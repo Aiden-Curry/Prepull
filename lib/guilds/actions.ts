@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { requireUser } from "./auth.ts";
 import { getGuildRepository } from "./factory.ts";
 import type { CreateGuildInput, CreateRaidInput, GuildMember, RaidAssignment, RaidGroup, SignupStatus } from "./types.ts";
-import { applyCsvImport } from "./workflows.ts";
+import { applyCsvImport } from "./csv-apply.ts";
 
 const text = (form: FormData, key: string) => String(form.get(key) ?? "").trim();
 export async function createGuildAction(form: FormData) { const user = await requireUser(); const repository = getGuildRepository(); const guild = await repository.createGuild(user.id, { name: text(form, "name"), region: text(form, "region") as CreateGuildInput["region"], realmSlug: text(form, "realmSlug"), realmName: text(form, "realmName"), characterRealmType: text(form, "characterRealmType") as CreateGuildInput["characterRealmType"], contentVersion: text(form, "contentVersion") as CreateGuildInput["contentVersion"], faction: text(form, "faction") as CreateGuildInput["faction"], description: text(form, "description") }); revalidatePath(`/${guild.contentVersion}/guilds`); }
