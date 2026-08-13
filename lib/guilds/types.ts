@@ -11,6 +11,7 @@ export type GuildMember = { id: string; characterId: string; characterName: stri
 export type RaidGroup = { id: string; name: string; memberCharacterIds: string[] };
 export type RaidAssignment = { id: string; characterId: string; label: string; detail?: string };
 export type RaidEvent = { id: string; guildId: string; name: string; instance: string; startsAt: string; durationMinutes: number; status: "draft" | "open" | "locked" | "complete"; signups: RaidSignup[]; selectedCharacterIds: string[]; groups: RaidGroup[]; assignments: RaidAssignment[]; createdAt: string; updatedAt: string };
+export type SignupPreference = "accepted" | "tentative" | "unavailable" | "late";
 export type Guild = { id: string; name: string; region: Region; realmSlug: string; realmName: string; characterRealmType: CharacterRealmType; contentVersion: ContentVersion; faction: Faction; description: string; ownerUserId: string; importProvider: "manual" | "blizzard" | "json"; externalGuildId?: string; lastRosterSyncAt?: string; createdAt: string; updatedAt: string; memberIds: string[]; raidEventIds: string[] };
 export type GuildWorkspace = { guild: Guild; roster: GuildMember[]; events: RaidEvent[] };
 export type CreateGuildInput = Pick<Guild, "name" | "region" | "realmSlug" | "realmName" | "characterRealmType" | "contentVersion" | "faction" | "description">;

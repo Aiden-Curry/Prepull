@@ -1,0 +1,16 @@
+ALTER TABLE guild_members ADD COLUMN IF NOT EXISTS guild_rank text NOT NULL DEFAULT '';
+ALTER TABLE guild_members ADD COLUMN IF NOT EXISTS main_name text NOT NULL DEFAULT '';
+ALTER TABLE guild_members ADD COLUMN IF NOT EXISTS inactive_at timestamptz;
+ALTER TABLE guild_member_links ADD COLUMN IF NOT EXISTS reviewed_at timestamptz;
+ALTER TABLE guild_member_links ADD COLUMN IF NOT EXISTS decision_reason text NOT NULL DEFAULT '';
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS member_status text NOT NULL DEFAULT 'pending';
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS effective_status text NOT NULL DEFAULT 'pending';
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS preferred_role text NOT NULL DEFAULT '';
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS alternate_role text NOT NULL DEFAULT '';
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS override_actor_user_id uuid REFERENCES users(id);
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS override_at timestamptz;
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS override_reason text NOT NULL DEFAULT '';
+ALTER TABLE raid_events ADD COLUMN IF NOT EXISTS version integer NOT NULL DEFAULT 1;
+ALTER TABLE raid_assignments ADD COLUMN IF NOT EXISTS version integer NOT NULL DEFAULT 1;
+CREATE INDEX IF NOT EXISTS guild_members_main_idx ON guild_members(guild_id,main_name);
+CREATE UNIQUE INDEX IF NOT EXISTS approved_character_claim_idx ON guild_member_links(guild_member_id) WHERE status='approved';
