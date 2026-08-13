@@ -1,0 +1,4 @@
+import bcrypt from "bcryptjs";
+import { withTransaction } from "../lib/guilds/db.ts";
+if (process.env.NODE_ENV === "production") throw new Error("Refusing to seed a production environment.");
+await withTransaction(async (client) => { const passwordHash = await bcrypt.hash(process.env.PREPULL_SEED_PASSWORD ?? "dev-only-change-me", 12); const user = await client.query("INSERT INTO users(email,password_hash,name) VALUES($1,$2,$3) ON CONFLICT(email) DO UPDATE SET name=excluded.name RETURNING id", [process.env.PREPULL_SEED_EMAIL ?? "owner@prepull.local", passwordHash, "PrePull Development Owner"]); await client.query("INSERT INTO user_profiles(user_id,display_name) VALUES($1,$2) ON CONFLICT(user_id) DO NOTHING", [user.rows[0].id, "PrePull Development Owner"]); console.log(`Seeded development user ${process.env.PREPULL_SEED_EMAIL ?? "owner@prepull.local"}.`); });

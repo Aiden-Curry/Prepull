@@ -19,17 +19,25 @@
     "curated:availability": "node --experimental-strip-types scripts/curated-availability.ts",
     "items:sync-curated": "node --experimental-strip-types scripts/items-sync-curated.ts",
     "calibrate:fury": "node --experimental-strip-types scripts/calibrate-fury.ts",
+    "db:migrate": "node --experimental-strip-types scripts/db-migrate.ts",
+    "db:status": "node --experimental-strip-types scripts/db-status.ts",
+    "db:seed": "node --experimental-strip-types scripts/db-seed.ts",
     "snapshot:fury": "node --experimental-strip-types scripts/export-fury-snapshot.ts",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "next": "14.2.33",
+    "next-auth": "^4.24.15",
+    "pg": "^8.23.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "20.16.11",
+    "@types/pg": "^8.21.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "^10.4.20",

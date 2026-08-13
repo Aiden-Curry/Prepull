@@ -1,6 +1,10 @@
 import type { CharacterRealmType, ContentVersion, Faction, Region } from "../types.ts";
 
-export type GuildRole = "owner" | "officer" | "member";
+export type GuildRole = "owner" | "officer" | "raid-leader" | "member";
+export type GuildCapability = "manage-settings" | "manage-permissions" | "import-roster" | "manage-roster" | "manage-notes" | "create-raid" | "manage-raid" | "manage-assignments" | "manage-signup-overrides";
+export type GuildMembership = { id: string; guildId: string; userId: string; role: GuildRole; capabilities: GuildCapability[]; active: boolean; createdAt: string; updatedAt: string };
+export type CharacterClaimStatus = "pending" | "approved" | "rejected" | "revoked";
+export type CharacterClaim = { id: string; guildId: string; memberId: string; userId: string; status: CharacterClaimStatus; verifiedByUserId?: string; verificationMethod?: "officer-verified" | "battlenet-verified"; createdAt: string; updatedAt: string };
 export type SignupStatus = "pending" | "confirmed" | "declined" | "waitlist";
 export type RaidSignup = { characterId: string; status: SignupStatus; note?: string; updatedAt: string };
 export type GuildMember = { id: string; characterId: string; characterName: string; className: string; spec: string; level: number; race: string; faction: Faction; realm: string; region: Region; realmType: CharacterRealmType; contentVersion: ContentVersion; role: string; readiness: "ready" | "needs-review" | "unknown"; gearSetId?: string; joinedAt: string };
