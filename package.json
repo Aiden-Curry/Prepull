@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts",
+    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts",
     "validate:gear": "node --experimental-strip-types scripts/validate-gear-dataset.ts",
     "validate:curated": "node --experimental-strip-types scripts/validate-curated-gear.ts",
     "curated:import": "node --experimental-strip-types scripts/curated-import.ts",
