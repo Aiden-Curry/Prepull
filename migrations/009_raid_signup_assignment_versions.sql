@@ -1,0 +1,10 @@
+ALTER TABLE raid_events ADD COLUMN IF NOT EXISTS assignment_version integer NOT NULL DEFAULT 1;
+ALTER TABLE raid_events ADD COLUMN IF NOT EXISTS roster_locked boolean NOT NULL DEFAULT false;
+ALTER TABLE raid_roster_entries ADD COLUMN IF NOT EXISTS role_name text NOT NULL DEFAULT '';
+ALTER TABLE raid_assignments ADD COLUMN IF NOT EXISTS category text NOT NULL DEFAULT 'general';
+ALTER TABLE raid_assignments ADD COLUMN IF NOT EXISTS section text NOT NULL DEFAULT 'raid';
+ALTER TABLE raid_assignments ADD COLUMN IF NOT EXISTS position integer NOT NULL DEFAULT 0;
+ALTER TABLE raid_signups ADD COLUMN IF NOT EXISTS member_note text NOT NULL DEFAULT '';
+UPDATE raid_signups SET member_status = CASE status WHEN 'confirmed' THEN 'accepted' WHEN 'declined' THEN 'unavailable' WHEN 'waitlist' THEN 'late' ELSE COALESCE(NULLIF(member_status, ''), 'tentative') END WHERE member_status IS NULL OR member_status = 'pending';
+UPDATE raid_signups SET effective_status = COALESCE(NULLIF(effective_status, ''), member_status);
+CREATE INDEX IF NOT EXISTS raid_assignments_order_idx ON raid_assignments(raid_event_id, position, created_at);
