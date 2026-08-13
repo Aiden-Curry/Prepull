@@ -14,7 +14,7 @@ const moltenCoreEquipment = buildLoadout((candidate) => candidate.source?.instan
 export const eraFuryFixtures = {
   fresh60: character("Fresh 60", slots.map(starter)),
   preRaid: character("Pre-Raid", [...slots.map(starter).filter((item) => !["Main Hand", "Off Hand / Shield", "Trinket 1"].includes(item.slot)), ...candidatesBy((item) => ["Dungeon", "Quest", "Profession"].includes(item.source?.type ?? ""))]),
-  moltenCore: character("Molten Core", moltenCoreEquipment),
+  moltenCore: { ...character("Molten Core", moltenCoreEquipment), curatedReferenceSetId: "era-fury-phase-1" },
   bwlAq: character("BWL AQ", [...slots.map(starter).filter((item) => !["Head", "Chest", "Neck", "Shoulder", "Legs", "Feet", "Main Hand", "Off Hand / Shield"].includes(item.slot)), ...candidatesBy((item) => ["Blackwing Lair", "Ahn'Qiraj", "Zul'Gurub"].includes(item.source?.instance ?? ""))]),
   nearBis: character("Near BiS", nearBisEquipment),
 };

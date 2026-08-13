@@ -16,5 +16,10 @@ console.log(`Import validation: ${errors.length ? "FAIL" : "PASS"} (${parsed.row
 if (errors.length) process.exit(1);
 if (hasArg("dry-run")) { console.log("Dry run: no generated data was changed."); process.exit(0); }
 const output = arg("output") ?? "data/curated/generated/imported-reference.json";
-writeJson(output, built.sets);
+let existing: unknown[] = [];
+if (fs.existsSync(output)) {
+  try { const parsedExisting = JSON.parse(fs.readFileSync(output, "utf8")); if (Array.isArray(parsedExisting)) existing = parsedExisting; } catch { existing = []; }
+}
+const replacementIds = new Set(built.sets.map((set) => set.id));
+writeJson(output, [...existing.filter((set) => !replacementIds.has((set as { id?: string }).id ?? "")), ...built.sets]);
 console.log(`Generated normalized reference data: ${output}`);

@@ -1514,5 +1514,434 @@
         }
       ]
     }
+  },
+  {
+    "id": "era-fury-phase-1",
+    "contentVersion": "era",
+    "className": "warrior",
+    "specialization": "fury",
+    "role": "DPS",
+    "phase": 1,
+    "name": "warrior fury phase-1 general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "PrePull data review",
+      "reviewedAt": "2026-08-12",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Structured conclusions only; no numerical DPS claim."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 18817,
+          "slot": "Head",
+          "tier": "excellent",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Raid alternative; Lionheart Helm remains the normal ultimate DPS head target; useful stamina/fire-resistance context.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 18404,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Quest",
+            "instance": "Onyxia's Lair"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Faction-aware one-time quest reward; ultimate Phase 1 neck target; raid participation required.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 19146,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Ultimate Phase 1 wrist target; verify exact drop-source semantics before publication.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 19143,
+          "slot": "Hands",
+          "tier": "excellent",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Contextual glove option; evaluate race, weapon skill, Edgemaster's Handguards, and Devilsaur ownership.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18823,
+          "slot": "Hands",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Conditional dagger-build glove; +5 dagger skill and 1% critical strike; do not universally replace Devilsaur, Edgemaster's, or Flameguard.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 19137,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Aspirational Phase 1 waist target; Brigam Girdle remains a realistic inherited alternative.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 18821,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-fury-phase-1",
+          "uniqueGroup": "18821",
+          "notes": "Legal paired ring pool; unique restrictions apply.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17063,
+          "slot": "Finger 1",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Hit-heavy contextual ring; unique and high-competition restrictions apply.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 17075,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Onyxia's Lair"
+          },
+          "setId": "era-fury-phase-1",
+          "raceNotes": "Human",
+          "notes": "Unique one-hand sword; aspirational Human sword-context target.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17068,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Onyxia's Lair"
+          },
+          "setId": "era-fury-phase-1",
+          "raceNotes": "Orc",
+          "notes": "One-hand axe; aspirational Orc axe-context target; not forced above Human sword configurations.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18832,
+          "slot": "Main Hand",
+          "tier": "excellent",
+          "rank": 3,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-fury-phase-1",
+          "uniqueGroup": "18832",
+          "notes": "Unique one-hand sword; evaluate as either hand in a legal paired loadout.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18816,
+          "slot": "Main Hand",
+          "tier": "strong",
+          "rank": 4,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "One-hand dagger; legal Main Hand and Off Hand candidate; evaluate with Core Hound Tooth as a pair when dagger skill is solved.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 18832,
+          "slot": "Off Hand / Shield",
+          "tier": "excellent",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-fury-phase-1",
+          "uniqueGroup": "18832",
+          "notes": "Unique one-hand sword; evaluate as either hand in a legal paired loadout.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18805,
+          "slot": "Off Hand / Shield",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus / Cache of the Firelord"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Conditional dagger option; requires valid dagger weapon-skill context such as Edgemaster's.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18816,
+          "slot": "Off Hand / Shield",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Conditional dagger option; weapon-skill dependent and requires human review.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 17069,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Magmadar"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Ultimate Phase 1 ranged/stat-stick target.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17072,
+          "slot": "Ranged / Relic",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Golemagg the Incinerator"
+          },
+          "setId": "era-fury-phase-1",
+          "notes": "Strong raid alternative; retain inherited ranged options beneath it.",
+          "requiresRaidContent": true,
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ]
+    }
   }
 ]

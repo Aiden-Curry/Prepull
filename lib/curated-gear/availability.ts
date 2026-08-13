@@ -7,7 +7,7 @@ export type ItemAvailability = { availableFromPhase: ClassicContentPhase; availa
 export type AvailabilityRow = { itemId: number; phase: ClassicContentPhase; eligible: boolean };
 
 // This is deliberately keyed metadata, never inferred from an item ID range.
-const phaseOneItems = [12640, 13404, 12587, 15411, 17044, 11933, 12927, 12082, 16733, 13340, 11626, 13397, 11726, 14637, 13944, 12936, 13400, 13211, 12966, 15063, 14551, 13957, 13142, 13959, 13502, 14554, 15062, 16732, 14616, 12555, 13967, 13098, 17713, 2246, 12548, 13217, 11815, 13965, 19120, 11684, 12940, 811, 12590, 12939, 871, 15806, 13015, 12653, 12651];
+const phaseOneItems = [12640, 13404, 12587, 15411, 17044, 11933, 12927, 12082, 16733, 13340, 11626, 13397, 11726, 14637, 13944, 12936, 13400, 13211, 12966, 15063, 14551, 13957, 13142, 13959, 13502, 14554, 15062, 16732, 14616, 12555, 13967, 13098, 17713, 2246, 12548, 13217, 11815, 13965, 19120, 11684, 12940, 811, 12590, 12939, 871, 15806, 13015, 12653, 12651, 18817, 18404, 19146, 19143, 19137, 18821, 17063, 17075, 17068, 18832, 18805, 18816, 18823, 17069, 17072];
 const phaseTwoItems = [18500, 18380, 18323];
 export const classicItemAvailability: ReadonlyMap<number, ItemAvailability> = new Map<number, ItemAvailability>([
   ...phaseOneItems.map((itemId) => [itemId, { availableFromPhase: 1, evidence: "curated" as const }] as const),

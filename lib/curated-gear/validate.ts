@@ -32,6 +32,7 @@ export function validateReferenceSets(profile: CuratedReferenceProfile): Curated
     const seen = new Set<string>();
     for (const [slot, entries] of Object.entries(set.slots)) {
       for (const reference of entries ?? []) {
+        if (set.composition && reference.origin === "inherited") continue;
         const key = `${slot}:${reference.itemId}:${reference.context ?? set.context}`;
         if (seen.has(key)) issues.push({ severity: "error", code: "duplicate-item-slot-context", message: `Item #${reference.itemId} is duplicated for ${slot}.`, setId: set.id });
         seen.add(key);
@@ -46,6 +47,7 @@ export function validateReferenceSets(profile: CuratedReferenceProfile): Curated
         if (!tiers.has(reference.tier)) issues.push({ severity: "error", code: "invalid-tier", message: `Item #${reference.itemId} has an invalid recommendation tier.`, setId: set.id });
         if (reference.context && reference.context !== set.context) issues.push({ severity: "error", code: "context-mismatch", message: `Item #${reference.itemId} context does not match the reference set.`, setId: set.id });
         if (!reference.source?.type) issues.push({ severity: "error", code: "missing-source", message: `Item #${reference.itemId} has no acquisition source.`, setId: set.id });
+        if (set.allowedRaidSources?.length && reference.origin === "phase-1-addition" && reference.source.type === "Raid" && !set.allowedRaidSources.includes(reference.source.instance ?? "")) issues.push({ severity: "error", code: "disallowed-raid-source", message: `Item #${reference.itemId} uses raid source ${reference.source.instance ?? "unknown"}, outside the allowed Phase 1 sources.`, setId: set.id });
         const availabilityPhase = resolvedPhaseForSet(set.phase);
         const availability = availabilityFor(reference.itemId);
         if (!availability) issues.push({ severity: "error", code: "missing-availability", message: `Item #${reference.itemId} has no explicit phase-availability record; known canonical rows cannot default to Phase 1.`, setId: set.id });

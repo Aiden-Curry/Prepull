@@ -793,5 +793,140 @@
       "contentVersion": "era",
       "realmType": "era"
     }
+  },
+  {
+    "itemId": 18817,
+    "name": "Crown of Destruction",
+    "slot": "Head",
+    "quality": "Epic",
+    "itemLevel": 76,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:30.705Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19146,
+    "name": "Wristguards of Stability",
+    "slot": "Wrist",
+    "quality": "Epic",
+    "itemLevel": 65,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:30.791Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19143,
+    "name": "Flameguard Gauntlets",
+    "slot": "Hands",
+    "quality": "Epic",
+    "itemLevel": 69,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:30.885Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17063,
+    "name": "Band of Accuria",
+    "slot": "Finger 1",
+    "quality": "Epic",
+    "itemLevel": 78,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:30.992Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17068,
+    "name": "Deathbringer",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 75,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:31.099Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18805,
+    "name": "Core Hound Tooth",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 70,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:31.211Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18816,
+    "name": "Perdition's Blade",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 77,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:31.311Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17072,
+    "name": "Blastershot Launcher",
+    "slot": "Ranged / Relic",
+    "quality": "Epic",
+    "itemLevel": 70,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:09:31.403Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18823,
+    "name": "Aged Core Leather Gloves",
+    "slot": "Hands",
+    "quality": "Epic",
+    "itemLevel": 69,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-13T11:44:11.952Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
   }
 ]

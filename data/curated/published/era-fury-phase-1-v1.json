@@ -1,0 +1,52 @@
+{
+  "setId": "era-fury-phase-1",
+  "datasetVersion": "era-fury-phase-1-v1",
+  "contentVersion": "era",
+  "class": "Warrior",
+  "spec": "Fury",
+  "role": "DPS",
+  "progressionPhase": 1,
+  "status": "published",
+  "publishedAt": "2026-08-13",
+  "methodology": "Curated Reference",
+  "baseSetId": "era-fury-pre-raid",
+  "baseDatasetVersion": "era-fury-pre-raid-v1",
+  "baseSnapshot": {
+    "path": "data/curated/published/era-fury-pre-raid-v1.json",
+    "sha256": "F49839B32E4CB8D28676C824035832C2CD1205A4411327925D98341A5EB588AF"
+  },
+  "source": {
+    "baseCsv": "data/curated/era/warrior/fury/reference.csv",
+    "baseCsvSha256": "F49839B32E4CB8D28676C824035832C2CD1205A4411327925D98341A5EB588AF",
+    "overlayCsv": "data/curated/era/warrior/fury/phase-1.csv",
+    "overlayCsvSha256": "39019DE520B4F6312E0E06AFDA69C70BC9085D51C043391CDC47FCC327E0977B",
+    "normalizedImport": "data/curated/generated/imported-reference.json",
+    "normalizedImportSha256": "1A3389FF155F80DD98825BFEFBA75DFB334C3679A25908C42EA42B219AA74A90"
+  },
+  "overlay": {
+    "rows": 17,
+    "uniqueItems": 15
+  },
+  "composed": {
+    "rows": 84,
+    "slots": 17
+  },
+  "availability": {
+    "anniversaryPhase1": {
+      "eligibleRows": 72,
+      "unavailableRows": 12
+    },
+    "matureEra": {
+      "eligibleRows": 84,
+      "unavailableRows": 0
+    }
+  },
+  "review": {
+    "approvedOverlayRows": 8,
+    "approvedConditionalOverlayRows": 9,
+    "reviewRequiredOverlayRows": 0,
+    "disputedRows": 0,
+    "actualBlockers": 0
+  },
+  "changelog": "Published the Era Fury Warrior Phase 1 curated reference set for Molten Core and Onyxia's Lair. Added phase-aware raid progression, contextual Human sword, Orc axe and dagger configurations, legal weapon and ring pairing, faction-aware Onyxia rewards, raid activity planning and inheritance from the published Pre-Raid v1 dataset."
+}
