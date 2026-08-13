@@ -1,0 +1,2 @@
+import { query } from "../../../../lib/guilds/db";
+export async function GET() { try { const result=await query("SELECT EXISTS (SELECT 1 FROM schema_migrations) AS migrations_ready"); if(!result.rows[0]?.migrations_ready)return Response.json({status:"not-ready"},{status:503,headers:{"cache-control":"no-store"}}); return Response.json({status:"ready"},{headers:{"cache-control":"no-store"}}); } catch { return Response.json({status:"not-ready"},{status:503,headers:{"cache-control":"no-store"}}); } }
