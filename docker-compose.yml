@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    profiles: [development]
+    environment:
+      POSTGRES_USER: prepull
+      POSTGRES_PASSWORD: prepull-dev-only
+      POSTGRES_DB: prepull
+    ports:
+      - "5432:5432"
+    volumes:
+      - prepull-postgres:/var/lib/postgresql/data
+  postgres-test:
+    image: postgres:16-alpine
+    profiles: [test]
+    environment:
+      POSTGRES_USER: prepull
+      POSTGRES_PASSWORD: prepull-test-only
+      POSTGRES_DB: prepull_test
+    ports:
+      - "5433:5432"
+    volumes:
+      - prepull-postgres-test:/var/lib/postgresql/data
+volumes:
+  prepull-postgres:
+  prepull-postgres-test:

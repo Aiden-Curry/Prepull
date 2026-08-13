@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts",
+    "test:integration": "node --test --experimental-strip-types tests/postgres.integration.test.ts",
     "validate:gear": "node --experimental-strip-types scripts/validate-gear-dataset.ts",
     "validate:curated": "node --experimental-strip-types scripts/validate-curated-gear.ts",
     "curated:import": "node --experimental-strip-types scripts/curated-import.ts",
@@ -22,6 +23,10 @@
     "db:migrate": "node --experimental-strip-types scripts/db-migrate.ts",
     "db:status": "node --experimental-strip-types scripts/db-status.ts",
     "db:seed": "node --experimental-strip-types scripts/db-seed.ts",
+    "db:dev:up": "docker compose --profile development up -d postgres",
+    "db:dev:down": "docker compose --profile development down",
+    "db:test:up": "docker compose --profile test up -d postgres-test",
+    "db:test:down": "docker compose --profile test down",
     "snapshot:fury": "node --experimental-strip-types scripts/export-fury-snapshot.ts",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
