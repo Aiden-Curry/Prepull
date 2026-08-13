@@ -6,6 +6,7 @@ const defaults: Record<GuildRole, GuildCapability[]> = {
   "raid-leader": ["manage-raid", "manage-assignments"],
   member: [],
 };
-export function hasCapability(membership: GuildMembership, capability: GuildCapability) { return membership.active && (defaults[membership.role].includes(capability) || membership.capabilities.includes(capability)); }
+export function hasCapability(membership: GuildMembership, capability: GuildCapability) { return membership.active && !membership.revokedCapabilities?.includes(capability) && (defaults[membership.role].includes(capability) || membership.capabilities.includes(capability)); }
 export function defaultCapabilities(role: GuildRole) { return [...defaults[role]]; }
+export function roleCapabilities(role: GuildRole) { return [...defaults[role]]; }
 export function canManageRaid(membership: GuildMembership, raidLeaderUserId: string | undefined, userId: string) { return hasCapability(membership, "manage-raid") && (membership.role !== "raid-leader" || raidLeaderUserId === userId); }

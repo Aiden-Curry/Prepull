@@ -2,7 +2,8 @@ import type { CharacterRealmType, ContentVersion, Faction, Region } from "../typ
 
 export type GuildRole = "owner" | "officer" | "raid-leader" | "member";
 export type GuildCapability = "manage-settings" | "manage-permissions" | "import-roster" | "manage-roster" | "manage-notes" | "create-raid" | "manage-raid" | "manage-assignments" | "manage-signup-overrides";
-export type GuildMembership = { id: string; guildId: string; userId: string; role: GuildRole; capabilities: GuildCapability[]; active: boolean; createdAt: string; updatedAt: string };
+export const REGISTERED_GUILD_CAPABILITIES: readonly GuildCapability[] = ["manage-settings", "manage-permissions", "import-roster", "manage-roster", "manage-notes", "create-raid", "manage-raid", "manage-assignments", "manage-signup-overrides"];
+export type GuildMembership = { id: string; guildId: string; userId: string; role: GuildRole; capabilities: GuildCapability[]; revokedCapabilities?: GuildCapability[]; active: boolean; createdAt: string; updatedAt: string };
 export type CharacterClaimStatus = "pending" | "approved" | "rejected" | "revoked";
 export type CharacterClaim = { id: string; guildId: string; memberId: string; userId: string; status: CharacterClaimStatus; verifiedByUserId?: string; verificationMethod?: "officer-verified" | "battlenet-verified"; createdAt: string; updatedAt: string };
 export type SignupStatus = "pending" | "confirmed" | "declined" | "waitlist";
@@ -12,7 +13,7 @@ export type RaidGroup = { id: string; name: string; memberCharacterIds: string[]
 export type RaidAssignment = { id: string; characterId: string; label: string; detail?: string };
 export type RaidEvent = { id: string; guildId: string; name: string; instance: string; startsAt: string; durationMinutes: number; status: "draft" | "open" | "locked" | "complete"; signups: RaidSignup[]; selectedCharacterIds: string[]; groups: RaidGroup[]; assignments: RaidAssignment[]; createdAt: string; updatedAt: string };
 export type SignupPreference = "accepted" | "tentative" | "unavailable" | "late";
-export type Guild = { id: string; name: string; region: Region; realmSlug: string; realmName: string; characterRealmType: CharacterRealmType; contentVersion: ContentVersion; faction: Faction; description: string; ownerUserId: string; importProvider: "manual" | "blizzard" | "json"; externalGuildId?: string; lastRosterSyncAt?: string; createdAt: string; updatedAt: string; memberIds: string[]; raidEventIds: string[] };
+export type Guild = { id: string; name: string; region: Region; realmSlug: string; realmName: string; characterRealmType: CharacterRealmType; contentVersion: ContentVersion; defaultContentVersion?: ContentVersion; faction: Faction; description: string; ownerUserId: string; importProvider: "manual" | "blizzard" | "json"; externalGuildId?: string; lastRosterSyncAt?: string; raidTimezone?: string; defaultAvailabilityPhase?: number; internalNotes?: string; createdAt: string; updatedAt: string; memberIds: string[]; raidEventIds: string[] };
 export type GuildWorkspace = { guild: Guild; roster: GuildMember[]; events: RaidEvent[] };
 export type CreateGuildInput = Pick<Guild, "name" | "region" | "realmSlug" | "realmName" | "characterRealmType" | "contentVersion" | "faction" | "description">;
 export type CreateRaidInput = Pick<RaidEvent, "name" | "instance" | "startsAt" | "durationMinutes">;
