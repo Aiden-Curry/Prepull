@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ContentVersion } from "../lib/types";
+export function Footer({ version }: { version: ContentVersion }) { return <footer className="border-t border-[var(--line)]"><div className="mx-auto flex max-w-[1240px] flex-col gap-4 px-5 py-8 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between lg:px-8"><Link href={`/${version}`} className="font-bold tracking-[-.04em] text-[var(--text)]">PRE<span className="text-[var(--primary)]">PULL</span></Link><span>Made for players who like to come prepared.</span><span>© 2026 PrePull</span></div></footer>; }

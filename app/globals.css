@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --background: #17130f; --surface: #211a14; --surface-raised: #2a2118; --primary: #b88946; --primary-light: #d7b87a; --secondary: #8f3d2e; --text: #f5eee3; --muted: #a69a8b; --line: rgba(215,184,122,.16); --glow: rgba(184,137,70,.12); --font-body: "Inter"; --font-display: "Georgia"; }
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body { margin: 0; background: var(--background); color: var(--text); font-family: var(--font-body), sans-serif; transition: background-color 250ms ease, color 250ms ease; }
+button, input, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+.app-shell { min-height: 100vh; background: radial-gradient(circle at 82% 0%, var(--glow), transparent 31rem), radial-gradient(circle at 12% 37%, var(--glow), transparent 25rem); transition: background 250ms ease; }
+.display { font-family: var(--font-display), Georgia, serif; }
+.eyebrow { color: var(--primary-light); font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.panel { background: color-mix(in srgb, var(--surface) 94%, transparent); border: 1px solid var(--line); box-shadow: 0 16px 42px rgba(0,0,0,.16); }
+.focus-ring:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }

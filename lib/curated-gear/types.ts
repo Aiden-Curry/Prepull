@@ -1,0 +1,19 @@
+import type { CharacterSource, ContentVersion, EquipmentSlot, EquippedItem, Faction } from "../types.ts";
+
+export type GearEvaluationStrategy = "curated-reference" | "loadout-aware" | "simulation-tested";
+export type ReferenceRecommendationTier = "bis" | "excellent" | "strong" | "alternative" | "entry";
+export type ReferenceContext = "general" | "balanced" | "threat" | "mitigation" | "resistance" | "fire-resistance" | "nature-resistance" | "frost-resistance" | "throughput" | "sustain";
+export type ReferenceVerificationStatus = "unreviewed" | "reviewed" | "verified" | "curated" | "incomplete" | "disputed";
+export type CuratedSetStatus = "incomplete" | "draft" | "reviewed" | "published";
+export type ReferenceSetFrame = "progression-era" | "current-era";
+export type ReferenceProvenance = { source: string; reviewedAt: string; reviewedBy: string; verificationStatus: ReferenceVerificationStatus; notes?: string };
+export type ReferenceItemEntry = { itemId: number; slot: EquipmentSlot; tier: ReferenceRecommendationTier; rank?: number; phase: number; source: CharacterSource; context?: ReferenceContext; setId?: string; setBonusGroup?: string; setBonusEffects?: string[]; faction?: Faction; factionSources?: Partial<Record<Faction, string>>; raceNotes?: string; craftedByProfession?: string; requiresProfession?: string; requiresRaidContent?: boolean; professionRequirements?: string[]; uniqueGroup?: string; notes?: string; provenanceId?: string; provenance: ReferenceProvenance };
+export type ReferenceGearSet = { id: string; contentVersion: ContentVersion; className: string; specialization: string; role: string; phase: number; name: string; context: ReferenceContext; referenceFrame?: ReferenceSetFrame; description: string; methodology: string; sourceProvenance: ReferenceProvenance; complete: boolean; status?: CuratedSetStatus; publishedAt?: string; datasetVersion?: string; changelog?: string; slots: Partial<Record<EquipmentSlot, ReferenceItemEntry[]>> };
+export type CuratedReferenceProfile = { id: string; className: string; specialization: string; contentVersion: ContentVersion; role: string; strategy: GearEvaluationStrategy; contexts: ReferenceContext[]; defaultSetId: string; methodology: string; sets: ReferenceGearSet[] };
+export type CuratedRecommendationStatus = "target-equipped" | "excellent" | "strong" | "serviceable" | "upgrade-available" | "major-progression" | "unknown";
+export type CuratedScope = "ranked" | "outside-reference-scope" | "unknown" | "complete";
+export type CuratedPriority = "major-opportunity" | "meaningful-upgrade" | "upgrade" | "low-priority" | "complete" | "outside-reference-scope" | "unknown";
+export type CuratedCertainty = "high" | "contextual" | "limited";
+export type CuratedRecommendation = { slot: EquipmentSlot; currentItem?: EquippedItem; currentTier?: ReferenceRecommendationTier; scope: CuratedScope; target?: EquippedItem & { reference: ReferenceItemEntry }; bestRealistic?: EquippedItem & { reference: ReferenceItemEntry }; otherOptions: Array<EquippedItem & { reference: ReferenceItemEntry }>; status: CuratedRecommendationStatus | CuratedScope; priority: CuratedPriority; certainty: CuratedCertainty; conditionalNotes: string[]; reason: string };
+export type CuratedActivity = { activity: string; upgrades: CuratedRecommendation[]; slots: EquipmentSlot[]; highestTier: ReferenceRecommendationTier; score: number; recommendation: string };
+export type CuratedEvaluation = { profileId: string; strategy: GearEvaluationStrategy; methodology: string; set: ReferenceGearSet; recommendations: CuratedRecommendation[]; activities: CuratedActivity[]; incompleteData: boolean; referenceAvailability: "available" | "not-available"; characterProgressionPhase: number; requestedSetId: string };

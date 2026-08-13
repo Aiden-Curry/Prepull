@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main className="grid min-h-screen place-items-center bg-[#17130F] p-8 text-center text-[#F5EEE3]"><div><p className="mb-3 text-xs uppercase tracking-[.2em] text-[#D7B87A]">404 / Lost in the dungeon</p><h1 className="display text-4xl">That page isn’t ready yet.</h1><Link className="mt-6 inline-block text-sm text-[#D7B87A]" href="/era">Return to PrePull →</Link></div></main>; }

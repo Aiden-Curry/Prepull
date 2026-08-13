@@ -1,0 +1,1518 @@
+[
+  {
+    "id": "era-fury-pre-raid",
+    "contentVersion": "era",
+    "className": "warrior",
+    "specialization": "fury",
+    "role": "DPS",
+    "phase": 0,
+    "name": "warrior fury pre-raid general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "PrePull data review",
+      "reviewedAt": "2026-08-12",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Structured conclusions only; no numerical DPS claim."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 12640,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Blacksmithing",
+            "profession": "Blacksmithing"
+          },
+          "setId": "era-fury-pre-raid",
+          "craftedByProfession": "Blacksmithing",
+          "notes": "Top pre-raid DPS target; expensive crafted option.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13404,
+          "slot": "Head",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "The Unforgiven"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12587,
+          "slot": "Head",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 15411,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "In Dreams"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Strong quest reward and practical pre-raid target.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17044,
+          "slot": "Neck",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Aurius' Reckoning"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 11933,
+          "slot": "Neck",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 12927,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Pyroguard Emberseer"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12082,
+          "slot": "Shoulder",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "A Taste of Flame"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 16733,
+          "slot": "Shoulder",
+          "tier": "alternative",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "More defensive alternative than the primary DPS choices.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 15051,
+          "slot": "Shoulder",
+          "tier": "strong",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking"
+          },
+          "setId": "era-fury-pre-raid",
+          "setBonusGroup": "black-dragon-mail",
+          "setBonusEffects": [
+            "2-piece: +1% hit",
+            "3-piece: +2% critical strike"
+          ],
+          "notes": "Black Dragon Mail piece; 2 pieces grant +1% hit and 3 pieces grant +2% critical strike. Set-aware evaluation required.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 13340,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Baron Rivendare"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 11626,
+          "slot": "Back",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "High Interrogator Gerstahn"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13397,
+          "slot": "Back",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Stonespine"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 11726,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Gorosh the Dervish"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Primary curated pre-raid chest target.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 14637,
+          "slot": "Chest",
+          "tier": "strong",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Various side bosses"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13944,
+          "slot": "Chest",
+          "tier": "alternative",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Darkmaster Gandling"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 15050,
+          "slot": "Chest",
+          "tier": "strong",
+          "rank": 5,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking"
+          },
+          "setId": "era-fury-pre-raid",
+          "setBonusGroup": "black-dragon-mail",
+          "setBonusEffects": [
+            "2-piece: +1% hit",
+            "3-piece: +2% critical strike"
+          ],
+          "notes": "Black Dragon Mail piece; 2 pieces grant +1% hit and 3 pieces grant +2% critical strike. Set-aware evaluation required.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 12936,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13400,
+          "slot": "Wrist",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Timmy the Cruel"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13211,
+          "slot": "Wrist",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Halycon"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12966,
+          "slot": "Wrist",
+          "tier": "alternative",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "The Beast"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 15063,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-fury-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Devilsaur set piece; especially attractive when paired with Devilsaur Leggings.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 14551,
+          "slot": "Hands",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Conditional weapon-skill option; especially valuable when the character lacks an appropriate 305+ weapon skill source.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13957,
+          "slot": "Hands",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Kirtonos the Herald"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 13142,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "General Drakkisath"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13959,
+          "slot": "Waist",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Warlord's Command / Maxwell's Mission"
+          },
+          "setId": "era-fury-pre-raid",
+          "factionSources": {
+            "Alliance": "Maxwell's Mission",
+            "Horde": "Warlord's Command"
+          },
+          "notes": "Faction-specific versions of the same progression quest chain.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13502,
+          "slot": "Waist",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Goraluk Anvilcrack"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 14554,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Very expensive/rare world-drop option; active-use considerations can affect practical value.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 15062,
+          "slot": "Legs",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-fury-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Devilsaur set piece; strong practical target when paired with Devilsaur Gauntlets.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18380,
+          "slot": "Legs",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul West",
+            "boss": "Prince Tortheldrin"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 16732,
+          "slot": "Legs",
+          "tier": "alternative",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Baron Rivendare"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 22385,
+          "slot": "Legs",
+          "tier": "excellent",
+          "rank": 5,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Blacksmithing"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Crafted by Blacksmithing from a rare world-drop plan; expensive Auction House option, not automatically the realistic target.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 15052,
+          "slot": "Legs",
+          "tier": "strong",
+          "rank": 6,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking"
+          },
+          "setId": "era-fury-pre-raid",
+          "setBonusGroup": "black-dragon-mail",
+          "setBonusEffects": [
+            "2-piece: +1% hit",
+            "3-piece: +2% critical strike"
+          ],
+          "notes": "Black Dragon Mail piece; evaluate with the Breastplate and Shoulders for the 2-piece/3-piece set effects.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 14616,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Various side bosses"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12555,
+          "slot": "Feet",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Spire"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Bind-on-equip drop from Blackrock Spire.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13967,
+          "slot": "Feet",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Kirtonos the Herald"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 13098,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "General Drakkisath"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:13098",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 18500,
+          "slot": "Finger 1",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul North",
+            "boss": "Mizzle the Crafty"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:18500",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17713,
+          "slot": "Finger 1",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Maraudon",
+            "boss": "Princess Theradras"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:17713",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 2246,
+          "slot": "Finger 1",
+          "tier": "alternative",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:2246",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12548,
+          "slot": "Finger 1",
+          "tier": "alternative",
+          "rank": 5,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "The Princess's Surprise"
+          },
+          "setId": "era-fury-pre-raid",
+          "faction": "Alliance",
+          "uniqueGroup": "unique:12548",
+          "notes": "Alliance-only quest reward.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 19325,
+          "slot": "Finger 1",
+          "tier": "excellent",
+          "rank": 6,
+          "phase": 0,
+          "source": {
+            "type": "PvP",
+            "instance": "Alterac Valley"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:19325",
+          "notes": "Exalted Alterac Valley reputation commitment; Unique-Equipped and not an ordinary dungeon farm.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 18500,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul North",
+            "boss": "Mizzle the Crafty"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:18500",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 17713,
+          "slot": "Finger 2",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Maraudon",
+            "boss": "Princess Theradras"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:17713",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13098,
+          "slot": "Finger 2",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "General Drakkisath"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:13098",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 2246,
+          "slot": "Finger 2",
+          "tier": "alternative",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:2246",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13217,
+          "slot": "Finger 2",
+          "tier": "alternative",
+          "rank": 5,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Houses of the Holy"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:13217",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 21182,
+          "slot": "Finger 2",
+          "tier": "strong",
+          "rank": 6,
+          "phase": 0,
+          "source": {
+            "type": "Reputation",
+            "instance": "Cenarion Circle"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "unique:21182",
+          "notes": "Requires Honored Cenarion Circle and Cenarion combat, logistics, and tactical badges; conservative contextual ring option.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 11815,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Current Classic Era source; historical progression snapshots used a different boss.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13965,
+          "slot": "Trinket 1",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "General Drakkisath's Demise / For The Horde!"
+          },
+          "setId": "era-fury-pre-raid",
+          "factionSources": {
+            "Alliance": "General Drakkisath's Demise",
+            "Horde": "For The Horde!"
+          },
+          "notes": "Faction-specific quest names award the same trinket.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 19120,
+          "slot": "Trinket 1",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Job Opening: Guard Captain of Revantusk Village"
+          },
+          "setId": "era-fury-pre-raid",
+          "faction": "Horde",
+          "notes": "Horde-only quest reward.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 20130,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Voodoo Feathers"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Warrior class-quest on-use trinket; +75 Strength for 1 minute with a 6-minute cooldown. Encounter and cooldown context apply.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Trinket 2": [
+        {
+          "itemId": 13965,
+          "slot": "Trinket 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "General Drakkisath's Demise / For The Horde!"
+          },
+          "setId": "era-fury-pre-raid",
+          "factionSources": {
+            "Alliance": "General Drakkisath's Demise",
+            "Horde": "For The Horde!"
+          },
+          "notes": "Chosen as the paired target with Hand of Justice in Trinket 1.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 11815,
+          "slot": "Trinket 2",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Current Classic Era source; historical progression snapshots used a different boss.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 19120,
+          "slot": "Trinket 2",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Job Opening: Guard Captain of Revantusk Village"
+          },
+          "setId": "era-fury-pre-raid",
+          "faction": "Horde",
+          "notes": "Horde-only quest reward.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 21180,
+          "slot": "Trinket 2",
+          "tier": "excellent",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Reputation",
+            "instance": "Champion's Battlegear"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Cenarion Circle/Silithus Field Duty on-use trinket; substantial reputation and badge grind, not a default tonight farm.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 11684,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Extremely rare drop; often not the best realistic farm despite very high ceiling.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12940,
+          "slot": "Main Hand",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "dalrends",
+          "notes": "Pairs with Dal'Rend's Tribal Guardian.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 811,
+          "slot": "Main Hand",
+          "tier": "excellent",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Especially attractive for Orcs because of Axe Specialization.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 12590,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Very rare drop; high ceiling but poor farmability.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12939,
+          "slot": "Off Hand / Shield",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand"
+          },
+          "setId": "era-fury-pre-raid",
+          "uniqueGroup": "dalrends",
+          "notes": "Pairs with Dal'Rend's Sacred Charge.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 871,
+          "slot": "Off Hand / Shield",
+          "tier": "excellent",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "notes": "Especially attractive for Orcs because of Axe Specialization.",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 15806,
+          "slot": "Off Hand / Shield",
+          "tier": "strong",
+          "rank": 4,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Kirtonos the Herald"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 13015,
+          "slot": "Off Hand / Shield",
+          "tier": "alternative",
+          "rank": 5,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "World Drop"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 18323,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul East",
+            "boss": "Zevrim Thornhoof"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12653,
+          "slot": "Ranged / Relic",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Shadow Hunter Vosh'gajin"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        },
+        {
+          "itemId": 12651,
+          "slot": "Ranged / Relic",
+          "tier": "strong",
+          "rank": 3,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Shadow Hunter Vosh'gajin"
+          },
+          "setId": "era-fury-pre-raid",
+          "provenanceId": "prepull-curated-2026-08",
+          "provenance": {
+            "source": "PrePull data review",
+            "reviewedAt": "2026-08-12",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Structured conclusions only; no numerical DPS claim."
+          }
+        }
+      ]
+    }
+  }
+]

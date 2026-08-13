@@ -1,0 +1,14 @@
+import type { EquipmentSlot, NormalizedCharacter } from "../../types.ts";
+
+export type CalibrationPreference = "itemA" | "itemB" | "tie";
+export type CalibrationReferenceStatus = "entered" | "pending";
+export type CalibrationSeverity = "Negligible" | "Small" | "Material" | "Severe";
+export type CalibrationScenario = { level: number; targetLevel: number; race: string; faction: "Horde" | "Alliance"; talents: string; buffs: string; debuffs: string; consumables: string; weaponImbues: string; fightDuration: string; worldBuffs: string; weaponSkill: string; mainHand: string; offHand: string; mainHandWeaponSkill: number; offHandWeaponSkill: number; hit: number; crit: number; attackPower: number; strength: number; agility: number; talentPoints: number; setPiecesEquipped: string[]; activeSetBonuses: string[]; notes?: string };
+export type CalibrationReadinessIssue = { code: string; message: string };
+export type CalibrationReadiness = { ready: boolean; issues: CalibrationReadinessIssue[] };
+export type CalibrationReference = { status: CalibrationReferenceStatus; source: "simulation"; tool: "WoWSims Classic Warrior" | "Guybrush Warrior Sim" | "manual"; toolVersion: string; capturedAt?: string; enteredAt?: string; reviewer?: string; loadoutADps?: number; loadoutBDps?: number; iterations?: number; preference?: CalibrationPreference; difference?: number; notes: string; scenario: CalibrationScenario };
+export type CalibrationCase = { id: string; characterFixture: string; slot: EquipmentSlot; itemA: number; itemB: number; prepullPreference?: CalibrationPreference; reference?: CalibrationReference; tags: string[]; notes: string };
+export type CalibrationComparison = { caseId: string; characterFixture: string; slot: EquipmentSlot; itemA: number; itemB: number; category?: string[]; prepullPreference?: CalibrationPreference; prepullScoreDelta?: number; referencePreference?: CalibrationPreference; agreement: "agreement" | "disagreement" | "missing-reference" | "not-comparable" | "invalid"; severity?: CalibrationSeverity; difference?: number; notes: string; comparableReason?: string; readiness?: CalibrationReadiness };
+export type CalibrationThresholds = { negligible: number; small: number; material: number; severe: number };
+export type CalibrationReport = { profileVersion: string; generatedAt: string; totalCases: number; enteredComparisons: number; pendingReferences: number; comparableCases: number; notComparableCases: number; agreements: number; disagreements: number; closeDisagreements: number; materialDisagreements: number; severeDisagreements: number; invalidCases: number; disagreementCategories: Record<string, number>; comparisons: CalibrationComparison[] };
+export type CalibrationFixture = { name: string; character: NormalizedCharacter; scenario: CalibrationScenario };

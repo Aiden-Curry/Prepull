@@ -1,0 +1,42 @@
+{
+  "name": "prepull",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts",
+    "validate:gear": "node --experimental-strip-types scripts/validate-gear-dataset.ts",
+    "validate:curated": "node --experimental-strip-types scripts/validate-curated-gear.ts",
+    "curated:import": "node --experimental-strip-types scripts/curated-import.ts",
+    "curated:export": "node --experimental-strip-types scripts/curated-export.ts",
+    "curated:template": "node --experimental-strip-types scripts/curated-template.ts",
+    "curated:inspect": "node --experimental-strip-types scripts/curated-inspect.ts",
+    "curated:test-character": "node --experimental-strip-types scripts/curated-test-character.ts",
+    "curated:review": "node --experimental-strip-types scripts/curated-review.ts",
+    "curated:candidates": "node --experimental-strip-types scripts/curated-candidates.ts",
+    "curated:availability": "node --experimental-strip-types scripts/curated-availability.ts",
+    "items:sync-curated": "node --experimental-strip-types scripts/items-sync-curated.ts",
+    "calibrate:fury": "node --experimental-strip-types scripts/calibrate-fury.ts",
+    "snapshot:fury": "node --experimental-strip-types scripts/export-fury-snapshot.ts",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.33",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.14",
+    "typescript": "5.6.3"
+  }
+}

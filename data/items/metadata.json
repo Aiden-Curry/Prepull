@@ -1,0 +1,797 @@
+[
+  {
+    "itemId": 12640,
+    "name": "Lionheart Helm",
+    "slot": "Head",
+    "quality": "Epic",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.414Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13404,
+    "name": "Mask of the Unforgiven",
+    "slot": "Head",
+    "quality": "Rare",
+    "itemLevel": 57,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.510Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12587,
+    "name": "Eye of Rend",
+    "slot": "Head",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.618Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 15411,
+    "name": "Mark of Fordring",
+    "slot": "Neck",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.743Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17044,
+    "name": "Will of the Martyr",
+    "slot": "Neck",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.840Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11933,
+    "name": "Imperial Jewel",
+    "slot": "Neck",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:03.930Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12082,
+    "name": "Wyrmhide Spaulders",
+    "slot": "Shoulder",
+    "quality": "Uncommon",
+    "itemLevel": 58,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.022Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16733,
+    "name": "Spaulders of Valor",
+    "slot": "Shoulder",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.101Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13340,
+    "name": "Cape of the Black Baron",
+    "slot": "Back",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.199Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11626,
+    "name": "Blackveil Cape",
+    "slot": "Back",
+    "quality": "Rare",
+    "itemLevel": 53,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.284Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13397,
+    "name": "Stoneskin Gargoyle Cape",
+    "slot": "Back",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.386Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 14637,
+    "name": "Cadaverous Armor",
+    "slot": "Chest",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.466Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13944,
+    "name": "Tombstone Breastplate",
+    "slot": "Chest",
+    "quality": "Rare",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.568Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12936,
+    "name": "Battleborn Armbraces",
+    "slot": "Wrist",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.672Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13400,
+    "name": "Vambraces of the Sadist",
+    "slot": "Wrist",
+    "quality": "Rare",
+    "itemLevel": 59,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.758Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13211,
+    "name": "Slashclaw Bracers",
+    "slot": "Wrist",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.841Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12966,
+    "name": "Blackmist Armguards",
+    "slot": "Wrist",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:04.939Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 14551,
+    "name": "Edgemaster's Handguards",
+    "slot": "Hands",
+    "quality": "Epic",
+    "itemLevel": 49,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.041Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13957,
+    "name": "Gargoyle Slashers",
+    "slot": "Hands",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.150Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13142,
+    "name": "Brigam Girdle",
+    "slot": "Waist",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.227Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13959,
+    "name": "Omokk's Girth Restrainer",
+    "slot": "Waist",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.326Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13502,
+    "name": "Handcrafted Mastersmith Girdle",
+    "slot": "Waist",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.412Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 14554,
+    "name": "Cloudkeeper Legplates",
+    "slot": "Legs",
+    "quality": "Epic",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.534Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18380,
+    "name": "Eldritch Reinforced Legplates",
+    "slot": "Legs",
+    "quality": "Rare",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.619Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16732,
+    "name": "Legplates of Valor",
+    "slot": "Legs",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.717Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 14616,
+    "name": "Bloodmail Boots",
+    "slot": "Feet",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.823Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12555,
+    "name": "Battlechaser's Greaves",
+    "slot": "Feet",
+    "quality": "Rare",
+    "itemLevel": 55,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:05.922Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13967,
+    "name": "Windreaver Greaves",
+    "slot": "Feet",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.025Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18500,
+    "name": "Tarnished Elven Ring",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.128Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17713,
+    "name": "Blackstone Ring",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 54,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.205Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 2246,
+    "name": "Myrmidon's Signet",
+    "slot": "Finger 1",
+    "quality": "Epic",
+    "itemLevel": 58,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.302Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12548,
+    "name": "Magni's Will",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.434Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13217,
+    "name": "Band of the Penitent",
+    "slot": "Finger 1",
+    "quality": "Uncommon",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.536Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19120,
+    "name": "Rune of the Guard Captain",
+    "slot": "Trinket 1",
+    "quality": "Uncommon",
+    "itemLevel": 51,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.639Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11684,
+    "name": "Ironfoe",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.742Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 811,
+    "name": "Axe of the Deep Woods",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 57,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.821Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18348,
+    "name": "Quel'Serrar",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 71,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:06.946Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12590,
+    "name": "Felstriker",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.055Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 871,
+    "name": "Flurry Axe",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 47,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.151Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 15806,
+    "name": "Mirah's Song",
+    "slot": "Main Hand",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.254Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13015,
+    "name": "Serathil",
+    "slot": "Main Hand",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.326Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18323,
+    "name": "Satyr's Bow",
+    "slot": "Ranged / Relic",
+    "quality": "Rare",
+    "itemLevel": 58,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.484Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12653,
+    "name": "Riphook",
+    "slot": "Ranged / Relic",
+    "quality": "Rare",
+    "itemLevel": 59,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.579Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12651,
+    "name": "Blackcrow",
+    "slot": "Ranged / Relic",
+    "quality": "Rare",
+    "itemLevel": 59,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T17:59:07.680Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 22385,
+    "name": "Titanic Leggings",
+    "slot": "Legs",
+    "quality": "Epic",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:15:59.897Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 15052,
+    "name": "Black Dragonscale Leggings",
+    "slot": "Legs",
+    "quality": "Rare",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.005Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19325,
+    "name": "Don Julio's Band",
+    "slot": "Finger 1",
+    "quality": "Epic",
+    "itemLevel": 65,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.100Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 21182,
+    "name": "Band of Earthen Might",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.209Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 21180,
+    "name": "Earthstrike",
+    "slot": "Trinket 1",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.408Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 15050,
+    "name": "Black Dragonscale Breastplate",
+    "slot": "Chest",
+    "quality": "Rare",
+    "itemLevel": 58,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.512Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 15051,
+    "name": "Black Dragonscale Shoulders",
+    "slot": "Shoulder",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:16:00.645Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 20130,
+    "name": "Diamond Flask",
+    "slot": "Trinket 1",
+    "quality": "Rare",
+    "itemLevel": 52,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:23:59.861Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16984,
+    "name": "Black Dragonscale Boots",
+    "slot": "Feet",
+    "quality": "Epic",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-08-12T21:24:01.150Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  }
+]

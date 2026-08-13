@@ -1,0 +1,21 @@
+import type { CharacterSource, ContentVersion, EquipmentSlot, EquippedItem, NormalizedCharacter, UpgradeRecommendation } from "../types.ts";
+import type { GearEvaluationStrategy } from "../curated-gear/types.ts";
+
+export type AnalysisConfidence = "High" | "Medium" | "Limited";
+export type AnalysisAssumptionSource = { label: string; type: "theorycraft" | "simulation" | "game-mechanic" | "curated" | "internal-heuristic"; url?: string; notes?: string; verifiedAt?: string };
+export type StatName = "Strength" | "Agility" | "Attack power" | "Crit" | "Hit" | "Stamina";
+export type BreakpointRule = { stat: StatName; target: number; belowWeight: number; atOrAboveWeight: number; label: string };
+export type SetBonus = { setId: string; pieces: number; label: string; value: number };
+export type SpecialEffect = { id: string; type: "Passive" | "Proc" | "OnUse"; label: string; effectiveStats: Partial<Record<StatName, number>>; confidence: AnalysisConfidence };
+export type WeaponRule = { allowedHands: Array<"Main Hand" | "Off Hand / Shield">; oneHandOnly?: boolean; dpsWeight: number; speedWeight: number; mainHandWeight: number; offHandWeight: number; weaponSkillNote: string };
+export type ActivityWeights = { major: number; meaningful: number; minor: number; bestInSlot: number; dungeonAccess: number; raidAccess: number; questAccess: number; uniqueSlotBonus: number };
+export type ProfileAssumption = { key: string; label: string; value: string | number; source: AnalysisAssumptionSource };
+export type SpecScoringProfile = { id: string; className: string; specialization: string; contentVersion: ContentVersion; currentPhase: number; strategy?: GearEvaluationStrategy; hitBreakpoint: BreakpointRule; statWeights: Partial<Record<StatName, number>>; weaponRule: WeaponRule; setBonuses: SetBonus[]; specialEffects: Record<string, SpecialEffect>; tierThresholds: { minor: number; meaningful: number; major: number; bestInSlot: number }; activityWeights: ActivityWeights; assumptions: string[]; assumptionSources: ProfileAssumption[] };
+export type CandidateAvailability = { contentVersion: ContentVersion; phase: number; realms: Array<"era" | "anniversary">; faction?: "Alliance" | "Horde"; classes?: string[]; professions?: string[] };
+export type CuratedCandidate = EquippedItem & { availability: CandidateAvailability; confidence: AnalysisConfidence; isBestInSlot?: boolean; isRealistic?: boolean; unknownSpecialEffect?: boolean; slotOptions?: EquipmentSlot[]; sourceQuality?: "verified" | "curated" | "unverified" };
+export type CombatSnapshot = { strength: number; agility: number; attackPower: number; crit: number; hit: number; hitTarget: number; hitState: "below" | "at-target" | "above"; weaponDps: number; weaponSpeed: number; setPieces: Record<string, number>; setValue: number; specialEffectValue: number; score: number };
+export type AnalysisAssumptions = { profileVersion: string; hitTarget: number; currentPhase: number; enchantTreatment: string; worldBuffs: string; specialEffects: string; methodologyPath: string };
+export type ActivitySummary = { destination: string; upgrades: UpgradeRecommendation[]; meaningfulCount: number; majorCount: number; bisCount: number; score: number; recommendation: string };
+export type GearAnalysisResult = { supported: boolean; status: "supported" | "unsupported"; message?: string; profileVersion?: string; currentSnapshot?: CombatSnapshot; recommendations: UpgradeRecommendation[]; bySlot: Record<string, { bestRealistic?: UpgradeRecommendation; bestInSlot?: UpgradeRecommendation; otherOptions: UpgradeRecommendation[] }>; activities: ActivitySummary[]; assumptions?: AnalysisAssumptions };
+export type GearAnalysisInput = { character: NormalizedCharacter; profile: SpecScoringProfile; candidates: CuratedCandidate[] };
+export type Loadout = Partial<Record<EquipmentSlot, EquippedItem>>;

@@ -1,0 +1,9 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { VersionShell } from "../../../components/version-shell";
+import { SectionHeader } from "../../../components/section-header";
+import { RaidCard, ToolCard, ClassCard } from "../../../components/cards";
+import { gameVersions, isGameVersion } from "../../../lib/game-data";
+import { GameVersion } from "../../../lib/types";
+const sections = ["raids", "classes", "gear", "tools", "guilds"];
+export default function SectionPage({ params }: { params: { version: string; section: string } }) { if (!isGameVersion(params.version) || !sections.includes(params.section)) notFound(); const version = params.version as GameVersion; const data = gameVersions[version]; const title = params.section[0].toUpperCase() + params.section.slice(1); return <VersionShell version={version}><main className="mx-auto min-h-[calc(100vh-148px)] max-w-[1240px] px-5 py-20 lg:px-8"><Link href={`/${version}`} className="mb-12 inline-block text-xs text-[var(--muted)] hover:text-[var(--primary-light)]">← Back to overview</Link><SectionHeader eyebrow={`${data.name} / ${title}`} title={title} description={params.section === "gear" ? "A focused place for upgrade paths and meaningful decisions." : `Your ${data.name} preparation workspace.`} />{params.section === "raids" && <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{data.raids.map((raid) => <RaidCard key={raid.name} raid={raid} version={version} />)}</div>}{params.section === "classes" && <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">{data.classes.map((info) => <ClassCard key={info.name} info={info} version={version} />)}</div>}{(params.section === "tools" || params.section === "gear" || params.section === "guilds") && <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{data.tools.map((tool) => <ToolCard key={tool.name} tool={tool} version={version} />)}</div>}</main></VersionShell>; }
