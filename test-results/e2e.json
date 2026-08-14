@@ -52,11 +52,164 @@
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.51.1",
+    "version": "1.55.1",
     "workers": 1,
     "webServer": null
   },
   "suites": [
+    {
+      "title": "accessibility.e2e.spec.ts",
+      "file": "accessibility.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "automated accessibility acceptance",
+          "file": "accessibility.e2e.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "public sign-in has no serious axe violations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1323,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-14T00:58:12.597Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e8c41682d34aafdba928-40cb54214900ee75cb66",
+              "file": "accessibility.e2e.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "authenticated guild surfaces have no serious axe violations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5602,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-14T00:58:13.998Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e8c41682d34aafdba928-f64120f5ec3e44ca867f",
+              "file": "accessibility.e2e.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "mobile guild workspace keeps primary controls reachable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1046,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-14T00:58:19.607Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e8c41682d34aafdba928-0bcb27923fccaaff1b46",
+              "file": "accessibility.e2e.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "sign-in and guild navigation are keyboard operable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1001,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-14T00:58:20.664Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e8c41682d34aafdba928-eb7a797536eceb460507",
+              "file": "accessibility.e2e.spec.ts",
+              "line": 41,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "audit-errors.e2e.spec.ts",
       "file": "audit-errors.e2e.spec.ts",
@@ -79,12 +232,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 696,
+                  "duration": 1312,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:48.604Z",
+                  "startTime": "2026-08-14T00:58:21.675Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -112,12 +266,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 429,
+                  "duration": 1117,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:49.364Z",
+                  "startTime": "2026-08-14T00:58:22.995Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -153,12 +308,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1982,
+                  "duration": 2575,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:49.798Z",
+                  "startTime": "2026-08-14T00:58:24.129Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -186,12 +342,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 422,
+                  "duration": 1020,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:51.783Z",
+                  "startTime": "2026-08-14T00:58:26.712Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -227,12 +384,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 271,
+                  "duration": 1197,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:52.211Z",
+                  "startTime": "2026-08-14T00:58:27.741Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -260,12 +418,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 305,
+                  "duration": 885,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:52.486Z",
+                  "startTime": "2026-08-14T00:58:28.958Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -293,12 +452,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 422,
+                  "duration": 1022,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:52.793Z",
+                  "startTime": "2026-08-14T00:58:29.854Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -308,6 +468,150 @@
           "id": "936e047bad223c7ef20d-830088ff697a5f0837be",
           "file": "browser.acceptance.spec.ts",
           "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "direct-actions.e2e.spec.ts",
+      "file": "direct-actions.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "unauthenticated guild creation form is rejected without a database mutation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1590,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:58:30.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c13195edcd94ffa3814-55ef9bd2cb9160371ee3",
+          "file": "direct-actions.e2e.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "cross-guild role action rejects altered guild and target identifiers",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1670,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:58:32.501Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c13195edcd94ffa3814-96322a7e0e9d4c39a3f2",
+          "file": "direct-actions.e2e.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "member signup action rejects a raid identifier from another guild",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1589,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:58:34.180Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c13195edcd94ffa3814-c43c439b076ac1815f60",
+          "file": "direct-actions.e2e.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "cross-guild claim review rejects an altered guild identifier",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:58:35.778Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c13195edcd94ffa3814-f6767c35be6c3c4a4068",
+          "file": "direct-actions.e2e.spec.ts",
+          "line": 59,
           "column": 5
         }
       ]
@@ -334,12 +638,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 490,
+                  "duration": 1143,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:53.221Z",
+                  "startTime": "2026-08-14T00:58:37.490Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -367,12 +672,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 385,
+                  "duration": 1030,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:53.714Z",
+                  "startTime": "2026-08-14T00:58:38.640Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -408,12 +714,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 457,
+                  "duration": 1065,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:54.103Z",
+                  "startTime": "2026-08-14T00:58:39.679Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -441,12 +748,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 385,
+                  "duration": 1013,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:54.563Z",
+                  "startTime": "2026-08-14T00:58:40.752Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -456,6 +764,48 @@
           "id": "7a46a0f97c7558a1775f-e1d36fe1ae996440705a",
           "file": "guilds.e2e.spec.ts",
           "line": 15,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "https-session.e2e.spec.ts",
+      "file": "https-session.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "HTTPS production proxy sets secure HttpOnly session and sign-out removes access",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1102,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:58:41.775Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef897462946220484591-959aea5d16ed1f3594b4",
+          "file": "https-session.e2e.spec.ts",
+          "line": 4,
           "column": 5
         }
       ]
@@ -482,12 +832,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 420,
+                  "duration": 1043,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:54.953Z",
+                  "startTime": "2026-08-14T00:58:42.886Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -515,12 +866,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 414,
+                  "duration": 1034,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:55.376Z",
+                  "startTime": "2026-08-14T00:58:43.936Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -548,12 +900,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 402,
+                  "duration": 1043,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:55.792Z",
+                  "startTime": "2026-08-14T00:58:44.977Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -589,12 +942,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 357,
+                  "duration": 1001,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:56.199Z",
+                  "startTime": "2026-08-14T00:58:46.030Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -622,12 +976,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 416,
+                  "duration": 1062,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:56.558Z",
+                  "startTime": "2026-08-14T00:58:47.039Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -663,12 +1018,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1460,
+                  "duration": 2670,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:56.980Z",
+                  "startTime": "2026-08-14T00:58:48.110Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -696,12 +1052,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 526,
+                  "duration": 1182,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:58.442Z",
+                  "startTime": "2026-08-14T00:58:50.787Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -737,12 +1094,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 385,
+                  "duration": 991,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:58.973Z",
+                  "startTime": "2026-08-14T00:58:51.979Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -770,12 +1128,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 340,
+                  "duration": 1282,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:59.360Z",
+                  "startTime": "2026-08-14T00:58:52.978Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -811,12 +1170,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 435,
+                  "duration": 1093,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:14:59.705Z",
+                  "startTime": "2026-08-14T00:58:54.270Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -844,12 +1204,13 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 327,
+                  "duration": 979,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T00:15:00.143Z",
+                  "startTime": "2026-08-14T00:58:55.370Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
@@ -866,9 +1227,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-14T00:14:48.079Z",
-    "duration": 12489.906,
-    "expected": 22,
+    "startTime": "2026-08-14T00:58:11.846Z",
+    "duration": 44621.207,
+    "expected": 31,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
