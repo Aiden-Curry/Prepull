@@ -1,0 +1,4 @@
+import { test, expect } from "@playwright/test";
+import { signIn, attemptSignIn, base, expectSafeError } from "./helpers";
+test("valid credentials, invalid credentials, unknown user, and disabled user are generic", async ({ page }) => { await attemptSignIn(page, base.email, "wrong-password"); await expect(page).toHaveURL(/auth\/signin|api\/auth\/error/); await expectSafeError(page); await attemptSignIn(page, "unknown@prepull.test", "wrong-password"); await expectSafeError(page); await attemptSignIn(page, "e2e-disabled@prepull.test", base.password); await expectSafeError(page); });
+test("protected route redirects unauthenticated and sign-in reaches guilds", async ({ page }) => { await page.goto("/era/guilds"); await expect(page).toHaveURL(/auth\/signin/); await signIn(page); await expect(page).toHaveURL(/era\/guilds/); });

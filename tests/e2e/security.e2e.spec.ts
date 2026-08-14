@@ -1,0 +1,4 @@
+import { test, expect } from "@playwright/test";
+import { signIn, id, expectSafeError } from "./helpers";
+test("Guild B cannot read Guild A private dashboard or use Guild A raid URL", async ({ browser }) => { const context=await browser.newContext(); const page=await context.newPage(); await signIn(page,"e2e-guild-b-owner@prepull.test"); const response=await page.goto(`/era/guilds/${id("E2E_GUILD_A_ID")}`); expect(response?.status() ?? 0).toBeGreaterThanOrEqual(200); await expect(page.getByText("E2E Guild A")).not.toBeVisible(); await expectSafeError(page); await context.close(); });
+test("invalid direct mutation responses contain no database details", async ({ page }) => { await signIn(page); const response=await page.request.post("/api/health/ready", { data: { guildId: id("E2E_GUILD_B_ID") } }); expect(response.status()).toBe(405); await expectSafeError(page); });

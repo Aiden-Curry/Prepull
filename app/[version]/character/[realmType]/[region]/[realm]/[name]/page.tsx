@@ -16,12 +16,13 @@ function ProviderState({ version, title, message, realmType }: { version: Conten
   return <VersionShell version={version}><main className="grid min-h-[calc(100vh-148px)] place-items-center px-5 text-center"><div><div className="eyebrow mb-4">Character lookup / {realmType.toUpperCase()}</div><h1 className="display text-4xl">{title}</h1><p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[var(--muted)]">{message}</p><div className="mt-7 flex justify-center gap-3"><Link href={`/${version}`} className="rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-[var(--background)]">Back to search</Link><Link href={`/${version}/character/era/eu/firemaw/aidy`} className="rounded-full border border-[var(--line)] px-5 py-3 text-sm font-bold text-[var(--text)]">Use sample character</Link></div></div></main></VersionShell>;
 }
 
-export default async function CharacterPage({ params }: { params: { version: string; realmType: string; region: string; realm: string; name: string } }) {
-  if (!isContentVersion(params.version) || !["era", "anniversary"].includes(params.realmType) || !["eu", "us"].includes(params.region)) notFound();
-  const version = params.version as ContentVersion;
-  const realmType = params.realmType as CharacterRealmType;
+export default async function CharacterPage({ params }: { params: Promise<{ version: string; realmType: string; region: string; realm: string; name: string }> }) {
+  const resolvedParams = await params;
+  if (!isContentVersion(resolvedParams.version) || !["era", "anniversary"].includes(resolvedParams.realmType) || !["eu", "us"].includes(resolvedParams.region)) notFound();
+  const version = resolvedParams.version as ContentVersion;
+  const realmType = resolvedParams.realmType as CharacterRealmType;
   try {
-    const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType, region: params.region as Region, realm: params.realm, characterName: params.name });
+    const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
     if (!character) return <ProviderState version={version} realmType={realmType} title="Character not found." message={`We could not find that ${realmType} character. Check the realm, region, and spelling, then try again.`} />;
     const analysis = analyzeCharacter(character);
     const recommendations = analysis.supported ? analysis.recommendations : [];
@@ -30,10 +31,10 @@ export default async function CharacterPage({ params }: { params: { version: str
   } catch (error) {
     if (error instanceof CharacterProviderError) {
       if (error.code === "CharacterNotFound" || error.code === "RealmNotFound") return <ProviderState version={version} realmType={realmType} title="Character not found." message="Blizzard did not return a matching character profile." />;
-      if (error.code === "UnsupportedRealmType" || error.code === "UnsupportedGameVersion") return <ProviderState version={version} realmType={realmType} title="Live data unavailable for this realm type." message="Blizzard’s currently verified profile API does not expose this realm ecosystem yet. PrePull has not substituted another ecosystem." />;
+      if (error.code === "UnsupportedRealmType" || error.code === "UnsupportedGameVersion") return <ProviderState version={version} realmType={realmType} title="Live data unavailable for this realm type." message="BlizzardÃ¢â‚¬â„¢s currently verified profile API does not expose this realm ecosystem yet. PrePull has not substituted another ecosystem." />;
       return <ProviderState version={version} realmType={realmType} title="Provider unavailable." message={error.message} />;
     }
-    console.error("[character-page] unexpected provider failure", { version, realmType, region: params.region });
+    console.error("[character-page] unexpected provider failure", { version, realmType, region: resolvedParams.region });
     return <ProviderState version={version} realmType={realmType} title="Provider unavailable." message="The character provider returned an unexpected error. Please try again." />;
   }
 }

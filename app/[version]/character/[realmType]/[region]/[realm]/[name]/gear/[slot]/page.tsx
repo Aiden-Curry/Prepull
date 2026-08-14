@@ -9,12 +9,13 @@ import { AnalysisSlotPanel } from "../../../../../../../../../components/analysi
 import { evaluateCuratedReference } from "../../../../../../../../../lib/curated-gear/evaluate";
 import { CuratedSlotPanel } from "../../../../../../../../../components/curated-ui";
 
-export default async function GearSlotPage({ params }: { params: { version: string; realmType: string; region: string; realm: string; name: string; slot: string } }) {
-  if (!isContentVersion(params.version) || !["era", "anniversary"].includes(params.realmType) || !["eu", "us"].includes(params.region)) notFound();
-  const version = params.version as ContentVersion;
-  const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType: params.realmType as CharacterRealmType, region: params.region as Region, realm: params.realm, characterName: params.name });
+export default async function GearSlotPage({ params }: { params: Promise<{ version: string; realmType: string; region: string; realm: string; name: string; slot: string }> }) {
+  const resolvedParams = await params;
+  if (!isContentVersion(resolvedParams.version) || !["era", "anniversary"].includes(resolvedParams.realmType) || !["eu", "us"].includes(resolvedParams.region)) notFound();
+  const version = resolvedParams.version as ContentVersion;
+  const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType: resolvedParams.realmType as CharacterRealmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
   if (!character) notFound();
-  const slot = params.slot.replaceAll("-", " ");
+  const slot = resolvedParams.slot.replaceAll("-", " ");
   const analysis = analyzeCharacter(character);
   const recommendation = analysis.supported ? analysis.bySlot[slot]?.bestRealistic ?? analysis.bySlot[slot]?.bestInSlot : undefined;
   const curated = character.contentVersion === "era" && character.class === "Warrior" && character.spec === "Fury" ? evaluateCuratedReference(character) : undefined;
