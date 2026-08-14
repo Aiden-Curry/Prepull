@@ -37,6 +37,7 @@
     "acceptance:guilds": "npm run config:check:production && npm run test:e2e",
     "test:security": "npm run test:integration",
     "validate:action-inventory": "node --experimental-strip-types scripts/validate-action-inventory.ts",
+    "validate:action-coverage": "node --experimental-strip-types scripts/validate-action-coverage.ts",
     "acceptance:deployment": "node --experimental-strip-types scripts/acceptance-deployment.ts"
   },
   "dependencies": {
