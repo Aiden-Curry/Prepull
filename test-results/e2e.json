@@ -58,6 +58,80 @@
   },
   "suites": [
     {
+      "title": "audit-errors.e2e.spec.ts",
+      "file": "audit-errors.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guild and raid rendered output contains no secret or raw-error material",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 696,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:48.604Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11da7b24849410c9ae88-5029c4024bc7b5475350",
+          "file": "audit-errors.e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "missing guild and raid responses remain generic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:49.364Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11da7b24849410c9ae88-5679f352fa945d70ef67",
+          "file": "audit-errors.e2e.spec.ts",
+          "line": 19,
+          "column": 5
+        }
+      ]
+    },
+    {
       "title": "auth.e2e.spec.ts",
       "file": "auth.e2e.spec.ts",
       "column": 0,
@@ -79,12 +153,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2451,
+                  "duration": 1982,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:38.630Z",
+                  "startTime": "2026-08-14T00:14:49.798Z",
                   "attachments": []
                 }
               ],
@@ -112,12 +186,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 599,
+                  "duration": 422,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:41.252Z",
+                  "startTime": "2026-08-14T00:14:51.783Z",
                   "attachments": []
                 }
               ],
@@ -153,12 +227,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 380,
+                  "duration": 271,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:41.859Z",
+                  "startTime": "2026-08-14T00:14:52.211Z",
                   "attachments": []
                 }
               ],
@@ -186,12 +260,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 476,
+                  "duration": 305,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:42.244Z",
+                  "startTime": "2026-08-14T00:14:52.486Z",
                   "attachments": []
                 }
               ],
@@ -219,12 +293,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 487,
+                  "duration": 422,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:42.724Z",
+                  "startTime": "2026-08-14T00:14:52.793Z",
                   "attachments": []
                 }
               ],
@@ -260,12 +334,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 844,
+                  "duration": 490,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:43.219Z",
+                  "startTime": "2026-08-14T00:14:53.221Z",
                   "attachments": []
                 }
               ],
@@ -293,12 +367,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 578,
+                  "duration": 385,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:44.066Z",
+                  "startTime": "2026-08-14T00:14:53.714Z",
                   "attachments": []
                 }
               ],
@@ -308,6 +382,261 @@
           "id": "c84f25b81f3aa732da32-7950b45b3ac4653eeaa6",
           "file": "guilds-roster.e2e.spec.ts",
           "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "guilds.e2e.spec.ts",
+      "file": "guilds.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "owner sees only accessible guild workspaces and persisted roster summary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:54.103Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a46a0f97c7558a1775f-7e44574daa623b539bf4",
+          "file": "guilds.e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "guild creation form preserves independent content and realm concepts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 385,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:54.563Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a46a0f97c7558a1775f-e1d36fe1ae996440705a",
+          "file": "guilds.e2e.spec.ts",
+          "line": 15,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "raids.e2e.spec.ts",
+      "file": "raids.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "assigned raid leader receives assignment controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 420,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:54.953Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5ee10384230e82110d60-27652fa300b10aa6b201",
+          "file": "raids.e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "unassigned raid leader may view but cannot manage assignments",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 414,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:55.376Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5ee10384230e82110d60-8cfdc995b5934f41802b",
+          "file": "raids.e2e.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "member sees own signup flow and raid readiness without officer mutation controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 402,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:55.792Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5ee10384230e82110d60-484fcb451d3f5a2cd301",
+          "file": "raids.e2e.spec.ts",
+          "line": 21,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "roster-import.e2e.spec.ts",
+      "file": "roster-import.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "officer can reach the deterministic CSV preview workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:56.199Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd9994755f797a4b1ad-7bc5aec6b74b6bb9f53e",
+          "file": "roster-import.e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "synthetic CSV fixtures stay local to the browser test and never enter rendered audit output",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:56.558Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd9994755f797a4b1ad-7b21a5d0f1b7ed0c1068",
+          "file": "roster-import.e2e.spec.ts",
+          "line": 12,
           "column": 5
         }
       ]
@@ -334,12 +663,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2432,
+                  "duration": 1460,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:44.651Z",
+                  "startTime": "2026-08-14T00:14:56.980Z",
                   "attachments": []
                 }
               ],
@@ -367,12 +696,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 755,
+                  "duration": 526,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:47.086Z",
+                  "startTime": "2026-08-14T00:14:58.442Z",
                   "attachments": []
                 }
               ],
@@ -408,12 +737,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 526,
+                  "duration": 385,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:47.849Z",
+                  "startTime": "2026-08-14T00:14:58.973Z",
                   "attachments": []
                 }
               ],
@@ -441,12 +770,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 508,
+                  "duration": 340,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-13T23:41:48.378Z",
+                  "startTime": "2026-08-14T00:14:59.360Z",
                   "attachments": []
                 }
               ],
@@ -459,13 +788,87 @@
           "column": 5
         }
       ]
+    },
+    {
+      "title": "settings-claims.e2e.spec.ts",
+      "file": "settings-claims.e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "owner settings expose safe claim methodology and permission controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:14:59.705Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c405d839529e231528b2-c229c7d91ffa56cd3b4d",
+          "file": "settings-claims.e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "member settings expose claim submission but not officer controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 327,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-14T00:15:00.143Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c405d839529e231528b2-e808be52ecb49376924a",
+          "file": "settings-claims.e2e.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-13T23:41:37.776Z",
-    "duration": 11238.262,
-    "expected": 11,
+    "startTime": "2026-08-14T00:14:48.079Z",
+    "duration": 12489.906,
+    "expected": 22,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -1,0 +1,12 @@
+ ⨯ TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+    at p (C:\Users\aidy6\Prepull\.next\server\app\[version]\guilds\[guildId]\settings\page.js:2:10944) {
+  digest: '1093473690'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+    at p (C:\Users\aidy6\Prepull\.next\server\app\[version]\guilds\[guildId]\settings\page.js:2:10944) {
+  digest: '1093473690'
+}
+ ⨯ TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+    at p (C:\Users\aidy6\Prepull\.next\server\app\[version]\guilds\[guildId]\settings\page.js:2:10944) {
+  digest: '1093473690'
+}
