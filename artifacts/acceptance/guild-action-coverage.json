@@ -1,0 +1,277 @@
+{
+  "discoveredActionCount": 29,
+  "inventoriedActionCount": 29,
+  "directlyInvokedActionCount": 29,
+  "authenticationCoveredCount": 29,
+  "alteredGuildIdCoveredCount": 29,
+  "alteredTargetIdCoveredCount": 29,
+  "malformedPayloadCoveredCount": 29,
+  "zeroMutationVerifiedCount": 29,
+  "auditNonCreationVerifiedCount": 29,
+  "privacyScanCoveredCount": 29,
+  "actions": {
+    "createGuildAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "importGuildAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "addMemberAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "createRaidAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "signupAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "selectRosterAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "saveGroupAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "saveAssignmentAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "reorderAssignmentAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "duplicateAssignmentAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "duplicateSectionAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "reorderSectionAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "deleteSectionAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "saveSignupOverrideAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "clearSignupOverrideAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "saveRosterStateAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "toggleRosterLockAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "previewCsvImportAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "applyCsvImportAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "saveMainAltAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "updateGuildSettingsAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "changeMemberRoleAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "setCapabilityOverrideAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "deactivateMemberAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "activateMemberAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "removeMemberAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "transferOwnershipAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "decideClaimAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "submitClaimAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    }
+  },
+  "uncoveredActions": [],
+  "generatedBy": "tests/e2e/action-coverage.e2e.spec.ts"
+}

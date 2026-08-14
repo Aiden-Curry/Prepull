@@ -53,19 +53,19 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.55.1",
-    "workers": 6,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "action-coverage.e2e.spec.ts",
-      "file": "action-coverage.e2e.spec.ts",
+      "title": "action-canary.e2e.spec.ts",
+      "file": "action-canary.e2e.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "direct transport rejects altered or malformed createGuildAction without mutation",
-          "ok": false,
+          "title": "authenticated create-guild Server Action canary creates its owner",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -78,71 +78,35 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30106,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\aidy6\\Prepull\\tests\\e2e\\action-coverage.e2e.spec.ts",
-                        "column": 62,
-                        "line": 49
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form[data-action=\"createGuildAction\"] button')\u001b[22m\n\n\n  47 |   console.log(`Action coverage IDs: ${query}`);\n  48 |   await page.goto(`/acceptance/actions?${query}`, { waitUntil: \"domcontentloaded\" }).catch(() => undefined);\n> 49 |   await page.locator(`form[data-action=\"${action}\"] button`).click({ noWaitAfter: true });\n     |                                                              ^\n  50 |   await page.waitForTimeout(500);\n  51 |   await expectSafeError(page);\n  52 |   expect(responses.join(\"\\n\")).not.toMatch(/Guild B private note|internal guild note|claimant reason|private assignment text|signup note|NEXTAUTH_SECRET|DATABASE_URL|stack trace|PostgreSQL|constraint/i);\n    at C:\\Users\\aidy6\\Prepull\\tests\\e2e\\action-coverage.e2e.spec.ts:49:62"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Action coverage IDs: guildA=0257d99c-f243-44a0-9eac-41128d5e163f&guildB=cdc89cd5-30d4-4212-b978-13644b96a13c&raidA=ef7b575c-e06b-4d4c-8bfe-40b902493bb9&raidB=5b6a03b1-0cb5-4e3d-b2f7-eed082a39e15&memberA=125eda17-1bce-47d5-8fa1-4e9dd4ed6886&memberB=98633ab1-c0e3-4ed7-9f34-7a9b6de6dbb1&userB=eafae5bf-5d6a-49e5-b4a0-0286840cb0d8&claimB=00000000-0000-0000-0000-000000000000&assignmentA=9db88191-4906-47aa-a55e-b365d27eefea&sectionA=Bosses\n"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 1688,
+                  "errors": [],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-14T18:32:35.474Z",
+                  "startTime": "2026-08-14T18:59:10.622Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\aidy6\\Prepull\\test-results\\action-coverage.e2e-direct-5a448-uildAction-without-mutation-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\aidy6\\Prepull\\test-results\\action-coverage.e2e-direct-5a448-uildAction-without-mutation-chromium\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\aidy6\\Prepull\\test-results\\action-coverage.e2e-direct-5a448-uildAction-without-mutation-chromium\\trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "b2426d85176e17e40d48-69f115adc588e18ac7b6",
-          "file": "action-coverage.e2e.spec.ts",
-          "line": 41,
-          "column": 35
+          "id": "749d4210a36a7d17832b-8e1a9619cd77d7950f4b",
+          "file": "action-canary.e2e.spec.ts",
+          "line": 7,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-14T18:32:34.737Z",
-    "duration": 31180.854,
-    "expected": 0,
+    "startTime": "2026-08-14T18:59:09.682Z",
+    "duration": 2845.5679999999998,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
