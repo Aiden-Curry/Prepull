@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts tests/settings.test.ts tests/main-alt.test.ts tests/production-config.test.ts",
+    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts tests/settings.test.ts tests/main-alt.test.ts tests/production-config.test.ts tests/image-trust.test.ts",
     "test:integration": "node --test --experimental-strip-types tests/postgres.integration.test.ts tests/postgres.workflows.integration.test.ts tests/postgres.settings.integration.test.ts tests/postgres.raid.integration.test.ts tests/postgres.main-alt.integration.test.ts",
     "validate:gear": "node --experimental-strip-types scripts/validate-gear-dataset.ts",
     "validate:curated": "node --experimental-strip-types scripts/validate-curated-gear.ts",
@@ -35,7 +35,9 @@
     "test:e2e:headed": "playwright test --headed",
     "db:seed:e2e": "node --experimental-strip-types scripts/db-seed-e2e.ts",
     "acceptance:guilds": "npm run config:check:production && npm run test:e2e",
-    "test:security": "npm run test:integration"
+    "test:security": "npm run test:integration",
+    "validate:action-inventory": "node --experimental-strip-types scripts/validate-action-inventory.ts",
+    "acceptance:deployment": "node --experimental-strip-types scripts/acceptance-deployment.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
