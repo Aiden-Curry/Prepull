@@ -16,4 +16,9 @@ a { color: inherit; text-decoration: none; }
 .eyebrow { color: var(--primary-light); font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 .panel { background: color-mix(in srgb, var(--surface) 94%, transparent); border: 1px solid var(--line); box-shadow: 0 16px 42px rgba(0,0,0,.16); }
 .focus-ring:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 3px; }
+.button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; border-radius: .65rem; padding: .7rem 1rem; font-size: .875rem; font-weight: 700; transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease; }
+.button-primary { background: var(--primary); color: var(--background); }
+.button-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.button-secondary { border: 1px solid var(--line); color: var(--text); }
+.button-secondary:hover { border-color: var(--primary); color: var(--primary-light); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
