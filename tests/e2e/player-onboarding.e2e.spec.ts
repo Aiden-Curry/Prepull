@@ -1,5 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { signIn, expectSafeError } from "./helpers";
+import { signIn, expectSafeError, resetPlayerState } from "./helpers";
+
+test.beforeEach(() => resetPlayerState());
+test.afterEach(() => resetPlayerState());
 
 test("onboarding and dashboard redirect anonymously", async ({ page }) => {
   for (const path of ["/era/onboarding", "/era/dashboard", "/era/characters/connect"]) {
@@ -32,7 +35,7 @@ test("authenticated player can save, choose, and remove a character", async ({ p
   await expect(page.getByText("Primary").first()).toBeVisible();
   await page.goto("/era/dashboard");
   await expect(page.getByText("Aidy").first()).toBeVisible();
-  await page.getByRole("button", { name: "Remove" }).click();
+  await page.getByRole("article").filter({ hasText: "Aidy" }).getByRole("button", { name: "Remove" }).click();
   await expect(page.getByText("Choose a character to make this home yours.")).toBeVisible();
 });
 

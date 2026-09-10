@@ -18,6 +18,19 @@ await withTransaction(async (client) => {
   for (const [key, email, _role, active] of users) {
     const row = await client.query("INSERT INTO users(email,password_hash,name,active) VALUES($1,$2,$3,$4) ON CONFLICT(email) DO UPDATE SET password_hash=excluded.password_hash,name=excluded.name,active=excluded.active RETURNING id", [email, await bcrypt.hash(password, 4), `E2E ${key}`, active]); ids.set(key, row.rows[0].id);
   }
+  const syntheticUserIds = [...ids.values()];
+  // Player fixtures are deliberately reset for synthetic E2E users only. Keep
+  // guild fixtures and all non-E2E personal data untouched.
+  await client.query("DELETE FROM character_sync_items WHERE sync_id IN (SELECT syncs.id FROM character_syncs syncs JOIN user_characters characters ON characters.id=syncs.user_character_id WHERE characters.user_id=ANY($1::uuid[]))", [syntheticUserIds]);
+  await client.query("DELETE FROM character_syncs WHERE user_character_id IN (SELECT id FROM user_characters WHERE user_id=ANY($1::uuid[]))", [syntheticUserIds]);
+  await client.query("DELETE FROM user_characters WHERE user_id=ANY($1::uuid[])", [syntheticUserIds]);
+  const activePlayerRows = await client.query<{ count: string }>("SELECT count(*)::text AS count FROM user_characters WHERE user_id=ANY($1::uuid[]) AND archived_at IS NULL", [syntheticUserIds]);
+  const scopedSyncRows = await client.query<{ count: string }>("SELECT count(*)::text AS count FROM character_syncs syncs JOIN user_characters characters ON characters.id=syncs.user_character_id WHERE characters.user_id=ANY($1::uuid[])", [syntheticUserIds]);
+  const orphanSyncRows = await client.query<{ count: string }>("SELECT count(*)::text AS count FROM character_syncs syncs WHERE NOT EXISTS (SELECT 1 FROM user_characters characters WHERE characters.id=syncs.user_character_id)");
+  const orphanItemRows = await client.query<{ count: string }>("SELECT count(*)::text AS count FROM character_sync_items items WHERE NOT EXISTS (SELECT 1 FROM character_syncs syncs WHERE syncs.id=items.sync_id)");
+  if (activePlayerRows.rows[0].count !== "0" || scopedSyncRows.rows[0].count !== "0" || orphanSyncRows.rows[0].count !== "0" || orphanItemRows.rows[0].count !== "0") throw new Error(`E2E player reset verification failed: active=${activePlayerRows.rows[0].count}, scopedSyncs=${scopedSyncRows.rows[0].count}, orphanSyncs=${orphanSyncRows.rows[0].count}, orphanItems=${orphanItemRows.rows[0].count}`);
+  const owner = await client.query<{ count: string }>("SELECT count(*)::text AS count FROM user_characters WHERE user_id=$1 AND archived_at IS NULL", [ids.get("owner")]);
+  console.log(JSON.stringify({ playerReset: { syntheticUsers: syntheticUserIds.length, ownerActiveCharacters: Number(owner.rows[0].count), scopedSyncs: Number(scopedSyncRows.rows[0].count), orphanSyncs: Number(orphanSyncRows.rows[0].count), orphanItems: Number(orphanItemRows.rows[0].count) } }));
   const guild = async (name: string, owner: string, version: "era" | "tbc") => {
     const found = await client.query("SELECT id FROM guilds WHERE name=$1 AND owner_user_id=$2 AND archived_at IS NULL", [name, ids.get(owner)]);
     return found.rows[0] ?? (await client.query("INSERT INTO guilds(name,region,realm_slug,realm_name,character_realm_type,content_version,faction,description,owner_user_id) VALUES($1,'eu','firemaw','Firemaw','era',$2,'Horde','Synthetic E2E guild.', $3) RETURNING id", [name, version, ids.get(owner)])).rows[0];

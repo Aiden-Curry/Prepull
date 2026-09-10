@@ -1,6 +1,9 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { signIn } from "./helpers";
+import { resetPlayerState, signIn } from "./helpers";
+
+test.beforeEach(() => resetPlayerState());
+test.afterEach(() => resetPlayerState());
 
 test("player onboarding surfaces have no serious or critical axe violations", async ({ page }) => {
   await signIn(page);

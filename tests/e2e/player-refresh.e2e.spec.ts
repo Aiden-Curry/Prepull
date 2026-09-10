@@ -1,5 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { signIn } from "./helpers";
+import { resetPlayerState, signIn } from "./helpers";
+
+test.beforeEach(() => resetPlayerState());
+test.afterEach(() => resetPlayerState());
 
 test("first character refresh establishes a baseline and keeps advice visible", async ({ page }) => {
   await signIn(page);
@@ -10,7 +13,6 @@ test("first character refresh establishes a baseline and keeps advice visible", 
   await page.getByRole("button", { name: "Refresh character" }).click();
   await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
   await expect(page.getByText(/What should I do next\?/)).toBeVisible();
-  await page.getByRole("button", { name: "Remove" }).last().click();
 });
 
 test("Anniversary refresh remains explicitly unsupported", async ({ page }) => {
@@ -22,6 +24,6 @@ test("Anniversary refresh remains explicitly unsupported", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Aidy" }).last()).toBeVisible();
   await page.goto("/tbc/dashboard");
   await page.getByRole("button", { name: "Refresh character" }).click();
-  await expect(page.getByText(/Live Anniversary character profiles aren't available yet/)).toBeVisible();
+  await expect(page.getByText(/Live Anniversary character profiles aren't available yet/).first()).toBeVisible();
   await page.getByRole("button", { name: "Remove" }).click();
 });

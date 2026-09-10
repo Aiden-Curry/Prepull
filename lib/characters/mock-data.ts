@@ -4,7 +4,7 @@ import { normalizeLookup } from "./normalization";
 import { eraFuryFixtures } from "../gear-analysis/fixtures";
 const gear = (items: Record<string, EquippedItem>) => Object.values(items);
 export const mockCharacters: NormalizedCharacter[] = [
-  { id: "era-eu-firemaw-aidy", name: "Aidy", region: "eu", realm: "Firemaw", contentVersion: "era", realmType: "era", level: 60, race: "Orc", class: "Warrior", spec: "Fury", faction: "Horde", professions: ["Mining", "Engineering"], equipment: gear(eraItems) },
+  { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-aidy", name: "Aidy", dataMeta: { provider: "mock", isLive: false } },
   { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-freshfury", name: "Freshfury", dataMeta: { provider: "mock", isLive: false } },
   { id: "era-us-whitemane-lyria", name: "Lyria", region: "us", realm: "Whitemane", contentVersion: "era", realmType: "era", level: 60, race: "Human", class: "Mage", spec: "Frost", faction: "Alliance", professions: ["Tailoring", "Enchanting"], equipment: gear(eraItems).map((item) => ({ ...item, name: item.slot === "Main Hand" ? "Azuresong Mageblade" : item.name, stats: item.slot === "Main Hand" ? { "Spell power": "+30", "Critical strike": "+1%" } : item.stats })) },
   { id: "tbc-anniversary-spineshatter-aidy", name: "Aidy", region: "eu", realm: "Spineshatter", contentVersion: "tbc", realmType: "anniversary", level: 70, race: "Orc", class: "Warrior", spec: "Protection", faction: "Horde", professions: ["Jewelcrafting", "Mining"], equipment: gear(tbcItems) },
