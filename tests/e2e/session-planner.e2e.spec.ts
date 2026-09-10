@@ -11,13 +11,13 @@ async function save(page: Parameters<typeof addCharacter>[0], character: string,
   await expect(page.getByRole("heading", { name: character, exact: true })).toBeVisible();
 }
 
-test("builds, switches, and copies a persisted Fury session plan", async ({ page }) => {
+test("builds, switches, and copies a persisted Fury session plan", async ({ page, context }) => {
   await signIn(page);
   await save(page, "Aidy");
   await page.goto("/era/dashboard");
   await expect(page.getByText("Refresh your character before building a personalized session plan.")).toBeVisible();
   await page.getByRole("button", { name: "Refresh character" }).click();
-  await expect(page.getByText(/Updated just now/)).toBeVisible();
+  await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
 
   await page.getByText("90 minutes", { exact: true }).click();
   await page.getByText("Best progress", { exact: true }).click();
@@ -26,8 +26,10 @@ test("builds, switches, and copies a persisted Fury session plan", async ({ page
   await expect(page.getByText("Tonight's plan")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Main goal" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View activity details →" }).first()).toBeVisible();
+  await context.grantPermissions(["clipboard-read", "clipboard-write"], { origin: new URL(page.url()).origin });
   await page.getByRole("button", { name: "Copy plan" }).click();
   await expect(page.getByRole("button", { name: "Plan copied" })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => navigator.clipboard.readText())).toContain("PrePull plan");
 
   await page.getByText("Dungeons", { exact: true }).click();
   await page.getByRole("button", { name: "Build my plan" }).click();
@@ -45,7 +47,7 @@ test("blocks unsynced planning and keeps unsupported planning safe", async ({ pa
   await page.goto("/era/dashboard");
   await page.getByRole("button", { name: "Switch to Lyria" }).click();
   await page.getByRole("button", { name: "Refresh character" }).click();
-  await expect(page.getByText(/Updated just now/)).toBeVisible();
+  await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
   await expect(page.getByText("Session planning based on gear upgrades isn't available for this specialization yet.")).toBeVisible();
   await expect(page.getByRole("button", { name: "Build my plan" })).toHaveCount(0);
 });
