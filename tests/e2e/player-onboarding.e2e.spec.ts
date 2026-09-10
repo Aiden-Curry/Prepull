@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { signIn, expectSafeError, resetPlayerState } from "./helpers";
+import { addCharacter, signIn, expectSafeError, resetPlayerState } from "./helpers";
 
 test.beforeEach(() => resetPlayerState());
 test.afterEach(() => resetPlayerState());
@@ -28,8 +28,7 @@ test("authenticated player can search the deterministic character provider", asy
 test("authenticated player can save, choose, and remove a character", async ({ page }) => {
   await signIn(page);
   await page.goto("/era/characters/connect?search=1&region=eu&realmType=era&realm=firemaw&name=aidy");
-  await page.getByRole("button", { name: "Add to PrePull" }).click();
-  await page.waitForTimeout(500);
+  await addCharacter(page);
   await page.goto("/era/onboarding");
   await expect(page.getByRole("heading", { name: "Aidy" })).toBeVisible();
   await expect(page.getByText("Primary").first()).toBeVisible();
