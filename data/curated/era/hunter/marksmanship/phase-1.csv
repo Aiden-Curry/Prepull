@@ -1,0 +1,16 @@
+contentVersion,class,spec,role,phase,context,setId,slot,itemId,tier,rank,sourceType,sourceName,activity,boss,faction,race,profession,notes,provenanceId,verificationStatus
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Head,16846,bis,1,raid,Molten Core,Molten Core,Garr,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Neck,18404,bis,1,quest,Onyxia's Lair,Onyxia's Lair,,,,,Faction quest paths apply.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Shoulder,16848,bis,1,raid,Molten Core,Molten Core,Sulfuron Harbinger,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Back,17102,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Reviewed physical cloak.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Chest,16845,bis,1,raid,Molten Core,Molten Core,Golemagg the Incinerator,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Wrist,16850,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Hands,16852,bis,1,raid,Molten Core,Molten Core,Shazzrah,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Waist,16851,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Legs,16938,bis,1,raid,Molten Core,Molten Core,Magmadar,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Feet,16849,bis,1,raid,Molten Core,Molten Core,Gehennas,,,,Reviewed Hunter tier target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Finger 1,17063,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Unique raid ring target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Finger 2,18821,bis,1,raid,Molten Core,Molten Core,,,,,Unique raid ring target.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Main Hand,18832,bis,1,raid,Molten Core,Molten Core,Garr,,,Melee stat stick,One-hand melee stat-stick path.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Off Hand / Shield,18805,bis,1,raid,Molten Core,Molten Core,Majordomo Executus,,,Melee stat stick,One-hand melee stat-stick path.,hunter-classic-era-2026-09,curated
+era,hunter,marksmanship,DPS,phase-1,general,era-marksmanship-hunter-phase-1,Ranged / Relic,17069,bis,1,raid,Molten Core,Molten Core,Magmadar,,,Ranged weapon,Primary ranged weapon target.,hunter-classic-era-2026-09,curated

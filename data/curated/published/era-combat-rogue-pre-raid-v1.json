@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "specKey": "era-rogue-combat",
+  "datasetVersion": "era-combat-rogue-pre-raid-v1",
+  "identity": {
+    "contentVersion": "era",
+    "className": "Rogue",
+    "specName": "Combat",
+    "level": 60,
+    "role": "DPS"
+  },
+  "phase": {
+    "number": 0,
+    "label": "Pre-Raid",
+    "setId": "era-combat-rogue-pre-raid"
+  },
+  "sourceDatasets": [
+    {
+      "phase": 0,
+      "path": "data/curated/era/rogue/combat/reference.csv",
+      "sha256": "3A6E173D3F0DCC4311AEFFD0E45E2C21A46687EB0FC4C84EE4FD9C7F648011EC"
+    }
+  ],
+  "content": {
+    "rows": 20,
+    "uniqueItems": 20,
+    "slots": 17
+  },
+  "provenance": {
+    "id": "rogue-classic-era-2026-09",
+    "documentationPath": "docs/era-combat-rogue-curated-reference.md"
+  },
+  "capabilities": {
+    "playerAdvice": true,
+    "progressTracking": true,
+    "sessionPlanner": true
+  }
+}

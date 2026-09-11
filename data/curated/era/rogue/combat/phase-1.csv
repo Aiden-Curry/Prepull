@@ -1,0 +1,16 @@
+contentVersion,class,spec,role,phase,context,setId,slot,itemId,tier,rank,sourceType,sourceName,activity,boss,faction,race,profession,notes,provenanceId,verificationStatus
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Head,16821,bis,1,raid,Molten Core,Molten Core,Garr,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Neck,18404,bis,1,quest,Onyxia's Lair,Onyxia's Lair,,,,,Faction quest paths apply.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Shoulder,16823,bis,1,raid,Molten Core,Molten Core,Sulfuron Harbinger,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Back,17102,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Reviewed Phase 1 melee cloak.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Chest,16820,bis,1,raid,Molten Core,Molten Core,Golemagg the Incinerator,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Wrist,16825,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Hands,18823,bis,1,raid,Molten Core,Molten Core,,,,,Weapon-type context remains conditional.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Waist,16827,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Legs,16909,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Feet,16824,bis,1,raid,Molten Core,Molten Core,Shazzrah,,,,Reviewed Phase 1 Rogue raid target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Finger 1,17063,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Unique raid ring target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Finger 2,18821,bis,1,raid,Molten Core,Molten Core,,,,,Unique raid ring target.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Main Hand,18816,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,Dagger,Main-hand dagger path is conditional.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Off Hand / Shield,18805,bis,1,raid,Molten Core,Molten Core,Majordomo Executus,,,Dagger,Off-hand dagger path is conditional.,rogue-classic-era-2026-09,curated
+era,rogue,combat,DPS,phase-1,general,era-combat-rogue-phase-1,Ranged / Relic,17069,bis,1,raid,Molten Core,Molten Core,Magmadar,,,,Reviewed Phase 1 ranged slot.,rogue-classic-era-2026-09,curated

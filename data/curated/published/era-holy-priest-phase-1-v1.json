@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "specKey": "era-priest-holy",
+  "datasetVersion": "era-holy-priest-phase-1-v1",
+  "identity": {
+    "contentVersion": "era",
+    "className": "Priest",
+    "specName": "Holy",
+    "level": 60,
+    "role": "Healer"
+  },
+  "phase": {
+    "number": 1,
+    "label": "Phase 1",
+    "setId": "era-holy-priest-phase-1",
+    "baseSetId": "era-holy-priest-pre-raid"
+  },
+  "sourceDatasets": [
+    {
+      "phase": 0,
+      "path": "data/curated/era/priest/holy/reference.csv",
+      "sha256": "591DBC02E0AE64C59A8B5F49D19DDA2217A7DFBFEB7F4AC8993A98A0609E30AB"
+    },
+    {
+      "phase": 1,
+      "path": "data/curated/era/priest/holy/phase-1.csv",
+      "sha256": "413A5A7AFCB3147C8D2F792FD5441C00E9033741EADC8DC1ED46BFBDC32126E9"
+    }
+  ],
+  "content": {
+    "rows": 34,
+    "uniqueItems": 34,
+    "slots": 17
+  },
+  "provenance": {
+    "id": "priest-classic-era-2026-09",
+    "documentationPath": "docs/era-holy-priest-curated-reference.md"
+  },
+  "capabilities": {
+    "playerAdvice": true,
+    "progressTracking": true,
+    "sessionPlanner": true
+  }
+}

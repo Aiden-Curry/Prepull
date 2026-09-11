@@ -1,9 +1,9 @@
-# Recommendation registry and coupling audit
+# Recommendation manifest, registry, and coupling audit
 
-Phase 6.3E routes curated player recommendations through `lib/recommendations/registry.ts`. Each supported content/class/spec combination owns its profile, published phase-to-set mapping, candidates, and narrowly scoped presentation/decorator options.
+Phase 6.3F makes `lib/recommendations/manifests/` the authoritative source for each supported content/class/spec combination. Each manifest owns its identity, capabilities, authored phase files, published snapshot hashes, provenance, candidates, optional rules, and profile construction. `lib/recommendations/registry.ts` derives registrations from those manifests; the support matrix, coverage page, validators, and snapshot tooling derive from the registry or the same manifest list.
 
 The audit found direct Fury assumptions in PlayerAdvice support detection, generated-set repository normalization, evaluator candidate lookup, curated authoring validation, public character pages, dashboard status copy, and mock fixtures. These paths now resolve through the registry or through a profile passed by the resolved registry entry. Session Planner, activity detail, refresh persistence, and saved-character persistence already consumed normalized models and required no class-specific branch.
 
 Fury-only weapon, race, dagger, Edgemaster, Aged Core Leather Gloves, and Black Dragon Mail rules remain intentionally isolated in the Fury dataset/decorator and evaluator context. They are not copied into Mage configuration. The legacy stat-scoring module in `lib/gear-analysis/engine.ts` remains Fury-specific and unchanged; Frost uses the curated-reference path and no Mage stat weights or DPS model were introduced.
 
-Registry validation rejects duplicate content/class/spec identities, duplicate keys, missing published datasets, profile/content/spec mismatches, phase/set mismatches, empty datasets, and candidate content/class mismatches. Unsupported specs do not fall back to a neighboring registry entry.
+Registry validation rejects duplicate content/class/spec identities, duplicate keys, missing published datasets, profile/content/spec mismatches, phase/set mismatches, empty datasets, and candidate content/class mismatches. Per-spec validation additionally blocks malformed source rows, strict candidate/source/slot mismatches, missing provenance, unpublished or incomplete supported phases, snapshot drift, and illegal spec rules. Unsupported specs do not fall back to a neighboring registry entry.

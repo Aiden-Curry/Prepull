@@ -8,6 +8,8 @@ node_modules/
 .next/
 out/
 coverage/
+!app/[[]version]/coverage/
+!app/[[]version]/coverage/page.tsx
 playwright-report/
 test-results/
 .vercel

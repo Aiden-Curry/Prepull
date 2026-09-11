@@ -6,11 +6,11 @@ import { getCanonicalCuratedProfile } from "./repository.ts";
 import { progressionPhaseForSet, setForPhase } from "./progression.ts";
 import { availabilityFor, isAvailableInPhase, resolvedPhaseForSet, sourceForPhase, type ClassicContentPhase } from "./availability.ts";
 import type { CuratedActivity, CuratedEvaluation, CuratedRecommendation, CuratedReferenceProfile, ReferenceGearSet, ReferenceItemEntry } from "./types.ts";
+import type { SpecRuleModule } from "../recommendations/manifest.ts";
 
 const tierRank: Record<ReferenceItemEntry["tier"], number> = { bis: 5, excellent: 4, strong: 3, alternative: 2, entry: 1 };
 const metadata = normalizedItemMetadata();
 type EvaluatedItem = EquippedItem & { reference: ReferenceItemEntry; isRealistic?: boolean };
-const blackDragonMailIds = new Set([16984, 15050, 15051, 15052]);
 
 const itemFor = (reference: ReferenceItemEntry, candidateById: ReadonlyMap<number, CuratedCandidate>, character?: NormalizedCharacter, phase: ClassicContentPhase = 6): EvaluatedItem | undefined => {
   const source = candidateById.get(reference.itemId) ?? metadata.get(reference.itemId);
@@ -22,27 +22,18 @@ const itemFor = (reference: ReferenceItemEntry, candidateById: ReadonlyMap<numbe
 const sourceName = (recommendation: Pick<CuratedRecommendation, "target">) => recommendation.target?.source?.instance ?? recommendation.target?.source?.zone ?? recommendation.target?.source?.type ?? "Unspecified source";
 const pairedSlots = (slot: EquipmentSlot) => ["Finger 1", "Finger 2"].includes(slot) ? ["Finger 1", "Finger 2"] : ["Trinket 1", "Trinket 2"].includes(slot) ? ["Trinket 1", "Trinket 2"] : ["Main Hand", "Off Hand / Shield"].includes(slot) ? ["Main Hand", "Off Hand / Shield"] : [];
 const conflicts = (item: EvaluatedItem, reserved: Set<string>) => Boolean(item.uniqueGroup && reserved.has(`group:${item.uniqueGroup}`)) || reserved.has(`item:${item.itemId}`);
-const isTwoHand = (item: EvaluatedItem | EquippedItem | undefined) => item?.weapon?.hand === "two-hand" || ("reference" in (item ?? {}) && /two-handed/i.test((item as EvaluatedItem).reference.weaponContext ?? ""));
+const isTwoHand = (item: EvaluatedItem | EquippedItem | undefined) => item?.weapon?.hand === "two-hand" || ("weaponRole" in (item ?? {}) && (item as EvaluatedItem & { weaponRole?: { hand: string } }).weaponRole?.hand === "two-hand") || ("reference" in (item ?? {}) && /two-handed/i.test((item as EvaluatedItem).reference.weaponContext ?? ""));
 const reserve = (item: EvaluatedItem | undefined, reserved: Set<string>) => { if (!item) return; reserved.add(`item:${item.itemId}`); if (item.uniqueGroup) reserved.add(`group:${item.uniqueGroup}`); if (isTwoHand(item)) reserved.add("weapon:two-hand"); };
-const notesFor = (character: NormalizedCharacter, item: EvaluatedItem | undefined, reference: ReferenceItemEntry | undefined): string[] => {
+const notesFor = (character: NormalizedCharacter, item: EvaluatedItem | undefined, reference: ReferenceItemEntry | undefined, options: readonly EvaluatedItem[], rules?: SpecRuleModule): string[] => {
   if (!item || !reference) return [];
   const notes = reference.notes ? [reference.notes] : [];
   if (item.uniqueGroup) notes.push("Unique or paired-slot restrictions apply.");
   if (reference.weaponContext) notes.push(`Weapon context: ${reference.weaponContext}.`);
   if (reference.conditionalEffects?.length) notes.push(`Conditional effects: ${reference.conditionalEffects.join(", ")}.`);
   if (item.weapon?.weaponSkillBonus) notes.push(`Provides +${item.weapon.weaponSkillBonus} weapon skill.`);
-  if (item.weapon?.weaponType === "Axe" && character.race === "Orc") notes.push("Orc racial axe expertise is relevant; no numerical performance delta is claimed.");
-  if (["Sword", "Mace"].includes(item.weapon?.weaponType ?? "") && character.race === "Human") notes.push("Human racial weapon expertise is relevant; no numerical performance delta is claimed.");
   if (reference.professionRequirements?.length) notes.push(`Requires ${reference.professionRequirements.join(", ")}.`);
   if (reference.source.type === "World Drop") notes.push("Availability is conditional on the world-drop acquisition path.");
-  if (reference.setBonusGroup === "black-dragon-mail") {
-    const equippedPieces = character.equipment.filter((equipped) => blackDragonMailIds.has(equipped.itemId)).length;
-    const resultingPieces = equippedPieces + (blackDragonMailIds.has(item.itemId) && !character.equipment.some((equipped) => equipped.itemId === item.itemId) ? 1 : 0);
-    notes.push(`Black Dragon Mail context: ${equippedPieces} piece(s) equipped; this option results in ${resultingPieces} piece(s).`);
-    if (resultingPieces >= 3) notes.push("Active 3-piece bonus: +2% critical strike.");
-    else if (resultingPieces >= 2) notes.push("Active 2-piece bonus: +1% hit.");
-  }
-  if ([20130, 21180].includes(item.itemId)) notes.push("On-use trinket; evaluate cooldown alignment and paired-trinket conflicts contextually.");
+  notes.push(...(rules?.conditionalNotes?.({ character, item, reference, options }) ?? []));
   return [...new Set(notes)];
 };
 const certaintyFor = (item: EvaluatedItem | undefined, reference: ReferenceItemEntry | undefined): CuratedRecommendation["certainty"] => item?.isRealistic === false || reference?.source.type === "World Drop" ? "contextual" : reference?.provenance.verificationStatus === "curated" ? "high" : "limited";
@@ -51,13 +42,11 @@ const characterProgressionPhase = (character: NormalizedCharacter, candidateById
 const hasReferenceRows = (set: ReferenceGearSet | undefined) => Boolean(set && Object.values(set.slots).some((entries) => (entries?.length ?? 0) > 0));
 const isBeyondSet = (currentItem: EquippedItem | undefined, activePhase: number, candidateById: ReadonlyMap<number, CuratedCandidate>) => { const candidate = currentItem ? candidateById.get(currentItem.itemId) : undefined; return Boolean(candidate && candidate.source?.type === "Raid" && candidate.availability.phase > activePhase); };
 const isPlaceholder = (item: EquippedItem | undefined) => Boolean(item && ((item.itemId >= 700000 && item.itemId < 700100) || item.name.startsWith("Fresh 60 ")));
-const daggerLoadout = (character: NormalizedCharacter) => character.equipment.some((item) => [18805, 18816].includes(item.itemId) || item.weapon?.weaponType === "Dagger");
-
-function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entries: ReferenceItemEntry[], reserved: Set<string>, activePhase: number, availabilityPhase: ClassicContentPhase, candidateById: ReadonlyMap<number, CuratedCandidate>): CuratedRecommendation {
+function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entries: ReferenceItemEntry[], reserved: Set<string>, activePhase: number, availabilityPhase: ClassicContentPhase, candidateById: ReadonlyMap<number, CuratedCandidate>, rules?: SpecRuleModule): CuratedRecommendation {
   const equippedItem = character.equipment.find((item) => item.slot === slot);
   const currentItem = isPlaceholder(equippedItem) ? undefined : equippedItem;
   const unavailable = entries.filter((entry) => !isAvailableInPhase(entry.itemId, availabilityPhase));
-  const allOptions = entries.filter((entry) => isAvailableInPhase(entry.itemId, availabilityPhase) && (!entry.faction || entry.faction === character.faction)).map((entry) => itemFor(entry, candidateById, character, availabilityPhase)).filter((item): item is EvaluatedItem => Boolean(item)).sort((left, right) => (slot === "Hands" && daggerLoadout(character) ? Number(right.itemId === 18823) - Number(left.itemId === 18823) : 0) || tierRank[right.reference.tier] - tierRank[left.reference.tier]);
+  const allOptions = entries.filter((entry) => isAvailableInPhase(entry.itemId, availabilityPhase) && (!entry.faction || entry.faction === character.faction)).map((entry) => itemFor(entry, candidateById, character, availabilityPhase)).filter((item): item is EvaluatedItem => Boolean(item)).sort((left, right) => (rules?.compareOptions?.({ character, slot, left, right }) ?? 0) || tierRank[right.reference.tier] - tierRank[left.reference.tier]);
   const currentReference = allOptions.find((item) => item.itemId === currentItem?.itemId);
   if (slot === "Off Hand / Shield" && reserved.has("weapon:two-hand")) return { slot, currentItem, scope: "complete", otherOptions: [], status: "complete", priority: "complete", certainty: "high", conditionalNotes: ["A two-handed weapon occupies both weapon slots."], reason: "The selected two-handed weapon does not permit an off-hand item." };
   if (isBeyondSet(currentItem, activePhase, candidateById)) return { slot, currentItem, currentTier: undefined, scope: "outside-reference-scope", otherOptions: [], status: "outside-reference-scope", priority: "outside-reference-scope", certainty: "limited", conditionalNotes: [], reason: "This character's equipment is beyond the current reference dataset. No downgrade recommendation generated; later-phase reference data is required for a reliable comparison." };
@@ -77,10 +66,8 @@ function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entri
   else if (!currentItem && target?.reference.tier === "bis") { status = "major-progression"; priority = "major-opportunity"; }
   else if (!currentItem) { status = "upgrade-available"; priority = "meaningful-upgrade"; }
   else { status = "unknown"; priority = "unknown"; }
-  const conditionalNotes = notesFor(character, bestRealistic ?? target, (bestRealistic ?? target)?.reference);
+  const conditionalNotes = notesFor(character, bestRealistic ?? target, (bestRealistic ?? target)?.reference, options, rules);
   if (!options.length && unavailable.length) conditionalNotes.push(`Options unavailable in Phase ${availabilityPhase}: ${unavailable.map((entry) => `${entry.itemId} (available from Phase ${availabilityFor(entry.itemId)?.availableFromPhase ?? "unknown"})`).join(", ")}.`);
-  if (character.race === "Orc" && options.some((item) => item.weapon?.weaponType === "Axe" || [811, 871, 13015].includes(item.itemId))) conditionalNotes.push("Axe alternatives are Orc-favored through racial axe expertise; ordering remains contextual and no numerical performance delta is claimed.");
-  if (character.race === "Human" && options.some((item) => ["Sword", "Mace"].includes(item.weapon?.weaponType ?? ""))) conditionalNotes.push("Sword/mace alternatives are Human-favored through racial weapon expertise; ordering remains contextual and no numerical performance delta is claimed.");
   const reason = currentItem && scope === "unknown" ? "The current item is not safely identified in this reference set. No upgrade priority is inferred." : options.length ? `Curated ${target?.reference.tier ?? "reference"} option from ${sourceName({ target })}. No numerical performance increase is claimed.` : "This slot is not ranked in the selected curated reference set.";
   const recommendation = { slot, currentItem, currentTier: currentReference?.reference.tier, scope, target, bestRealistic, otherOptions, status, priority, certainty: certaintyFor(bestRealistic ?? target, (bestRealistic ?? target)?.reference), conditionalNotes, reason };
   if (priority !== "unknown") reserve(target, reserved);
@@ -88,7 +75,8 @@ function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entri
 }
 
 export function evaluateCuratedReference(character: NormalizedCharacter, profile: CuratedReferenceProfile = getCanonicalCuratedProfile(), setId = profile.defaultSetId, requestedAvailabilityPhase?: ClassicContentPhase, candidates?: readonly CuratedCandidate[]): CuratedEvaluation {
-  const registeredCandidates = candidates ?? getRecommendationConfigForProfile(profile)?.candidates ?? [];
+  const config = getRecommendationConfigForProfile(profile);
+  const registeredCandidates = candidates ?? config?.candidates ?? [];
   const candidateById = new Map(registeredCandidates.map((candidate) => [candidate.itemId, candidate]));
   const baseSet: ReferenceGearSet = profile.sets.find((candidate) => candidate.id === setId) ?? profile.sets[0];
   const characterPhase = characterProgressionPhase(character, candidateById);
@@ -98,7 +86,7 @@ export function evaluateCuratedReference(character: NormalizedCharacter, profile
   const activePhase = progressionPhaseForSet(activeSet);
   const availabilityPhase = requestedAvailabilityPhase ?? resolvedPhaseForSet(activePhase);
   const reserved = new Set<string>();
-  const rawRecommendations = Object.keys(activeSet.slots).map((slot) => evaluateSlot(character, slot as EquipmentSlot, activeSet.slots[slot as EquipmentSlot] ?? [], reserved, activePhase, availabilityPhase, candidateById));
+  const rawRecommendations = Object.keys(activeSet.slots).map((slot) => evaluateSlot(character, slot as EquipmentSlot, activeSet.slots[slot as EquipmentSlot] ?? [], reserved, activePhase, availabilityPhase, candidateById, config?.ruleModule));
   const recommendations = referenceAvailability === "not-available" ? rawRecommendations.map((recommendation) => recommendation.priority === "outside-reference-scope" || recommendation.priority === "complete" ? recommendation : { ...recommendation, target: undefined, bestRealistic: undefined, otherOptions: [], status: "unknown" as const, priority: "unknown" as const, certainty: "limited" as const, conditionalNotes: [], reason: "Reference data not yet available for this progression level. No recommendation is generated until the relevant later-phase dataset exists." }) : rawRecommendations;
   const priorityScore = (recommendation: CuratedRecommendation) => recommendation.priority === "major-opportunity" ? 4 : recommendation.priority === "meaningful-upgrade" ? 2 : 1;
   const optionItems = (recommendation: CuratedRecommendation) => [recommendation.target, recommendation.bestRealistic, ...recommendation.otherOptions].filter((item): item is NonNullable<CuratedRecommendation["target"]> => Boolean(item));

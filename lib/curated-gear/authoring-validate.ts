@@ -5,12 +5,11 @@ import { metadataSlotCompatible } from "../item-metadata/validate.ts";
 import type { NormalizedItemMetadata } from "../item-metadata/types.ts";
 
 export type AuthoringIssue = { severity: "error" | "warning"; row: number; code: string; message: string };
-const builtInProfiles = new Set(["warrior:fury", "warrior:protection", "priest:holy", "mage:frost"]);
 const verificationStates = new Set(["unreviewed", "reviewed", "verified", "curated", "incomplete", "disputed"]);
 
 export function validateAuthoringRows(rows: AuthoringRow[], profileList: CuratedReferenceProfile[] = [], metadata: Map<number, NormalizedItemMetadata> = normalizedItemMetadata()): AuthoringIssue[] {
   const issues: AuthoringIssue[] = [];
-  const profiles = new Set([...builtInProfiles, ...profileList.map((profile) => `${profile.className.toLowerCase()}:${profile.specialization.toLowerCase()}`)]);
+  const profiles = new Set(profileList.map((profile) => `${profile.className.toLowerCase()}:${profile.specialization.toLowerCase()}`));
   const seen = new Set<string>();
   const ranks = new Set<string>();
   for (const [index, row] of rows.entries()) {

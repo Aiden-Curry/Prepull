@@ -46,6 +46,7 @@ test("blocks unsynced planning and keeps unsupported planning safe", async ({ pa
   await save(page, "Pyra", "us", "whitemane");
   await page.goto("/era/dashboard");
   await submitServerAction(page, page.getByRole("button", { name: "Switch to Pyra" }));
+  await expect(page.getByRole("heading", { name: "Pyra", exact: true })).toBeVisible();
   await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
   await expect(page.getByText("Session planning based on gear upgrades isn't available for this specialization yet.")).toBeVisible();

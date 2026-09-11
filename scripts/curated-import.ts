@@ -1,11 +1,12 @@
 import fs from "node:fs";
 import { parseAuthoringCsv, rowsToSets } from "../lib/curated-gear/authoring.ts";
 import { validateAuthoringRows } from "../lib/curated-gear/authoring-validate.ts";
-import { curatedReferenceProfiles } from "../lib/curated-gear/data.ts";
+import { recommendationRegistry } from "../lib/recommendations/registry.ts";
 import { arg, hasArg, writeJson } from "./curated-common.ts";
 
 const file = arg("file");
 if (!file) { console.error("Usage: npm run curated:import -- --file=<path> [--dry-run]"); process.exit(1); }
+const curatedReferenceProfiles = recommendationRegistry.map((entry) => entry.profile);
 const parsed = parseAuthoringCsv(fs.readFileSync(file, "utf8"));
 const issues = [...parsed.errors.map((message) => ({ severity: "error", row: 0, code: "csv", message } as const)), ...validateAuthoringRows(parsed.rows, curatedReferenceProfiles)];
 const built = rowsToSets(parsed.rows, curatedReferenceProfiles);

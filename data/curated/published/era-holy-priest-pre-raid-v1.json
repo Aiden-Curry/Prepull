@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "specKey": "era-priest-holy",
+  "datasetVersion": "era-holy-priest-pre-raid-v1",
+  "identity": {
+    "contentVersion": "era",
+    "className": "Priest",
+    "specName": "Holy",
+    "level": 60,
+    "role": "Healer"
+  },
+  "phase": {
+    "number": 0,
+    "label": "Pre-Raid",
+    "setId": "era-holy-priest-pre-raid"
+  },
+  "sourceDatasets": [
+    {
+      "phase": 0,
+      "path": "data/curated/era/priest/holy/reference.csv",
+      "sha256": "591DBC02E0AE64C59A8B5F49D19DDA2217A7DFBFEB7F4AC8993A98A0609E30AB"
+    }
+  ],
+  "content": {
+    "rows": 19,
+    "uniqueItems": 19,
+    "slots": 17
+  },
+  "provenance": {
+    "id": "priest-classic-era-2026-09",
+    "documentationPath": "docs/era-holy-priest-curated-reference.md"
+  },
+  "capabilities": {
+    "playerAdvice": true,
+    "progressTracking": true,
+    "sessionPlanner": true
+  }
+}

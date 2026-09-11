@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { ContentVersion } from "../lib/types";
 
-const nav = [{ label: "Dashboard", path: "dashboard" }, { label: "Characters", path: "characters/connect" }, { label: "Raids", path: "raids" }, { label: "Gear", path: "gear" }, { label: "Guilds", path: "guilds" }, { label: "Account", path: "profile" }];
+const nav = [{ label: "Dashboard", path: "dashboard" }, { label: "Characters", path: "characters/connect" }, { label: "Raids", path: "raids" }, { label: "Gear", path: "gear" }, { label: "Coverage", path: "coverage" }, { label: "Guilds", path: "guilds" }, { label: "Account", path: "profile" }];
 export function Header({ version }: { version: ContentVersion }) {
   const pathname = usePathname(); const router = useRouter();
   function switchVersion(next: ContentVersion) { if (next === version) return; const section = pathname.split("/")[2]; const valid = nav.some((item) => item.path === section || item.path.startsWith(`${section}/`)); router.push(section && valid ? `/${next}/${pathname.split("/").slice(2).join("/")}` : `/${next}`); localStorage.setItem("prepull-version", next); }

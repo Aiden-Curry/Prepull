@@ -1,0 +1,16 @@
+contentVersion,class,spec,role,phase,context,setId,slot,itemId,tier,rank,sourceType,sourceName,activity,boss,faction,race,profession,notes,provenanceId,verificationStatus
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Head,16813,bis,1,raid,Molten Core,Molten Core,Garr,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Neck,17109,bis,1,raid,Molten Core,Molten Core,Lucifron,,,,Healing and mana context reviewed.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Shoulder,16816,bis,1,raid,Molten Core,Molten Core,Sulfuron Harbinger,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Back,18811,bis,1,raid,Molten Core,Molten Core,Majordomo Executus,,,,Healing-oriented raid cloak.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Chest,16815,bis,1,raid,Molten Core,Molten Core,Golemagg the Incinerator,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Wrist,16819,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Hands,18808,bis,1,raid,Molten Core,Molten Core,Majordomo Executus,,,,Healing-oriented raid gloves.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Waist,16817,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Legs,16814,bis,1,raid,Molten Core,Molten Core,Magmadar,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Feet,16811,bis,1,raid,Molten Core,Molten Core,Shazzrah,,,,Reviewed Priest tier target.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Finger 1,18812,bis,1,raid,Molten Core,Molten Core,Majordomo Executus,,,,Healing-oriented raid ring.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Finger 2,19138,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Healing-oriented raid ring.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Main Hand,17105,bis,1,raid,Molten Core,Molten Core,Garr,,,One-hand,Healing-oriented one-hand raid path.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Off Hand / Shield,19142,bis,1,raid,Molten Core,Molten Core,,,,Off-hand,Used with a one-hand main hand.,priest-classic-era-2026-09,curated
+era,priest,holy,Healer,phase-1,general,era-holy-priest-phase-1,Ranged / Relic,17077,bis,1,raid,Molten Core,Molten Core,,,,Wand,Reviewed ranged slot raid target.,priest-classic-era-2026-09,curated

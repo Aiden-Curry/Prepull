@@ -1,15 +1,21 @@
 import type { CharacterSource, ContentVersion, EquipmentSlot, Faction } from "../types.ts";
 import type { CuratedReferenceProfile, ReferenceContext, ReferenceGearSet, ReferenceItemEntry, ReferenceProvenance, ReferenceRecommendationTier, ReferenceVerificationStatus } from "./types.ts";
-import { findRegisteredRecommendationCandidate } from "../recommendations/registry.ts";
+import { findRegisteredRecommendationCandidate, recommendationRegistry } from "../recommendations/registry.ts";
 
 export const authoringHeaders = ["contentVersion", "class", "spec", "role", "phase", "context", "setId", "slot", "itemId", "tier", "rank", "sourceType", "sourceName", "activity", "boss", "faction", "race", "profession", "notes", "provenanceId", "verificationStatus"] as const;
 export type AuthoringHeader = typeof authoringHeaders[number];
 export type AuthoringRow = Record<AuthoringHeader, string>;
 export type CuratedProvenanceRecord = { id: string; title: string; sourceType: string; sourceName: string; sourceUrl?: string; author?: string; reviewedAt: string; reviewer?: string; notes?: string };
-export const provenanceRegistry: Record<string, CuratedProvenanceRecord> = {
-  "prepull-curated-2026-08": { id: "prepull-curated-2026-08", title: "PrePull curated Classic Era reference dataset", sourceType: "internal-review", sourceName: "PrePull data review", reviewedAt: "2026-08-12", reviewer: "PrePull data review", notes: "Structured conclusions only; no numerical DPS claim." },
-  "mage-classic-era-2026-09": { id: "mage-classic-era-2026-09", title: "PrePull Era Frost Mage source review", sourceType: "authoritative-game-data-review", sourceName: "Blizzard static Classic API and Warcraft Wiki Classic item records", sourceUrl: "https://warcraft.wiki.gg/wiki/Category:World_of_Warcraft_Classic_items", reviewedAt: "2026-09-11", reviewer: "PrePull data review", notes: "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score." },
-};
+export const provenanceRegistry: Record<string, CuratedProvenanceRecord> = Object.fromEntries(recommendationRegistry.map(({ manifest }) => [manifest.provenance.id, {
+  id: manifest.provenance.id,
+  title: manifest.provenance.source,
+  sourceType: "authoritative-game-data-review",
+  sourceName: manifest.provenance.source,
+  sourceUrl: manifest.provenance.sourceUrl,
+  reviewedAt: manifest.provenance.reviewedAt,
+  reviewer: manifest.provenance.reviewedBy,
+  notes: manifest.provenance.notes,
+}]));
 export const validPhases = new Set(["pre-raid", "phase-1", "phase-2", "phase-3", "phase-4", "phase-5", "phase-6"]);
 export const phaseNumber = (value: string) => value === "pre-raid" ? 0 : Number(value.replace("phase-", ""));
 export const phaseLabel = (value: number) => value === 0 ? "pre-raid" : `phase-${value}`;

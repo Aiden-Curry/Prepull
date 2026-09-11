@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "specKey": "era-hunter-marksman",
+  "datasetVersion": "era-marksmanship-hunter-pre-raid-v1",
+  "identity": {
+    "contentVersion": "era",
+    "className": "Hunter",
+    "specName": "Marksmanship",
+    "level": 60,
+    "role": "DPS"
+  },
+  "phase": {
+    "number": 0,
+    "label": "Pre-Raid",
+    "setId": "era-marksmanship-hunter-pre-raid"
+  },
+  "sourceDatasets": [
+    {
+      "phase": 0,
+      "path": "data/curated/era/hunter/marksmanship/reference.csv",
+      "sha256": "B6D477B793A497DBC70182C4B189F1C8DB79AFFA3D69ED04BAFCDF12B71C2BB3"
+    }
+  ],
+  "content": {
+    "rows": 18,
+    "uniqueItems": 18,
+    "slots": 17
+  },
+  "provenance": {
+    "id": "hunter-classic-era-2026-09",
+    "documentationPath": "docs/era-marksmanship-hunter-curated-reference.md"
+  },
+  "capabilities": {
+    "playerAdvice": true,
+    "progressTracking": true,
+    "sessionPlanner": true
+  }
+}

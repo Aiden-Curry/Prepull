@@ -1,4 +1,5 @@
 import type { CharacterSource } from "../types.ts";
+import { additionalSpecCandidates } from "../gear-analysis/additional-spec-datasets.ts";
 
 export type ClassicContentPhase = 1 | 2 | 3 | 4 | 5 | 6;
 export type AvailabilityEvidence = "verified" | "curated" | "needs-review";
@@ -16,6 +17,7 @@ const frostMagePhaseOneItems = [
   19147, 19138, 18820, 17103, 18842, 17077,
 ];
 export const classicItemAvailability: ReadonlyMap<number, ItemAvailability> = new Map<number, ItemAvailability>([
+  ...additionalSpecCandidates.map((item) => [item.itemId, { availableFromPhase: Math.max(1, item.availability.phase) as ClassicContentPhase, evidence: "curated" as const }] as const),
   ...phaseOneItems.map((itemId) => [itemId, { availableFromPhase: 1, evidence: "curated" as const }] as const),
   ...phaseTwoItems.map((itemId) => [itemId, { availableFromPhase: 2, evidence: "curated" as const }] as const),
   ...frostMagePhaseOneItems.map((itemId) => [itemId, { availableFromPhase: 1, evidence: "curated" as const }] as const),

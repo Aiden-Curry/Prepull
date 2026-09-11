@@ -2851,5 +2851,2652 @@
         }
       ]
     }
+  },
+  {
+    "id": "era-combat-rogue-pre-raid",
+    "contentVersion": "era",
+    "className": "rogue",
+    "specialization": "combat",
+    "role": "DPS",
+    "phase": 0,
+    "name": "rogue combat pre-raid general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 13404,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "The Unforgiven"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed melee progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 15411,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Western Plaguelands"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed quest progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 12927,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Pyroguard Emberseer"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed hit-oriented melee target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 13340,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Baron Rivendare"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed melee progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 14637,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Rattlegore"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed leather progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 12966,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "The Beast"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed melee progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 15063,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Reviewed crafted Devilsaur set target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 14551,
+          "slot": "Hands",
+          "tier": "alternative",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "Azeroth"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Conditional weapon-skill world drop.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 13142,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "General Drakkisath"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed melee progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 15062,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Reviewed crafted Devilsaur set target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 14616,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Kirtonos the Herald"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed melee progression target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 18500,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Prince Tortheldrin"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "uniqueGroup": "unique:18500",
+          "notes": "Unique ring target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 17713,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Maraudon",
+            "boss": "Princess Theradras"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "uniqueGroup": "unique:17713",
+          "notes": "Unique ring target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 11815,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "uniqueGroup": "unique:11815",
+          "notes": "Unique trinket target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 2": [
+        {
+          "itemId": 18465,
+          "slot": "Trinket 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Dire Maul"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "uniqueGroup": "unique:18465",
+          "notes": "Rogue class quest target.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 12940,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand",
+            "profession": "Sword"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed Combat main-hand sword.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 11684,
+          "slot": "Main Hand",
+          "tier": "alternative",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan",
+            "profession": "Mace"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Conditional rare main-hand mace.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 12939,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand",
+            "profession": "Sword"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed Combat off-hand sword.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 15806,
+          "slot": "Off Hand / Shield",
+          "tier": "strong",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Scholomance",
+            "profession": "Sword"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Accessible off-hand sword alternative.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 12651,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Shadow Hunter Vosh'gajin"
+          },
+          "setId": "era-combat-rogue-pre-raid",
+          "notes": "Reviewed ranged utility slot.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-combat-rogue-phase-1",
+    "contentVersion": "era",
+    "className": "rogue",
+    "specialization": "combat",
+    "role": "DPS",
+    "phase": 1,
+    "name": "rogue combat phase-1 general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 16821,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 18404,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Quest",
+            "instance": "Onyxia's Lair"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Faction quest paths apply.",
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 16823,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Sulfuron Harbinger"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 17102,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 melee cloak.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 16820,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Golemagg the Incinerator"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 16825,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 18823,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Weapon-type context remains conditional.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 16827,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 16909,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 16824,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Shazzrah"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 Rogue raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 17063,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "uniqueGroup": "unique:17063",
+          "notes": "Unique raid ring target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 18821,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "uniqueGroup": "unique:18821",
+          "notes": "Unique raid ring target.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 18816,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros",
+            "profession": "Dagger"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Main-hand dagger path is conditional.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 18805,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus",
+            "profession": "Dagger"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Off-hand dagger path is conditional.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 17069,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Magmadar"
+          },
+          "setId": "era-combat-rogue-phase-1",
+          "notes": "Reviewed Phase 1 ranged slot.",
+          "requiresRaidContent": true,
+          "provenanceId": "rogue-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, weapon role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-marksmanship-hunter-pre-raid",
+    "contentVersion": "era",
+    "className": "hunter",
+    "specialization": "marksmanship",
+    "role": "DPS",
+    "phase": 0,
+    "name": "hunter marksmanship pre-raid general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 13404,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "The Unforgiven"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed ranged physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 15411,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Western Plaguelands"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed quest target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 12927,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Pyroguard Emberseer"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 13340,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Baron Rivendare"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 11726,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Gorosh the Dervish"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 13211,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "The Beast"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 15063,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Reviewed crafted Devilsaur target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 13142,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "General Drakkisath"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 15062,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Reviewed crafted Devilsaur target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 14616,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Kirtonos the Herald"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Reviewed physical target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 18500,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Prince Tortheldrin"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "uniqueGroup": "unique:18500",
+          "notes": "Unique ring target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 17713,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Maraudon",
+            "boss": "Princess Theradras"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "uniqueGroup": "unique:17713",
+          "notes": "Unique ring target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 18473,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Dire Maul"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "uniqueGroup": "unique:18473",
+          "notes": "Hunter class quest target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 2": [
+        {
+          "itemId": 13965,
+          "slot": "Trinket 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Upper Blackrock Spire"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "factionSources": {
+            "Alliance": "General Drakkisath's Demise",
+            "Horde": "For The Horde!"
+          },
+          "uniqueGroup": "unique:13965",
+          "notes": "Reviewed quest target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 18520,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "King Gordok",
+            "profession": "Two-hand stat stick"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Two-handed melee stat-stick path.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 12940,
+          "slot": "Main Hand",
+          "tier": "strong",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand",
+            "profession": "One-hand stat stick"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "One-hand paired alternative.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 12939,
+          "slot": "Off Hand / Shield",
+          "tier": "strong",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Warchief Rend Blackhand",
+            "profession": "One-hand stat stick"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Used only with a one-hand main-hand path.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 12651,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Shadow Hunter Vosh'gajin",
+            "profession": "Ranged weapon"
+          },
+          "setId": "era-marksmanship-hunter-pre-raid",
+          "notes": "Primary ranged weapon target.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-marksmanship-hunter-phase-1",
+    "contentVersion": "era",
+    "className": "hunter",
+    "specialization": "marksmanship",
+    "role": "DPS",
+    "phase": 1,
+    "name": "hunter marksmanship phase-1 general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 16846,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 18404,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Quest",
+            "instance": "Onyxia's Lair"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Faction quest paths apply.",
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 16848,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Sulfuron Harbinger"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 17102,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed physical cloak.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 16845,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Golemagg the Incinerator"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 16850,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 16852,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Shazzrah"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 16851,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 16938,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Magmadar"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 16849,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Gehennas"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Reviewed Hunter tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 17063,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "uniqueGroup": "unique:17063",
+          "notes": "Unique raid ring target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 18821,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "uniqueGroup": "unique:18821",
+          "notes": "Unique raid ring target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 18832,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr",
+            "profession": "Melee stat stick"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "One-hand melee stat-stick path.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 18805,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus",
+            "profession": "Melee stat stick"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "One-hand melee stat-stick path.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 17069,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Magmadar",
+            "profession": "Ranged weapon"
+          },
+          "setId": "era-marksmanship-hunter-phase-1",
+          "notes": "Primary ranged weapon target.",
+          "requiresRaidContent": true,
+          "provenanceId": "hunter-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, ranged/melee role, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-holy-priest-phase-1",
+    "contentVersion": "era",
+    "className": "priest",
+    "specialization": "holy",
+    "role": "Healer",
+    "phase": 1,
+    "name": "priest holy phase-1 general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 16813,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 17109,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Lucifron"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Healing and mana context reviewed.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 16816,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Sulfuron Harbinger"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 18811,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Healing-oriented raid cloak.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 16815,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Golemagg the Incinerator"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 16819,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 18808,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Healing-oriented raid gloves.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 16817,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 16814,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Magmadar"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 16811,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Shazzrah"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed Priest tier target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 18812,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Majordomo Executus"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "uniqueGroup": "unique:18812",
+          "notes": "Healing-oriented raid ring.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 19138,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "uniqueGroup": "unique:19138",
+          "notes": "Healing-oriented raid ring.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 17105,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr",
+            "profession": "One-hand"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Healing-oriented one-hand raid path.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 19142,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "profession": "Off-hand"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Used with a one-hand main hand.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 17077,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "profession": "Wand"
+          },
+          "setId": "era-holy-priest-phase-1",
+          "notes": "Reviewed ranged slot raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-holy-priest-pre-raid",
+    "contentVersion": "era",
+    "className": "priest",
+    "specialization": "holy",
+    "role": "Healer",
+    "phase": 0,
+    "name": "priest holy pre-raid general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 13102,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "Azeroth"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Aspirational healing head option.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 18727,
+          "slot": "Head",
+          "tier": "excellent",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Magistrate Barthilas"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Realistic healing-oriented dungeon alternative.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 18723,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Ramstein the Gorger"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented dungeon target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 18681,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Darkmaster Gandling"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented dungeon target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 18510,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Leatherworking",
+            "profession": "Leatherworking"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "craftedByProfession": "Leatherworking",
+          "notes": "Healing-oriented crafted target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 13346,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Baron Rivendare"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented dungeon target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 13969,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "The Seven"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented dungeon target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 18527,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Illyanna Ravenoak"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented dungeon target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 18327,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Alzzin the Wildshaper"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Mana and healing context reviewed.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 18386,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Illyanna Ravenoak"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Mana and healing context reviewed.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 11822,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Golem Lord Argelmach"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Mana and healing context reviewed.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 16058,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Western Plaguelands"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "uniqueGroup": "unique:16058",
+          "notes": "Reviewed sustain-oriented quest ring.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 18395,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Prince Tortheldrin"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "uniqueGroup": "unique:18395",
+          "notes": "Reviewed healing ring.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 11819,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Golem Lord Argelmach"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "uniqueGroup": "unique:11819",
+          "notes": "Reviewed mana-sustain trinket.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Trinket 2": [
+        {
+          "itemId": 18469,
+          "slot": "Trinket 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Dire Maul"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "uniqueGroup": "unique:18469",
+          "notes": "Priest healing class quest target.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 11923,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "The Seven",
+            "profession": "One-hand"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing-oriented one-hand path.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        },
+        {
+          "itemId": 11932,
+          "slot": "Main Hand",
+          "tier": "strong",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan",
+            "profession": "Two-hand staff"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Two-handed staff alternative.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 11928,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Emperor Dagran Thaurissan",
+            "profession": "Off-hand"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Used with a one-hand main hand.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 18483,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Cho'Rush the Observer",
+            "profession": "Wand"
+          },
+          "setId": "era-holy-priest-pre-raid",
+          "notes": "Healing and mana context reviewed.",
+          "provenanceId": "priest-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard Classic item records, Warcraft Wiki item and instance records, and independent PrePull review",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Identity, slot, healing context, source, phase, and practical acquisition classification were reviewed independently."
+          }
+        }
+      ]
+    }
   }
 ]

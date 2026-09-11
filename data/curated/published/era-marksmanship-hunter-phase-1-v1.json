@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "specKey": "era-hunter-marksman",
+  "datasetVersion": "era-marksmanship-hunter-phase-1-v1",
+  "identity": {
+    "contentVersion": "era",
+    "className": "Hunter",
+    "specName": "Marksmanship",
+    "level": 60,
+    "role": "DPS"
+  },
+  "phase": {
+    "number": 1,
+    "label": "Phase 1",
+    "setId": "era-marksmanship-hunter-phase-1",
+    "baseSetId": "era-marksmanship-hunter-pre-raid"
+  },
+  "sourceDatasets": [
+    {
+      "phase": 0,
+      "path": "data/curated/era/hunter/marksmanship/reference.csv",
+      "sha256": "B6D477B793A497DBC70182C4B189F1C8DB79AFFA3D69ED04BAFCDF12B71C2BB3"
+    },
+    {
+      "phase": 1,
+      "path": "data/curated/era/hunter/marksmanship/phase-1.csv",
+      "sha256": "D4DB391DFACF30587A89E015887314D1C3D3919417BBC93E14A721DD546164F9"
+    }
+  ],
+  "content": {
+    "rows": 33,
+    "uniqueItems": 33,
+    "slots": 17
+  },
+  "provenance": {
+    "id": "hunter-classic-era-2026-09",
+    "documentationPath": "docs/era-marksmanship-hunter-curated-reference.md"
+  },
+  "capabilities": {
+    "playerAdvice": true,
+    "progressTracking": true,
+    "sessionPlanner": true
+  }
+}

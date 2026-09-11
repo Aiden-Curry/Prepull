@@ -1,13 +1,11 @@
 import type { ContentVersion, NormalizedCharacter } from "../types.ts";
 import type { CuratedCandidate } from "../gear-analysis/types.ts";
-import { eraFuryCandidates } from "../gear-analysis/dataset.ts";
-import { eraFrostMageCandidates } from "../gear-analysis/mage-dataset.ts";
-import { eraFuryCuratedProfile } from "../curated-gear/data.ts";
-import { eraFrostMageCuratedProfile } from "../curated-gear/mage-data.ts";
-import { CuratedReferenceRepository, decorateFuryReferenceEntry, type ReferenceEntryDecorator } from "../curated-gear/repository.ts";
+import { CuratedReferenceRepository, type ReferenceEntryDecorator } from "../curated-gear/repository.ts";
 import type { CuratedReferenceProfile } from "../curated-gear/types.ts";
+import type { SpecAuthoringManifest, SpecRuleModule } from "./manifest.ts";
+import { recommendationSpecManifests } from "./manifests/index.ts";
 
-export type SupportedSpecKey = "era-warrior-fury" | "era-mage-frost";
+export type SupportedSpecKey = typeof recommendationSpecManifests[number]["key"];
 export type SpecRecommendationConfig = {
   key: SupportedSpecKey;
   contentVersion: ContentVersion;
@@ -18,13 +16,25 @@ export type SpecRecommendationConfig = {
   profile: CuratedReferenceProfile;
   candidates: CuratedCandidate[];
   decorateEntry?: ReferenceEntryDecorator;
+  ruleModule?: SpecRuleModule;
   includeSingleBestInSlotTargets?: boolean;
+  manifest: SpecAuthoringManifest;
 };
 
-export const recommendationRegistry: readonly SpecRecommendationConfig[] = [
-  { key: "era-warrior-fury", contentVersion: "era", className: "Warrior", specName: "Fury", availablePhases: [0, 1], setIdByPhase: { 0: "era-fury-pre-raid", 1: "era-fury-phase-1" }, profile: eraFuryCuratedProfile, candidates: eraFuryCandidates, decorateEntry: decorateFuryReferenceEntry },
-  { key: "era-mage-frost", contentVersion: "era", className: "Mage", specName: "Frost", availablePhases: [0, 1], setIdByPhase: { 0: "era-frost-mage-pre-raid", 1: "era-frost-mage-phase-1" }, profile: eraFrostMageCuratedProfile, candidates: eraFrostMageCandidates, includeSingleBestInSlotTargets: true },
-];
+export const recommendationRegistry: readonly SpecRecommendationConfig[] = recommendationSpecManifests.map((manifest) => ({
+  key: manifest.key,
+  contentVersion: manifest.contentVersion,
+  className: manifest.className,
+  specName: manifest.specName,
+  availablePhases: manifest.phases.map((phase) => phase.phase),
+  setIdByPhase: Object.fromEntries(manifest.phases.map((phase) => [phase.phase, phase.setId])),
+  profile: manifest.profile,
+  candidates: manifest.candidates,
+  decorateEntry: manifest.decorateEntry,
+  ruleModule: manifest.ruleModule,
+  includeSingleBestInSlotTargets: manifest.includeSingleBestInSlotTargets,
+  manifest,
+}));
 
 const identity = (value: string) => value.trim().toLowerCase();
 export function getCharacterRecommendationSupport(character: Pick<NormalizedCharacter, "contentVersion" | "class" | "spec">) {
@@ -64,6 +74,7 @@ export function validateRecommendationRegistry(entries: readonly SpecRecommendat
     for (const phase of Object.keys(entry.setIdByPhase).map(Number)) if (!entry.availablePhases.includes(phase)) issues.push(`${entry.key} registers unavailable Phase ${phase}.`);
     if (!entry.candidates.length) issues.push(`${entry.key} has no item dataset.`);
     for (const candidate of entry.candidates) if (candidate.availability.contentVersion !== entry.contentVersion || (candidate.availability.classes && !candidate.availability.classes.some((className) => identity(className) === identity(entry.className)))) issues.push(`${entry.key} candidate #${candidate.itemId} does not match the registered content/class.`);
+    for (const issue of entry.ruleModule?.validate(entry.candidates) ?? []) issues.push(`${entry.key} rule ${entry.ruleModule?.id}: ${issue}`);
   }
   return issues;
 }
