@@ -1,6 +1,8 @@
 import { normalizeLookup } from "../characters/normalization.ts";
 import { buildPlayerAdvice } from "../player-advice/service.ts";
+import type { PlayerAction, PlayerAdvice } from "../player-advice/types.ts";
 import type { EquippedItem, NormalizedCharacter } from "../types.ts";
+import type { RaidPrepActivityCategory, RaidPrepActivityGroup, RaidPrepBoard } from "./prep-board-types.ts";
 import { query } from "./db.ts";
 import { GuildDomainError } from "./errors.ts";
 import { canManageRaid } from "./permissions.ts";
@@ -65,7 +67,19 @@ function validShare(row: RaidReadinessRow) {
     }));
 }
 
-export function projectGuildCharacterReadiness(row: RaidReadinessRow, equipment: EquippedItem[] = []): GuildCharacterReadiness {
+function normalizedCharacter(row: RaidReadinessRow, equipment: EquippedItem[]): NormalizedCharacter {
+  return {
+    id: row.user_character_id, name: row.saved_character_name, region: row.character_region, realm: row.realm_name,
+    contentVersion: row.sync_content_version, realmType: row.sync_realm_type, level: row.level ?? 0,
+    race: row.sync_race ?? "Unavailable", class: row.sync_class_name ?? "Unavailable", spec: row.sync_spec ?? "Unavailable",
+    faction: row.sync_faction ?? "Alliance", professions: row.professions ?? [], talents: row.talents ?? [], equipment,
+    dataMeta: { provider: row.provider === "blizzard" ? "blizzard" : "mock", isLive: row.provider === "blizzard", lastUpdated: iso(row.synced_at) },
+  };
+}
+
+export type RaidPrepSource = { rosterState: "selected" | "bench"; readiness: GuildCharacterReadiness; advice?: PlayerAdvice };
+
+export function projectRaidPrepSource(row: RaidReadinessRow, equipment: EquippedItem[] = []): RaidPrepSource {
   const base = {
     guildCharacterId: row.guild_member_id,
     characterName: row.character_name,
@@ -76,31 +90,30 @@ export function projectGuildCharacterReadiness(row: RaidReadinessRow, equipment:
     raidRole: row.role_name || undefined,
     mainName: row.main_name || undefined,
   };
-  if (!row.member_active) return { ...base, shareState: "unavailable", dataState: "unavailable", message: "Roster character is inactive." };
-  if (!validShare(row)) return { ...base, shareState: "not-shared", dataState: "unavailable", message: "No readiness shared for this character." };
-  if (!row.sync_id) return { ...base, shareState: "shared", dataState: "needs-refresh", message: "Needs a character refresh before gear-readiness details are available." };
-  const character: NormalizedCharacter = {
-    id: row.user_character_id, name: row.saved_character_name, region: row.character_region, realm: row.realm_name,
-    contentVersion: row.sync_content_version, realmType: row.sync_realm_type, level: row.level ?? 0,
-    race: row.sync_race ?? "Unavailable", class: row.sync_class_name ?? "Unavailable", spec: row.sync_spec ?? "Unavailable",
-    faction: row.sync_faction ?? "Alliance", professions: row.professions ?? [], talents: row.talents ?? [], equipment,
-    dataMeta: { provider: row.provider === "blizzard" ? "blizzard" : "mock", isLive: row.provider === "blizzard", lastUpdated: iso(row.synced_at) },
-  };
+  const rosterState = row.roster_state === "bench" ? "bench" : "selected";
+  if (!row.member_active) return { rosterState, readiness: { ...base, shareState: "unavailable", dataState: "unavailable", message: "Roster character is inactive." } };
+  if (!validShare(row)) return { rosterState, readiness: { ...base, shareState: "not-shared", dataState: "unavailable", message: "No readiness shared for this character." } };
+  if (!row.sync_id) return { rosterState, readiness: { ...base, shareState: "shared", dataState: "needs-refresh", message: "Needs a character refresh before gear-readiness details are available." } };
+  const character = normalizedCharacter(row, equipment);
   const { advice } = buildPlayerAdvice(character);
-  if (!advice.supported) return {
-    ...base, className: character.class, specName: character.spec, shareState: "shared", dataState: "unsupported-spec",
-    lastRefreshedAt: iso(row.synced_at), recommendationSupport: { supported: false },
-    message: "Readiness shared. Personal gear recommendations for this specialization aren't available yet.",
-  };
+  if (!advice.supported) return { rosterState, advice, readiness: {
+      ...base, className: character.class, specName: character.spec, shareState: "shared", dataState: "unsupported-spec",
+      lastRefreshedAt: iso(row.synced_at), recommendationSupport: { supported: false },
+      message: "Readiness shared. Personal gear recommendations for this specialization aren't available yet.",
+    } };
   const categories: Partial<Record<ReadinessActivityCategory, number>> = {};
   for (const action of [...advice.topActions, ...advice.secondaryActions]) categories[action.type] = (categories[action.type] ?? 0) + action.upgradeCount;
   const remaining = advice.summary.actionableUpgradeCount;
-  return {
-    ...base, className: character.class, specName: character.spec, shareState: "shared", dataState: "available",
-    lastRefreshedAt: iso(row.synced_at), recommendationSupport: { supported: true, specKey: advice.specKey, supportedPhases: advice.availablePhases },
-    summary: { ...advice.summary }, activityCategoryCounts: categories,
-    message: remaining === 0 ? "No strong Pre-Raid opportunities remain." : `${remaining} realistic Pre-Raid opportunit${remaining === 1 ? "y" : "ies"} remain.`,
-  };
+  return { rosterState, advice, readiness: {
+      ...base, className: character.class, specName: character.spec, shareState: "shared", dataState: "available",
+      lastRefreshedAt: iso(row.synced_at), recommendationSupport: { supported: true, specKey: advice.specKey, supportedPhases: advice.availablePhases },
+      summary: { ...advice.summary }, activityCategoryCounts: categories,
+      message: remaining === 0 ? "No strong Pre-Raid opportunities remain." : `${remaining} realistic Pre-Raid opportunit${remaining === 1 ? "y" : "ies"} remain.`,
+    } };
+}
+
+export function projectGuildCharacterReadiness(row: RaidReadinessRow, equipment: EquippedItem[] = []): GuildCharacterReadiness {
+  return projectRaidPrepSource(row, equipment).readiness;
 }
 
 export function summarizeReadiness(selected: GuildCharacterReadiness[]): RaidReadinessSummary {
@@ -114,7 +127,83 @@ export function summarizeReadiness(selected: GuildCharacterReadiness[]): RaidRea
   };
 }
 
-export async function getRaidReadiness(viewerUserId: string, guildId: string, raidId: string): Promise<RaidReadiness> {
+function prepCategory(action: PlayerAction): RaidPrepActivityCategory {
+  if (action.view === "raid") return "raid-alternative";
+  if (action.targets.some((target) => target.realistic && target.sourceType === "Reputation")) return "reputation";
+  if (action.type === "dungeon") return "dungeon";
+  if (action.type === "quest") return "quest";
+  if (action.type === "crafting") return "crafted";
+  return "other";
+}
+
+function sortedGroups(groups: Map<string, RaidPrepActivityGroup>) {
+  return [...groups.values()].map((group) => ({
+    ...group,
+    playerCount: group.players.length,
+    players: [...group.players].sort((a, b) => a.characterName.localeCompare(b.characterName) || a.guildCharacterId.localeCompare(b.guildCharacterId)),
+  })).sort((a, b) => b.playerCount - a.playerCount || b.opportunityCount - a.opportunityCount || a.label.localeCompare(b.label) || a.key.localeCompare(b.key));
+}
+
+export function buildRaidPrepBoard(
+  guild: RaidPrepBoard["guild"],
+  raid: RaidPrepBoard["raid"],
+  sources: RaidPrepSource[],
+): RaidPrepBoard {
+  const selected = sources.filter((source) => source.rosterState === "selected");
+  const groups = new Map<string, RaidPrepActivityGroup>();
+  const realisticPlayers = new Set<string>();
+  for (const source of selected) {
+    if (source.readiness.dataState !== "available" || !source.advice?.supported) continue;
+    for (const action of [...source.advice.topActions, ...source.advice.secondaryActions]) {
+      if (action.upgradeCount < 1) continue;
+      const category = prepCategory(action);
+      const key = `${category}:${action.id}`;
+      const group = groups.get(key) ?? { key, label: action.activity, category, playerCount: 0, opportunityCount: 0, players: [] };
+      let player = group.players.find((candidate) => candidate.guildCharacterId === source.readiness.guildCharacterId);
+      if (!player) {
+        player = {
+          guildCharacterId: source.readiness.guildCharacterId,
+          characterName: source.readiness.characterName,
+          className: source.readiness.className,
+          specName: source.readiness.specName,
+          groupName: source.readiness.groupName,
+          raidRole: source.readiness.raidRole,
+          opportunityCount: 0,
+          lastRefreshedAt: source.readiness.lastRefreshedAt,
+        };
+        group.players.push(player);
+      }
+      player.opportunityCount += action.upgradeCount;
+      group.opportunityCount += action.upgradeCount;
+      groups.set(key, group);
+      if (category !== "raid-alternative") realisticPlayers.add(source.readiness.guildCharacterId);
+    }
+  }
+  const activityGroups = sortedGroups(new Map([...groups].filter(([, group]) => group.category !== "raid-alternative")));
+  const raidAlternativeGroups = sortedGroups(new Map([...groups].filter(([, group]) => group.category === "raid-alternative")));
+  const available = selected.filter((source) => source.readiness.dataState === "available");
+  return {
+    guild,
+    raid,
+    summary: {
+      selectedCount: selected.length,
+      sharingCount: selected.filter((source) => source.readiness.shareState === "shared").length,
+      supportedDataCount: available.length,
+      withRealisticOpportunitiesCount: realisticPlayers.size,
+      needsRefreshCount: selected.filter((source) => source.readiness.dataState === "needs-refresh").length,
+      unsupportedSpecCount: selected.filter((source) => source.readiness.dataState === "unsupported-spec").length,
+      notSharingCount: selected.filter((source) => source.readiness.shareState !== "shared").length,
+      noStrongPreRaidOpportunitiesCount: available.filter((source) => !realisticPlayers.has(source.readiness.guildCharacterId)).length,
+    },
+    activityGroups,
+    raidAlternativeGroups,
+    benchCount: sources.filter((source) => source.rosterState === "bench").length,
+  };
+}
+
+async function loadAuthorizedRaidData(viewerUserId: string, guildId: string, raidId: string) {
+  // Fixed query shape: one authorization query, one batched roster/share/latest-success query,
+  // and one batched sync-item query. An empty roster needs one metadata fallback query.
   const access = await query<Record<string, any>>(`
     SELECT membership.*,raid.raid_leader_user_id
     FROM raid_events raid
@@ -134,15 +223,29 @@ export async function getRaidReadiness(viewerUserId: string, guildId: string, ra
   const itemRows = await guildReadinessRepository.loadSyncItems([...new Set(validSyncIds)]);
   const items = new Map<string, EquippedItem[]>();
   for (const item of itemRows) items.set(item.sync_id, [...(items.get(item.sync_id) ?? []), itemFrom(item)]);
-  const projected = rows.filter((row) => row.guild_member_id).map((row) => ({ state: row.roster_state, readiness: projectGuildCharacterReadiness(row, items.get(row.sync_id) ?? []) }));
-  const selected = projected.filter((row) => row.state === "selected").map((row) => row.readiness);
-  const bench = projected.filter((row) => row.state === "bench").map((row) => row.readiness);
-  const first = rows[0];
+  return { rows, items, first: rows[0] };
+}
+
+export async function getRaidReadiness(viewerUserId: string, guildId: string, raidId: string): Promise<RaidReadiness> {
+  const { rows, items, first } = await loadAuthorizedRaidData(viewerUserId, guildId, raidId);
+  const projected = rows.filter((row) => row.guild_member_id).map((row) => projectRaidPrepSource(row, items.get(row.sync_id) ?? []));
+  const selected = projected.filter((source) => source.rosterState === "selected").map((source) => source.readiness);
+  const bench = projected.filter((source) => source.rosterState === "bench").map((source) => source.readiness);
   return {
     guild: { id: first.guild_id, name: first.guild_name, contentVersion: first.guild_content_version },
     raid: { id: first.raid_id, name: first.raid_name, instance: first.instance, startsAt: iso(first.starts_at) },
     selected, bench, summary: summarizeReadiness(selected),
   };
+}
+
+export async function getRaidPrepBoard(viewerUserId: string, guildId: string, raidId: string): Promise<RaidPrepBoard> {
+  const { rows, items, first } = await loadAuthorizedRaidData(viewerUserId, guildId, raidId);
+  const sources = rows.filter((row) => row.guild_member_id).map((row) => projectRaidPrepSource(row, items.get(row.sync_id) ?? []));
+  return buildRaidPrepBoard(
+    { id: first.guild_id, name: first.guild_name },
+    { id: first.raid_id, name: first.raid_name, instance: first.instance, startsAt: iso(first.starts_at) },
+    sources,
+  );
 }
 
 export async function getGuildCharacterReadiness(viewerUserId: string, guildId: string, raidId: string, guildCharacterId: string) {

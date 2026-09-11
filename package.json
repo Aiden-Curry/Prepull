@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts tests/settings.test.ts tests/main-alt.test.ts tests/production-config.test.ts tests/image-trust.test.ts tests/saved-characters.test.ts tests/player-advice.test.ts tests/character-sync.test.ts tests/session-planner.test.ts tests/recommendation-registry.test.ts tests/mage-recommendations.test.ts tests/additional-recommendations.test.ts tests/guild-readiness.test.ts",
+    "test": "node --test --experimental-strip-types tests/gear-analysis.test.ts tests/guilds.test.ts tests/settings.test.ts tests/main-alt.test.ts tests/production-config.test.ts tests/image-trust.test.ts tests/saved-characters.test.ts tests/player-advice.test.ts tests/character-sync.test.ts tests/session-planner.test.ts tests/recommendation-registry.test.ts tests/mage-recommendations.test.ts tests/additional-recommendations.test.ts tests/guild-readiness.test.ts tests/guild-prep-board.test.ts",
     "test:integration": "node --test --experimental-strip-types tests/postgres.integration.test.ts tests/postgres.workflows.integration.test.ts tests/postgres.settings.integration.test.ts tests/postgres.raid.integration.test.ts tests/postgres.main-alt.integration.test.ts tests/postgres.saved-characters.integration.test.ts tests/postgres.character-sync.integration.test.ts tests/postgres.readiness.integration.test.ts",
     "validate:gear": "node --experimental-strip-types scripts/validate-gear-dataset.ts",
     "validate:curated": "node --experimental-strip-types scripts/validate-curated-gear.ts",

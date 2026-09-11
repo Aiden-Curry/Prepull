@@ -8,7 +8,7 @@ if (!process.env.TEST_DATABASE_URL) {
   process.env.DATABASE_URL = process.env.TEST_DATABASE_URL;
   const { query, closePool } = await import("../lib/guilds/db.ts");
   const { GuildReadinessRepository } = await import("../lib/guilds/readiness-repository.ts");
-  const { enableReadinessShare, disableReadinessShare, getRaidReadiness, listEligibleReadinessShares } = await import("../lib/guilds/readiness-service.ts");
+  const { enableReadinessShare, disableReadinessShare, getRaidPrepBoard, getRaidReadiness, listEligibleReadinessShares } = await import("../lib/guilds/readiness-service.ts");
 
   type Fixture = Awaited<ReturnType<typeof fixture>>;
   async function fixture() {
@@ -79,11 +79,15 @@ if (!process.env.TEST_DATABASE_URL) {
       await enableReadinessShare(f.ids.member, f.guildA, f.memberA, f.character);
       for (const viewer of [f.ids.owner, f.ids.officer, f.ids.leader]) {
         const readiness = await getRaidReadiness(viewer, f.guildA, f.raidA); assert.equal(readiness.summary.supportedCount, 1);
+        const prep = await getRaidPrepBoard(viewer, f.guildA, f.raidA); assert.equal(prep.summary.supportedDataCount, 1); assert.ok(prep.activityGroups.length);
         const serialized = JSON.stringify(readiness); assert.doesNotMatch(serialized, /@readiness\.test|userCharacterId|shareId|syncHistory|sessionPlan/);
+        assert.doesNotMatch(JSON.stringify(prep), /@readiness\.test|userCharacterId|shareId|syncHistory|sessionPlan|itemId|itemName/);
       }
       await assert.rejects(() => getRaidReadiness(f.ids.member, f.guildA, f.raidA), /not found/i);
+      await assert.rejects(() => getRaidPrepBoard(f.ids.member, f.guildA, f.raidA), /not found/i);
       await assert.rejects(() => getRaidReadiness(f.ids.leader, f.guildB, f.raidB), /not found/i);
       await assert.rejects(() => getRaidReadiness(f.ids.guildB, f.guildA, f.raidA), /not found/i);
+      await assert.rejects(() => getRaidPrepBoard(f.ids.guildB, f.guildA, f.raidA), /not found/i);
     } finally { await clean(f); }
   });
 
@@ -93,8 +97,10 @@ if (!process.env.TEST_DATABASE_URL) {
       await query("UPDATE guild_member_links SET status='revoked' WHERE guild_member_id=$1 AND user_id=$2", [f.memberA, f.ids.member]);
       assert.equal((await query("SELECT enabled FROM guild_readiness_shares WHERE guild_member_id=$1", [f.memberA])).rows[0].enabled, false);
       assert.equal((await getRaidReadiness(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
       await query("UPDATE guild_member_links SET status='approved' WHERE guild_member_id=$1 AND user_id=$2", [f.memberA, f.ids.member]);
       assert.equal((await getRaidReadiness(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
     } finally { await clean(f); }
   });
 
@@ -103,11 +109,13 @@ if (!process.env.TEST_DATABASE_URL) {
       let share = await enableReadinessShare(f.ids.member, f.guildA, f.memberA, f.character);
       await query("UPDATE guild_workspace_memberships SET active=false WHERE guild_id=$1 AND user_id=$2", [f.guildA, f.ids.member]);
       assert.equal((await query("SELECT enabled FROM guild_readiness_shares WHERE id=$1", [share])).rows[0].enabled, false);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
       await query("UPDATE guild_workspace_memberships SET active=true WHERE guild_id=$1 AND user_id=$2", [f.guildA, f.ids.member]);
       assert.equal((await getRaidReadiness(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
       share = await enableReadinessShare(f.ids.member, f.guildA, f.memberA, f.character);
       await query("UPDATE user_characters SET archived_at=now(),is_primary=false WHERE id=$1", [f.character]);
       assert.equal((await query("SELECT enabled FROM guild_readiness_shares WHERE id=$1", [share])).rows[0].enabled, false);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
       assert.equal((await query("SELECT count(*)::int AS count FROM guild_members WHERE id=$1", [f.memberA])).rows[0].count, 1);
       assert.equal((await query("SELECT count(*)::int AS count FROM character_syncs WHERE user_character_id=$1", [f.character])).rows[0].count, 1);
     } finally { await clean(f); }
@@ -119,6 +127,7 @@ if (!process.env.TEST_DATABASE_URL) {
       await assert.rejects(() => disableReadinessShare(f.ids.officer, share), /not found/i);
       await disableReadinessShare(f.ids.member, share);
       assert.equal((await query("SELECT enabled FROM guild_readiness_shares WHERE id=$1", [share])).rows[0].enabled, false);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
     } finally { await clean(f); }
   });
 
@@ -129,6 +138,30 @@ if (!process.env.TEST_DATABASE_URL) {
       assert.equal((await query("SELECT enabled FROM guild_readiness_shares WHERE id=$1", [share])).rows[0].enabled, false);
       await query("UPDATE guild_members SET active=true WHERE id=$1", [f.memberA]);
       assert.equal((await getRaidReadiness(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
+      assert.equal((await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA)).summary.notSharingCount, 1);
+    } finally { await clean(f); }
+  });
+
+  test("Prep Board uses latest successful persisted snapshots, survives repository recreation, and excludes bench", async () => {
+    const f = await fixture(); try {
+      const shareId = await enableReadinessShare(f.ids.member, f.guildA, f.memberA, f.character);
+      const recreated = new GuildReadinessRepository();
+      assert.equal((await recreated.listEligibleCandidates(f.ids.member, f.guildA))[0].share_id, shareId);
+      const failed = randomUUID();
+      await query("INSERT INTO character_syncs(id,user_character_id,synced_at,level,class_name,spec,race,faction,content_version,character_realm_type,provider,status,error_code,error_message) VALUES($1,$2,now()+interval '2 seconds',60,'Mage','Fire','Human','Alliance','era','era','mock','failed','ProviderUnavailable','safe failure')", [failed, f.character]);
+      let prep = await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA);
+      assert.equal(prep.summary.supportedDataCount, 1);
+      assert.ok(prep.activityGroups.length);
+      const unsupported = randomUUID();
+      await query("INSERT INTO character_syncs(id,user_character_id,synced_at,level,class_name,spec,race,faction,content_version,character_realm_type,provider,status) VALUES($1,$2,now()+interval '1 second',60,'Mage','Fire','Human','Alliance','era','era','mock','success')", [unsupported, f.character]);
+      prep = await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA);
+      assert.equal(prep.summary.unsupportedSpecCount, 1);
+      assert.equal(prep.activityGroups.length, 0);
+      await query("UPDATE raid_roster_entries SET roster_state='bench',group_name=NULL WHERE raid_event_id=$1 AND guild_member_id=$2", [f.raidA, f.memberA]);
+      prep = await getRaidPrepBoard(f.ids.owner, f.guildA, f.raidA);
+      assert.equal(prep.summary.selectedCount, 0);
+      assert.equal(prep.benchCount, 1);
+      assert.equal(prep.activityGroups.length, 0);
     } finally { await clean(f); }
   });
 
