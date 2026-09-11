@@ -1,14 +1,14 @@
 {
-  "discoveredActionCount": 29,
-  "inventoriedActionCount": 29,
-  "directlyInvokedActionCount": 29,
-  "authenticationCoveredCount": 29,
-  "alteredGuildIdCoveredCount": 29,
-  "alteredTargetIdCoveredCount": 29,
-  "malformedPayloadCoveredCount": 29,
-  "zeroMutationVerifiedCount": 29,
-  "auditNonCreationVerifiedCount": 29,
-  "privacyScanCoveredCount": 29,
+  "discoveredActionCount": 31,
+  "inventoriedActionCount": 31,
+  "directlyInvokedActionCount": 31,
+  "authenticationCoveredCount": 31,
+  "alteredGuildIdCoveredCount": 31,
+  "alteredTargetIdCoveredCount": 31,
+  "malformedPayloadCoveredCount": 31,
+  "zeroMutationVerifiedCount": 31,
+  "auditNonCreationVerifiedCount": 31,
+  "privacyScanCoveredCount": 31,
   "actions": {
     "createGuildAction": {
       "harnessRendered": true,
@@ -263,6 +263,24 @@
       "privacyScanVerified": true
     },
     "submitClaimAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "enableReadinessShareAction": {
+      "harnessRendered": true,
+      "formSubmitted": true,
+      "actionReached": true,
+      "expectedResultObserved": true,
+      "databaseStateVerified": true,
+      "auditStateVerified": true,
+      "privacyScanVerified": true
+    },
+    "disableReadinessShareAction": {
       "harnessRendered": true,
       "formSubmitted": true,
       "actionReached": true,

@@ -8,6 +8,7 @@ import {
   changeMemberRoleAction, setCapabilityOverrideAction, deactivateMemberAction, activateMemberAction,
   removeMemberAction, transferOwnershipAction, decideClaimAction, submitClaimAction,
 } from "../../../../lib/guilds/actions";
+import { disableReadinessShareAction, enableReadinessShareAction } from "../../../../lib/guilds/readiness-actions";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ actionName: string }> };
@@ -49,6 +50,8 @@ export default async function ActionHarnessPage({ params }: Props) {
     case "transferOwnershipAction": return <Form actionName={actionName} action={transferOwnershipAction}><Field name="guildId" /><Field name="targetUserId" /><Field name="confirmation" value="wrong" /></Form>;
     case "decideClaimAction": return <Form actionName={actionName} action={decideClaimAction}><Field name="guildId" /><Field name="claimId" /><Field name="decision" value="approved" /><Field name="reason" value="Harness" /></Form>;
     case "submitClaimAction": return <Form actionName={actionName} action={submitClaimAction}><Field name="guildId" /><Field name="memberId" /></Form>;
+    case "enableReadinessShareAction": return <Form actionName={actionName} action={enableReadinessShareAction}><Field name="version" value="era"/><Field name="guildId"/><Field name="guildCharacterId"/><Field name="userCharacterId"/></Form>;
+    case "disableReadinessShareAction": return <Form actionName={actionName} action={disableReadinessShareAction}><Field name="version" value="era"/><Field name="guildId"/><Field name="shareId"/></Form>;
     default: notFound();
   }
 }

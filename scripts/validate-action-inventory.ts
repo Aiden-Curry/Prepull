@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 
-const source = readFileSync("lib/guilds/actions.ts", "utf8");
+const source = ["lib/guilds/actions.ts", "lib/guilds/readiness-actions.ts"].map((file) => readFileSync(file, "utf8")).join("\n");
 const inventory = JSON.parse(readFileSync("data/acceptance/guild-action-inventory.json", "utf8")) as { actions: Array<{ name: string; authorization: string; ids: string[] }> };
 const exported = [...source.matchAll(/export async function (\w+)\s*\(/g)].map((match) => match[1]);
 const listed = inventory.actions.map((action) => action.name);

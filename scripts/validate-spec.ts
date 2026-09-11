@@ -2,7 +2,7 @@ import { recommendationSpecManifests } from "../lib/recommendations/manifests/in
 import { validateSpec } from "../lib/recommendations/validate-spec.ts";
 
 const requested = process.argv[2];
-const manifests = requested ? recommendationSpecManifests.filter((manifest) => manifest.key === requested) : recommendationSpecManifests;
+const manifests = !requested || requested === "all" ? recommendationSpecManifests : recommendationSpecManifests.filter((manifest) => manifest.key === requested);
 if (!manifests.length) { console.error(`Unknown recommendation spec: ${requested}.`); process.exit(1); }
 let failed = false;
 for (const manifest of manifests) {

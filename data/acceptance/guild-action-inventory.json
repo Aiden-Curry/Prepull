@@ -1,6 +1,6 @@
 {
   "version": "6.2E.5D",
-  "source": "lib/guilds/actions.ts",
+  "source": "lib/guilds/actions.ts + lib/guilds/readiness-actions.ts",
   "transport": "Next.js Server Action POST from rendered production forms",
   "actions": [
     {"name":"createGuildAction","authorization":"authenticated user","ids":["none"],"alteredIdCoverage":"direct-transport"},
@@ -31,6 +31,8 @@
     {"name":"removeMemberAction","authorization":"guild settings capability","ids":["guildId","targetUserId"],"alteredIdCoverage":"repository"},
     {"name":"transferOwnershipAction","authorization":"guild owner","ids":["guildId","targetUserId"],"alteredIdCoverage":"repository"},
     {"name":"decideClaimAction","authorization":"guild claim-review capability","ids":["guildId","claimId"],"alteredIdCoverage":"direct-transport"},
-    {"name":"submitClaimAction","authorization":"authenticated user","ids":["guildId","memberId"],"alteredIdCoverage":"repository"}
+    {"name":"submitClaimAction","authorization":"authenticated user","ids":["guildId","memberId"],"alteredIdCoverage":"repository"},
+    {"name":"enableReadinessShareAction","authorization":"authenticated saved-character owner with active membership and approved claim","ids":["guildId","guildCharacterId","userCharacterId"],"alteredIdCoverage":"repository"},
+    {"name":"disableReadinessShareAction","authorization":"authenticated share owner","ids":["shareId"],"alteredIdCoverage":"repository"}
   ]
 }

@@ -18,7 +18,7 @@ const evidence = new Map<string, {
 async function database() { const client = new Client({ connectionString: process.env.E2E_DATABASE_URL }); await client.connect(); return client; }
 async function state(client: Client) {
   const result: Record<string, string> = {};
-  for (const table of ["guilds", "guild_workspace_memberships", "guild_members", "guild_member_links", "raid_events", "raid_signups", "raid_roster_entries", "raid_assignments", "raid_assignment_assignees", "guild_main_alt_relationships", "guild_main_alt_history", "audit_events"]) {
+  for (const table of ["guilds", "guild_workspace_memberships", "guild_members", "guild_member_links", "guild_readiness_shares", "raid_events", "raid_signups", "raid_roster_entries", "raid_assignments", "raid_assignment_assignees", "guild_main_alt_relationships", "guild_main_alt_history", "audit_events"]) {
     result[table] = String((await client.query(`SELECT count(*)::int AS count FROM ${table}`)).rows[0].count);
   }
   return result;
