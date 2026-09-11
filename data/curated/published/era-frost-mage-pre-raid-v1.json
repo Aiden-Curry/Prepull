@@ -1,0 +1,18 @@
+{
+  "setId": "era-frost-mage-pre-raid",
+  "datasetVersion": "era-frost-mage-pre-raid-v1",
+  "contentVersion": "era",
+  "class": "Mage",
+  "spec": "Frost",
+  "role": "DPS",
+  "progressionPhase": 0,
+  "status": "published",
+  "publishedAt": "2026-09-11",
+  "methodology": "Curated Reference",
+  "canonicalSource": "data/curated/era/mage/frost/reference.csv",
+  "canonicalSourceSha256": "B8EEEF81617B31A0B8E7C20364E2E32F705F23E3F3625B3B31EF6E577606CBDF",
+  "rows": 20,
+  "uniqueItems": 20,
+  "slots": 17,
+  "changelog": "Published the initial explainable Era Frost Mage Pre-Raid reference, including paired slots, one-hand/off-hand and two-handed weapon paths, faction quests, crafting requirements, and realistic versus aspirational acquisition semantics."
+}

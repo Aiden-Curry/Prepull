@@ -1,0 +1,29 @@
+{
+  "setId": "era-frost-mage-phase-1",
+  "datasetVersion": "era-frost-mage-phase-1-v1",
+  "contentVersion": "era",
+  "class": "Mage",
+  "spec": "Frost",
+  "role": "DPS",
+  "progressionPhase": 1,
+  "status": "published",
+  "publishedAt": "2026-09-11",
+  "methodology": "Curated Reference",
+  "baseSetId": "era-frost-mage-pre-raid",
+  "baseDatasetVersion": "era-frost-mage-pre-raid-v1",
+  "source": {
+    "baseCsv": "data/curated/era/mage/frost/reference.csv",
+    "baseCsvSha256": "B8EEEF81617B31A0B8E7C20364E2E32F705F23E3F3625B3B31EF6E577606CBDF",
+    "overlayCsv": "data/curated/era/mage/frost/phase-1.csv",
+    "overlayCsvSha256": "4139B8A439B80BFBC0360ADA5943CF23AEE4399910D71C6A0ADFC1C7443165F7"
+  },
+  "overlay": {
+    "rows": 16,
+    "uniqueItems": 16
+  },
+  "composed": {
+    "rows": 36,
+    "slots": 17
+  },
+  "changelog": "Added reviewed Molten Core and Onyxia's Lair progression targets as a Phase 1 overlay without changing the Pre-Raid reference."
+}

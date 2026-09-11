@@ -11,7 +11,7 @@ const sections = [
   ["Sets and effects", "Set bonuses are recalculated after replacement. Only curated special effects contribute an estimated value. Unknown procs and on-use effects are marked Limited confidence."],
   ["Best in Slot vs realistic", "Best in Slot is the theoretical preferred candidate under the configured profile. Best realistic favours attainable progression and avoids presenting a late raid or legendary item as the only useful next step."],
   ["Acquisition recommendations", "Activities are scored transparently from major, meaningful, minor, and BiS opportunities, accessibility, and distinct affected slots. This is a prioritisation heuristic, not a drop-time or farming-efficiency model."],
-  ["Limitations", "The current implementation supports Classic Era Fury Warrior only. It is not a full DPS simulator, does not model every item or effect, excludes world buffs, and does not provide live Anniversary analysis."],
+  ["Limitations", "The legacy stat-scoring profile is specific to Classic Era Fury Warrior. Player recommendations currently use curated Classic Era Fury Warrior and Frost Mage references; they are not full DPS simulations, do not model every item or effect, exclude world buffs, and do not provide live Anniversary analysis."],
 ] as const;
 
 export default async function MethodologyPage({ params }: { params: Promise<{ version: string }> }) {

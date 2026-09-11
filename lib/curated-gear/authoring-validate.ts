@@ -5,16 +5,17 @@ import { metadataSlotCompatible } from "../item-metadata/validate.ts";
 import type { NormalizedItemMetadata } from "../item-metadata/types.ts";
 
 export type AuthoringIssue = { severity: "error" | "warning"; row: number; code: string; message: string };
-const profiles = new Set(["warrior:fury", "warrior:protection", "priest:holy"]);
+const builtInProfiles = new Set(["warrior:fury", "warrior:protection", "priest:holy", "mage:frost"]);
 const verificationStates = new Set(["unreviewed", "reviewed", "verified", "curated", "incomplete", "disputed"]);
 
 export function validateAuthoringRows(rows: AuthoringRow[], profileList: CuratedReferenceProfile[] = [], metadata: Map<number, NormalizedItemMetadata> = normalizedItemMetadata()): AuthoringIssue[] {
   const issues: AuthoringIssue[] = [];
+  const profiles = new Set([...builtInProfiles, ...profileList.map((profile) => `${profile.className.toLowerCase()}:${profile.specialization.toLowerCase()}`)]);
   const seen = new Set<string>();
   const ranks = new Set<string>();
   for (const [index, row] of rows.entries()) {
     const rowNumber = index + 2;
-    const required = ["contentVersion", "class", "spec", "role", "phase", "context", "setId", "slot", "itemId", "tier", "sourceType", "sourceName", "provenanceId", "verificationStatus"] as const;
+    const required = ["contentVersion", "class", "spec", "role", "phase", "context", "setId", "slot", "itemId", "tier", "rank", "sourceType", "sourceName", "activity", "provenanceId", "verificationStatus"] as const;
     for (const field of required) if (!row[field]?.trim()) issues.push({ severity: "error", row: rowNumber, code: "missing-required", message: `Missing ${field}.` });
     const profileKey = `${row.class.toLowerCase()}:${row.spec.toLowerCase()}`;
     if (!profiles.has(profileKey)) issues.push({ severity: "error", row: rowNumber, code: "invalid-profile", message: `Unsupported class/spec ${profileKey}.` });
@@ -24,7 +25,7 @@ export function validateAuthoringRows(rows: AuthoringRow[], profileList: Curated
     if (!validSlots.has(row.slot as never)) issues.push({ severity: "error", row: rowNumber, code: "invalid-slot", message: `Unknown slot ${row.slot}.` });
     const itemId = Number(row.itemId);
     if (!Number.isInteger(itemId) || itemId <= 0) issues.push({ severity: "error", row: rowNumber, code: "invalid-item-id", message: `Malformed item ID ${row.itemId}.` });
-    else { const item = metadata.get(itemId); if (!item) issues.push({ severity: "warning", row: rowNumber, code: "missing-item-metadata", message: `Item #${itemId} is not in normalized metadata.` }); else { if (!metadataSlotCompatible(item, row.slot as never)) issues.push({ severity: "error", row: rowNumber, code: "slot-mismatch", message: `Item #${itemId} metadata slot ${item.slot} is incompatible with curated slot ${row.slot}.` }); if (item.classRestrictions && !item.classRestrictions.includes("Warrior")) issues.push({ severity: "error", row: rowNumber, code: "class-restriction", message: `Item #${itemId} is restricted to ${item.classRestrictions.join(", ")}.` }); } }
+    else { const item = metadata.get(itemId); if (!item) issues.push({ severity: "warning", row: rowNumber, code: "missing-item-metadata", message: `Item #${itemId} is not in normalized metadata.` }); else { if (!metadataSlotCompatible(item, row.slot as never)) issues.push({ severity: "error", row: rowNumber, code: "slot-mismatch", message: `Item #${itemId} metadata slot ${item.slot} is incompatible with curated slot ${row.slot}.` }); const requestedClass = row.class.charAt(0).toUpperCase() + row.class.slice(1).toLowerCase(); if (item.classRestrictions && !item.classRestrictions.includes(requestedClass)) issues.push({ severity: "error", row: rowNumber, code: "class-restriction", message: `Item #${itemId} is restricted to ${item.classRestrictions.join(", ")}.` }); } }
     if (!validTiers.has(row.tier as never)) issues.push({ severity: "error", row: rowNumber, code: "invalid-tier", message: `Unknown tier ${row.tier}.` });
     if (row.rank && (!Number.isInteger(Number(row.rank)) || Number(row.rank) < 1)) issues.push({ severity: "error", row: rowNumber, code: "invalid-rank", message: "Rank must be a positive integer." });
     if (!validSourceTypes.has(row.sourceType)) issues.push({ severity: "error", row: rowNumber, code: "invalid-source-type", message: `Unknown source type ${row.sourceType}.` });

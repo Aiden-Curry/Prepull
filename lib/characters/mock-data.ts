@@ -1,12 +1,15 @@
 import { EquippedItem, NormalizedCharacter, CharacterRealmType, ContentVersion } from "../types";
-import { eraItems, tbcItems } from "./items";
+import { tbcItems } from "./items";
 import { normalizeLookup } from "./normalization";
 import { eraFuryFixtures } from "../gear-analysis/fixtures";
+import { eraFrostMageFixtures } from "../gear-analysis/mage-fixtures";
 const gear = (items: Record<string, EquippedItem>) => Object.values(items);
 export const mockCharacters: NormalizedCharacter[] = [
   { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-aidy", name: "Aidy", dataMeta: { provider: "mock", isLive: false } },
   { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-freshfury", name: "Freshfury", dataMeta: { provider: "mock", isLive: false } },
-  { id: "era-us-whitemane-lyria", name: "Lyria", region: "us", realm: "Whitemane", contentVersion: "era", realmType: "era", level: 60, race: "Human", class: "Mage", spec: "Frost", faction: "Alliance", professions: ["Tailoring", "Enchanting"], equipment: gear(eraItems).map((item) => ({ ...item, name: item.slot === "Main Hand" ? "Azuresong Mageblade" : item.name, stats: item.slot === "Main Hand" ? { "Spell power": "+30", "Critical strike": "+1%" } : item.stats })) },
+  { ...eraFrostMageFixtures.browserBaseline, id: "era-us-whitemane-lyria", name: "Lyria", dataMeta: { provider: "mock", isLive: false } },
+  { ...eraFrostMageFixtures.browserProgressed, id: "era-us-whitemane-lyriaprogress", name: "Lyriaprogress", dataMeta: { provider: "mock", isLive: false } },
+  { ...eraFrostMageFixtures.fresh60, id: "era-us-whitemane-pyra", name: "Pyra", spec: "Fire", dataMeta: { provider: "mock", isLive: false } },
   { id: "tbc-anniversary-spineshatter-aidy", name: "Aidy", region: "eu", realm: "Spineshatter", contentVersion: "tbc", realmType: "anniversary", level: 70, race: "Orc", class: "Warrior", spec: "Protection", faction: "Horde", professions: ["Jewelcrafting", "Mining"], equipment: gear(tbcItems) },
   { id: "tbc-anniversary-us-benediction-selene", name: "Selene", region: "us", realm: "Benediction", contentVersion: "tbc", realmType: "anniversary", level: 70, race: "Draenei", class: "Priest", spec: "Holy", faction: "Alliance", professions: ["Tailoring", "Enchanting"], equipment: gear(tbcItems).map((item) => ({ ...item, name: item.slot === "Main Hand" ? "Light's Justice" : item.name, stats: item.slot === "Main Hand" ? { "Healing power": "+550", "Mana per 5": "+8" } : item.stats })) },
 ];

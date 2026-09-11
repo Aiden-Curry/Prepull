@@ -5,7 +5,7 @@ const validSlots = new Set<EquipmentSlot>(["Head", "Neck", "Shoulder", "Back", "
 
 export type DatasetIssue = { itemId?: number; severity: "error" | "warning"; code: string; message: string };
 
-export function validateFuryDataset(candidates: CuratedCandidate[]): DatasetIssue[] {
+export function validateCandidateDataset(candidates: CuratedCandidate[], expected?: { contentVersion: string; className: string }): DatasetIssue[] {
   const issues: DatasetIssue[] = [];
   const ids = new Map<number, CuratedCandidate>();
   const sources = new Set<string>();
@@ -15,6 +15,8 @@ export function validateFuryDataset(candidates: CuratedCandidate[]): DatasetIssu
     if (!validSlots.has(candidate.slot)) issues.push({ itemId: candidate.itemId, severity: "error", code: "invalid-slot", message: `Invalid slot ${candidate.slot}.` });
     if (!candidate.source) issues.push({ itemId: candidate.itemId, severity: "error", code: "missing-source", message: "Candidate has no acquisition source." });
     if (!candidate.availability || candidate.availability.contentVersion !== "era" || !Number.isInteger(candidate.availability.phase)) issues.push({ itemId: candidate.itemId, severity: "error", code: "invalid-availability", message: "Candidate has invalid Era/phase availability." });
+    if (expected && candidate.availability && candidate.availability.contentVersion !== expected.contentVersion) issues.push({ itemId: candidate.itemId, severity: "error", code: "dataset-registration-mismatch", message: "Candidate availability is outside the registered content version." });
+    if (expected && candidate.availability.classes && !candidate.availability.classes.some((className) => className.toLowerCase() === expected.className.toLowerCase())) issues.push({ itemId: candidate.itemId, severity: "error", code: "dataset-class-mismatch", message: `Candidate is not available to ${expected.className}.` });
     if (!Object.keys(candidate.stats).length && !candidate.weapon && !candidate.specialEffectId) issues.push({ itemId: candidate.itemId, severity: "warning", code: "missing-stats", message: "Candidate has no stats, weapon properties, or modeled effect." });
     if (candidate.isBestInSlot && !candidate.source) issues.push({ itemId: candidate.itemId, severity: "error", code: "bis-missing-source", message: "Best-in-slot candidate lacks acquisition metadata." });
     if (candidate.sourceQuality === "unverified" || candidate.source?.verification === "unverified") issues.push({ itemId: candidate.itemId, severity: "warning", code: "unverified-source", message: "Acquisition metadata is explicitly unverified." });
@@ -24,3 +26,5 @@ export function validateFuryDataset(candidates: CuratedCandidate[]): DatasetIssu
   }
   return issues;
 }
+
+export const validateFuryDataset = (candidates: CuratedCandidate[]) => validateCandidateDataset(candidates);

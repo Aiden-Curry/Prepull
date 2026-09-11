@@ -928,5 +928,545 @@
       "contentVersion": "era",
       "realmType": "era"
     }
+  },
+  {
+    "itemId": 18727,
+    "name": "Crimson Felt Hat",
+    "slot": "Head",
+    "quality": "Rare",
+    "itemLevel": 59,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.085Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12103,
+    "name": "Star of Mystaria",
+    "slot": "Neck",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.201Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11782,
+    "name": "Boreal Mantle",
+    "slot": "Shoulder",
+    "quality": "Rare",
+    "itemLevel": 57,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.322Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11623,
+    "name": "Spritecaster Cape",
+    "slot": "Back",
+    "quality": "Rare",
+    "itemLevel": 52,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.459Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 14152,
+    "name": "Robe of the Archmage",
+    "slot": "Chest",
+    "quality": "Epic",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.567Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18497,
+    "name": "Sublime Wristguards",
+    "slot": "Wrist",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.692Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13253,
+    "name": "Hands of Power",
+    "slot": "Hands",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.793Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11662,
+    "name": "Ban'thok Sash",
+    "slot": "Waist",
+    "quality": "Rare",
+    "itemLevel": 54,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:05.922Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13170,
+    "name": "Skyshroud Leggings",
+    "slot": "Legs",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.046Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11822,
+    "name": "Omnicast Boots",
+    "slot": "Feet",
+    "quality": "Rare",
+    "itemLevel": 59,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.170Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12543,
+    "name": "Songstone of Ironforge",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.281Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12545,
+    "name": "Eye of Orgrimmar",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.398Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13001,
+    "name": "Maiden's Circle",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 61,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.536Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16058,
+    "name": "Fordring's Seal",
+    "slot": "Finger 1",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.656Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 12930,
+    "name": "Briarwood Reed",
+    "slot": "Trinket 1",
+    "quality": "Rare",
+    "itemLevel": 60,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.751Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13968,
+    "name": "Eye of the Beast",
+    "slot": "Trinket 1",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.859Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13964,
+    "name": "Witchblade",
+    "slot": "Main Hand",
+    "quality": "Rare",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:06.981Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18534,
+    "name": "Rod of the Ogre Magi",
+    "slot": "Main Hand",
+    "quality": "Rare",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:07.118Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 11904,
+    "name": "Spirit of Aquementas",
+    "slot": "Main Hand",
+    "quality": "Uncommon",
+    "itemLevel": 56,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:07.219Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 13938,
+    "name": "Bonecreeper Stylus",
+    "slot": "Ranged / Relic",
+    "quality": "Rare",
+    "itemLevel": 62,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:07.347Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16795,
+    "name": "Arcanist Crown",
+    "slot": "Head",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:08.645Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17109,
+    "name": "Choker of Enlightenment",
+    "slot": "Neck",
+    "quality": "Epic",
+    "itemLevel": 65,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:08.752Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16797,
+    "name": "Arcanist Mantle",
+    "slot": "Shoulder",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:08.867Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17078,
+    "name": "Sapphiron Drape",
+    "slot": "Back",
+    "quality": "Epic",
+    "itemLevel": 72,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:08.968Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19145,
+    "name": "Robe of Volatile Power",
+    "slot": "Chest",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.090Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16799,
+    "name": "Arcanist Bindings",
+    "slot": "Wrist",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.206Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16801,
+    "name": "Arcanist Gloves",
+    "slot": "Hands",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.364Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19136,
+    "name": "Mana Igniting Cord",
+    "slot": "Waist",
+    "quality": "Epic",
+    "itemLevel": 71,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.465Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16915,
+    "name": "Netherwind Pants",
+    "slot": "Legs",
+    "quality": "Epic",
+    "itemLevel": 76,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.593Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 16800,
+    "name": "Arcanist Boots",
+    "slot": "Feet",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.708Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19147,
+    "name": "Ring of Spell Power",
+    "slot": "Finger 1",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.843Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 19138,
+    "name": "Band of Sulfuras",
+    "slot": "Finger 1",
+    "quality": "Epic",
+    "itemLevel": 78,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:09.933Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18820,
+    "name": "Talisman of Ephemeral Power",
+    "slot": "Trinket 1",
+    "quality": "Epic",
+    "itemLevel": 66,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:10.020Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17103,
+    "name": "Azuresong Mageblade",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 71,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:10.124Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 18842,
+    "name": "Staff of Dominance",
+    "slot": "Main Hand",
+    "quality": "Epic",
+    "itemLevel": 70,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:10.262Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
+  },
+  {
+    "itemId": 17077,
+    "name": "Crimson Shocker",
+    "slot": "Ranged / Relic",
+    "quality": "Epic",
+    "itemLevel": 63,
+    "icon": "IT",
+    "stats": {},
+    "provenance": {
+      "source": "blizzard-api",
+      "verifiedAt": "2026-09-10T23:07:10.384Z",
+      "contentVersion": "era",
+      "realmType": "era"
+    }
   }
 ]

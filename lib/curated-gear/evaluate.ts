@@ -1,6 +1,7 @@
 import type { EquipmentSlot, EquippedItem, NormalizedCharacter } from "../types.ts";
-import { eraFuryCandidates } from "../gear-analysis/dataset.ts";
+import type { CuratedCandidate } from "../gear-analysis/types.ts";
 import { normalizedItemMetadata } from "../item-metadata/store.ts";
+import { getRecommendationConfigForProfile } from "../recommendations/registry.ts";
 import { getCanonicalCuratedProfile } from "./repository.ts";
 import { progressionPhaseForSet, setForPhase } from "./progression.ts";
 import { availabilityFor, isAvailableInPhase, resolvedPhaseForSet, sourceForPhase, type ClassicContentPhase } from "./availability.ts";
@@ -8,11 +9,10 @@ import type { CuratedActivity, CuratedEvaluation, CuratedRecommendation, Curated
 
 const tierRank: Record<ReferenceItemEntry["tier"], number> = { bis: 5, excellent: 4, strong: 3, alternative: 2, entry: 1 };
 const metadata = normalizedItemMetadata();
-const candidateById = new Map(eraFuryCandidates.map((candidate) => [candidate.itemId, candidate]));
 type EvaluatedItem = EquippedItem & { reference: ReferenceItemEntry; isRealistic?: boolean };
 const blackDragonMailIds = new Set([16984, 15050, 15051, 15052]);
 
-const itemFor = (reference: ReferenceItemEntry, character?: NormalizedCharacter, phase: ClassicContentPhase = 6): EvaluatedItem | undefined => {
+const itemFor = (reference: ReferenceItemEntry, candidateById: ReadonlyMap<number, CuratedCandidate>, character?: NormalizedCharacter, phase: ClassicContentPhase = 6): EvaluatedItem | undefined => {
   const source = candidateById.get(reference.itemId) ?? metadata.get(reference.itemId);
   if (!source) return undefined;
   const factionSource = character && reference.factionSources?.[character.faction];
@@ -22,7 +22,8 @@ const itemFor = (reference: ReferenceItemEntry, character?: NormalizedCharacter,
 const sourceName = (recommendation: Pick<CuratedRecommendation, "target">) => recommendation.target?.source?.instance ?? recommendation.target?.source?.zone ?? recommendation.target?.source?.type ?? "Unspecified source";
 const pairedSlots = (slot: EquipmentSlot) => ["Finger 1", "Finger 2"].includes(slot) ? ["Finger 1", "Finger 2"] : ["Trinket 1", "Trinket 2"].includes(slot) ? ["Trinket 1", "Trinket 2"] : ["Main Hand", "Off Hand / Shield"].includes(slot) ? ["Main Hand", "Off Hand / Shield"] : [];
 const conflicts = (item: EvaluatedItem, reserved: Set<string>) => Boolean(item.uniqueGroup && reserved.has(`group:${item.uniqueGroup}`)) || reserved.has(`item:${item.itemId}`);
-const reserve = (item: EvaluatedItem | undefined, reserved: Set<string>) => { if (!item) return; reserved.add(`item:${item.itemId}`); if (item.uniqueGroup) reserved.add(`group:${item.uniqueGroup}`); };
+const isTwoHand = (item: EvaluatedItem | EquippedItem | undefined) => item?.weapon?.hand === "two-hand" || ("reference" in (item ?? {}) && /two-handed/i.test((item as EvaluatedItem).reference.weaponContext ?? ""));
+const reserve = (item: EvaluatedItem | undefined, reserved: Set<string>) => { if (!item) return; reserved.add(`item:${item.itemId}`); if (item.uniqueGroup) reserved.add(`group:${item.uniqueGroup}`); if (isTwoHand(item)) reserved.add("weapon:two-hand"); };
 const notesFor = (character: NormalizedCharacter, item: EvaluatedItem | undefined, reference: ReferenceItemEntry | undefined): string[] => {
   if (!item || !reference) return [];
   const notes = reference.notes ? [reference.notes] : [];
@@ -45,20 +46,21 @@ const notesFor = (character: NormalizedCharacter, item: EvaluatedItem | undefine
   return [...new Set(notes)];
 };
 const certaintyFor = (item: EvaluatedItem | undefined, reference: ReferenceItemEntry | undefined): CuratedRecommendation["certainty"] => item?.isRealistic === false || reference?.source.type === "World Drop" ? "contextual" : reference?.provenance.verificationStatus === "curated" ? "high" : "limited";
-const knownProgressionPhase = (item: EquippedItem | undefined) => { const candidate = item ? candidateById.get(item.itemId) : undefined; return candidate?.source?.type === "Raid" ? candidate.availability.phase : 0; };
-const characterProgressionPhase = (character: NormalizedCharacter) => Math.max(0, ...character.equipment.map(knownProgressionPhase));
+const knownProgressionPhase = (item: EquippedItem | undefined, candidateById: ReadonlyMap<number, CuratedCandidate>) => { const candidate = item ? candidateById.get(item.itemId) : undefined; return candidate?.source?.type === "Raid" ? candidate.availability.phase : 0; };
+const characterProgressionPhase = (character: NormalizedCharacter, candidateById: ReadonlyMap<number, CuratedCandidate>) => Math.max(0, ...character.equipment.map((item) => knownProgressionPhase(item, candidateById)));
 const hasReferenceRows = (set: ReferenceGearSet | undefined) => Boolean(set && Object.values(set.slots).some((entries) => (entries?.length ?? 0) > 0));
-const isBeyondSet = (currentItem: EquippedItem | undefined, activePhase: number) => { const candidate = currentItem ? candidateById.get(currentItem.itemId) : undefined; return Boolean(candidate && candidate.source?.type === "Raid" && candidate.availability.phase > activePhase); };
+const isBeyondSet = (currentItem: EquippedItem | undefined, activePhase: number, candidateById: ReadonlyMap<number, CuratedCandidate>) => { const candidate = currentItem ? candidateById.get(currentItem.itemId) : undefined; return Boolean(candidate && candidate.source?.type === "Raid" && candidate.availability.phase > activePhase); };
 const isPlaceholder = (item: EquippedItem | undefined) => Boolean(item && ((item.itemId >= 700000 && item.itemId < 700100) || item.name.startsWith("Fresh 60 ")));
 const daggerLoadout = (character: NormalizedCharacter) => character.equipment.some((item) => [18805, 18816].includes(item.itemId) || item.weapon?.weaponType === "Dagger");
 
-function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entries: ReferenceItemEntry[], reserved: Set<string>, activePhase: number, availabilityPhase: ClassicContentPhase): CuratedRecommendation {
+function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entries: ReferenceItemEntry[], reserved: Set<string>, activePhase: number, availabilityPhase: ClassicContentPhase, candidateById: ReadonlyMap<number, CuratedCandidate>): CuratedRecommendation {
   const equippedItem = character.equipment.find((item) => item.slot === slot);
   const currentItem = isPlaceholder(equippedItem) ? undefined : equippedItem;
   const unavailable = entries.filter((entry) => !isAvailableInPhase(entry.itemId, availabilityPhase));
-  const allOptions = entries.filter((entry) => isAvailableInPhase(entry.itemId, availabilityPhase) && (!entry.faction || entry.faction === character.faction)).map((entry) => itemFor(entry, character, availabilityPhase)).filter((item): item is EvaluatedItem => Boolean(item)).sort((left, right) => (slot === "Hands" && daggerLoadout(character) ? Number(right.itemId === 18823) - Number(left.itemId === 18823) : 0) || tierRank[right.reference.tier] - tierRank[left.reference.tier]);
+  const allOptions = entries.filter((entry) => isAvailableInPhase(entry.itemId, availabilityPhase) && (!entry.faction || entry.faction === character.faction)).map((entry) => itemFor(entry, candidateById, character, availabilityPhase)).filter((item): item is EvaluatedItem => Boolean(item)).sort((left, right) => (slot === "Hands" && daggerLoadout(character) ? Number(right.itemId === 18823) - Number(left.itemId === 18823) : 0) || tierRank[right.reference.tier] - tierRank[left.reference.tier]);
   const currentReference = allOptions.find((item) => item.itemId === currentItem?.itemId);
-  if (isBeyondSet(currentItem, activePhase)) return { slot, currentItem, currentTier: undefined, scope: "outside-reference-scope", otherOptions: [], status: "outside-reference-scope", priority: "outside-reference-scope", certainty: "limited", conditionalNotes: [], reason: "This character's equipment is beyond the current reference dataset. No downgrade recommendation generated; later-phase reference data is required for a reliable comparison." };
+  if (slot === "Off Hand / Shield" && reserved.has("weapon:two-hand")) return { slot, currentItem, scope: "complete", otherOptions: [], status: "complete", priority: "complete", certainty: "high", conditionalNotes: ["A two-handed weapon occupies both weapon slots."], reason: "The selected two-handed weapon does not permit an off-hand item." };
+  if (isBeyondSet(currentItem, activePhase, candidateById)) return { slot, currentItem, currentTier: undefined, scope: "outside-reference-scope", otherOptions: [], status: "outside-reference-scope", priority: "outside-reference-scope", certainty: "limited", conditionalNotes: [], reason: "This character's equipment is beyond the current reference dataset. No downgrade recommendation generated; later-phase reference data is required for a reliable comparison." };
   const paired = new Set(pairedSlots(slot).filter((pairedSlot) => pairedSlot !== slot).flatMap((pairedSlot) => character.equipment.filter((item) => item.slot === pairedSlot)));
   const options = allOptions.filter((item) => !conflicts(item, reserved) && ![...paired].some((equipped) => equipped.itemId === item.itemId || (item.uniqueGroup && equipped.uniqueGroup === item.uniqueGroup)));
   const target = options.find((item) => item.reference.tier === "bis") ?? options[0];
@@ -85,16 +87,18 @@ function evaluateSlot(character: NormalizedCharacter, slot: EquipmentSlot, entri
   return recommendation;
 }
 
-export function evaluateCuratedReference(character: NormalizedCharacter, profile: CuratedReferenceProfile = getCanonicalCuratedProfile(), setId = profile.defaultSetId, requestedAvailabilityPhase?: ClassicContentPhase): CuratedEvaluation {
+export function evaluateCuratedReference(character: NormalizedCharacter, profile: CuratedReferenceProfile = getCanonicalCuratedProfile(), setId = profile.defaultSetId, requestedAvailabilityPhase?: ClassicContentPhase, candidates?: readonly CuratedCandidate[]): CuratedEvaluation {
+  const registeredCandidates = candidates ?? getRecommendationConfigForProfile(profile)?.candidates ?? [];
+  const candidateById = new Map(registeredCandidates.map((candidate) => [candidate.itemId, candidate]));
   const baseSet: ReferenceGearSet = profile.sets.find((candidate) => candidate.id === setId) ?? profile.sets[0];
-  const characterPhase = characterProgressionPhase(character);
+  const characterPhase = characterProgressionPhase(character, candidateById);
   const requestedSet = requestedAvailabilityPhase !== undefined ? baseSet : setId === profile.defaultSetId ? (character.curatedReferenceSetId ? profile.sets.find((candidate) => candidate.id === character.curatedReferenceSetId) ?? setForPhase(profile, characterPhase) : setForPhase(profile, characterPhase)) : baseSet;
   const activeSet = requestedSet && (characterPhase === 0 || hasReferenceRows(requestedSet)) ? requestedSet : baseSet;
   const referenceAvailability = characterPhase > progressionPhaseForSet(baseSet) && !hasReferenceRows(requestedSet) ? "not-available" : "available";
   const activePhase = progressionPhaseForSet(activeSet);
   const availabilityPhase = requestedAvailabilityPhase ?? resolvedPhaseForSet(activePhase);
   const reserved = new Set<string>();
-  const rawRecommendations = Object.keys(activeSet.slots).map((slot) => evaluateSlot(character, slot as EquipmentSlot, activeSet.slots[slot as EquipmentSlot] ?? [], reserved, activePhase, availabilityPhase));
+  const rawRecommendations = Object.keys(activeSet.slots).map((slot) => evaluateSlot(character, slot as EquipmentSlot, activeSet.slots[slot as EquipmentSlot] ?? [], reserved, activePhase, availabilityPhase, candidateById));
   const recommendations = referenceAvailability === "not-available" ? rawRecommendations.map((recommendation) => recommendation.priority === "outside-reference-scope" || recommendation.priority === "complete" ? recommendation : { ...recommendation, target: undefined, bestRealistic: undefined, otherOptions: [], status: "unknown" as const, priority: "unknown" as const, certainty: "limited" as const, conditionalNotes: [], reason: "Reference data not yet available for this progression level. No recommendation is generated until the relevant later-phase dataset exists." }) : rawRecommendations;
   const priorityScore = (recommendation: CuratedRecommendation) => recommendation.priority === "major-opportunity" ? 4 : recommendation.priority === "meaningful-upgrade" ? 2 : 1;
   const optionItems = (recommendation: CuratedRecommendation) => [recommendation.target, recommendation.bestRealistic, ...recommendation.otherOptions].filter((item): item is NonNullable<CuratedRecommendation["target"]> => Boolean(item));

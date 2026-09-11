@@ -1943,5 +1943,913 @@
         }
       ]
     }
+  },
+  {
+    "id": "era-frost-mage-phase-1",
+    "contentVersion": "era",
+    "className": "mage",
+    "specialization": "frost",
+    "role": "DPS",
+    "phase": 1,
+    "name": "mage frost phase-1 general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 16795,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Garr"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 17109,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Lucifron"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 16797,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Baron Geddon"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 17078,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Onyxia's Lair",
+            "boss": "Onyxia"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 19145,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Shared Molten Core boss loot.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 16799,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Molten Core trash"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Bind-on-equip raid drop.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 16801,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Shazzrah"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 19136,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Shared Molten Core boss loot.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 16915,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 16800,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Lucifron"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Phase 1 raid target.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 19147,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Unique ring; paired-slot restrictions apply.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 19138,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core",
+            "boss": "Ragnaros"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Unique ring; paired-slot restrictions apply.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 18820,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Unique on-use raid trinket; cooldown value is not simulated.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 17103,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "One-hand caster weapon; may be paired with an off-hand.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        },
+        {
+          "itemId": 18842,
+          "slot": "Main Hand",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Two-handed alternative; an off-hand cannot be equipped with it.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 17077,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 1,
+          "source": {
+            "type": "Raid",
+            "instance": "Molten Core"
+          },
+          "setId": "era-frost-mage-phase-1",
+          "notes": "Shared Molten Core boss loot.",
+          "requiresRaidContent": true,
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "era-frost-mage-pre-raid",
+    "contentVersion": "era",
+    "className": "mage",
+    "specialization": "frost",
+    "role": "DPS",
+    "phase": 0,
+    "name": "mage frost pre-raid general",
+    "context": "general",
+    "description": "Imported curated reference data.",
+    "methodology": "Curated reference",
+    "sourceProvenance": {
+      "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+      "reviewedAt": "2026-09-11",
+      "reviewedBy": "PrePull data review",
+      "verificationStatus": "curated",
+      "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+    },
+    "complete": false,
+    "status": "draft",
+    "slots": {
+      "Head": [
+        {
+          "itemId": 18727,
+          "slot": "Head",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Magistrate Barthilas"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Reviewed all-spell caster target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Neck": [
+        {
+          "itemId": 12103,
+          "slot": "Neck",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Stratholme",
+            "boss": "Balnazzar"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Spell-hit option; no universal hit target is claimed.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Shoulder": [
+        {
+          "itemId": 11782,
+          "slot": "Shoulder",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Lord Incendius"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Frost-oriented dungeon target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Back": [
+        {
+          "itemId": 11623,
+          "slot": "Back",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Houndmaster Grebmar"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "General spell-damage progression option.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Chest": [
+        {
+          "itemId": 14152,
+          "slot": "Chest",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Profession",
+            "instance": "Tailoring",
+            "profession": "Tailoring"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "craftedByProfession": "Tailoring",
+          "notes": "Mage-only bind-on-pickup craft; requires Tailoring 300 and the learned pattern.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Wrist": [
+        {
+          "itemId": 18497,
+          "slot": "Wrist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "Gordok guards"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Shared Gordok guard loot.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Hands": [
+        {
+          "itemId": 13253,
+          "slot": "Hands",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Quartermaster Zigris"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "General spell-damage dungeon target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Waist": [
+        {
+          "itemId": 11662,
+          "slot": "Waist",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Ok'thor the Breaker"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Spell-hit option; no simulated value is claimed.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Legs": [
+        {
+          "itemId": 13170,
+          "slot": "Legs",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Lower Blackrock Spire",
+            "boss": "Highlord Omokk"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "General caster progression option.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Feet": [
+        {
+          "itemId": 11822,
+          "slot": "Feet",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Blackrock Depths",
+            "boss": "Golem Lord Argelmach"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "General spell-damage dungeon target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Finger 1": [
+        {
+          "itemId": 12543,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "The Princess Saved?"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "faction": "Alliance",
+          "notes": "Alliance quest-reward path.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        },
+        {
+          "itemId": 12545,
+          "slot": "Finger 1",
+          "tier": "bis",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "The Princess's Surprise"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "faction": "Horde",
+          "notes": "Horde quest-reward path.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Finger 2": [
+        {
+          "itemId": 13001,
+          "slot": "Finger 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "World Drop",
+            "instance": "Azeroth"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Conditional world-drop option; not treated as the default realistic path.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        },
+        {
+          "itemId": 16058,
+          "slot": "Finger 2",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "In Dreams"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Deterministic quest alternative to the world-drop target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Trinket 1": [
+        {
+          "itemId": 12930,
+          "slot": "Trinket 1",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Upper Blackrock Spire",
+            "boss": "Jed Runewatcher"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Unique trinket.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Trinket 2": [
+        {
+          "itemId": 13968,
+          "slot": "Trinket 2",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "General Drakkisath's Demise"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Unique quest reward.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Main Hand": [
+        {
+          "itemId": 13964,
+          "slot": "Main Hand",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Darkmaster Gandling"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "One-hand caster weapon; may be paired with an off-hand.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        },
+        {
+          "itemId": 18534,
+          "slot": "Main Hand",
+          "tier": "excellent",
+          "rank": 2,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Dire Maul",
+            "boss": "King Gordok"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Two-handed alternative; an off-hand cannot be equipped with it.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Off Hand / Shield": [
+        {
+          "itemId": 11904,
+          "slot": "Off Hand / Shield",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Quest",
+            "instance": "Aquementas"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Off-hand option for a one-hand weapon setup.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ],
+      "Ranged / Relic": [
+        {
+          "itemId": 13938,
+          "slot": "Ranged / Relic",
+          "tier": "bis",
+          "rank": 1,
+          "phase": 0,
+          "source": {
+            "type": "Dungeon",
+            "instance": "Scholomance",
+            "boss": "Darkmaster Gandling"
+          },
+          "setId": "era-frost-mage-pre-raid",
+          "notes": "Classic wand-slot progression target.",
+          "provenanceId": "mage-classic-era-2026-09",
+          "provenance": {
+            "source": "Blizzard static Classic API and Warcraft Wiki Classic item records",
+            "reviewedAt": "2026-09-11",
+            "reviewedBy": "PrePull data review",
+            "verificationStatus": "curated",
+            "notes": "Item identity, slot and acquisition paths were reviewed. Priority is curated and is not a simulated DPS score."
+          }
+        }
+      ]
+    }
   }
 ]

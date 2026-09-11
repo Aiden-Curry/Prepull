@@ -9,9 +9,16 @@ export type AvailabilityRow = { itemId: number; phase: ClassicContentPhase; elig
 // This is deliberately keyed metadata, never inferred from an item ID range.
 const phaseOneItems = [12640, 13404, 12587, 15411, 17044, 11933, 12927, 12082, 16733, 13340, 11626, 13397, 11726, 14637, 13944, 12936, 13400, 13211, 12966, 15063, 14551, 13957, 13142, 13959, 13502, 14554, 15062, 16732, 14616, 12555, 13967, 13098, 17713, 2246, 12548, 13217, 11815, 13965, 19120, 11684, 12940, 811, 12590, 12939, 871, 15806, 13015, 12653, 12651, 18817, 18404, 19146, 19143, 19137, 18821, 17063, 17075, 17068, 18832, 18805, 18816, 18823, 17069, 17072];
 const phaseTwoItems = [18500, 18380, 18323];
+const frostMagePhaseOneItems = [
+  18727, 12103, 11782, 11623, 14152, 18497, 13253, 11662, 13170, 11822,
+  12543, 12545, 13001, 16058, 12930, 13968, 13964, 18534, 11904, 13938,
+  16795, 17109, 16797, 17078, 19145, 16799, 16801, 19136, 16915, 16800,
+  19147, 19138, 18820, 17103, 18842, 17077,
+];
 export const classicItemAvailability: ReadonlyMap<number, ItemAvailability> = new Map<number, ItemAvailability>([
   ...phaseOneItems.map((itemId) => [itemId, { availableFromPhase: 1, evidence: "curated" as const }] as const),
   ...phaseTwoItems.map((itemId) => [itemId, { availableFromPhase: 2, evidence: "curated" as const }] as const),
+  ...frostMagePhaseOneItems.map((itemId) => [itemId, { availableFromPhase: 1, evidence: "curated" as const }] as const),
   [20130, { availableFromPhase: 3, evidence: "verified", notes: "Warrior level-50 class quest reward becomes available with the Phase 3 class-quest release." }],
   [22385, { availableFromPhase: 6, evidence: "verified", notes: "Mature-era crafted item; recipe availability is treated as Phase 6/current in this model." }],
   [19325, { availableFromPhase: 2, evidence: "verified", notes: "Alterac Valley reputation reward; available when Alterac Valley opens in the phased model." }],

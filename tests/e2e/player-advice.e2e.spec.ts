@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { addCharacter, resetPlayerState, signIn } from "./helpers";
+import { addCharacter, advanceLyriaFixture, resetPlayerState, signIn, submitServerAction } from "./helpers";
 
 test.beforeEach(() => resetPlayerState());
 test.afterEach(() => resetPlayerState());
@@ -14,7 +14,7 @@ test("supported Fury dashboard shows ranked advice and activity detail", async (
   await expect(page.getByText(/Never refreshed/)).toBeVisible();
   await expect(page.getByText(/realistic upgrade/)).toHaveCount(0);
   await expect(page.getByRole("link", { name: "View upgrades" })).toHaveCount(0);
-  await page.getByRole("button", { name: "Refresh character" }).click();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(/Updated just now/)).toBeVisible();
   await expect(page.getByRole("heading", { name: "What should I do next?" })).toBeVisible();
   await expect(page.getByText(/realistic upgrade/).first()).toBeVisible();
@@ -26,22 +26,55 @@ test("supported Fury dashboard shows ranked advice and activity detail", async (
   await page.goto("/era/dashboard");
 });
 
-test("switching to an unsupported mock character changes dashboard advice", async ({ page }) => {
+test("supported Frost Mage refreshes, ranks activities, shows detail, and records a completed target", async ({ page }) => {
+  await signIn(page);
+  await page.goto("/era/characters/connect?search=1&region=us&realmType=era&realm=whitemane&name=lyria");
+  await addCharacter(page);
+  await page.goto("/era/dashboard");
+  await expect(page.getByText(/Never refreshed/)).toBeVisible();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
+  await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
+  await expect(page.getByText("Frost Mage")).toBeVisible();
+  await expect(page.getByText(/ERA · Phase 1 recommendations available/)).toBeVisible();
+  const action = page.getByRole("link", { name: "View upgrades" }).first();
+  await expect(action).toBeVisible();
+  await action.click();
+  await expect(page.getByRole("heading", { name: "Recommended targets" })).toBeVisible();
+  await expect(page.getByText("Source").first()).toBeVisible();
+  await expect(page.getByText("Phase").first()).toBeVisible();
+  await page.goto("/era/dashboard");
+  await advanceLyriaFixture();
+  await page.reload();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
+  await expect(page.getByText(/1 gear change since your previous refresh/)).toBeVisible();
+  await expect(page.getByText(/1 recommended target completed/)).toBeVisible();
+});
+
+test("switching Fury to Frost to unsupported and back recalculates dashboard advice", async ({ page }) => {
   await signIn(page);
   await page.goto("/era/characters/connect?search=1&region=eu&realmType=era&realm=firemaw&name=aidy");
   await addCharacter(page);
   await page.goto("/era/onboarding");
   await expect(page.getByRole("heading", { name: "Aidy" })).toBeVisible();
   await page.goto("/era/dashboard");
-  await page.getByRole("button", { name: "Refresh character" }).click();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByRole("heading", { name: "What should I do next?" })).toBeVisible();
   await page.goto("/era/characters/connect?search=1&region=us&realmType=era&realm=whitemane&name=lyria");
   await addCharacter(page);
   await page.goto("/era/onboarding");
   await expect(page.getByRole("heading", { name: "Lyria" })).toBeVisible();
   await page.goto("/era/dashboard");
-  await page.getByRole("button", { name: "Switch to Lyria" }).click();
+  await submitServerAction(page, page.getByRole("button", { name: "Switch to Lyria" }));
+  await expect(page.getByRole("heading", { name: "Lyria", exact: true })).toBeVisible();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
+  await expect(page.getByText("Frost Mage")).toBeVisible();
+  await page.goto("/era/characters/connect?search=1&region=us&realmType=era&realm=whitemane&name=pyra");
+  await addCharacter(page);
+  await page.goto("/era/dashboard");
+  await submitServerAction(page, page.getByRole("button", { name: "Switch to Pyra" }));
+  await expect(page.getByRole("heading", { name: "Pyra", exact: true })).toBeVisible();
+  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(/Personal gear recommendations for this specialization are coming later/).first()).toBeVisible();
-  await page.getByRole("button", { name: "Switch to Aidy" }).click();
+  await submitServerAction(page, page.getByRole("button", { name: "Switch to Aidy" }));
   await expect(page.getByRole("heading", { name: "What should I do next?" })).toBeVisible();
 });

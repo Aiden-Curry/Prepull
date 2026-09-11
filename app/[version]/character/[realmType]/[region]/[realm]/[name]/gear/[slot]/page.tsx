@@ -6,8 +6,8 @@ import { analyzeCharacter } from "../../../../../../../../../lib/gear-analysis/e
 import { getCharacterProvider } from "../../../../../../../../../lib/providers/factory";
 import { CharacterRealmType, ContentVersion, Region } from "../../../../../../../../../lib/types";
 import { AnalysisSlotPanel } from "../../../../../../../../../components/analysis-ui";
-import { evaluateCuratedReference } from "../../../../../../../../../lib/curated-gear/evaluate";
 import { CuratedSlotPanel } from "../../../../../../../../../components/curated-ui";
+import { evaluateCharacterRecommendations } from "../../../../../../../../../lib/recommendations/evaluate";
 
 export default async function GearSlotPage({ params }: { params: Promise<{ version: string; realmType: string; region: string; realm: string; name: string; slot: string }> }) {
   const resolvedParams = await params;
@@ -18,6 +18,6 @@ export default async function GearSlotPage({ params }: { params: Promise<{ versi
   const slot = resolvedParams.slot.replaceAll("-", " ");
   const analysis = analyzeCharacter(character);
   const recommendation = analysis.supported ? analysis.bySlot[slot]?.bestRealistic ?? analysis.bySlot[slot]?.bestInSlot : undefined;
-  const curated = character.contentVersion === "era" && character.class === "Warrior" && character.spec === "Fury" ? evaluateCuratedReference(character) : undefined;
+  const curated = evaluateCharacterRecommendations(character);
   return <VersionShell version={version}><GearDetail character={character} recommendation={recommendation} /><main className="mx-auto max-w-[1000px] px-5 pb-16 lg:px-8"><AnalysisSlotPanel analysis={analysis} slot={slot} />{curated && <CuratedSlotPanel evaluation={curated} slot={slot} />}</main></VersionShell>;
 }

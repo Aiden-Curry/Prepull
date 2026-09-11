@@ -1,0 +1,17 @@
+contentVersion,class,spec,role,phase,context,setId,slot,itemId,tier,rank,sourceType,sourceName,activity,boss,faction,race,profession,notes,provenanceId,verificationStatus
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Head,16795,bis,1,raid,Molten Core,Molten Core,Garr,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Neck,17109,bis,1,raid,Molten Core,Molten Core,Lucifron,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Shoulder,16797,bis,1,raid,Molten Core,Molten Core,Baron Geddon,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Back,17078,bis,1,raid,Onyxia's Lair,Onyxia's Lair,Onyxia,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Chest,19145,bis,1,raid,Molten Core,Molten Core,,,,,Shared Molten Core boss loot.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Wrist,16799,bis,1,raid,Molten Core,Molten Core,Molten Core trash,,,,Bind-on-equip raid drop.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Hands,16801,bis,1,raid,Molten Core,Molten Core,Shazzrah,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Waist,19136,bis,1,raid,Molten Core,Molten Core,,,,,Shared Molten Core boss loot.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Legs,16915,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Feet,16800,bis,1,raid,Molten Core,Molten Core,Lucifron,,,,Phase 1 raid target.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Finger 1,19147,bis,1,raid,Molten Core,Molten Core,,,,,Unique ring; paired-slot restrictions apply.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Finger 2,19138,bis,1,raid,Molten Core,Molten Core,Ragnaros,,,,Unique ring; paired-slot restrictions apply.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Trinket 1,18820,bis,1,raid,Molten Core,Molten Core,,,,,Unique on-use raid trinket; cooldown value is not simulated.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Main Hand,17103,bis,1,raid,Molten Core,Molten Core,,,,,One-hand caster weapon; may be paired with an off-hand.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Main Hand,18842,excellent,2,raid,Molten Core,Molten Core,,,,,Two-handed alternative; an off-hand cannot be equipped with it.,mage-classic-era-2026-09,curated
+era,mage,frost,DPS,phase-1,general,era-frost-mage-phase-1,Ranged / Relic,17077,bis,1,raid,Molten Core,Molten Core,,,,,Shared Molten Core boss loot.,mage-classic-era-2026-09,curated

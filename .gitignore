@@ -12,3 +12,7 @@ playwright-report/
 test-results/
 .vercel
 .env*
+
+tsconfig.tsbuildinfo
+
+tsconfig.tsbuildinfo
