@@ -6,10 +6,11 @@ import { CharacterProviderError } from "../../../../lib/providers/character-prov
 import { isContentVersion } from "../../../../lib/game-data";
 import { saveCharacterAction } from "../../../../lib/characters/saved-actions";
 import { requireAuthenticatedUser } from "../../../../lib/auth";
+import { protectedRouteCallback } from "../../../../lib/auth-callback";
 import type { CharacterRealmType, ContentVersion, Region, NormalizedCharacter } from "../../../../lib/types";
 
 export default async function ConnectCharacterPage({ params, searchParams }: { params: Promise<{ version: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const { version: rawVersion } = await params; if (!isContentVersion(rawVersion)) notFound(); const version = rawVersion as ContentVersion; await requireAuthenticatedUser(); const query = await searchParams;
+  const { version: rawVersion } = await params; if (!isContentVersion(rawVersion)) notFound(); const version = rawVersion as ContentVersion; const query = await searchParams; await requireAuthenticatedUser(protectedRouteCallback(version, "/characters/connect", query));
   const region = String(query.region ?? "eu") as Region; const realmType = String(query.realmType ?? "era") as CharacterRealmType; const realm = String(query.realm ?? ""); const name = String(query.name ?? "");
   let character: NormalizedCharacter | null = null; let message = "";
   if (query.search === "1") {

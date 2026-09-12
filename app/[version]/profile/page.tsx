@@ -8,12 +8,13 @@ import { isContentVersion } from "../../../lib/game-data";
 import { disableReadinessShareAction, enableReadinessShareAction } from "../../../lib/guilds/readiness-actions";
 import { listEligibleReadinessShares } from "../../../lib/guilds/readiness-service";
 import type { ContentVersion } from "../../../lib/types";
+import { protectedRouteCallback } from "../../../lib/auth-callback";
 
-export default async function ProfilePage({ params }: { params: Promise<{ version: string }> }) {
+export default async function ProfilePage({ params, searchParams }: { params: Promise<{ version: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const { version: raw } = await params;
   if (!isContentVersion(raw)) notFound();
   const version = raw as ContentVersion;
-  const user = await requireAuthenticatedUser();
+  const user = await requireAuthenticatedUser(protectedRouteCallback(version, "/profile", await searchParams));
   const [characters, shares] = await Promise.all([savedCharacterRepository.listSavedCharacters(user.id), listEligibleReadinessShares(user.id)]);
   const primary = characters.find((character) => character.isPrimary);
   const [sync, history] = primary ? await Promise.all([characterSyncRepository.getLatestSuccessful(primary.id), characterSyncRepository.getHistory(primary.id, 5)]) : [undefined, []];

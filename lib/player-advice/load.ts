@@ -5,8 +5,8 @@ import type { PlayerAdvice } from "./types.ts";
 import { characterFromSync, characterSyncRepository } from "../characters/sync-repository.ts";
 import { completedTargetNames, diffEquipment } from "../characters/sync-service.ts";
 
-export async function loadPrimaryAdvice() {
-  const user = await requireAuthenticatedUser();
+export async function loadPrimaryAdvice(callbackUrl?: string) {
+  const user = await requireAuthenticatedUser(callbackUrl);
   const characters = await savedCharacterRepository.listSavedCharacters(user.id);
   const primary = characters.find((character) => character.isPrimary);
   if (!primary) return { user, characters, primary, character: undefined, advice: undefined as PlayerAdvice | undefined, latestSync: undefined, previousSync: undefined, latestAttempt: undefined, progress: undefined };
