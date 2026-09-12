@@ -3,10 +3,40 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { ContentVersion } from "../lib/types";
+import { switchContentVersionHref, versionedHref } from "../lib/navigation";
 
-const nav = [{ label: "Dashboard", path: "dashboard" }, { label: "Characters", path: "characters/connect" }, { label: "Raids", path: "raids" }, { label: "Gear", path: "gear" }, { label: "Coverage", path: "coverage" }, { label: "Guilds", path: "guilds" }, { label: "Account", path: "profile" }];
+const nav = [
+  { label: "Dashboard", path: "/dashboard" },
+  { label: "Characters", path: "/characters/connect" },
+  { label: "Raids", path: "/raids" },
+  { label: "Classes", path: "/classes" },
+  { label: "Gear", path: "/gear" },
+  { label: "Tools", path: "/tools" },
+  { label: "Coverage", path: "/coverage" },
+  { label: "Guilds", path: "/guilds" },
+  { label: "Profile", path: "/profile" },
+] as const;
+
 export function Header({ version }: { version: ContentVersion }) {
-  const pathname = usePathname(); const router = useRouter();
-  function switchVersion(next: ContentVersion) { if (next === version) return; const section = pathname.split("/")[2]; const valid = nav.some((item) => item.path === section || item.path.startsWith(`${section}/`)); router.push(section && valid ? `/${next}/${pathname.split("/").slice(2).join("/")}` : `/${next}`); localStorage.setItem("prepull-version", next); }
-  return <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--background)_88%,transparent)] backdrop-blur-xl"><div className="mx-auto flex h-[74px] max-w-[1240px] items-center gap-7 px-5 lg:px-8"><Link href={`/${version}`} className="focus-ring flex items-center gap-2" aria-label="PrePull home"><span className="text-2xl font-black tracking-[-.08em] text-[var(--text)]">PRE<span className="text-[var(--primary)]">PULL</span></span><span className="mt-1 h-2 w-2 rounded-full bg-[var(--primary)] shadow-[0_0_14px_var(--primary)]" /></Link><div className="hidden rounded-full border border-[var(--line)] bg-[var(--surface)] p-1 md:flex" role="group" aria-label="Choose content version">{(["era", "tbc"] as ContentVersion[]).map((item) => <button key={item} onClick={() => switchVersion(item)} className={`focus-ring rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[.16em] transition-colors ${version === item ? "bg-[var(--primary)] text-[var(--background)]" : "text-[var(--muted)] hover:text-[var(--text)]"}`}>{item.toUpperCase()}</button>)}</div><nav className="ml-auto hidden items-center gap-6 lg:flex">{nav.map((item) => <Link className="focus-ring text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]" href={`/${version}/${item.path}`} key={item.path}>{item.label}</Link>)}</nav><button className="focus-ring ml-auto grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] hover:text-[var(--primary-light)] lg:ml-0" aria-label="Search">⌕</button><button onClick={() => signOut({ callbackUrl: "/auth/signin" })} className="focus-ring hidden rounded-full border border-[var(--line)] px-4 py-2 text-sm text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--text)] sm:block">Sign out</button><details className="relative lg:hidden"><summary className="focus-ring cursor-pointer list-none rounded-full border border-[var(--line)] px-3 py-2 text-sm text-[var(--primary-light)]">Menu</summary><div className="panel absolute right-0 top-12 w-48 rounded-xl p-2">{(["era", "tbc"] as ContentVersion[]).map((item) => <button key={item} onClick={() => switchVersion(item)} className="block w-full px-3 py-2 text-left text-xs font-bold tracking-widest text-[var(--muted)]">{item.toUpperCase()}</button>)}{nav.map((item) => <Link key={item.path} href={`/${version}/${item.path}`} className="block rounded-lg px-3 py-2 text-sm text-[var(--text)] hover:bg-[var(--surface-raised)]">{item.label}</Link>)}</div></details></div></header>;
+  const pathname = usePathname();
+  const router = useRouter();
+  function switchVersion(next: ContentVersion) {
+    if (next === version) return;
+    router.push(switchContentVersionHref(next, pathname, window.location.search, window.location.hash));
+  }
+  const selector = (["era", "tbc"] as ContentVersion[]).map((item) => <button
+    type="button"
+    key={item}
+    aria-pressed={version === item}
+    onClick={() => switchVersion(item)}
+    className={`focus-ring rounded-full px-3 py-1.5 text-[10px] font-bold tracking-[.16em] transition-colors ${version === item ? "bg-[var(--accent)] text-[var(--background)] shadow-[0_0_18px_var(--glow)]" : "text-[var(--text-muted)] hover:text-[var(--text)]"}`}
+  >{item.toUpperCase()}</button>);
+  return <header className="site-header sticky top-0 z-20 border-b border-[var(--border)] backdrop-blur-xl"><div className="mx-auto flex min-h-[74px] max-w-[1240px] items-center gap-4 px-5 lg:px-8">
+    <Link href={versionedHref(version)} className="focus-ring flex shrink-0 items-center gap-2" aria-label={`PrePull ${version.toUpperCase()} home`}><span className="text-2xl font-black tracking-[-.08em] text-[var(--text)]">PRE<span className="text-[var(--accent)]">PULL</span></span><span className="expansion-mark">{version.toUpperCase()}</span></Link>
+    <div className="hidden rounded-full border border-[var(--border)] bg-[var(--surface)] p-1 md:flex" role="group" aria-label="Choose content version">{selector}</div>
+    <nav aria-label="Primary navigation" className="ml-auto hidden items-center gap-4 xl:flex">{nav.map((item) => { const href = versionedHref(version, item.path); const active = pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} className="nav-link focus-ring" href={href} key={item.path}>{item.label}</Link>; })}</nav>
+    <button className="focus-ring ml-auto grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent-hover)] xl:ml-0" aria-label="Search">⌕</button>
+    <button onClick={() => signOut({ callbackUrl: "/auth/signin" })} className="focus-ring hidden shrink-0 rounded-full border border-[var(--border)] px-4 py-2 text-sm text-[var(--text-muted)] transition hover:border-[var(--accent)] hover:text-[var(--text)] sm:block">Sign out</button>
+    <details className="relative xl:hidden"><summary className="focus-ring cursor-pointer list-none rounded-full border border-[var(--border)] px-3 py-2 text-sm text-[var(--accent-hover)]">Menu</summary><div className="panel absolute right-0 top-12 max-h-[calc(100vh-6rem)] w-56 overflow-y-auto rounded-xl p-2"><div className="mb-2 flex rounded-full border border-[var(--border)] bg-[var(--surface-muted)] p-1" role="group" aria-label="Choose content version">{selector}</div>{nav.map((item) => { const href = versionedHref(version, item.path); const active = pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} key={item.path} href={href} className="nav-link block rounded-lg px-3 py-2">{item.label}</Link>; })}</div></details>
+  </div></header>;
 }
