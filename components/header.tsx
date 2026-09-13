@@ -12,6 +12,7 @@ const nav = [
   { label: "Classes", path: "/classes" },
   { label: "Gear", path: "/gear" },
   { label: "Tools", path: "/tools" },
+  { label: "Calendar", path: "/calendar" },
   { label: "Coverage", path: "/coverage" },
   { label: "Guilds", path: "/guilds" },
   { label: "Profile", path: "/profile" },
