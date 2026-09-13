@@ -9,6 +9,7 @@ export type PrepRunRecord = {
   raidId: string;
   raidName: string;
   raidInstance: string;
+  guildTimeZone: string;
   activityKey: string;
   activityLabel: string;
   activityCategory: RaidPrepActivityCategory;

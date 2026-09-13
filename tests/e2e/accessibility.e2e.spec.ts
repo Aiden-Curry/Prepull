@@ -9,6 +9,7 @@ const routes = [
   `/era/guilds/${process.env.E2E_GUILD_A_ID}/roster`,
   `/era/guilds/${process.env.E2E_GUILD_A_ID}/roster/import`,
   `/era/guilds/${process.env.E2E_GUILD_A_ID}/settings`,
+  `/era/guilds/${process.env.E2E_GUILD_A_ID}/schedule`,
   `/era/guilds/${process.env.E2E_GUILD_A_ID}/raids/${process.env.E2E_RAID_A_ID}`,
 ];
 

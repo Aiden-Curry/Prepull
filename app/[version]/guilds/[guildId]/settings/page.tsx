@@ -2,40 +2,693 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VersionShell } from "../../../../../components/version-shell";
 import { requireUser } from "../../../../../lib/guilds/auth";
-import { getGuildSettings, capabilityState, filterClaims } from "../../../../../lib/guilds/settings";
+import {
+  getGuildSettings,
+  capabilityState,
+  filterClaims,
+} from "../../../../../lib/guilds/settings";
 import { REGISTERED_GUILD_CAPABILITIES } from "../../../../../lib/guilds/types";
-import { defaultCapabilities, roleCapabilities } from "../../../../../lib/guilds/permissions";
-import { updateGuildSettingsAction, changeMemberRoleAction, setCapabilityOverrideAction, deactivateMemberAction, activateMemberAction, removeMemberAction, transferOwnershipAction, decideClaimAction, submitClaimAction } from "../../../../../lib/guilds/actions";
+import {
+  defaultCapabilities,
+  roleCapabilities,
+} from "../../../../../lib/guilds/permissions";
+import {
+  updateGuildSettingsAction,
+  changeMemberRoleAction,
+  setCapabilityOverrideAction,
+  deactivateMemberAction,
+  activateMemberAction,
+  removeMemberAction,
+  transferOwnershipAction,
+  decideClaimAction,
+  submitClaimAction,
+} from "../../../../../lib/guilds/actions";
 import type { ContentVersion } from "../../../../../lib/types";
+import {
+  currentTimeZoneOffset,
+  timeZoneCatalog,
+} from "../../../../../lib/guilds/time";
 
-const actionLabel = (action: string) => action.replaceAll(".", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+const actionLabel = (action: string) =>
+  action
+    .replaceAll(".", " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
 const status = (value: unknown) => String(value ?? "").replaceAll("-", " ");
 
-export default async function GuildSettingsPage({ params, searchParams }: { params: Promise<{ version: string; guildId: string }>; searchParams?: Promise<{ claims?: string }> }) {
+export default async function GuildSettingsPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ version: string; guildId: string }>;
+  searchParams?: Promise<{ claims?: string; settingsError?: string }>;
+}) {
   const resolvedParams = await params;
   const resolvedSearchParams = searchParams ? await searchParams : undefined;
-  const user = await requireUser(); let data;
-  try { data = await getGuildSettings(user, resolvedParams.guildId); } catch { notFound(); }
-  const { guild, viewer, members, claims, audit, privileged } = data;
-  const claimFilter = (resolvedSearchParams?.claims ?? "all") as "pending" | "approved" | "rejected" | "revoked" | "all";
+  const user = await requireUser();
+  let data;
+  try {
+    data = await getGuildSettings(user, resolvedParams.guildId);
+  } catch {
+    notFound();
+  }
+  const { guild: storedGuild, viewer, members, claims, audit, privileged } =
+    data;
+  const rawGuild = storedGuild as Record<string, any>;
+  const guild: Record<string, any> = {
+    ...rawGuild,
+    realmName: rawGuild.realmName ?? rawGuild.realm_name,
+    contentVersion: rawGuild.contentVersion ?? rawGuild.content_version,
+    defaultAvailabilityPhase:
+      rawGuild.defaultAvailabilityPhase ?? rawGuild.default_availability_phase,
+    internalNotes: rawGuild.internalNotes ?? rawGuild.internal_notes,
+  };
+  const guildTimeZone = guild.raid_timezone ?? "UTC";
+  const claimFilter = (resolvedSearchParams?.claims ?? "all") as
+    | "pending"
+    | "approved"
+    | "rejected"
+    | "revoked"
+    | "all";
   const visibleClaims = filterClaims(claims, claimFilter);
-  return <VersionShell version={resolvedParams.version as ContentVersion}><main className="mx-auto max-w-6xl px-5 py-12">
-    <Link href={`/${resolvedParams.version}/guilds/${resolvedParams.guildId}`} className="text-xs text-[var(--muted)]">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Ãƒâ€šÃ‚Â Guild workspace</Link>
-    <div className="mt-8"><p className="eyebrow">Guild settings</p><h1 className="display mt-2 text-4xl">{guild.name}</h1><p className="mt-2 text-sm text-[var(--muted)]">Your current role: <span className="capitalize">{viewer.role}</span></p></div>
+  return (
+    <VersionShell version={resolvedParams.version as ContentVersion}>
+      <main className="mx-auto max-w-6xl px-5 py-12">
+        <Link
+          href={`/${resolvedParams.version}/guilds/${resolvedParams.guildId}`}
+          className="text-xs text-[var(--muted)]"
+        >
+          ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Ãƒâ€šÃ‚Â Guild workspace
+        </Link>
+        <Link
+          href={`/${resolvedParams.version}/guilds/${resolvedParams.guildId}/schedule`}
+          className="ml-4 text-xs text-[var(--muted)]"
+        >
+          Schedule
+        </Link>
+        <div className="mt-8">
+          <p className="eyebrow">Guild settings</p>
+          <h1 className="display mt-2 text-4xl">{guild.name}</h1>
+          <p className="mt-2 text-sm text-[var(--muted)]">
+            Your current role: <span className="capitalize">{viewer.role}</span>
+          </p>
+        </div>
+        {resolvedSearchParams?.settingsError ? (
+          <p
+            className="mt-5 rounded-xl border border-red-300/30 bg-red-300/5 p-4 text-sm"
+            role="alert"
+          >
+            {resolvedSearchParams.settingsError}
+          </p>
+        ) : null}
 
-    <section className="panel mt-8 rounded-2xl p-6"><h2 className="text-xl font-semibold">Guild details</h2><p className="mt-1 text-sm text-[var(--muted)]">Identity, realm and faction are immutable here. Imported character keys remain stable.</p>{has(viewer, "manage-settings") ? <form action={updateGuildSettingsAction} className="mt-5 grid gap-4 sm:grid-cols-2"><input type="hidden" name="guildId" value={guild.id}/><label className="text-sm">Display name<input name="name" defaultValue={guild.name} required className="field mt-1 w-full"/></label><label className="text-sm">Raid timezone<input name="raidTimezone" defaultValue={guild.raidTimezone ?? "UTC"} className="field mt-1 w-full"/></label><label className="text-sm sm:col-span-2">Description<textarea name="description" defaultValue={guild.description} className="field mt-1 min-h-20 w-full"/></label><label className="text-sm">Default content version<select name="defaultContentVersion" defaultValue={guild.contentVersion} className="field mt-1 w-full"><option value="era">Era</option><option value="tbc">TBC</option></select></label><label className="text-sm">Default availability phase<input name="defaultAvailabilityPhase" type="number" min="1" max="6" defaultValue={guild.defaultAvailabilityPhase ?? 6} className="field mt-1 w-full"/></label><label className="text-sm sm:col-span-2">Internal notes<textarea name="internalNotes" defaultValue={guild.internalNotes ?? ""} className="field mt-1 min-h-20 w-full"/></label><button className="button-primary sm:col-span-2" type="submit">Save guild details</button></form> : <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-3"><div><dt className="text-xs text-[var(--muted)]">Realm</dt><dd>{guild.realmName} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {guild.region.toUpperCase()}</dd></div><div><dt className="text-xs text-[var(--muted)]">Faction</dt><dd>{guild.faction}</dd></div><div><dt className="text-xs text-[var(--muted)]">Content</dt><dd>{guild.contentVersion.toUpperCase()}</dd></div></dl>}</section>
+        <section className="panel mt-8 rounded-2xl p-6">
+          <h2 className="text-xl font-semibold">Guild details</h2>
+          <p className="mt-1 text-sm text-[var(--muted)]">
+            Identity, realm and faction are immutable here. Imported character
+            keys remain stable.
+          </p>
+          {has(viewer, "manage-settings") ? (
+            <form
+              action={updateGuildSettingsAction}
+              className="mt-5 grid gap-4 sm:grid-cols-2"
+            >
+              <input type="hidden" name="guildId" value={guild.id} />
+              <input
+                type="hidden"
+                name="version"
+                value={resolvedParams.version}
+              />
+              <label className="text-sm">
+                Display name
+                <input
+                  name="name"
+                  defaultValue={guild.name}
+                  required
+                  className="field mt-1 w-full"
+                />
+              </label>
+              <label className="text-sm sm:col-span-2">
+                Description
+                <textarea
+                  name="description"
+                  defaultValue={guild.description}
+                  className="field mt-1 min-h-20 w-full"
+                />
+              </label>
+              <label className="text-sm">
+                Default content version
+                <select
+                  name="defaultContentVersion"
+                  defaultValue={guild.contentVersion}
+                  className="field mt-1 w-full"
+                >
+                  <option value="era">Era</option>
+                  <option value="tbc">TBC</option>
+                </select>
+              </label>
+              <label className="text-sm">
+                Default availability phase
+                <input
+                  name="defaultAvailabilityPhase"
+                  type="number"
+                  min="1"
+                  max="6"
+                  defaultValue={guild.defaultAvailabilityPhase ?? 6}
+                  className="field mt-1 w-full"
+                />
+              </label>
+              <label className="text-sm sm:col-span-2">
+                Internal notes
+                <textarea
+                  name="internalNotes"
+                  defaultValue={guild.internalNotes ?? ""}
+                  className="field mt-1 min-h-20 w-full"
+                />
+              </label>
+              <button className="button-primary sm:col-span-2" type="submit">
+                Save guild details
+              </button>
+            </form>
+          ) : (
+            <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-3">
+              <div>
+                <dt className="text-xs text-[var(--muted)]">Realm</dt>
+                <dd>
+                  {guild.realmName} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {guild.region.toUpperCase()}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs text-[var(--muted)]">Faction</dt>
+                <dd>{guild.faction}</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-[var(--muted)]">Content</dt>
+                <dd>{guild.contentVersion.toUpperCase()}</dd>
+              </div>
+            </dl>
+          )}
+        </section>
 
-    {privileged ? <>
-      <section className="panel mt-6 rounded-2xl p-6"><h2 className="text-xl font-semibold">Workspace members</h2><p className="mt-1 text-sm text-[var(--muted)]">Workspace users are separate from imported WoW roster characters.</p><div className="mt-5 grid gap-4">{members.map((member: any) => <article key={member.user_id} className="rounded-xl border border-white/10 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">{member.user_name}</h3><p className="text-xs text-[var(--muted)]">{member.user_email} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· joined {new Date(member.created_at).toLocaleDateString()}</p></div><span className="rounded-full border border-white/10 px-2 py-1 text-xs capitalize">{member.active ? member.role : "inactive"}</span></div><p className="mt-3 text-xs text-[var(--muted)]">Grants: {(member.capabilities ?? []).join(", ") || "none"} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Revokes: {(member.revoked_capabilities ?? []).join(", ") || "none"}</p>{member.user_id !== guild.owner_user_id ? <div className="mt-4 grid gap-3 sm:grid-cols-3"><form action={changeMemberRoleAction} className="flex gap-2"><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="targetUserId" value={member.user_id}/><select aria-label={`Role for ${member.user_name}`} name="role" defaultValue={member.role} className="field flex-1"><option value="officer">Officer</option><option value="raid-leader">Raid leader</option><option value="member">Member</option></select><button className="button-secondary" type="submit">Save role</button></form><form action={member.active ? deactivateMemberAction : activateMemberAction}><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="targetUserId" value={member.user_id}/><button className="button-secondary w-full" type="submit">{member.active ? "Deactivate" : "Activate"}</button></form><form action={removeMemberAction}><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="targetUserId" value={member.user_id}/><button className="button-secondary w-full" type="submit">Remove</button></form></div> : <p className="mt-3 text-xs text-amber-200">Current owner ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â transfer ownership before any destructive action.</p>}{has(viewer, "manage-permissions") && member.user_id !== guild.owner_user_id ? <div className="mt-4 grid gap-2 sm:grid-cols-2">{REGISTERED_GUILD_CAPABILITIES.map((capability) => <form action={setCapabilityOverrideAction} key={capability} className="flex items-center gap-2 text-xs"><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="targetUserId" value={member.user_id}/><input type="hidden" name="capability" value={capability}/><span className="min-w-40">{capability} <em className="text-[var(--muted)]">({capabilityState(member, capability)})</em></span><select aria-label={`${capability} override for ${member.user_name}`} name="mode" defaultValue="inherit" className="field flex-1"><option value="inherit">Inherit</option><option value="grant">Grant</option><option value="revoke">Revoke</option></select><button className="button-secondary" type="submit">Set</button></form>)}</div> : null}</article>)}</div></section>
+        <section className="panel mt-6 rounded-2xl p-6">
+          <h2 className="text-xl font-semibold">Guild timezone</h2>
+          <p className="mt-1 text-sm text-[var(--muted)]">
+            Raids and Prep Runs use this IANA timezone. Changing it never
+            reschedules existing events.
+          </p>
+          {has(viewer, "manage-settings") ? (
+            <form
+              action={updateGuildSettingsAction}
+              className="mt-5 grid gap-3 sm:grid-cols-[1fr_auto]"
+            >
+              <input type="hidden" name="guildId" value={guild.id} />
+              <input type="hidden" name="intent" value="timezone" />
+              <input
+                type="hidden"
+                name="version"
+                value={resolvedParams.version}
+              />
+              <label className="text-sm">
+                Timezone
+                <input
+                  name="timeZone"
+                  list="guild-timezones"
+                  defaultValue={guildTimeZone}
+                  required
+                  autoComplete="off"
+                  className="field mt-1 w-full"
+                  aria-describedby="timezone-offset"
+                />
+              </label>
+              <datalist id="guild-timezones">
+                {timeZoneCatalog().map((zone) => (
+                  <option value={zone} key={zone} />
+                ))}
+              </datalist>
+              <button className="button-primary self-end" type="submit">
+                Save timezone
+              </button>
+            </form>
+          ) : null}
+          <p id="timezone-offset" className="mt-3 text-sm">
+            {guildTimeZone}{" "}
+            <span className="text-[var(--muted)]">
+              · UTC{currentTimeZoneOffset(guildTimeZone)} currently
+            </span>
+          </p>
+        </section>
 
-      <section className="panel mt-6 rounded-2xl p-6"><h2 className="text-xl font-semibold">Roles and permissions</h2><div className="mt-4 grid gap-3 sm:grid-cols-2">{(["owner", "officer", "raid-leader", "member"] as const).map((role) => <div key={role} className="rounded-lg border border-white/10 p-3"><h3 className="capitalize">{role}</h3><p className="mt-1 text-xs text-[var(--muted)]">{roleCapabilities(role).join(", ") || "No default capabilities"}</p></div>)}</div></section>
+        {privileged ? (
+          <>
+            <section className="panel mt-6 rounded-2xl p-6">
+              <h2 className="text-xl font-semibold">Workspace members</h2>
+              <p className="mt-1 text-sm text-[var(--muted)]">
+                Workspace users are separate from imported WoW roster
+                characters.
+              </p>
+              <div className="mt-5 grid gap-4">
+                {members.map((member: any) => (
+                  <article
+                    key={member.user_id}
+                    className="rounded-xl border border-white/10 p-4"
+                  >
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div>
+                        <h3 className="font-medium">{member.user_name}</h3>
+                        <p className="text-xs text-[var(--muted)]">
+                          {member.user_email} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· joined{" "}
+                          {new Date(member.created_at).toLocaleDateString()}
+                        </p>
+                      </div>
+                      <span className="rounded-full border border-white/10 px-2 py-1 text-xs capitalize">
+                        {member.active ? member.role : "inactive"}
+                      </span>
+                    </div>
+                    <p className="mt-3 text-xs text-[var(--muted)]">
+                      Grants: {(member.capabilities ?? []).join(", ") || "none"}{" "}
+                      ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Revokes:{" "}
+                      {(member.revoked_capabilities ?? []).join(", ") || "none"}
+                    </p>
+                    {member.user_id !== guild.owner_user_id ? (
+                      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                        <form
+                          action={changeMemberRoleAction}
+                          className="flex gap-2"
+                        >
+                          <input
+                            type="hidden"
+                            name="guildId"
+                            value={guild.id}
+                          />
+                          <input
+                            type="hidden"
+                            name="targetUserId"
+                            value={member.user_id}
+                          />
+                          <select
+                            aria-label={`Role for ${member.user_name}`}
+                            name="role"
+                            defaultValue={member.role}
+                            className="field flex-1"
+                          >
+                            <option value="officer">Officer</option>
+                            <option value="raid-leader">Raid leader</option>
+                            <option value="member">Member</option>
+                          </select>
+                          <button className="button-secondary" type="submit">
+                            Save role
+                          </button>
+                        </form>
+                        <form
+                          action={
+                            member.active
+                              ? deactivateMemberAction
+                              : activateMemberAction
+                          }
+                        >
+                          <input
+                            type="hidden"
+                            name="guildId"
+                            value={guild.id}
+                          />
+                          <input
+                            type="hidden"
+                            name="targetUserId"
+                            value={member.user_id}
+                          />
+                          <button
+                            className="button-secondary w-full"
+                            type="submit"
+                          >
+                            {member.active ? "Deactivate" : "Activate"}
+                          </button>
+                        </form>
+                        <form action={removeMemberAction}>
+                          <input
+                            type="hidden"
+                            name="guildId"
+                            value={guild.id}
+                          />
+                          <input
+                            type="hidden"
+                            name="targetUserId"
+                            value={member.user_id}
+                          />
+                          <button
+                            className="button-secondary w-full"
+                            type="submit"
+                          >
+                            Remove
+                          </button>
+                        </form>
+                      </div>
+                    ) : (
+                      <p className="mt-3 text-xs text-amber-200">
+                        Current owner ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â
+                        transfer ownership before any destructive action.
+                      </p>
+                    )}
+                    {has(viewer, "manage-permissions") &&
+                    member.user_id !== guild.owner_user_id ? (
+                      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                        {REGISTERED_GUILD_CAPABILITIES.map((capability) => (
+                          <form
+                            action={setCapabilityOverrideAction}
+                            key={capability}
+                            className="flex items-center gap-2 text-xs"
+                          >
+                            <input
+                              type="hidden"
+                              name="guildId"
+                              value={guild.id}
+                            />
+                            <input
+                              type="hidden"
+                              name="targetUserId"
+                              value={member.user_id}
+                            />
+                            <input
+                              type="hidden"
+                              name="capability"
+                              value={capability}
+                            />
+                            <span className="min-w-40">
+                              {capability}{" "}
+                              <em className="text-[var(--muted)]">
+                                ({capabilityState(member, capability)})
+                              </em>
+                            </span>
+                            <select
+                              aria-label={`${capability} override for ${member.user_name}`}
+                              name="mode"
+                              defaultValue="inherit"
+                              className="field flex-1"
+                            >
+                              <option value="inherit">Inherit</option>
+                              <option value="grant">Grant</option>
+                              <option value="revoke">Revoke</option>
+                            </select>
+                            <button className="button-secondary" type="submit">
+                              Set
+                            </button>
+                          </form>
+                        ))}
+                      </div>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+            </section>
 
-      <section className="panel mt-6 rounded-2xl p-6"><h2 className="text-xl font-semibold">Ownership</h2><p className="mt-1 text-sm text-[var(--muted)]">Transfer makes the selected active member owner and makes you officer.</p>{viewer.userId === guild.ownerUserId ? <form action={transferOwnershipAction} className="mt-4 flex flex-wrap gap-2"><input type="hidden" name="guildId" value={guild.id}/><select name="targetUserId" aria-label="New owner" className="field flex-1"><option value="">Select active member</option>{members.filter((m: any) => m.active && m.user_id !== guild.ownerUserId).map((m: any) => <option key={m.user_id} value={m.user_id}>{m.user_name}</option>)}</select><input name="confirmation" aria-label="Type transfer confirmation" placeholder={`TRANSFER ${guild.id}`} className="field flex-1" required/><button className="button-primary" type="submit">Transfer ownership</button></form> : <p className="mt-4 text-sm text-[var(--muted)]">Only the current owner can transfer ownership.</p>}</section>
+            <section className="panel mt-6 rounded-2xl p-6">
+              <h2 className="text-xl font-semibold">Roles and permissions</h2>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {(["owner", "officer", "raid-leader", "member"] as const).map(
+                  (role) => (
+                    <div
+                      key={role}
+                      className="rounded-lg border border-white/10 p-3"
+                    >
+                      <h3 className="capitalize">{role}</h3>
+                      <p className="mt-1 text-xs text-[var(--muted)]">
+                        {roleCapabilities(role).join(", ") ||
+                          "No default capabilities"}
+                      </p>
+                    </div>
+                  ),
+                )}
+              </div>
+            </section>
 
-      <section className="panel mt-6 rounded-2xl p-6"><div className="flex flex-wrap items-end justify-between gap-3"><div><h2 className="text-xl font-semibold">Character claims</h2><p className="mt-1 text-sm text-[var(--muted)]">Verification method: Officer verified.</p></div><div className="flex gap-2 text-xs">{["all", "pending", "approved", "rejected", "revoked"].map((filter) => <Link key={filter} href={`/${resolvedParams.version}/guilds/${guild.id}/settings?claims=${filter}`} className="rounded-full border border-white/10 px-3 py-1 capitalize">{filter}</Link>)}</div></div><div className="mt-5 grid gap-3">{visibleClaims.length ? visibleClaims.map((claim: any) => <article key={claim.id} className="rounded-xl border border-white/10 p-4"><div className="flex flex-wrap justify-between gap-2"><div><h3 className="font-medium">{claim.character_name}</h3><p className="text-xs text-[var(--muted)]">{claim.claimant_name} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {claim.realm} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {String(claim.region).toUpperCase()} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· submitted {new Date(claim.created_at).toLocaleString()}</p></div><span className="capitalize">{status(claim.status)}</span></div><p className="mt-2 text-xs text-[var(--muted)]">Reviewer: {claim.reviewed_by_user_id ?? "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {claim.verification_method ?? "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Reason: {claim.decision_reason || "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"}{!claim.character_active ? " ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Conflict: inactive roster character" : ""}</p>{claim.status === "pending" ? <div className="mt-3 flex gap-2"><form action={decideClaimAction}><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="claimId" value={claim.id}/><input type="hidden" name="decision" value="approved"/><input name="reason" aria-label="Approval reason" placeholder="Reason" className="field" required/><button className="button-primary" type="submit">Approve</button></form><form action={decideClaimAction}><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="claimId" value={claim.id}/><input type="hidden" name="decision" value="rejected"/><input name="reason" aria-label="Rejection reason" placeholder="Reason" className="field" required/><button className="button-secondary" type="submit">Reject</button></form></div> : null}{claim.status === "approved" ? <form action={decideClaimAction} className="mt-3"><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="claimId" value={claim.id}/><input type="hidden" name="decision" value="revoked"/><input name="reason" aria-label="Revocation reason" placeholder="Reason" className="field" required/><button className="button-secondary" type="submit">Revoke approval</button></form> : null}</article>) : <p className="text-sm text-[var(--muted)]">No claims in this filter.</p>}</div></section>
-    </> : <section className="panel mt-6 rounded-2xl p-6"><h2 className="text-xl font-semibold">Claim a guild character</h2><p className="mt-1 text-sm text-[var(--muted)]">Submit a pending claim for an active roster character. An officer must verify it.</p><div className="mt-4 grid gap-2">{workspaceCharacters(data).map((member: any) => <form action={submitClaimAction} key={member.id} className="flex items-center justify-between gap-3 rounded-lg border border-white/10 p-3"><span>{member.character_name} <small className="text-[var(--muted)]">{member.realm}</small></span><input type="hidden" name="guildId" value={guild.id}/><input type="hidden" name="memberId" value={member.id}/><button className="button-secondary" type="submit">Submit claim</button></form>)}</div></section>}
-    {privileged ? <section className="panel mt-6 rounded-2xl p-6"><h2 className="text-xl font-semibold">Audit history</h2><p className="mt-1 text-sm text-[var(--muted)]">Safe summaries only; secrets and raw payloads are never displayed.</p><div className="mt-4 grid gap-2">{audit.map((event: any) => <div key={event.id} className="rounded-lg border border-white/10 p-3 text-sm"><span className="text-xs text-[var(--muted)]">{new Date(event.created_at).toLocaleString()} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {event.actor_name ?? "System"}</span><p className="mt-1">{actionLabel(event.action)} <span className="text-[var(--muted)]">({event.entity_type})</span></p></div>)}</div></section> : null}
-  </main></VersionShell>;
+            <section className="panel mt-6 rounded-2xl p-6">
+              <h2 className="text-xl font-semibold">Ownership</h2>
+              <p className="mt-1 text-sm text-[var(--muted)]">
+                Transfer makes the selected active member owner and makes you
+                officer.
+              </p>
+              {viewer.userId === guild.ownerUserId ? (
+                <form
+                  action={transferOwnershipAction}
+                  className="mt-4 flex flex-wrap gap-2"
+                >
+                  <input type="hidden" name="guildId" value={guild.id} />
+                  <select
+                    name="targetUserId"
+                    aria-label="New owner"
+                    className="field flex-1"
+                  >
+                    <option value="">Select active member</option>
+                    {members
+                      .filter(
+                        (m: any) => m.active && m.user_id !== guild.ownerUserId,
+                      )
+                      .map((m: any) => (
+                        <option key={m.user_id} value={m.user_id}>
+                          {m.user_name}
+                        </option>
+                      ))}
+                  </select>
+                  <input
+                    name="confirmation"
+                    aria-label="Type transfer confirmation"
+                    placeholder={`TRANSFER ${guild.id}`}
+                    className="field flex-1"
+                    required
+                  />
+                  <button className="button-primary" type="submit">
+                    Transfer ownership
+                  </button>
+                </form>
+              ) : (
+                <p className="mt-4 text-sm text-[var(--muted)]">
+                  Only the current owner can transfer ownership.
+                </p>
+              )}
+            </section>
+
+            <section className="panel mt-6 rounded-2xl p-6">
+              <div className="flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <h2 className="text-xl font-semibold">Character claims</h2>
+                  <p className="mt-1 text-sm text-[var(--muted)]">
+                    Verification method: Officer verified.
+                  </p>
+                </div>
+                <div className="flex gap-2 text-xs">
+                  {["all", "pending", "approved", "rejected", "revoked"].map(
+                    (filter) => (
+                      <Link
+                        key={filter}
+                        href={`/${resolvedParams.version}/guilds/${guild.id}/settings?claims=${filter}`}
+                        className="rounded-full border border-white/10 px-3 py-1 capitalize"
+                      >
+                        {filter}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
+              <div className="mt-5 grid gap-3">
+                {visibleClaims.length ? (
+                  visibleClaims.map((claim: any) => (
+                    <article
+                      key={claim.id}
+                      className="rounded-xl border border-white/10 p-4"
+                    >
+                      <div className="flex flex-wrap justify-between gap-2">
+                        <div>
+                          <h3 className="font-medium">
+                            {claim.character_name}
+                          </h3>
+                          <p className="text-xs text-[var(--muted)]">
+                            {claim.claimant_name} ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {claim.realm}{" "}
+                            ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {String(claim.region).toUpperCase()}{" "}
+                            ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· submitted{" "}
+                            {new Date(claim.created_at).toLocaleString()}
+                          </p>
+                        </div>
+                        <span className="capitalize">
+                          {status(claim.status)}
+                        </span>
+                      </div>
+                      <p className="mt-2 text-xs text-[var(--muted)]">
+                        Reviewer:{" "}
+                        {claim.reviewed_by_user_id ??
+                          "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"}{" "}
+                        ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â·{" "}
+                        {claim.verification_method ??
+                          "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"}{" "}
+                        ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Reason:{" "}
+                        {claim.decision_reason ||
+                          "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â"}
+                        {!claim.character_active
+                          ? " ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· Conflict: inactive roster character"
+                          : ""}
+                      </p>
+                      {claim.status === "pending" ? (
+                        <div className="mt-3 flex gap-2">
+                          <form action={decideClaimAction}>
+                            <input
+                              type="hidden"
+                              name="guildId"
+                              value={guild.id}
+                            />
+                            <input
+                              type="hidden"
+                              name="claimId"
+                              value={claim.id}
+                            />
+                            <input
+                              type="hidden"
+                              name="decision"
+                              value="approved"
+                            />
+                            <input
+                              name="reason"
+                              aria-label="Approval reason"
+                              placeholder="Reason"
+                              className="field"
+                              required
+                            />
+                            <button className="button-primary" type="submit">
+                              Approve
+                            </button>
+                          </form>
+                          <form action={decideClaimAction}>
+                            <input
+                              type="hidden"
+                              name="guildId"
+                              value={guild.id}
+                            />
+                            <input
+                              type="hidden"
+                              name="claimId"
+                              value={claim.id}
+                            />
+                            <input
+                              type="hidden"
+                              name="decision"
+                              value="rejected"
+                            />
+                            <input
+                              name="reason"
+                              aria-label="Rejection reason"
+                              placeholder="Reason"
+                              className="field"
+                              required
+                            />
+                            <button className="button-secondary" type="submit">
+                              Reject
+                            </button>
+                          </form>
+                        </div>
+                      ) : null}
+                      {claim.status === "approved" ? (
+                        <form action={decideClaimAction} className="mt-3">
+                          <input
+                            type="hidden"
+                            name="guildId"
+                            value={guild.id}
+                          />
+                          <input
+                            type="hidden"
+                            name="claimId"
+                            value={claim.id}
+                          />
+                          <input
+                            type="hidden"
+                            name="decision"
+                            value="revoked"
+                          />
+                          <input
+                            name="reason"
+                            aria-label="Revocation reason"
+                            placeholder="Reason"
+                            className="field"
+                            required
+                          />
+                          <button className="button-secondary" type="submit">
+                            Revoke approval
+                          </button>
+                        </form>
+                      ) : null}
+                    </article>
+                  ))
+                ) : (
+                  <p className="text-sm text-[var(--muted)]">
+                    No claims in this filter.
+                  </p>
+                )}
+              </div>
+            </section>
+          </>
+        ) : (
+          <section className="panel mt-6 rounded-2xl p-6">
+            <h2 className="text-xl font-semibold">Claim a guild character</h2>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Submit a pending claim for an active roster character. An officer
+              must verify it.
+            </p>
+            <div className="mt-4 grid gap-2">
+              {workspaceCharacters(data).map((member: any) => (
+                <form
+                  action={submitClaimAction}
+                  key={member.id}
+                  className="flex items-center justify-between gap-3 rounded-lg border border-white/10 p-3"
+                >
+                  <span>
+                    {member.character_name}{" "}
+                    <small className="text-[var(--muted)]">
+                      {member.realm}
+                    </small>
+                  </span>
+                  <input type="hidden" name="guildId" value={guild.id} />
+                  <input type="hidden" name="memberId" value={member.id} />
+                  <button className="button-secondary" type="submit">
+                    Submit claim
+                  </button>
+                </form>
+              ))}
+            </div>
+          </section>
+        )}
+        {privileged ? (
+          <section className="panel mt-6 rounded-2xl p-6">
+            <h2 className="text-xl font-semibold">Audit history</h2>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Safe summaries only; secrets and raw payloads are never displayed.
+            </p>
+            <div className="mt-4 grid gap-2">
+              {audit.map((event: any) => (
+                <div
+                  key={event.id}
+                  className="rounded-lg border border-white/10 p-3 text-sm"
+                >
+                  <span className="text-xs text-[var(--muted)]">
+                    {new Date(event.created_at).toLocaleString()}{" "}
+                    ÃƒÆ’Ã¢â‚¬Å¡Ã‚Â· {event.actor_name ?? "System"}
+                  </span>
+                  <p className="mt-1">
+                    {actionLabel(event.action)}{" "}
+                    <span className="text-[var(--muted)]">
+                      ({event.entity_type})
+                    </span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
+      </main>
+    </VersionShell>
+  );
 }
-function has(viewer: any, capability: string) { return !viewer.revokedCapabilities?.includes(capability) && (viewer.capabilities?.includes(capability) || defaultCapabilities(viewer.role).includes(capability as any)); }
-function workspaceCharacters(data: any) { return data.roster?.filter((member: any) => member.active !== false) ?? []; }
+function has(viewer: any, capability: string) {
+  return (
+    !viewer.revokedCapabilities?.includes(capability) &&
+    (viewer.capabilities?.includes(capability) ||
+      defaultCapabilities(viewer.role).includes(capability as any))
+  );
+}
+function workspaceCharacters(data: any) {
+  return data.roster?.filter((member: any) => member.active !== false) ?? [];
+}
