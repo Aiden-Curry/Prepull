@@ -8,7 +8,7 @@ test("onboarding and dashboard redirect anonymously", async ({ page }) => {
   for (const path of ["/era/onboarding", "/era/dashboard", "/era/characters/connect"]) {
     const response = await page.request.get(path, { maxRedirects: 0 });
     expect([302, 303, 307, 308]).toContain(response.status());
-    expect(response.headers().location).toMatch(/^\/auth\/signin/);
+    expect(new URL(response.headers().location, page.url()).pathname).toBe("/auth/signin");
   }
 });
 

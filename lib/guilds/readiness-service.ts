@@ -213,6 +213,10 @@ async function loadAuthorizedRaidData(viewerUserId: string, guildId: string, rai
   if (!accessRow || !canManageRaid(membershipFrom(accessRow, viewerUserId), accessRow.raid_leader_user_id, viewerUserId)) {
     throw new GuildDomainError("NOT_FOUND", "Raid readiness was not found.");
   }
+  return loadRaidProjectionData(guildId, raidId);
+}
+
+async function loadRaidProjectionData(guildId: string, raidId: string) {
   const rows = await guildReadinessRepository.loadRaidRows(guildId, raidId);
   if (!rows.length) {
     const raid = await query<Record<string, any>>(`SELECT raid.id AS raid_id,raid.name AS raid_name,raid.instance,raid.starts_at,g.id AS guild_id,g.name AS guild_name,g.content_version AS guild_content_version FROM raid_events raid JOIN guilds g ON g.id=raid.guild_id AND g.archived_at IS NULL WHERE raid.id=$1 AND g.id=$2`, [raidId, guildId]);
@@ -240,6 +244,22 @@ export async function getRaidReadiness(viewerUserId: string, guildId: string, ra
 
 export async function getRaidPrepBoard(viewerUserId: string, guildId: string, raidId: string): Promise<RaidPrepBoard> {
   const { rows, items, first } = await loadAuthorizedRaidData(viewerUserId, guildId, raidId);
+  const sources = rows.filter((row) => row.guild_member_id).map((row) => projectRaidPrepSource(row, items.get(row.sync_id) ?? []));
+  return buildRaidPrepBoard(
+    { id: first.guild_id, name: first.guild_name },
+    { id: first.raid_id, name: first.raid_name, instance: first.instance, startsAt: iso(first.starts_at) },
+    sources,
+  );
+}
+
+export async function getRaidPrepBoardForMember(viewerUserId: string, guildId: string, raidId: string): Promise<RaidPrepBoard> {
+  const access = await query(`
+    SELECT 1 FROM raid_events raid
+    JOIN guild_workspace_memberships membership ON membership.guild_id=raid.guild_id AND membership.user_id=$1 AND membership.active=true
+    JOIN users user_account ON user_account.id=membership.user_id AND user_account.active=true
+    WHERE raid.id=$2 AND raid.guild_id=$3`, [viewerUserId, raidId, guildId]);
+  if (!access.rows[0]) throw new GuildDomainError("NOT_FOUND", "Prep Run was not found.");
+  const { rows, items, first } = await loadRaidProjectionData(guildId, raidId);
   const sources = rows.filter((row) => row.guild_member_id).map((row) => projectRaidPrepSource(row, items.get(row.sync_id) ?? []));
   return buildRaidPrepBoard(
     { id: first.guild_id, name: first.guild_name },
