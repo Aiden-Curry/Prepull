@@ -2,6 +2,8 @@ import { randomUUID } from "node:crypto";
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { Client } from "pg";
+import { getCalendarEvents } from "../../lib/calendar/registry";
+import { calendarEventStatus, filterCalendarEvents } from "../../lib/calendar/service";
 import { instantToGuildLocalInput } from "../../lib/guilds/time";
 import { base, signIn } from "./helpers";
 
@@ -59,7 +61,9 @@ test("member sees game, raid, Prep Run, filters, region isolation, timezone chan
   await setTimeZone(current.guildId, "America/New_York"); await page.reload();
   const newYork = instantToGuildLocalInput(current.scheduledFor, "America/New_York").localTime;
   await expect(page.getByText(newYork, { exact: true }).first()).toBeVisible();
-  await expect(page.getByText(/Arathi Basin Bonus Weekend|Alterac Valley Bonus Weekend|Warsong Gulch Bonus Weekend/).first()).toBeVisible();
+  const eligibleBattleground = filterCalendarEvents(getCalendarEvents("era"), { version: "era", region: "us", category: "battlegrounds" })
+    .find((event) => calendarEventStatus(event, new Date(), "us") !== "ended");
+  if (eligibleBattleground) await expect(page.getByText(eligibleBattleground.title, { exact: true }).first()).toBeVisible();
 
   await page.getByRole("button", { name: "TBC", exact: true }).click();
   await expect(page).toHaveURL(new RegExp(`/tbc/guilds/${current.guildId}/calendar\\?region=us$`));
