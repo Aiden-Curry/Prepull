@@ -49,6 +49,7 @@ export async function createPrepRunAction(form: FormData) {
   revalidatePath(listPath(version, guildId));
   revalidatePath(`/${version}/guilds/${guildId}`);
   revalidatePath(`/${version}/guilds/${guildId}/schedule`);
+  revalidatePath(`/${version}/guilds/${guildId}/calendar`);
   revalidatePath(`/${version}/guilds/${guildId}/raids/${raidId}/prep`);
   redirect(runPath(version, guildId, runId));
 }
@@ -77,6 +78,7 @@ export async function updatePrepRunAction(form: FormData) {
   revalidatePath(listPath(version, guildId));
   revalidatePath(`/${version}/guilds/${guildId}`);
   revalidatePath(`/${version}/guilds/${guildId}/schedule`);
+  revalidatePath(`/${version}/guilds/${guildId}/calendar`);
   redirect(
     `${runPath(version, guildId, runId)}?prepNotice=${encodeURIComponent("Prep Run updated.")}`,
   );
@@ -97,6 +99,7 @@ export async function setPrepRunStatusAction(form: FormData) {
   revalidatePath(listPath(version, guildId));
   revalidatePath(`/${version}/guilds/${guildId}`);
   revalidatePath(`/${version}/guilds/${guildId}/schedule`);
+  revalidatePath(`/${version}/guilds/${guildId}/calendar`);
   redirect(
     `${runPath(version, guildId, runId)}?prepNotice=${encodeURIComponent(status === "completed" ? "Prep Run marked complete." : "Prep Run cancelled.")}`,
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VersionShell } from "../../../../../components/version-shell";
 import { isContentVersion } from "../../../../../lib/game-data";
+import { parseCalendarRegion } from "../../../../../lib/calendar/service";
 import { requireUser } from "../../../../../lib/guilds/auth";
 import {
   getGuildSchedule,
@@ -50,10 +51,13 @@ function ScheduleEntryCard({
 
 export default async function GuildSchedulePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ version: string; guildId: string }>;
+  searchParams: Promise<{ region?: string | string[] }>;
 }) {
   const resolved = await params;
+  const region = parseCalendarRegion((await searchParams).region);
   if (!isContentVersion(resolved.version)) notFound();
   const user = await requireUser();
   let schedule;
@@ -78,6 +82,9 @@ export default async function GuildSchedulePage({
         >
           <Link href={`/${resolved.version}/guilds/${resolved.guildId}`}>
             ← Guild workspace
+          </Link>
+          <Link href={`/${resolved.version}/guilds/${resolved.guildId}/calendar?region=${region}`}>
+            Calendar
           </Link>
           <Link href={`/${resolved.version}/guilds/${resolved.guildId}/raids`}>
             Raids

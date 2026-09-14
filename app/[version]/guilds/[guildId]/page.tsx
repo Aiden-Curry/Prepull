@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { GuildDateTimeFields } from "../../../../components/guild-date-time-fields";
 import { VersionShell } from "../../../../components/version-shell";
 import { isGameVersion } from "../../../../lib/game-data";
+import { getCalendarEvents } from "../../../../lib/calendar/registry";
+import { currentCalendarNow, parseCalendarRegion } from "../../../../lib/calendar/service";
+import { buildUnifiedCalendarProjection, selectUnifiedDashboardEntries, type UnifiedCalendarEntry } from "../../../../lib/calendar/unified";
 import { requireUser } from "../../../../lib/guilds/auth";
 import { getGuildRepository } from "../../../../lib/guilds/factory";
 import { getGuildSchedule } from "../../../../lib/guilds/schedule";
@@ -20,23 +23,27 @@ export default async function GuildWorkspacePage({
   searchParams,
 }: {
   params: Promise<{ version: string; guildId: string }>;
-  searchParams: Promise<{ raidError?: string }>;
+  searchParams: Promise<{ raidError?: string; region?: string | string[] }>;
 }) {
   const resolvedParams = await params;
   if (!isGameVersion(resolvedParams.version)) notFound();
   const version = resolvedParams.version as ContentVersion;
   const query = await searchParams;
+  const gameRegion = parseCalendarRegion(query.region);
+  const now = currentCalendarNow();
   const user = await requireUser();
   let workspace, schedule;
   try {
     [workspace, schedule] = await Promise.all([
       getGuildRepository().getWorkspace(user.id, resolvedParams.guildId),
-      getGuildSchedule(user.id, resolvedParams.guildId),
+      getGuildSchedule(user.id, resolvedParams.guildId, now),
     ]);
   } catch {
     notFound();
   }
   const { guild, roster, events } = workspace;
+  const unified = buildUnifiedCalendarProjection({ version, region: gameRegion, gameEvents: getCalendarEvents(version), schedule, now });
+  const upNext = selectUnifiedDashboardEntries(unified);
   const readiness = {
     ready: roster.filter((member) => member.readiness === "ready").length,
     review: roster.filter((member) => member.readiness === "needs-review")
@@ -56,6 +63,7 @@ export default async function GuildWorkspacePage({
           className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--muted)]"
           aria-label="Guild workspace navigation"
         >
+          <Link href={`/${version}/guilds/${guild.id}/calendar?region=${gameRegion}`}>Calendar</Link>
           <Link href={`/${version}/guilds/${guild.id}/schedule`}>Schedule</Link>
           <Link href={`/${version}/guilds/${guild.id}/raids`}>Raids</Link>
           <Link href={`/${version}/guilds/${guild.id}/prep`}>Prep Runs</Link>
@@ -271,28 +279,17 @@ export default async function GuildWorkspacePage({
               <h2 id="up-next-heading" className="mt-2 text-xl font-semibold">
                 Up next
               </h2>
-              {schedule.entries.length ? (
+              {upNext.length ? (
                 <ul className="mt-4 grid gap-3">
-                  {schedule.entries.slice(0, 2).map((entry) => (
-                    <li key={`${entry.type}-${entry.id}`}>
+                  {upNext.map((entry) => (
+                    <li key={`${entry.kind}-${entry.id}`}>
                       <Link
                         className="block rounded-lg border border-[var(--line)] p-3"
-                        href={
-                          entry.type === "raid"
-                            ? `/${version}/guilds/${guild.id}/raids/${entry.linkedRaidId}`
-                            : `/${version}/guilds/${guild.id}/prep/${entry.prepRunId}`
-                        }
+                        href={entry.kind === "game-event" ? `/${version}/calendar?region=${gameRegion}` : entry.href}
                       >
-                        <p className="text-xs text-[var(--muted)]">
-                          {formatGuildScheduleTime(
-                            entry.scheduledFor,
-                            schedule.timeZone,
-                          )}
-                        </p>
+                        <span className="origin-badge">{entry.kind === "game-event" ? "Game" : entry.kind === "raid" ? "Raid" : "Prep"}</span>
                         <p className="mt-1 font-semibold">{entry.title}</p>
-                        <p className="mt-1 text-xs capitalize text-[var(--muted)]">
-                          {entry.type === "raid" ? "Raid" : "Prep Run"}
-                        </p>
+                        <p className="mt-1 text-xs text-[var(--muted)]">{dashboardCalendarLabel(entry)}</p>
                       </Link>
                     </li>
                   ))}
@@ -304,9 +301,9 @@ export default async function GuildWorkspacePage({
               )}
               <Link
                 className="button-secondary mt-4 inline-flex"
-                href={`/${version}/guilds/${guild.id}/schedule`}
+                href={`/${version}/guilds/${guild.id}/calendar?region=${gameRegion}`}
               >
-                View full schedule
+                View Calendar
               </Link>
             </section>
             <form action={createRaidAction} className="panel rounded-2xl p-6">
@@ -334,6 +331,11 @@ export default async function GuildWorkspacePage({
       </main>
     </VersionShell>
   );
+}
+function dashboardCalendarLabel(entry: UnifiedCalendarEntry) {
+  if (entry.kind !== "game-event") return `${entry.guildLocalDate} · ${entry.guildLocalTime}`;
+  if (entry.timing.kind === "instant-range") return new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }).format(new Date(entry.timing.startsAt));
+  return entry.timing.endsOn ? `${entry.timing.startsOn} – ${entry.timing.endsOn}` : entry.timing.startsOn;
 }
 function Field({
   name,

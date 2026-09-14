@@ -154,3 +154,16 @@ test("schedule and timezone modules have no character-provider dependency", () =
     /getCharacterProvider|providers\/factory|findCharacter|refreshCharacter|Battle\.net|character_sync/i,
   );
 });
+
+test("unified calendar remains a presentation projection with no provider or readiness dependency", () => {
+  const source = [
+    "lib/calendar/unified.ts",
+    "app/[version]/guilds/[guildId]/calendar/page.tsx",
+  ]
+    .map((path) => fs.readFileSync(path, "utf8"))
+    .join("\n");
+  assert.doesNotMatch(
+    source,
+    /getCharacterProvider|providers\/factory|findCharacter|refreshCharacter|character_sync|PlayerAdvice|readiness|globalThis\.fetch|fetch\(/i,
+  );
+});

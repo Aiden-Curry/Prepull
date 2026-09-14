@@ -11,7 +11,7 @@ export function parseCalendarRegion(value: string | string[] | undefined): Calen
 
 export function currentCalendarNow(): Date { return new Date(); }
 
-function localDate(now: Date, region: CalendarDisplayRegion): string {
+export function calendarDateInRegion(now: Date, region: CalendarDisplayRegion): string {
   const parts = new Intl.DateTimeFormat("en-CA", { timeZone: regionTimeZones[region], year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
   const get = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value ?? "";
   return `${get("year")}-${get("month")}-${get("day")}`;
@@ -19,7 +19,7 @@ function localDate(now: Date, region: CalendarDisplayRegion): string {
 
 export function calendarEventStatus(event: GameCalendarEvent, now: Date, region: CalendarDisplayRegion): GameCalendarStatus {
   if (event.timing.kind === "date-range") {
-    const today = localDate(now, region); const end = event.timing.endsOn ?? event.timing.startsOn;
+    const today = calendarDateInRegion(now, region); const end = event.timing.endsOn ?? event.timing.startsOn;
     return today < event.timing.startsOn ? "upcoming" : today > end ? "ended" : "active";
   }
   const time = now.getTime(); const start = Date.parse(event.timing.startsAt); const end = event.timing.endsAt ? Date.parse(event.timing.endsAt) : start;

@@ -133,6 +133,8 @@ export async function createRaidAction(form: FormData) {
   revalidatePath(`/tbc/guilds/${guildId}`);
   revalidatePath(`/era/guilds/${guildId}/schedule`);
   revalidatePath(`/tbc/guilds/${guildId}/schedule`);
+  revalidatePath(`/era/guilds/${guildId}/calendar`);
+  revalidatePath(`/tbc/guilds/${guildId}/calendar`);
 }
 export async function signupAction(form: FormData) {
   const user = await requireUser();
@@ -420,6 +422,7 @@ export async function updateGuildSettingsAction(form: FormData) {
     revalidatePath(`/${version}/guilds/${guildId}`);
     revalidatePath(`/${version}/guilds/${guildId}/settings`);
     revalidatePath(`/${version}/guilds/${guildId}/schedule`);
+    revalidatePath(`/${version}/guilds/${guildId}/calendar`);
     revalidatePath(`/${version}/guilds/${guildId}/prep`);
   }
 }
