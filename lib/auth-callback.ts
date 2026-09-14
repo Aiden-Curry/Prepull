@@ -24,6 +24,10 @@ export function authSignInHref(callbackUrl: string) {
   return `/auth/signin?callbackUrl=${encodeURIComponent(sanitizeAuthCallback(callbackUrl))}`;
 }
 
+export function authSignUpHref(callbackUrl: string) {
+  return `/auth/signup?callbackUrl=${encodeURIComponent(sanitizeAuthCallback(callbackUrl))}`;
+}
+
 export function protectedRouteCallback(
   version: ContentVersion,
   path: string,

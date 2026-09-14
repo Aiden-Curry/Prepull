@@ -7,6 +7,7 @@ import { eraCombatRogueFixtures, eraHolyPriestFixtures, eraMarksmanshipHunterFix
 const gear = (items: Record<string, EquippedItem>) => Object.values(items);
 export const mockCharacters: NormalizedCharacter[] = [
   { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-aidy", name: "Aidy", dataMeta: { provider: "mock", isLive: false } },
+  { ...eraFuryFixtures.fresh60, id: "tbc-era-eu-firemaw-aidy", name: "Aidy", contentVersion: "tbc", dataMeta: { provider: "mock", isLive: false } },
   { ...eraFuryFixtures.fresh60, id: "era-eu-firemaw-freshfury", name: "Freshfury", dataMeta: { provider: "mock", isLive: false } },
   { ...eraFrostMageFixtures.browserBaseline, id: "era-us-whitemane-lyria", name: "Lyria", dataMeta: { provider: "mock", isLive: false } },
   { ...eraFrostMageFixtures.browserProgressed, id: "era-us-whitemane-lyriaprogress", name: "Lyriaprogress", dataMeta: { provider: "mock", isLive: false } },

@@ -22,8 +22,6 @@ for (const character of secondWave) test(`${character.label} refreshes into advi
   await signIn(page);
   await save(page, character);
   await page.goto("/era/dashboard");
-  await expect(page.getByText(/Never refreshed/)).toBeVisible();
-  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(character.label)).toBeVisible();
   await expect(page.getByRole("heading", { name: "What should I do next?" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View upgrades" }).first()).toBeVisible();
@@ -49,7 +47,6 @@ test("switching across supported specs and an unsupported spec never leaves stal
       await submitServerAction(page, page.getByRole("button", { name: `Switch to ${character.name}` }));
       await expect(page.getByRole("heading", { name: character.name, exact: true })).toBeVisible();
     }
-    await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
     if (character.label === "unsupported") {
       await expect(page.getByText("Personal gear recommendations for this specialization are coming later.").first()).toBeVisible();
       await expect(page.getByRole("button", { name: "Build my plan" })).toHaveCount(0);

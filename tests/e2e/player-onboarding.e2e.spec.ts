@@ -21,7 +21,7 @@ test("authenticated player can search the deterministic character provider", asy
   await page.getByLabel("Character name").fill("Aidy");
   await page.getByRole("button", { name: "Search character" }).click();
   await expect(page.getByRole("heading", { name: "Aidy" })).toBeVisible();
-  await expect(page.getByText("Saving a character does not verify ownership.")).toBeVisible();
+  await expect(page.getByText(/Level 60 Orc Warrior/)).toBeVisible();
   await expectSafeError(page);
 });
 
@@ -35,13 +35,13 @@ test("authenticated player can save, choose, and remove a character", async ({ p
   await page.goto("/era/dashboard");
   await expect(page.getByText("Aidy").first()).toBeVisible();
   await page.getByRole("article").filter({ hasText: "Aidy" }).getByRole("button", { name: "Remove" }).click();
-  await expect(page.getByText("Choose a character to make this home yours.")).toBeVisible();
+  await expect(page.getByText("Find your WoW character.")).toBeVisible();
 });
 
 test("anniversary search preserves its unsupported state", async ({ page }) => {
   await signIn(page);
   await page.goto("/era/characters/connect?search=1&region=eu&realmType=anniversary&realm=firemaw&name=aidy");
-  await expect(page.getByText(/Anniversary character profiles aren't available yet|Character not found/)).toBeVisible();
+  await expect(page.getByText(/Anniversary character profiles aren't available yet|couldn't find that character/i)).toBeVisible();
   await expectSafeError(page);
 });
 

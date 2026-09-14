@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { addCharacter, resetPlayerState, signIn, submitServerAction } from "./helpers";
+import { addCharacter, resetPlayerState, signIn } from "./helpers";
 
 test.beforeEach(() => resetPlayerState());
 test.afterEach(() => resetPlayerState());
@@ -27,7 +27,6 @@ test("synced Frost Mage dashboard is mobile, keyboard, and axe safe", async ({ p
   await page.goto("/era/characters/connect?search=1&region=us&realmType=era&realm=whitemane&name=lyria");
   await addCharacter(page);
   await page.goto("/era/dashboard");
-  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText("Frost Mage")).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1)).toBeTruthy();

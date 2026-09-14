@@ -16,6 +16,7 @@ export const config = {
     "/:version(era|tbc)/profile/:path*",
     "/:version(era|tbc)/onboarding/:path*",
     "/:version(era|tbc)/characters/connect/:path*",
+    "/:version(era|tbc)/character/:path*",
     "/:version(era|tbc)/guilds/:path*",
   ],
 };

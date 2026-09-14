@@ -16,8 +16,6 @@ test("builds, switches, and copies a persisted Fury session plan", async ({ page
   await signIn(page);
   await save(page, "Aidy");
   await page.goto("/era/dashboard");
-  await expect(page.getByText("Refresh your character before building a personalized session plan.")).toBeVisible();
-  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
 
   await page.getByText("90 minutes", { exact: true }).click();
@@ -37,17 +35,13 @@ test("builds, switches, and copies a persisted Fury session plan", async ({ page
   await expect(page.getByText("Tonight's plan")).toBeVisible();
 });
 
-test("blocks unsynced planning and keeps unsupported planning safe", async ({ page }) => {
+test("keeps unsupported planning safe after initial sync", async ({ page }) => {
   await signIn(page);
   await save(page, "Aidy");
-  await page.goto("/era/dashboard");
-  await expect(page.getByText("Refresh your character before building a personalized session plan.")).toBeVisible();
-
   await save(page, "Pyra", "us", "whitemane");
   await page.goto("/era/dashboard");
   await submitServerAction(page, page.getByRole("button", { name: "Switch to Pyra" }));
   await expect(page.getByRole("heading", { name: "Pyra", exact: true })).toBeVisible();
-  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText(/Updated just now|First refresh established your equipment baseline/).first()).toBeVisible();
   await expect(page.getByText("Session planning based on gear upgrades isn't available for this specialization yet.")).toBeVisible();
   await expect(page.getByRole("button", { name: "Build my plan" })).toHaveCount(0);
@@ -58,7 +52,6 @@ test("builds and copies a Frost Mage session plan", async ({ page, context }) =>
   await signIn(page);
   await save(page, "Lyria", "us", "whitemane");
   await page.goto("/era/dashboard");
-  await submitServerAction(page, page.getByRole("button", { name: "Refresh character" }));
   await expect(page.getByText("Frost Mage")).toBeVisible();
   await page.getByText("1 hour", { exact: true }).click();
   await page.getByText("Dungeons", { exact: true }).click();

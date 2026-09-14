@@ -1,0 +1,10 @@
+"use client";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import type { CharacterRealmType, ContentVersion, Region } from "../lib/types";
+
+export function CharacterFinderForm({ version, initial }: { version: ContentVersion; initial: { region: Region; realmType: CharacterRealmType; realm: string; name: string } }) {
+  const router = useRouter(); const [pending, setPending] = useState(false);
+  function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setPending(true); const values = new FormData(event.currentTarget); const query = new URLSearchParams({ search: "1", region: String(values.get("region")), realmType: String(values.get("realmType")), realm: String(values.get("realm")), name: String(values.get("name")) }); router.push(`/${version}/characters/connect?${query}`); }
+  return <form onSubmit={submit} className="panel mt-10 grid gap-4 rounded-2xl p-6 sm:grid-cols-2"><label className="text-xs text-[var(--muted)]">Region<select name="region" defaultValue={initial.region} className="field mt-2 w-full"><option value="eu">Europe</option><option value="us">North America</option></select></label><label className="text-xs text-[var(--muted)]">Realm ecosystem<select name="realmType" defaultValue={initial.realmType} className="field mt-2 w-full"><option value="era">Era</option><option value="anniversary">Anniversary</option></select></label><label className="text-xs text-[var(--muted)]">Realm<input name="realm" defaultValue={initial.realm} className="field mt-2 w-full" placeholder="Firemaw" required /></label><label className="text-xs text-[var(--muted)]">Character name<input name="name" defaultValue={initial.name} className="field mt-2 w-full" placeholder="Aidy" required /></label><button disabled={pending} aria-disabled={pending} className="button-primary sm:col-span-2" type="submit">{pending ? "Searching…" : "Search character"}</button><p className="sr-only" aria-live="polite">{pending ? "Searching for character" : ""}</p></form>;
+}
