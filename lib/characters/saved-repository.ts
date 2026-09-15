@@ -24,6 +24,10 @@ export class SavedCharacterRepository {
     const result = await query<Row>(`${select} WHERE user_id=$1 AND id=$2 AND archived_at IS NULL`, [userId, characterId]);
     return result.rows[0] ? fromRow(result.rows[0]) : undefined;
   }
+  async findSavedCharacterByIdentity(userId: string, input: { region: string; realmSlug: string; normalizedCharacterName: string; characterRealmType: string }) {
+    const result = await query<Row>(`${select} WHERE user_id=$1 AND region=$2 AND realm_slug=$3 AND normalized_character_name=$4 AND character_realm_type=$5 AND archived_at IS NULL`, [userId, input.region, normalizeLookup(input.realmSlug), normalizeLookup(input.normalizedCharacterName), input.characterRealmType]);
+    return result.rows[0] ? fromRow(result.rows[0]) : undefined;
+  }
   async saveCharacter(userId: string, input: SaveCharacterInput) {
     return withTransaction(async (client) => {
       const existing = await client.query<Row>(`${select} WHERE user_id=$1 AND region=$2 AND realm_slug=$3 AND normalized_character_name=$4 AND character_realm_type=$5 AND archived_at IS NULL`, [userId, input.region, input.realmSlug, input.normalizedCharacterName, input.characterRealmType]);

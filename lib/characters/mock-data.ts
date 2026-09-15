@@ -1,6 +1,6 @@
 import { EquippedItem, NormalizedCharacter, CharacterRealmType, ContentVersion } from "../types";
 import { tbcItems } from "./items";
-import { normalizeLookup } from "./normalization";
+import { normalizeCharacterName, normalizeLookup } from "./normalization";
 import { eraFuryFixtures } from "../gear-analysis/fixtures";
 import { eraFrostMageFixtures } from "../gear-analysis/mage-fixtures";
 import { eraCombatRogueFixtures, eraHolyPriestFixtures, eraMarksmanshipHunterFixtures } from "../gear-analysis/additional-spec-fixtures";
@@ -18,4 +18,4 @@ export const mockCharacters: NormalizedCharacter[] = [
   { id: "tbc-anniversary-spineshatter-aidy", name: "Aidy", region: "eu", realm: "Spineshatter", contentVersion: "tbc", realmType: "anniversary", level: 70, race: "Orc", class: "Warrior", spec: "Protection", faction: "Horde", professions: ["Jewelcrafting", "Mining"], equipment: gear(tbcItems) },
   { id: "tbc-anniversary-us-benediction-selene", name: "Selene", region: "us", realm: "Benediction", contentVersion: "tbc", realmType: "anniversary", level: 70, race: "Draenei", class: "Priest", spec: "Holy", faction: "Alliance", professions: ["Tailoring", "Enchanting"], equipment: gear(tbcItems).map((item) => ({ ...item, name: item.slot === "Main Hand" ? "Light's Justice" : item.name, stats: item.slot === "Main Hand" ? { "Healing power": "+550", "Mana per 5": "+8" } : item.stats })) },
 ];
-export const findMockCharacter = (contentVersion: ContentVersion, realmType: CharacterRealmType, region: string, realm: string, name: string) => mockCharacters.find((character) => character.contentVersion === contentVersion && character.realmType === realmType && character.region === region && normalizeLookup(character.realm) === normalizeLookup(realm) && normalizeLookup(character.name) === normalizeLookup(name));
+export const findMockCharacter = (contentVersion: ContentVersion, realmType: CharacterRealmType, region: string, realm: string, name: string) => mockCharacters.find((character) => character.contentVersion === contentVersion && character.realmType === realmType && character.region === region && normalizeLookup(character.realm) === normalizeLookup(realm) && normalizeCharacterName(character.name) === normalizeCharacterName(name));

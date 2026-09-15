@@ -1,4 +1,4 @@
-import { normalizeLookup } from "../characters/normalization";
+import { normalizeCharacterName, normalizeLookup } from "../characters/normalization";
 import { CharacterProvider, CharacterLookup, CharacterProviderError } from "../providers/character-provider";
 import { CharacterRealmType, CharacterTalent, ContentVersion, EquippedItem, EquipmentSlot, Faction, ItemQuality, NormalizedCharacter, Region } from "../types";
 import { CACHE_TTL, characterCache } from "../server/cache";
@@ -15,7 +15,7 @@ type BlizzardSpecializations = { specialization_groups?: Array<{ is_active?: boo
 const slotMap: Record<string, EquipmentSlot> = { HEAD: "Head", NECK: "Neck", SHOULDER: "Shoulder", BACK: "Back", CHEST: "Chest", WRIST: "Wrist", HANDS: "Hands", WAIST: "Waist", LEGS: "Legs", FEET: "Feet", FINGER_1: "Finger 1", FINGER_2: "Finger 2", TRINKET_1: "Trinket 1", TRINKET_2: "Trinket 2", MAIN_HAND: "Main Hand", OFF_HAND: "Off Hand / Shield", SHIELD: "Off Hand / Shield", RANGED: "Ranged / Relic", RELIC: "Ranged / Relic" };
 const qualityMap: Record<string, ItemQuality> = { POOR: "Poor", COMMON: "Common", UNCOMMON: "Uncommon", RARE: "Rare", EPIC: "Epic", LEGENDARY: "Legendary" };
 const factionMap: Record<string, Faction> = { ALLIANCE: "Alliance", HORDE: "Horde" };
-function safeLookup(lookup: CharacterLookup): CharacterLookup { if (!/^(eu|us)$/.test(lookup.region) || !["era", "tbc"].includes(lookup.contentVersion) || !["era", "anniversary"].includes(lookup.realmType) || !/^[a-z0-9-]{1,64}$/i.test(normalizeLookup(lookup.realm)) || !/^[a-z0-9-]{1,32}$/i.test(normalizeLookup(lookup.characterName))) throw new CharacterProviderError("MalformedProviderResponse", "That character lookup is not valid."); return { ...lookup, realm: normalizeLookup(lookup.realm), characterName: normalizeLookup(lookup.characterName) }; }
+function safeLookup(lookup: CharacterLookup): CharacterLookup { const characterName = normalizeCharacterName(lookup.characterName); if (!/^(eu|us)$/.test(lookup.region) || !["era", "tbc"].includes(lookup.contentVersion) || !["era", "anniversary"].includes(lookup.realmType) || !/^[a-z0-9-]{1,64}$/i.test(normalizeLookup(lookup.realm)) || !/^\p{L}[\p{L}\p{M}-]{0,31}$/u.test(characterName)) throw new CharacterProviderError("MalformedProviderResponse", "That character lookup is not valid."); return { ...lookup, realm: normalizeLookup(lookup.realm), characterName }; }
 
 export class BattleNetCharacterProvider implements CharacterProvider {
   private readonly itemProvider = new BlizzardItemDataProvider();
