@@ -10,7 +10,7 @@ export async function POST(request: Request, context: { params: Promise<{ nextau
   if (route[0] === "callback" && route[1] === "credentials") {
     try {
       const form = await request.clone().formData();
-      const limited = await enforceAbusePolicy({ endpoint: "signin", request, accountIdentifier: String(form.get("email") ?? "") });
+      const limited = await enforceAbusePolicy({ endpoint: "signin", request, accountIdentifier: form.get("battleNetGrant") === "1" ? undefined : String(form.get("email") ?? "") });
       if (!limited.allowed) return rateLimitedJson("Too many sign-in attempts. Try again later.", limited.retryAfterSeconds);
     } catch (error) {
       console.error("[abuse-control] sign-in protection unavailable", { event: "signin_protection_error", errorType: error instanceof Error ? error.name : "unknown" });

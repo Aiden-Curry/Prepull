@@ -36,4 +36,14 @@ test("saved characters are isolated, deduplicated, and primary selection is tran
   }
 });
 
+test("concurrent first-character saves retain exactly one primary", { skip: !enabled }, async () => {
+  const userId = randomUUID();
+  await query("INSERT INTO users(id,email,password_hash,name) VALUES($1,$2,'test','Concurrent')", [userId, `${userId}@saved.local`]);
+  try {
+    await Promise.all(["Aidy", "Rivyn", "Elowen"].map((name) => new SavedCharacterRepository().saveCharacter(userId, character(name))));
+    const result = await query<{ total: number; primary_count: number }>("SELECT count(*)::int AS total,count(*) FILTER (WHERE is_primary)::int AS primary_count FROM user_characters WHERE user_id=$1 AND archived_at IS NULL", [userId]);
+    assert.deepEqual(result.rows[0], { total: 3, primary_count: 1 });
+  } finally { await query("DELETE FROM users WHERE id=$1", [userId]); }
+});
+
 test.after(async () => closePool());

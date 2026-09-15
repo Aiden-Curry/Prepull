@@ -21,6 +21,8 @@ await withTransaction(async (client) => {
   const syntheticUserIds = [...ids.values()];
   // Player fixtures are deliberately reset for synthetic E2E users only. Keep
   // guild fixtures and all non-E2E personal data untouched.
+  await client.query("DELETE FROM battle_net_oauth_states WHERE initiating_user_id=ANY($1::uuid[])", [syntheticUserIds]);
+  await client.query("DELETE FROM battle_net_connections WHERE user_id=ANY($1::uuid[])", [syntheticUserIds]);
   await client.query("DELETE FROM guild_readiness_shares WHERE user_id=ANY($1::uuid[])", [syntheticUserIds]);
   await client.query("DELETE FROM character_sync_items WHERE sync_id IN (SELECT syncs.id FROM character_syncs syncs JOIN user_characters characters ON characters.id=syncs.user_character_id WHERE characters.user_id=ANY($1::uuid[]))", [syntheticUserIds]);
   await client.query("DELETE FROM character_syncs WHERE user_character_id IN (SELECT id FROM user_characters WHERE user_id=ANY($1::uuid[]))", [syntheticUserIds]);

@@ -14,6 +14,8 @@ export const config = {
   matcher: [
     "/:version(era|tbc)/dashboard/:path*",
     "/:version(era|tbc)/profile/:path*",
+    "/:version(era|tbc)/battle-net/:path*",
+    "/:version(era|tbc)/battle-net/:path*",
     "/:version(era|tbc)/onboarding/:path*",
     "/:version(era|tbc)/characters/connect/:path*",
     "/:version(era|tbc)/character/:path*",

@@ -5,3 +5,5 @@ The production adapter uses PostgreSQL through `DATABASE_URL`. Apply the SQL fil
 Migration 016 adds raid-linked Guild Prep Runs and member-based voluntary signups. It keeps activity identity immutable, allows at most one open run per guild/raid/activity, and retains completed or cancelled history.
 
 Migration 017 adds expendable shared infrastructure for public character lookup caching and fixed-window abuse protection. Neither table references player, guild, or sync records; expiry and cleanup cannot alter trusted product state.
+
+Migration 018 adds Battle.net identities, one-time OAuth/login state, and short-lived character import sessions. It deliberately allows OAuth-only users without fabricated email or password credentials.

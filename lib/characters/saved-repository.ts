@@ -30,6 +30,7 @@ export class SavedCharacterRepository {
   }
   async saveCharacter(userId: string, input: SaveCharacterInput) {
     return withTransaction(async (client) => {
+      await client.query("SELECT pg_advisory_xact_lock(hashtext($1))", [userId]);
       const existing = await client.query<Row>(`${select} WHERE user_id=$1 AND region=$2 AND realm_slug=$3 AND normalized_character_name=$4 AND character_realm_type=$5 AND archived_at IS NULL`, [userId, input.region, input.realmSlug, input.normalizedCharacterName, input.characterRealmType]);
       if (existing.rows[0]) return fromRow(existing.rows[0]);
       const count = await client.query<{ count: string }>(`SELECT count(*)::text AS count FROM user_characters WHERE user_id=$1 AND archived_at IS NULL`, [userId]);

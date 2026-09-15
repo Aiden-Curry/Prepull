@@ -9,18 +9,21 @@ import { disableReadinessShareAction, enableReadinessShareAction } from "../../.
 import { listEligibleReadinessShares } from "../../../lib/guilds/readiness-service";
 import type { ContentVersion } from "../../../lib/types";
 import { protectedRouteCallback } from "../../../lib/auth-callback";
+import { battleNetRepository } from "../../../lib/battle-net/repository";
+import { BattleNetStart } from "../../../components/battle-net-start";
 
 export default async function ProfilePage({ params, searchParams }: { params: Promise<{ version: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const { version: raw } = await params;
   if (!isContentVersion(raw)) notFound();
   const version = raw as ContentVersion;
   const user = await requireAuthenticatedUser(protectedRouteCallback(version, "/profile", await searchParams));
-  const [characters, shares] = await Promise.all([savedCharacterRepository.listSavedCharacters(user.id), listEligibleReadinessShares(user.id)]);
+  const [characters, shares, battleNetConnections] = await Promise.all([savedCharacterRepository.listSavedCharacters(user.id), listEligibleReadinessShares(user.id), battleNetRepository.listConnections(user.id)]);
   const primary = characters.find((character) => character.isPrimary);
   const [sync, history] = primary ? await Promise.all([characterSyncRepository.getLatestSuccessful(primary.id), characterSyncRepository.getHistory(primary.id, 5)]) : [undefined, []];
   return <VersionShell version={version}><main className="mx-auto min-h-[calc(100vh-148px)] max-w-[900px] px-5 py-12 lg:px-8 lg:py-16">
     <div className="eyebrow">Account</div><h1 className="display mt-3 text-5xl">Your PrePull profile.</h1>
     <section className="panel mt-10 rounded-2xl p-6"><dl className="grid gap-5 text-sm sm:grid-cols-2"><div><dt className="text-xs text-[var(--muted)]">Name</dt><dd className="mt-1 font-semibold">{user.displayName}</dd></div><div><dt className="text-xs text-[var(--muted)]">Saved characters</dt><dd className="mt-1 font-semibold">{characters.length}</dd></div></dl></section>
+    <section className="panel mt-5 rounded-2xl p-6" aria-labelledby="battle-net-heading"><div className="eyebrow">Connected account</div><h2 id="battle-net-heading" className="display mt-2 text-3xl">Battle.net</h2>{battleNetConnections.length ? <div className="mt-4 grid gap-3">{battleNetConnections.map((connection) => <div className="rounded-xl border border-[var(--line)] p-4" key={connection.id}><p className="font-semibold">{connection.battleTag}</p><p className="mt-1 text-xs text-[var(--muted)]">{connection.region === "eu" ? "Europe" : "Americas"} · Last authorized {new Date(connection.lastAuthorizedAt).toLocaleDateString()}</p></div>)}</div> : <p className="mt-3 text-sm text-[var(--muted)]">No Battle.net account connected.</p>}<div className="mt-5 max-w-sm"><BattleNetStart intent="link" callbackUrl={`/${version}/battle-net/import`} compact /></div></section>
     <section aria-labelledby="readiness-sharing-heading" className="panel mt-5 rounded-2xl p-6">
       <div className="eyebrow">Guild privacy</div><h2 id="readiness-sharing-heading" className="display mt-2 text-3xl">Readiness sharing</h2>
       <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">Sharing is optional. Guild officers and assigned raid leaders can see recommendation support, your latest successful refresh time, evaluated slots, and high-level opportunity counts. They cannot see your email, equipment history, other characters, or Session Planner.</p>
