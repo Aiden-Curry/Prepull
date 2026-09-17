@@ -1,3 +1,4 @@
+import type { CharacterArmory } from "../armory/types.ts";
 import type { CharacterRealmType, ContentVersion, Faction, Region } from "../types.ts";
 
 export type PublicCharacterProjection = {
@@ -13,6 +14,7 @@ export type PublicCharacterProjection = {
   realmType: CharacterRealmType;
   providerStatus: "live" | "preview";
   retrievedAt: string;
+  armory?: CharacterArmory;
 };
 
 export type PublicCacheEntry =

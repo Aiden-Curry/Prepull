@@ -14,6 +14,9 @@ export function battleNetApplicationOrigin(request: Request) {
 }
 
 export function battleNetCallbackUri(request: Request) {
+  const configured = process.env.BATTLENET_REDIRECT_URI;
+  if (configured) return configured;
+  if (process.env.NODE_ENV === "production") throw new Error("BATTLENET_REDIRECT_URI is required for Battle.net login.");
   return `${battleNetApplicationOrigin(request)}/api/auth/battlenet/callback`;
 }
 

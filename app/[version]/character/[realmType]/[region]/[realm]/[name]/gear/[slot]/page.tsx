@@ -1,9 +1,9 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { GearDetail } from "../../../../../../../../../components/character-view";
 import { VersionShell } from "../../../../../../../../../components/version-shell";
 import { isContentVersion } from "../../../../../../../../../lib/game-data";
 import { analyzeCharacter } from "../../../../../../../../../lib/gear-analysis/engine";
-import { getCharacterProvider } from "../../../../../../../../../lib/providers/factory";
+import { loadRouteCharacter } from "../../../../../../../../../lib/characters/route-character";
 import { CharacterRealmType, ContentVersion, Region } from "../../../../../../../../../lib/types";
 import { AnalysisSlotPanel } from "../../../../../../../../../components/analysis-ui";
 import { CuratedSlotPanel } from "../../../../../../../../../components/curated-ui";
@@ -13,7 +13,8 @@ export default async function GearSlotPage({ params }: { params: Promise<{ versi
   const resolvedParams = await params;
   if (!isContentVersion(resolvedParams.version) || !["era", "anniversary"].includes(resolvedParams.realmType) || !["eu", "us"].includes(resolvedParams.region)) notFound();
   const version = resolvedParams.version as ContentVersion;
-  const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType: resolvedParams.realmType as CharacterRealmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
+  const { character, saved } = await loadRouteCharacter({ contentVersion: version, realmType: resolvedParams.realmType as CharacterRealmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
+  if (saved && !character) redirect(`/${version}/dashboard`);
   if (!character) notFound();
   const slot = resolvedParams.slot.replaceAll("-", " ");
   const analysis = analyzeCharacter(character);

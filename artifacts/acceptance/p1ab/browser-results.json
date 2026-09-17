@@ -1,0 +1,238 @@
+{
+  "passed": 58,
+  "skipped": 0,
+  "tests": [
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "anonymous Era lookup opens a safe shareable public character"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "anonymous TBC lookup preserves version and Anniversary stays truthfully unsupported"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "signup from a result returns to the exact character and completes trusted initial sync"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "sign-in restores the exact public result and an already-saved lookup opens without duplication"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "not-found and temporary provider errors are distinct and safe"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "public search and profile are mobile, keyboard, and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "public API returns 429 before protected work at the lookup threshold"
+    },
+    {
+      "file": "tests\\e2e\\public-character.e2e.spec.ts",
+      "test": "signup and credentials sign-in endpoints enforce separate durable limits"
+    },
+    {
+      "file": "tests\\e2e\\battle-net-auth.e2e.spec.ts",
+      "test": "Battle.net login discovers, bulk imports with partial success, and reaches dashboard"
+    },
+    {
+      "file": "tests\\e2e\\battle-net-auth.e2e.spec.ts",
+      "test": "Battle.net cancellation is safe and creates no account"
+    },
+    {
+      "file": "tests\\e2e\\battle-net-auth.e2e.spec.ts",
+      "test": "an email user can link Battle.net and another user cannot steal that identity"
+    },
+    {
+      "file": "tests\\e2e\\battle-net-auth.e2e.spec.ts",
+      "test": "returning Battle.net login reuses its user and preserves TBC content context"
+    },
+    {
+      "file": "tests\\e2e\\player-advice.e2e.spec.ts",
+      "test": "supported Fury dashboard shows ranked advice and activity detail"
+    },
+    {
+      "file": "tests\\e2e\\player-advice.e2e.spec.ts",
+      "test": "supported Frost Mage refreshes, ranks activities, shows detail, and records a completed target"
+    },
+    {
+      "file": "tests\\e2e\\player-onboarding.e2e.spec.ts",
+      "test": "onboarding and dashboard redirect anonymously"
+    },
+    {
+      "file": "tests\\e2e\\player-onboarding.e2e.spec.ts",
+      "test": "authenticated player can search the deterministic character provider"
+    },
+    {
+      "file": "tests\\e2e\\player-onboarding.e2e.spec.ts",
+      "test": "authenticated player can save, choose, and remove a character"
+    },
+    {
+      "file": "tests\\e2e\\player-onboarding.e2e.spec.ts",
+      "test": "anniversary search preserves its unsupported state"
+    },
+    {
+      "file": "tests\\e2e\\player-onboarding.e2e.spec.ts",
+      "test": "dashboard has keyboard-reachable character controls on mobile"
+    },
+    {
+      "file": "tests\\e2e\\player-refresh.e2e.spec.ts",
+      "test": "first character refresh establishes a baseline and keeps advice visible"
+    },
+    {
+      "file": "tests\\e2e\\player-refresh.e2e.spec.ts",
+      "test": "Anniversary refresh remains explicitly unsupported"
+    },
+    {
+      "file": "tests\\e2e\\session-planner.e2e.spec.ts",
+      "test": "builds, switches, and copies a persisted Fury session plan"
+    },
+    {
+      "file": "tests\\e2e\\session-planner.e2e.spec.ts",
+      "test": "builds and copies a Frost Mage session plan"
+    },
+    {
+      "file": "tests\\e2e\\session-planner.e2e.spec.ts",
+      "test": "planner remains keyboard reachable on a narrow dashboard"
+    },
+    {
+      "file": "tests\\e2e\\player-advice.e2e.spec.ts",
+      "test": "switching Fury to Frost to unsupported and back recalculates dashboard advice"
+    },
+    {
+      "file": "tests\\e2e\\session-planner.e2e.spec.ts",
+      "test": "keeps unsupported planning safe after initial sync"
+    },
+    {
+      "file": "tests\\e2e\\game-calendar.e2e.spec.ts",
+      "test": "public Era calendar supports regions, filters, provenance, and version switching"
+    },
+    {
+      "file": "tests\\e2e\\game-calendar.e2e.spec.ts",
+      "test": "direct TBC calendar is public, mobile, keyboard, and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\game-calendar.e2e.spec.ts",
+      "test": "dashboard previews keep Era and TBC events isolated"
+    },
+    {
+      "file": "tests\\e2e\\guild-prep-runs.e2e.spec.ts",
+      "test": "organizer creates a canonical run and member RSVP remains after readiness consent is revoked"
+    },
+    {
+      "file": "tests\\e2e\\guild-prep-runs.e2e.spec.ts",
+      "test": "assigned leader may manage while ordinary, unassigned, and cross-guild members cannot"
+    },
+    {
+      "file": "tests\\e2e\\guild-prep-runs.e2e.spec.ts",
+      "test": "Prep Run list and detail are mobile, keyboard, and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "member explicitly enables and immediately disables readiness sharing"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "pending claims and mismatched saved characters cannot be shared"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "officer sees factual selected summary and a separate bench without private data"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "assigned raid leader has access while an unassigned raid leader does not"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "another guild cannot discover readiness through the raid URL"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "a member cannot disable another member's readiness share"
+    },
+    {
+      "file": "tests\\e2e\\guild-readiness.e2e.spec.ts",
+      "test": "raid readiness is mobile, keyboard, and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\guild-schedule.e2e.spec.ts",
+      "test": "authorized timezone changes persist and alter presentation without shifting stored raid instants"
+    },
+    {
+      "file": "tests\\e2e\\guild-schedule.e2e.spec.ts",
+      "test": "schedule is browser-timezone independent, versioned, private across guilds, mobile, keyboard and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\guild-schedule.e2e.spec.ts",
+      "test": "signed-out TBC schedule sign-in returns to the TBC schedule"
+    },
+    {
+      "file": "tests\\e2e\\unified-calendar.e2e.spec.ts",
+      "test": "member sees game, raid, Prep Run, filters, region isolation, timezone changes, and version switching"
+    },
+    {
+      "file": "tests\\e2e\\unified-calendar.e2e.spec.ts",
+      "test": "unified route is membership-protected and exact TBC callback is restored"
+    },
+    {
+      "file": "tests\\e2e\\unified-calendar.e2e.spec.ts",
+      "test": "unified calendar is mobile, keyboard, and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\version-navigation.e2e.spec.ts",
+      "test": "Era and TBC primary navigation preserve their route version"
+    },
+    {
+      "file": "tests\\e2e\\version-navigation.e2e.spec.ts",
+      "test": "direct TBC links retain theme on refresh and mobile selector is keyboard and axe safe"
+    },
+    {
+      "file": "tests\\e2e\\armory.e2e.spec.ts",
+      "test": "realm combobox supports keyboard, region clearing and ecosystem separation without character quota calls"
+    },
+    {
+      "file": "tests\\e2e\\armory.e2e.spec.ts",
+      "test": "public Armory renders safe slot equipment and remains usable with Wowhead blocked on mobile"
+    },
+    {
+      "file": "tests\\e2e\\armory.e2e.spec.ts",
+      "test": "saved Armory changes only through a persisted refresh and preserves the last success after provider failure"
+    },
+    {
+      "file": "tests\\e2e\\armory.e2e.spec.ts",
+      "test": "observed Classic talent fixture renders active totals and spell links without invented positions"
+    },
+    {
+      "file": "tests\\e2e\\guilds.e2e.spec.ts",
+      "test": "owner sees only accessible guild workspaces and persisted roster summary"
+    },
+    {
+      "file": "tests\\e2e\\guilds.e2e.spec.ts",
+      "test": "guild creation form preserves independent content and realm concepts"
+    },
+    {
+      "file": "tests\\e2e\\public-beta-onboarding.e2e.spec.ts",
+      "test": "new Era visitor registers, auto-signs in, finds, saves, syncs, and reaches advice"
+    },
+    {
+      "file": "tests\\e2e\\public-beta-onboarding.e2e.spec.ts",
+      "test": "new TBC visitor preserves version through registration, finder, save, and dashboard"
+    },
+    {
+      "file": "tests\\e2e\\public-beta-onboarding.e2e.spec.ts",
+      "test": "signup and finder failures are safe and Anniversary remains unsupported"
+    },
+    {
+      "file": "tests\\e2e\\version-navigation.e2e.spec.ts",
+      "test": "expansion selector preserves equivalent nested paths, query, and hash"
+    },
+    {
+      "file": "tests\\e2e\\version-navigation.e2e.spec.ts",
+      "test": "TBC guild raid, readiness, Prep Board, and Profile flow never resets to Era"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "classicTooltip": true,
+  "icons": 19,
+  "mobileOverflow": false,
+  "talentTooltip": true,
+  "tbcTooltip": true,
+  "classicDataset": true,
+  "tbcDataset": true,
+  "scriptCount": 1,
+  "uncaughtErrors": 0
+}

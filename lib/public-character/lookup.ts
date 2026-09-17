@@ -1,3 +1,4 @@
+import { projectArmory } from "../armory/projection.ts";
 import { createHash } from "node:crypto";
 import type { CharacterLookup, CharacterProvider } from "../providers/character-provider.ts";
 import { CharacterProviderError } from "../providers/character-provider.ts";
@@ -20,7 +21,7 @@ export function publicLookupCacheKey(lookup: CharacterLookup) {
 }
 
 export function projectPublicCharacter(character: NormalizedCharacter, now: Date): PublicCharacterProjection {
-  return { name: character.name, realm: character.realm, region: character.region, level: character.level, race: character.race, className: character.class, specialization: character.spec, faction: character.faction, contentVersion: character.contentVersion, realmType: character.realmType, providerStatus: character.dataMeta?.isLive ? "live" : "preview", retrievedAt: character.dataMeta?.lastUpdated ?? now.toISOString() };
+  return { name: character.name, realm: character.realm, region: character.region, level: character.level, race: character.race, className: character.class, specialization: character.spec, faction: character.faction, contentVersion: character.contentVersion, realmType: character.realmType, providerStatus: character.dataMeta?.isLive ? "live" : "preview", retrievedAt: character.dataMeta?.retrievedAt ?? now.toISOString(), armory: projectArmory(character, character.dataMeta?.retrievedAt ?? now.toISOString()) };
 }
 
 export async function lookupPublicCharacter(input: PublicLookupInput, dependencies: { cache?: PublicCharacterCacheStore; provider?: CharacterProvider; now?: Date } = {}): Promise<PublicLookupResult> {
@@ -32,7 +33,7 @@ export async function lookupPublicCharacter(input: PublicLookupInput, dependenci
   if (cached) { console.info("[public-character] lookup", { event: "cache_hit", version: input.contentVersion, realmType: input.realmType, region: input.region, outcome: cached.status }); return cached.status === "found" ? { status: "found", character: cached.projection, cache: "hit" } : { status: "not_found", cache: "hit" }; }
   console.info("[public-character] lookup", { event: "cache_miss", version: input.contentVersion, realmType: input.realmType, region: input.region });
   try {
-    const character = await provider.findCharacter(normalized.lookup);
+    const character = await (provider.findPublicCharacter ? provider.findPublicCharacter(normalized.lookup) : provider.findCharacter(normalized.lookup));
     if (!character) { await cache.set(key, { status: "not_found", projection: null }, new Date(now.getTime() + PUBLIC_LOOKUP_CACHE_TTL.notFoundMs), now); console.info("[public-character] lookup", { event: "provider_not_found", version: input.contentVersion, realmType: input.realmType, region: input.region }); return { status: "not_found", cache: "miss" }; }
     const projection = projectPublicCharacter(character, now);
     await cache.set(key, { status: "found", projection }, new Date(now.getTime() + PUBLIC_LOOKUP_CACHE_TTL.foundMs), now);

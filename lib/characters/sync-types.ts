@@ -1,3 +1,4 @@
+import type { ArmorySnapshot } from "../armory/types.ts";
 import type { CharacterRealmType, CharacterTalent, ContentVersion, EquippedItem, Faction } from "../types.ts";
 
 export type CharacterSyncStatus = "success" | "failed";
@@ -18,5 +19,6 @@ export type CharacterSync = {
   provider: string;
   errorCode?: string;
   errorMessage?: string;
+  armory?: ArmorySnapshot;
   equipment: EquippedItem[];
 };

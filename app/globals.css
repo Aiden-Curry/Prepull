@@ -52,3 +52,37 @@ details .nav-link[aria-current="page"]::after { display: none; }
 .home-cta { background: radial-gradient(circle at 82% 20%, var(--hero-flare), transparent 24rem), linear-gradient(135deg, var(--surface-raised), var(--surface)); box-shadow: 0 30px 80px rgba(0,0,0,.24); }
 .home-cta::before { position: absolute; top: -7rem; right: -4rem; width: 20rem; height: 20rem; border: 1px solid var(--border-strong); border-radius: 999px; box-shadow: 0 0 0 3rem var(--accent-soft), 0 0 0 6rem color-mix(in srgb, var(--accent-soft) 45%, transparent); content: ""; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+/* A fixed slot grid keeps empty equipment in place and reserves icon space. */
+.armory-equipment { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.armory-slot { min-width: 0; padding: .65rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); }
+.armory-item { position: relative; display: flex; align-items: center; gap: .75rem; min-height: 56px; font-size: .875rem; }
+.armory-icon { flex: 0 0 48px; width: 48px; height: 48px; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--border); border-radius: .4rem; background: var(--surface-muted); }
+.armory-icon img { width: 48px; height: 48px; object-fit: cover; }
+.armory-center { display: none; }
+.armory-focus-details { display: none; position: absolute; z-index: 20; top: 100%; left: 0; right: 0; padding: .75rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--surface); color: var(--text); box-shadow: 0 10px 30px #0008; }
+.armory-item:focus-visible .armory-focus-details { display: block; }
+.armory-item .iconsmall, .armory-item .iconmedium, .armory-item .iconlarge { position: absolute !important; left: 0; top: 4px; width: 48px !important; height: 48px !important; margin: 0 !important; }
+.armory-item .iconlarge ins, .armory-item .iconlarge del { width: 48px !important; height: 48px !important; left: 0 !important; top: 0 !important; background-size: cover !important; }
+.armory-item[data-wh-icon-size] { padding-left: 0 !important; }
+.armory-slot[data-quality="Poor"] .armory-item-name { color: #b9b9b9; }
+.armory-slot[data-quality="Uncommon"] .armory-item-name { color: #6ee779; }
+.armory-slot[data-quality="Rare"] .armory-item-name { color: #78baff; }
+.armory-slot[data-quality="Epic"] .armory-item-name { color: #d1a1ff; }
+.armory-slot[data-quality="Legendary"] .armory-item-name { color: #ffb568; }
+@media (min-width: 700px) {
+  .armory-equipment { grid-template-columns: minmax(0, 1fr) minmax(0, .65fr) minmax(0, 1fr); }
+  .armory-slot:nth-child(odd) { grid-column: 1; }
+  .armory-slot:nth-child(even) { grid-column: 3; }
+  .armory-head, .armory-neck { grid-row: 1; }
+  .armory-shoulder, .armory-back { grid-row: 2; }
+  .armory-chest, .armory-wrist { grid-row: 3; }
+  .armory-hands, .armory-waist { grid-row: 4; }
+  .armory-legs, .armory-feet { grid-row: 5; }
+  .armory-finger1, .armory-finger2 { grid-row: 6; }
+  .armory-trinket1, .armory-trinket2 { grid-row: 7; }
+  .armory-shirt, .armory-tabard { grid-row: 8; }
+  .armory-equipment .armory-mainHand { grid-column: 2; grid-row: 9; }
+  .armory-equipment .armory-offHand { grid-column: 1; grid-row: 10; }
+  .armory-equipment .armory-ranged { grid-column: 3; grid-row: 10; }
+  .armory-center { grid-column: 2; grid-row: 1 / 9; display: flex; align-items: center; justify-content: center; flex-direction: column; border-radius: 50%; background: radial-gradient(ellipse, color-mix(in srgb, var(--accent) 9%, transparent), transparent 65%); }
+}

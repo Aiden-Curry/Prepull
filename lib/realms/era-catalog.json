@@ -1,0 +1,870 @@
+[
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "amnennar",
+    "name": "Amnennar",
+    "id": 5501
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "soulseeker",
+    "name": "Soulseeker",
+    "id": 6113
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "eu4-cwow-gmss-2",
+    "name": "EU4 CWOW GMSS 2",
+    "id": 5198
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "eu4-cwow-gmss-1",
+    "name": "EU4 CWOW GMSS 1",
+    "id": 5199
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "eu4-cwow-web",
+    "name": "EU4 CWOW Web",
+    "id": 5201
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "dragonfang",
+    "name": "Dragonfang",
+    "id": 5219
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "stitches",
+    "name": "Stitches",
+    "id": 5220
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "earthshaker",
+    "name": "Earthshaker",
+    "id": 5221
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "bloodfang",
+    "name": "Bloodfang",
+    "id": 5224
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "transcendence",
+    "name": "Transcendence",
+    "id": 5225
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "finkle",
+    "name": "Finkle",
+    "id": 5226
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "skullflame",
+    "name": "Skullflame",
+    "id": 5227
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "ashbringer",
+    "name": "Ashbringer",
+    "id": 5228
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "noggenfogger",
+    "name": "Noggenfogger",
+    "id": 5229
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "gandling",
+    "name": "Gandling",
+    "id": 5230
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "mograine",
+    "name": "Mograine",
+    "id": 5231
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "zandalar-tribe",
+    "name": "Zandalar Tribe",
+    "id": 5232
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "firemaw",
+    "name": "Firemaw",
+    "id": 5233
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "patchwerk",
+    "name": "Patchwerk",
+    "id": 5234
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "golemagg",
+    "name": "Golemagg",
+    "id": 5235
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "sulfuron",
+    "name": "Sulfuron",
+    "id": 5236
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "lucifron",
+    "name": "Lucifron",
+    "id": 5237
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "lakeshire",
+    "name": "Lakeshire",
+    "id": 5240
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "auberdine",
+    "name": "Auberdine",
+    "id": 5241
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "everlook",
+    "name": "Everlook",
+    "id": 5242
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "eu5-cwow-web",
+    "name": "EU5 CWOW Web",
+    "id": 5244
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "mandokir",
+    "name": "Mandokir",
+    "id": 5258
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "harbinger-of-doom-ru",
+    "name": "Harbinger of Doom (RU)",
+    "id": 5259
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "nekrosh",
+    "name": "Nek'Rosh",
+    "id": 5261
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "heartstriker",
+    "name": "Heartstriker",
+    "id": 5262
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "celebras",
+    "name": "Celebras",
+    "id": 5266
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "judgement",
+    "name": "Judgement",
+    "id": 5267
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "ten-storms",
+    "name": "Ten Storms",
+    "id": 5268
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "dragons-call",
+    "name": "Dragon's Call",
+    "id": 5269
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "dreadmist",
+    "name": "Dreadmist",
+    "id": 5270
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "rhokdelar-ru",
+    "name": "Rhok'delar (RU)",
+    "id": 5271
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "flamelash",
+    "name": "Flamelash",
+    "id": 5272
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "stonespine",
+    "name": "Stonespine",
+    "id": 5273
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "wyrmthalak-ru",
+    "name": "Wyrmthalak (RU)",
+    "id": 5274
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "hydraxian-waterlords",
+    "name": "Hydraxian Waterlords",
+    "id": 5275
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "razorgore",
+    "name": "Razorgore",
+    "id": 5276
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "venoxis",
+    "name": "Venoxis",
+    "id": 5277
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "gehennas",
+    "name": "Gehennas",
+    "id": 5278
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "shazzrah",
+    "name": "Shazzrah",
+    "id": 5279
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "flamegor-ru",
+    "name": "Flamegor (RU)",
+    "id": 5280
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "nethergarde-keep",
+    "name": "Nethergarde Keep",
+    "id": 5281
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "razorfen",
+    "name": "Razorfen",
+    "id": 5282
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "mirage-raceway",
+    "name": "Mirage Raceway",
+    "id": 5283
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "pyrewood-village",
+    "name": "Pyrewood Village",
+    "id": 5284
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "chromie-ru",
+    "name": "Chromie (RU)",
+    "id": 5285
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "wild-growth",
+    "name": "Wild Growth",
+    "id": 5825
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "lone-wolf",
+    "name": "Lone Wolf",
+    "id": 5826
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "living-flame",
+    "name": "Living Flame",
+    "id": 5827
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "crusader-strike",
+    "name": "Crusader Strike",
+    "id": 5828
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "penance-season",
+    "name": "Penance (Season)",
+    "id": 5829
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "shadowstrike-season",
+    "name": "Shadowstrike (Season)",
+    "id": 5830
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "lava-lash",
+    "name": "Lava Lash",
+    "id": 5831
+  },
+  {
+    "region": "eu",
+    "realmType": "era",
+    "slug": "chaos-bolt",
+    "name": "Chaos Bolt",
+    "id": 5832
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "remulos",
+    "name": "Remulos",
+    "id": 5085
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "herod",
+    "name": "Herod",
+    "id": 5065
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "whitemane",
+    "name": "Whitemane",
+    "id": 5066
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "felstriker",
+    "name": "Felstriker",
+    "id": 5067
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "westfall",
+    "name": "Westfall",
+    "id": 5068
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "azuresong",
+    "name": "Azuresong",
+    "id": 5069
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "yojamba",
+    "name": "Yojamba",
+    "id": 5070
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "ashkandi",
+    "name": "Ashkandi",
+    "id": 5071
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "arugal",
+    "name": "Arugal",
+    "id": 5073
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "doomhowl",
+    "name": "Doomhowl",
+    "id": 6105
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "skull-rock",
+    "name": "Skull Rock",
+    "id": 5099
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "arcanite-reaper",
+    "name": "Arcanite Reaper",
+    "id": 5100
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "anathema",
+    "name": "Anathema",
+    "id": 5101
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "thunderfury",
+    "name": "Thunderfury",
+    "id": 5102
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "smolderweb",
+    "name": "Smolderweb",
+    "id": 5105
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "rattlegore",
+    "name": "Rattlegore",
+    "id": 5106
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "grobbulus",
+    "name": "Grobbulus",
+    "id": 5107
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "kurinnaxx",
+    "name": "Kurinnaxx",
+    "id": 5108
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "bigglesworth",
+    "name": "Bigglesworth",
+    "id": 5109
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "blaumeux",
+    "name": "Blaumeux",
+    "id": 5110
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "fairbanks",
+    "name": "Fairbanks",
+    "id": 5111
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "old-blanchy",
+    "name": "Old Blanchy",
+    "id": 5115
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "myzrael",
+    "name": "Myzrael",
+    "id": 5116
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "atiesh",
+    "name": "Atiesh",
+    "id": 5117
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "loatheb",
+    "name": "Loatheb",
+    "id": 5121
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "sulthraze",
+    "name": "Sul'thraze",
+    "id": 5124
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "defias-pillager",
+    "name": "Defias Pillager",
+    "id": 5126
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "heartseeker",
+    "name": "Heartseeker",
+    "id": 5129
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "earthfury",
+    "name": "Earthfury",
+    "id": 5130
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "netherwind",
+    "name": "Netherwind",
+    "id": 5132
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "benediction",
+    "name": "Benediction",
+    "id": 5133
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "windseeker",
+    "name": "Windseeker",
+    "id": 5134
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "sulfuras",
+    "name": "Sulfuras",
+    "id": 5135
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "kirtonos",
+    "name": "Kirtonos",
+    "id": 5136
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "kromcrush",
+    "name": "Kromcrush",
+    "id": 5137
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "incendius",
+    "name": "Incendius",
+    "id": 5138
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "bloodsail-buccaneers",
+    "name": "Bloodsail Buccaneers",
+    "id": 5139
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "skeram",
+    "name": "Skeram",
+    "id": 5140
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "stalagg",
+    "name": "Stalagg",
+    "id": 5141
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "faerlina",
+    "name": "Faerlina",
+    "id": 5142
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "thalnos",
+    "name": "Thalnos",
+    "id": 5143
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "deviate-delight",
+    "name": "Deviate Delight",
+    "id": 5147
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "pagle",
+    "name": "Pagle",
+    "id": 5148
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "mankrik",
+    "name": "Mankrik",
+    "id": 5149
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-log",
+    "name": "US2 VANWOW Log",
+    "id": 5155
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-web",
+    "name": "US2 VANWOW Web",
+    "id": 5156
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-account",
+    "name": "US2 VANWOW Account",
+    "id": 5157
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-87",
+    "name": "US2 VANWOW CSI 87",
+    "id": 5158
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-86",
+    "name": "US2 VANWOW CSI 86",
+    "id": 5159
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-85",
+    "name": "US2 VANWOW CSI 85",
+    "id": 5160
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-84",
+    "name": "US2 VANWOW CSI 84",
+    "id": 5161
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-83",
+    "name": "US2 VANWOW CSI 83",
+    "id": 5162
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-82",
+    "name": "US2 VANWOW CSI 82",
+    "id": 5163
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-81",
+    "name": "US2 VANWOW CSI 81",
+    "id": 5164
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us2-vanwow-csi-80",
+    "name": "US2 VANWOW CSI 80",
+    "id": 5165
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us1-vanwow-gmss-1",
+    "name": "US1 VANWOW GMSS 1",
+    "id": 5166
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us1-vanwow-web",
+    "name": "US1 VANWOW Web",
+    "id": 5168
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "us1-vanwow-gmss-2",
+    "name": "US1 VANWOW GMSS 2",
+    "id": 5180
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "wild-growth",
+    "name": "Wild Growth",
+    "id": 5813
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "lone-wolf",
+    "name": "Lone Wolf",
+    "id": 5814
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "living-flame",
+    "name": "Living Flame",
+    "id": 5815
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "crusader-strike",
+    "name": "Crusader Strike",
+    "id": 5816
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "penance-au",
+    "name": "Penance (AU)",
+    "id": 5817
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "shadowstrike-au",
+    "name": "Shadowstrike (AU)",
+    "id": 5818
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "lava-lash",
+    "name": "Lava Lash",
+    "id": 5819
+  },
+  {
+    "region": "us",
+    "realmType": "era",
+    "slug": "chaos-bolt",
+    "name": "Chaos Bolt",
+    "id": 5820
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-16",
+  "scope": "local P1A/B",
+  "localAcceptance": true,
+  "stagingDeployed": false,
+  "unit": {
+    "passed": 225,
+    "failed": 0,
+    "skipped": 0
+  },
+  "postgres": {
+    "passed": 51,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "passed": 58,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "productionBuild": "PASS",
+  "diffCheck": "PASS",
+  "calendar": {
+    "occurrences": 26,
+    "structuralErrors": 0
+  },
+  "gearValidator": "PASS with existing warnings",
+  "curatedValidator": "PASS",
+  "specValidator": "PASS, five specs, zero blockers",
+  "recommendationSnapshots": {
+    "unchanged": 10
+  },
+  "protectedDataAndMigrationsUnchanged": true,
+  "liveEraApi": {
+    "character": "Kankan",
+    "realm": "Firemaw",
+    "region": "EU",
+    "summary": "PASS",
+    "equipment": "PASS",
+    "statistics": "PASS",
+    "talents": "PASS"
+  },
+  "migration019": "Applied only to isolated local PostgreSQL"
+}

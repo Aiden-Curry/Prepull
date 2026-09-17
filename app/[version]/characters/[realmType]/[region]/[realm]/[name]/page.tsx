@@ -1,3 +1,4 @@
+import { CharacterSheet } from "../../../../../../../components/character-sheet";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -38,13 +39,11 @@ export default async function PublicCharacterPage({ params }: { params: Promise<
   if (result.status === "invalid") notFound();
   const character = result.character; const session = await getServerSession(authOptions);
   const saved = session?.user?.id && character.realmType === "era" ? await savedCharacterRepository.findSavedCharacterByIdentity(session.user.id, { region: character.region, realmSlug: character.realm, normalizedCharacterName: character.name, characterRealmType: character.realmType }) : undefined;
-  return <VersionShell version={input.contentVersion}><main className="mx-auto min-h-[calc(100vh-148px)] max-w-[900px] px-5 py-12 lg:px-8 lg:py-16">
+  return <VersionShell version={input.contentVersion}><main className="mx-auto min-h-[calc(100vh-148px)] max-w-[1240px] px-5 py-12 lg:px-8 lg:py-16">
     <Link href={`/${input.contentVersion}#character-search`} className="focus-ring text-xs text-[var(--text-muted)]">← Find another character</Link>
-    <section className="panel mt-8 rounded-3xl p-6 sm:p-9" aria-labelledby="public-character-heading"><div className="eyebrow">Public character · {character.providerStatus === "live" ? "Battle.net" : "Preview provider"}</div><h1 id="public-character-heading" className="display mt-3 text-5xl">{character.name}</h1><p className="mt-3 text-lg text-[var(--text)]">Level {character.level} {character.race} {character.className}</p><p className="mt-1 text-sm text-[var(--text-muted)]">{character.realm} · {character.region.toUpperCase()} · {character.contentVersion === "era" ? "Classic Era" : "The Burning Crusade"}</p>
-      <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"><Fact label="Specialization" value={character.specialization} /><Fact label="Faction" value={character.faction} /><Fact label="Realm ecosystem" value={character.realmType === "anniversary" ? "Anniversary" : "Era"} /><Fact label="Data status" value={character.providerStatus === "live" ? "Live public profile" : "Deterministic preview"} /></dl>
-      <p className="mt-7 text-sm leading-6 text-[var(--text-muted)]">Current public character information. Save this character to establish trusted sync history and get personalized recommendations.</p>
-      <CharacterCta version={input.contentVersion} canonical={canonical} character={character} signedIn={Boolean(session?.user?.id)} saved={Boolean(saved)} />
-    </section>
+    {character.armory ? <CharacterSheet armory={character.armory} /> : <section className="panel mt-8 rounded-3xl p-6"><h1 className="display text-5xl">{character.name}</h1><p className="mt-3">Level {character.level} {character.race} {character.className}</p><p className="mt-3">Equipment, statistics and talents are unavailable in this older cached profile.</p></section>}
+    <p className="mt-7 text-sm text-[var(--text-muted)]">Current public character information. Save this character for personal advice and progress.</p>
+    <CharacterCta version={input.contentVersion} canonical={canonical} character={character} signedIn={Boolean(session?.user?.id)} saved={Boolean(saved)} />
   </main></VersionShell>;
 }
 
@@ -56,4 +55,3 @@ function CharacterCta({ version, canonical, character, signedIn, saved }: { vers
 }
 
 function PublicState({ version, title, message }: { version: ContentVersion; title: string; message: string }) { return <VersionShell version={version}><main className="grid min-h-[calc(100vh-148px)] place-items-center px-5 text-center"><div role="status"><div className="eyebrow">Public character lookup</div><h1 className="display mt-3 text-4xl">{title}</h1><p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[var(--text-muted)]">{message}</p><Link href={`/${version}#character-search`} className="button-secondary focus-ring mt-7">Back to character search</Link></div></main></VersionShell>; }
-function Fact({ label, value }: { label: string; value: string }) { return <div className="rounded-xl border border-[var(--border)] p-4"><dt className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">{label}</dt><dd className="mt-2 font-semibold">{value}</dd></div>; }

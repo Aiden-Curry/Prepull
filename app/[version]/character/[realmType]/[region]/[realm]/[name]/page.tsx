@@ -4,7 +4,7 @@ import { CharacterOverview } from "../../../../../../../components/character-vie
 import { VersionShell } from "../../../../../../../components/version-shell";
 import { isContentVersion } from "../../../../../../../lib/game-data";
 import { CharacterProviderError } from "../../../../../../../lib/providers/character-provider";
-import { getCharacterProvider } from "../../../../../../../lib/providers/factory";
+import { loadRouteCharacter } from "../../../../../../../lib/characters/route-character";
 import { summarizeUpgrades } from "../../../../../../../lib/upgrades/mock-upgrades";
 import { analyzeCharacter } from "../../../../../../../lib/gear-analysis/engine";
 import { AnalysisStatus } from "../../../../../../../components/analysis-ui";
@@ -22,12 +22,13 @@ export default async function CharacterPage({ params }: { params: Promise<{ vers
   const version = resolvedParams.version as ContentVersion;
   const realmType = resolvedParams.realmType as CharacterRealmType;
   try {
-    const character = await getCharacterProvider().findCharacter({ contentVersion: version, realmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
+    const { character, saved } = await loadRouteCharacter({ contentVersion: version, realmType, region: resolvedParams.region as Region, realm: resolvedParams.realm, characterName: resolvedParams.name });
+    if (saved && !character) return <ProviderState version={version} realmType={realmType} title="No successful sync yet." message="Open your dashboard and use Refresh character to load a saved snapshot." />;
     if (!character) return <ProviderState version={version} realmType={realmType} title="Character not found." message={`We could not find that ${realmType} character. Check the realm, region, and spelling, then try again.`} />;
     const analysis = analyzeCharacter(character);
     const recommendations = analysis.supported ? analysis.recommendations : [];
     const curated = evaluateCharacterRecommendations(character);
-    return <VersionShell version={version}><CharacterOverview character={character} recommendations={recommendations} summary={summarizeUpgrades(recommendations)} />{curated && <CuratedOverview evaluation={curated} />}{!curated && <AnalysisStatus analysis={analysis} />}</VersionShell>;
+    return <VersionShell version={version}><CharacterOverview saved={saved} character={character} recommendations={recommendations} summary={summarizeUpgrades(recommendations)} />{curated && <CuratedOverview evaluation={curated} />}{!curated && <AnalysisStatus analysis={analysis} />}</VersionShell>;
   } catch (error) {
     if (error instanceof CharacterProviderError) {
       if (error.code === "CharacterNotFound" || error.code === "RealmNotFound") return <ProviderState version={version} realmType={realmType} title="Character not found." message="Blizzard did not return a matching character profile." />;

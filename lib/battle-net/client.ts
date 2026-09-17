@@ -51,14 +51,14 @@ export function normalizeAccountProfile(payload: AccountProfile, region: Region)
 }
 
 export class LiveBattleNetOAuthClient implements BattleNetOAuthClient {
-  authorizationUrl({ region, state, redirectUri }: { region: Region; state: string; redirectUri: string }) {
+  authorizationUrl({ state, redirectUri }: { region: Region; state: string; redirectUri: string }) {
     const { clientId } = credentials();
     const query = new URLSearchParams({ client_id: clientId, redirect_uri: redirectUri, response_type: "code", scope: BATTLE_NET_OAUTH_SCOPES.join(" "), state });
-    return `https://${region}.battle.net/oauth/authorize?${query}`;
+    return `https://oauth.battle.net/authorize?${query}`;
   }
-  async exchangeCode({ region, code, redirectUri }: { region: Region; code: string; redirectUri: string }) {
+  async exchangeCode({ code, redirectUri }: { region: Region; code: string; redirectUri: string }) {
     const { clientId, clientSecret } = credentials();
-    const response = await fetch(`https://${region}.battle.net/oauth/token`, { method: "POST", headers: { authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString("base64")}`, "content-type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ grant_type: "authorization_code", code, redirect_uri: redirectUri }), cache: "no-store", signal: AbortSignal.timeout(10_000) });
+    const response = await fetch("https://oauth.battle.net/token", { method: "POST", headers: { authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString("base64")}`, "content-type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ grant_type: "authorization_code", code, redirect_uri: redirectUri }), cache: "no-store", signal: AbortSignal.timeout(10_000) });
     const token = await safeJson<TokenResponse>(response, "token_exchange");
     if (!token.access_token || !token.expires_in) throw new BattleNetOAuthError("malformed", "Battle.net returned an invalid token response.");
     return { accessToken: token.access_token, expiresIn: token.expires_in };

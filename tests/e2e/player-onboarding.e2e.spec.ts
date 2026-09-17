@@ -17,7 +17,7 @@ test("authenticated player can search the deterministic character provider", asy
   await page.goto("/era/characters/connect");
   await page.getByLabel("Region").selectOption("eu");
   await page.getByLabel("Realm ecosystem").selectOption("era");
-  await page.getByRole("textbox", { name: "Realm" }).fill("Firemaw");
+  await page.getByRole("combobox", { name: "Realm", exact: true }).fill("Firemaw");
   await page.getByLabel("Character name").fill("Aidy");
   await page.getByRole("button", { name: "Search character" }).click();
   await expect(page.getByRole("heading", { name: "Aidy" })).toBeVisible();

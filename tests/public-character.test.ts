@@ -28,8 +28,8 @@ test("public lookup normalizes canonical Era/TBC URLs while preserving realm eco
 test("public projection is an explicit allowlist with no trusted or provider-private state", () => {
   const source = { ...character, userId: "private", syncId: "private", rawProviderBody: { token: "private" } } as NormalizedCharacter & Record<string, unknown>;
   const projection = projectPublicCharacter(source, new Date("2026-09-15T12:00:00Z")); const serialized = JSON.stringify(projection);
-  assert.deepEqual(Object.keys(projection).sort(), ["className", "contentVersion", "faction", "level", "name", "providerStatus", "race", "realm", "realmType", "region", "retrievedAt", "specialization"].sort());
-  assert.doesNotMatch(serialized, /userId|syncId|equipment|token|email|readiness|planner/i);
+  assert.deepEqual(Object.keys(projection).sort(), ["armory", "className", "contentVersion", "faction", "level", "name", "providerStatus", "race", "realm", "realmType", "region", "retrievedAt", "specialization"].sort());
+  assert.doesNotMatch(serialized, /userId|syncId|token|email|readiness|planner/i);
 });
 
 test("a fresh positive lookup populates cache and repeated normalized lookup calls provider once", async () => {

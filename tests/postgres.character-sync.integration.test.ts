@@ -38,4 +38,17 @@ test("Frost Mage refresh snapshots persist and completed targets recalculate adv
     await query("DELETE FROM users WHERE id=$1", [userId]);
   }
 });
+
+test("Armory optional snapshot and modifier IDs persist atomically; failures preserve success and old snapshots stay unavailable", { skip: !enabled }, async () => {
+  const userId = randomUUID(); await query("INSERT INTO users(id,email,password_hash,name) VALUES($1,$2,'x','Armory Owner')", [userId, userId + "@armory.local"]);
+  const character = await saved.saveCharacter(userId, { region: "eu", realmSlug: "firemaw", realmName: "Firemaw", characterName: "Armory", normalizedCharacterName: "armory", className: "Warrior", race: "Orc", level: 60, faction: "Horde", characterRealmType: "era", contentVersion: "era" });
+  try {
+    const old = await syncs.recordSuccess(character.id, eraFuryFixtures.fresh60); assert.equal(old.armory, undefined);
+    const snapshot = { ...eraFuryFixtures.fresh60, armory: { statistics: { status: "available" as const, source: "blizzard" as const, retrievedAt: "2026-09-16T12:00:00Z", values: [{ key: "health", label: "Health", value: 5000 }] }, talents: { status: "temporary-error" as const } }, equipment: eraFuryFixtures.fresh60.equipment.map((item) => ({ ...item, enchantIds: [2583], gemIds: [23121] })) };
+    const success = await syncs.recordSuccess(character.id, snapshot);
+    const latest = (await syncs.getLatestSuccessful(character.id))!; assert.deepEqual(latest.armory, snapshot.armory); assert.deepEqual(latest.equipment[0].enchantIds, [2583]); assert.deepEqual(latest.equipment[0].gemIds, [23121]);
+    await syncs.recordFailure(character.id, { provider: "mock", contentVersion: "era", characterRealmType: "era", message: "Equipment unavailable" }); assert.equal((await syncs.getLatestSuccessful(character.id))?.id, success.id);
+    await assert.rejects(syncs.recordSuccess(character.id, { ...snapshot, equipment: [snapshot.equipment[0], snapshot.equipment[0]] })); assert.equal((await syncs.getLatestSuccessful(character.id))?.id, success.id);
+  } finally { await query("DELETE FROM users WHERE id=$1", [userId]); }
+});
 test.after(async () => closePool());

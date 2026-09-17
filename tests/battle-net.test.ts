@@ -6,7 +6,7 @@ import { browserBindingHash, opaqueTokenHash, randomOpaqueToken } from "../lib/b
 
 test("Battle.net OAuth requests only identity and account-profile scopes", () => {
   const previousId = process.env.BATTLENET_CLIENT_ID; const previousSecret = process.env.BATTLENET_CLIENT_SECRET; process.env.BATTLENET_CLIENT_ID = "client"; process.env.BATTLENET_CLIENT_SECRET = "secret";
-  try { const url = new URL(new LiveBattleNetOAuthClient().authorizationUrl({ region: "eu", state: "one-time", redirectUri: "https://example.test/api/auth/battlenet/callback" })); assert.equal(url.origin, "https://eu.battle.net"); assert.deepEqual(url.searchParams.get("scope")?.split(" "), [...BATTLE_NET_OAUTH_SCOPES]); assert.equal(url.searchParams.get("response_type"), "code"); assert.equal(url.searchParams.get("state"), "one-time"); }
+  try { const url = new URL(new LiveBattleNetOAuthClient().authorizationUrl({ region: "eu", state: "one-time", redirectUri: "https://example.test/api/auth/battlenet/callback" })); assert.equal(url.origin, "https://oauth.battle.net"); assert.deepEqual(url.searchParams.get("scope")?.split(" "), [...BATTLE_NET_OAUTH_SCOPES]); assert.equal(url.searchParams.get("response_type"), "code"); assert.equal(url.searchParams.get("state"), "one-time"); }
   finally { if (previousId === undefined) delete process.env.BATTLENET_CLIENT_ID; else process.env.BATTLENET_CLIENT_ID = previousId; if (previousSecret === undefined) delete process.env.BATTLENET_CLIENT_SECRET; else process.env.BATTLENET_CLIENT_SECRET = previousSecret; }
 });
 
@@ -24,4 +24,34 @@ test("opaque state and browser binding are random, hashed, and partitioned", () 
 test("mock OAuth represents unsupported Anniversary without Era fallback", async () => {
   const client = new MockBattleNetOAuthClient(); const token = await client.exchangeCode({ region: "us", code: "mock:default:us" }); const identity = await client.userInfo("us", token.accessToken); const characters = await client.discoverEraCharacters("us", token.accessToken);
   assert.equal(identity.subject, "mock-subject-default"); assert.ok(characters.some((item) => item.realmType === "anniversary" && item.contentSupport === "unsupported"));
+});
+
+
+test("global OAuth endpoints preserve exact callback for both regions", async () => {
+  const previousId = process.env.BATTLENET_CLIENT_ID, previousSecret = process.env.BATTLENET_CLIENT_SECRET;
+  const originalFetch = globalThis.fetch;
+  process.env.BATTLENET_CLIENT_ID = "test-client"; process.env.BATTLENET_CLIENT_SECRET = "test-secret";
+  const redirectUri = "https://prepull-staging-brown.vercel.app/api/auth/battlenet/callback";
+  try {
+    const client = new LiveBattleNetOAuthClient();
+    for (const region of ["eu", "us"] as const) {
+      const url = new URL(client.authorizationUrl({ region, state: "test-state", redirectUri }));
+      assert.equal(url.origin + url.pathname, "https://oauth.battle.net/authorize");
+      assert.deepEqual([...url.searchParams.keys()].sort(), ["client_id", "redirect_uri", "response_type", "scope", "state"]);
+      assert.equal(url.searchParams.get("redirect_uri"), redirectUri);
+      assert.equal(url.searchParams.get("client_id"), process.env.BATTLENET_CLIENT_ID);
+      globalThis.fetch = async (input, init) => {
+        assert.equal(input, "https://oauth.battle.net/token");
+        const body = new URLSearchParams(String(init?.body));
+        assert.equal(body.get("redirect_uri"), redirectUri);
+        assert.equal(body.get("grant_type"), "authorization_code");
+        return Response.json({ access_token: "test-token", expires_in: 300 });
+      };
+      await client.exchangeCode({ region, code: "test-code", redirectUri });
+    }
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (previousId === undefined) delete process.env.BATTLENET_CLIENT_ID; else process.env.BATTLENET_CLIENT_ID = previousId;
+    if (previousSecret === undefined) delete process.env.BATTLENET_CLIENT_SECRET; else process.env.BATTLENET_CLIENT_SECRET = previousSecret;
+  }
 });

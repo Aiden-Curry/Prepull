@@ -1,0 +1,1526 @@
+{
+  "statistics": {
+    "health": 8669,
+    "power": 100,
+    "power_type": {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/power-type/1?namespace=static-1.15.9_68185-classic1x-eu"
+      },
+      "name": "Rage",
+      "id": 1
+    },
+    "strength": {
+      "base": 120,
+      "effective": 357
+    },
+    "agility": {
+      "base": 80,
+      "effective": 284
+    },
+    "intellect": {
+      "base": 30,
+      "effective": 50
+    },
+    "stamina": {
+      "base": 110,
+      "effective": 596
+    },
+    "melee_crit": {
+      "rating_bonus": 0,
+      "value": 26.640001,
+      "rating_normalized": 0
+    },
+    "attack_power": 982,
+    "main_hand_damage_min": 327.38574,
+    "main_hand_damage_max": 446.38574,
+    "main_hand_speed": 2.7,
+    "main_hand_dps": 143.29102,
+    "off_hand_damage_min": 113.258934,
+    "off_hand_damage_max": 155.13394,
+    "off_hand_speed": 1.5,
+    "off_hand_dps": 89.464294,
+    "spell_power": 0,
+    "spell_penetration": 0,
+    "spell_crit": {
+      "rating_bonus": 0,
+      "value": 0,
+      "rating_normalized": 0
+    },
+    "mana_regen": 0,
+    "mana_regen_combat": 0,
+    "armor": {
+      "base": 6465,
+      "effective": 6849
+    },
+    "dodge": {
+      "rating_bonus": 0,
+      "value": 17.640001,
+      "rating_normalized": 0
+    },
+    "parry": {
+      "rating_bonus": 0,
+      "value": 7.44,
+      "rating_normalized": 0
+    },
+    "block": {
+      "rating_bonus": 0,
+      "value": 7.44,
+      "rating_normalized": 0
+    },
+    "ranged_crit": {
+      "rating_bonus": 0,
+      "value": 21.08,
+      "rating_normalized": 0
+    },
+    "spirit": {
+      "base": 45,
+      "effective": 120
+    },
+    "defense": {
+      "base": 310,
+      "effective": 361
+    },
+    "fire_resistance": {
+      "base": 0,
+      "effective": 27
+    },
+    "holy_resistance": {
+      "base": 0,
+      "effective": 0
+    },
+    "shadow_resistance": {
+      "base": 0,
+      "effective": 27
+    },
+    "nature_resistance": {
+      "base": 0,
+      "effective": 27
+    },
+    "arcane_resistance": {
+      "base": 0,
+      "effective": 27
+    }
+  },
+  "specializations": {
+    "specialization_groups": [
+      {
+        "is_active": false,
+        "specializations": [
+          {
+            "talents": [
+              {
+                "talent": {
+                  "id": 157
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Cruelty",
+                    "id": 12856
+                  },
+                  "description": "Increases your chance to get a critical strike with melee weapons by 5%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 159
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Unbridled Wrath",
+                    "id": 13002
+                  },
+                  "description": "Gives you a 40% chance to generate an additional Rage point when you deal melee damage with a weapon.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 166
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Cleave",
+                    "id": 20496
+                  },
+                  "description": "Increases the bonus damage done by your Cleave ability by 120%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              },
+              {
+                "talent": {
+                  "id": 154
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Battle Shout",
+                    "id": 12857
+                  },
+                  "description": "Increases the melee attack power bonus of your Battle Shout by 10%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 2
+              },
+              {
+                "talent": {
+                  "id": 155
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Enrage",
+                    "id": 13048
+                  },
+                  "description": "Gives you a 25% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 1542
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Execute",
+                    "id": 20503
+                  },
+                  "description": "Reduces the Rage cost of your Execute ability by 5.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 2
+              },
+              {
+                "talent": {
+                  "id": 1581
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Dual Wield Specialization",
+                    "id": 23588
+                  },
+                  "description": "Increases the damage done by your offhand weapon by 25%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 165
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Death Wish",
+                    "id": 12328
+                  },
+                  "description": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.  Lasts 30 sec.",
+                  "cast_time": "Instant",
+                  "power_cost": "10 Rage",
+                  "cooldown": "3 min cooldown"
+                },
+                "talent_rank": 1
+              },
+              {
+                "talent": {
+                  "id": 156
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Flurry",
+                    "id": 12974
+                  },
+                  "description": "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 167
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Bloodthirst",
+                    "id": 23881
+                  },
+                  "description": "Instantly attack the target causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec.",
+                  "cast_time": "Instant",
+                  "power_cost": "30 Rage",
+                  "range": "Melee Range",
+                  "cooldown": "6 sec cooldown"
+                },
+                "talent_rank": 1
+              }
+            ],
+            "specialization_name": "Fury",
+            "spent_points": 34
+          },
+          {
+            "talents": [
+              {
+                "talent": {
+                  "id": 124
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Heroic Strike",
+                    "id": 12664
+                  },
+                  "description": "Reduces the cost of your Heroic Strike ability by 3 rage points.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              },
+              {
+                "talent": {
+                  "id": 127
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Rend",
+                    "id": 12659
+                  },
+                  "description": "Increases the bleed damage done by your Rend ability by 35%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              },
+              {
+                "talent": {
+                  "id": 641
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Tactical Mastery",
+                    "id": 12679
+                  },
+                  "description": "You retain up to 25 of your rage points when you change stances.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 137
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Anger Management",
+                    "id": 12296
+                  },
+                  "description": "Increases the time required for your rage to decay while out of combat by 30%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 1
+              },
+              {
+                "talent": {
+                  "id": 121
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Deep Wounds",
+                    "id": 12867
+                  },
+                  "description": "Your critical strikes cause the opponent to bleed, dealing 60% of your melee weapon's average damage over 12 sec.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              },
+              {
+                "talent": {
+                  "id": 662
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Impale",
+                    "id": 16494
+                  },
+                  "description": "Increases the critical strike damage bonus of your abilities in Battle, Defensive, and Berserker stance by 20%.",
+                  "cast_time": "Passive"
+                },
+                "talent_rank": 2
+              }
+            ],
+            "specialization_name": "Arms",
+            "spent_points": 17
+          }
+        ]
+      },
+      {
+        "is_active": true,
+        "specializations": [
+          {
+            "talents": [
+              {
+                "talent": {
+                  "id": 138
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Anticipation",
+                    "id": 12753
+                  },
+                  "description": "Increases your Defense skill by 10.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 142
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Bloodrage",
+                    "id": 12818
+                  },
+                  "description": "Increases the instant Rage generated by your Bloodrage ability by 5.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 2
+              },
+              {
+                "talent": {
+                  "id": 140
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Toughness",
+                    "id": 12762
+                  },
+                  "description": "Increases your armor value from items by 6%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              },
+              {
+                "talent": {
+                  "id": 153
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Last Stand",
+                    "id": 12975
+                  },
+                  "description": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds.  After the effect expires, the hit points are lost.",
+                  "cast_time": "Instant",
+                  "power_cost": null,
+                  "cooldown": "10 min cooldown"
+                },
+                "talent_rank": 1
+              },
+              {
+                "talent": {
+                  "id": 144
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Defiance",
+                    "id": 12792
+                  },
+                  "description": "Increases the threat generated by your attacks by 15% while in Defensive Stance.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              }
+            ],
+            "specialization_name": "Protection",
+            "spent_points": 16
+          },
+          {
+            "talents": [
+              {
+                "talent": {
+                  "id": 157
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Cruelty",
+                    "id": 12856
+                  },
+                  "description": "Increases your chance to get a critical strike with melee weapons by 5%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 159
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Unbridled Wrath",
+                    "id": 13002
+                  },
+                  "description": "Gives you a 40% chance to generate an additional Rage point when you deal melee damage with a weapon.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 154
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Battle Shout",
+                    "id": 12861
+                  },
+                  "description": "Increases the melee attack power bonus of your Battle Shout by 25%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 155
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Enrage",
+                    "id": 13048
+                  },
+                  "description": "Gives you a 25% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 1581
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Dual Wield Specialization",
+                    "id": 23588
+                  },
+                  "description": "Increases the damage done by your offhand weapon by 25%.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 165
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Death Wish",
+                    "id": 12328
+                  },
+                  "description": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.  Lasts 30 sec.",
+                  "cast_time": "Instant",
+                  "power_cost": "10 Rage",
+                  "cooldown": "3 min cooldown"
+                },
+                "talent_rank": 1
+              },
+              {
+                "talent": {
+                  "id": 156
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Flurry",
+                    "id": 12974
+                  },
+                  "description": "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 5
+              },
+              {
+                "talent": {
+                  "id": 167
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Bloodthirst",
+                    "id": 23881
+                  },
+                  "description": "Instantly attack the target causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec.",
+                  "cast_time": "Instant",
+                  "power_cost": "30 Rage",
+                  "range": "Melee Range",
+                  "cooldown": "6 sec cooldown"
+                },
+                "talent_rank": 1
+              }
+            ],
+            "specialization_name": "Fury",
+            "spent_points": 32
+          },
+          {
+            "talents": [
+              {
+                "talent": {
+                  "id": 124
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "name": "Improved Heroic Strike",
+                    "id": 12664
+                  },
+                  "description": "Reduces the cost of your Heroic Strike ability by 3 rage points.",
+                  "cast_time": "Passive",
+                  "power_cost": null
+                },
+                "talent_rank": 3
+              }
+            ],
+            "specialization_name": "Arms",
+            "spent_points": 3
+          }
+        ]
+      }
+    ]
+  },
+  "equipment": {
+    "equipped_items": [
+      {
+        "slot": {
+          "type": "HEAD",
+          "name": "Head"
+        },
+        "item": {
+          "id": 21329
+        },
+        "name": "Conqueror's Crown",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Defense +7/Stamina +10/Block Value +15",
+            "enchantment_id": 2583,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 29,
+            "display": {
+              "display_string": "+29 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 18,
+            "display": {
+              "display_string": "+18 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 34,
+            "display": {
+              "display_string": "+34 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "NECK",
+          "name": "Neck"
+        },
+        "item": {
+          "id": 23053
+        },
+        "name": "Stormrage's Talisman of Seething",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "stats": [
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 12,
+            "display": {
+              "display_string": "+12 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "SHOULDER",
+          "name": "Shoulders"
+        },
+        "item": {
+          "id": 21330
+        },
+        "name": "Conqueror's Spaulders",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Attack Power +26 and +1% Critical Strike",
+            "enchantment_id": 2717,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 20,
+            "display": {
+              "display_string": "+20 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 16,
+            "display": {
+              "display_string": "+16 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 21,
+            "display": {
+              "display_string": "+21 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "SHIRT",
+          "name": "Shirt"
+        },
+        "item": {
+          "id": 14617
+        },
+        "name": "Sawbones Shirt",
+        "quality": {
+          "type": "COMMON",
+          "name": "Common"
+        }
+      },
+      {
+        "slot": {
+          "type": "CHEST",
+          "name": "Chest"
+        },
+        "item": {
+          "id": 21331
+        },
+        "name": "Conqueror's Breastplate",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: All Stats +4",
+            "enchantment_id": 1891,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 34,
+            "display": {
+              "display_string": "+34 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 24,
+            "display": {
+              "display_string": "+24 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 38,
+            "display": {
+              "display_string": "+38 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "WAIST",
+          "name": "Waist"
+        },
+        "item": {
+          "id": 23219
+        },
+        "name": "Girdle of the Mentor",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 21,
+            "display": {
+              "display_string": "+21 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 20,
+            "display": {
+              "display_string": "+20 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 21,
+            "display": {
+              "display_string": "+21 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "LEGS",
+          "name": "Legs"
+        },
+        "item": {
+          "id": 21332
+        },
+        "name": "Conqueror's Legguards",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Defense +7/Stamina +10/Block Value +15",
+            "enchantment_id": 2583,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 33,
+            "display": {
+              "display_string": "+33 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 21,
+            "display": {
+              "display_string": "+21 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 24,
+            "display": {
+              "display_string": "+24 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "FEET",
+          "name": "Feet"
+        },
+        "item": {
+          "id": 19387
+        },
+        "name": "Chromatic Boots",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Agility +7",
+            "enchantment_id": 1887,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 20,
+            "display": {
+              "display_string": "+20 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 20,
+            "display": {
+              "display_string": "+20 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 19,
+            "display": {
+              "display_string": "+19 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "WRIST",
+          "name": "Wrist"
+        },
+        "item": {
+          "id": 22423
+        },
+        "name": "Dreadnaught Bracers",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Stamina +9",
+            "enchantment_id": 1886,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 14,
+            "display": {
+              "display_string": "+14 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 28,
+            "display": {
+              "display_string": "+28 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "HANDS",
+          "name": "Hands"
+        },
+        "item": {
+          "id": 21581
+        },
+        "name": "Gauntlets of Annihilation",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Agility +15",
+            "enchantment_id": 2564,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 35,
+            "display": {
+              "display_string": "+35 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 15,
+            "display": {
+              "display_string": "+15 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "FINGER_1",
+          "name": "Ring 1"
+        },
+        "item": {
+          "id": 19376
+        },
+        "name": "Archimtiros' Ring of Reckoning",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "stats": [
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 14,
+            "display": {
+              "display_string": "+14 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 28,
+            "display": {
+              "display_string": "+28 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "FINGER_2",
+          "name": "Ring 2"
+        },
+        "item": {
+          "id": 23059
+        },
+        "name": "Ring of the Dreadnaught",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "stats": [
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 27,
+            "display": {
+              "display_string": "+27 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "TRINKET_1",
+          "name": "Trinket 1"
+        },
+        "item": {
+          "id": 21670
+        },
+        "name": "Badge of the Swarmguard",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        }
+      },
+      {
+        "slot": {
+          "type": "TRINKET_2",
+          "name": "Trinket 2"
+        },
+        "item": {
+          "id": 22954
+        },
+        "name": "Kiss of the Spider",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        }
+      },
+      {
+        "slot": {
+          "type": "BACK",
+          "name": "Back"
+        },
+        "item": {
+          "id": 21710
+        },
+        "name": "Cloak of the Fallen God",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Agility +3",
+            "enchantment_id": 849,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STRENGTH",
+              "name": "Strength"
+            },
+            "value": 11,
+            "display": {
+              "display_string": "+11 Strength",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "AGILITY",
+              "name": "Agility"
+            },
+            "value": 26,
+            "display": {
+              "display_string": "+26 Agility",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 15,
+            "display": {
+              "display_string": "+15 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "MAIN_HAND",
+          "name": "Main Hand"
+        },
+        "item": {
+          "id": 23054
+        },
+        "name": "Gressil, Dawn of Ruin",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Crusader",
+            "enchantment_id": 1900,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 15,
+            "display": {
+              "display_string": "+15 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "OFF_HAND",
+          "name": "Off Hand"
+        },
+        "item": {
+          "id": 23577
+        },
+        "name": "The Hungering Cold",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Crusader",
+            "enchantment_id": 1900,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 14,
+            "display": {
+              "display_string": "+14 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "RANGED",
+          "name": "Ranged"
+        },
+        "item": {
+          "id": 22811
+        },
+        "name": "Soulstring",
+        "quality": {
+          "type": "EPIC",
+          "name": "Epic"
+        },
+        "enchantments": [
+          {
+            "display_string": "Enchanted: Scope (+7 Damage)",
+            "enchantment_id": 664,
+            "enchantment_slot": {
+              "id": 0,
+              "type": "PERMANENT"
+            }
+          }
+        ],
+        "stats": [
+          {
+            "type": {
+              "type": "STAMINA",
+              "name": "Stamina"
+            },
+            "value": 6,
+            "display": {
+              "display_string": "+6 Stamina",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "slot": {
+          "type": "TABARD",
+          "name": "Tabard"
+        },
+        "item": {
+          "id": 5976
+        },
+        "name": "Guild Tabard",
+        "quality": {
+          "type": "COMMON",
+          "name": "Common"
+        }
+      }
+    ]
+  }
+}

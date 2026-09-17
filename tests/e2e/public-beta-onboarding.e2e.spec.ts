@@ -19,7 +19,7 @@ async function register(page: Parameters<typeof signIn>[0], version: "era" | "tb
 
 async function findAndSaveAidy(page: Parameters<typeof signIn>[0], version: "era" | "tbc") {
   await page.getByLabel("Region").selectOption("eu"); await page.getByLabel("Realm ecosystem").selectOption("era");
-  await page.getByRole("textbox", { name: "Realm" }).fill("Firemaw"); await page.getByLabel("Character name").fill("Aidy");
+  await page.getByRole("combobox", { name: "Realm", exact: true }).fill("Firemaw"); await page.getByLabel("Character name").fill("Aidy");
   await page.getByRole("button", { name: "Search character" }).click();
   await expect(page.getByRole("heading", { name: "Aidy" })).toBeVisible(); await expect(page.getByText(/Level 60 Orc Warrior/)).toBeVisible();
   await page.getByRole("button", { name: "Add to my characters" }).click(); await page.waitForURL(`**/${version}/dashboard`);
