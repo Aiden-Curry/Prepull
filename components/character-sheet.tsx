@@ -1,19 +1,21 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import type { CharacterArmory, CharacterTalentState } from "../lib/armory/types";
 import { relevantStatistics } from "../lib/armory/normalize";
 import { wowheadItemParams, wowheadLink } from "../lib/armory/wowhead";
 import { WowheadTooltips } from "./wowhead-tooltips";
 
-export function CharacterSheet({ armory, saved = false, headingLevel = 1, adviceHref, progressHref }: { armory: CharacterArmory; saved?: boolean; headingLevel?: 1 | 2; adviceHref?: string; progressHref?: string }) {
+export function CharacterSheet({ armory, saved = false, headingLevel = 1, adviceHref, progressHref, logs }: { armory: CharacterArmory; saved?: boolean; headingLevel?: 1 | 2; adviceHref?: string; progressHref?: string; logs?: ReactNode }) {
   return <section className="character-sheet mt-8" aria-label="Character sheet" data-armory-source={saved ? "persisted" : "public"}>
     <WowheadTooltips refreshKey={armory.character.realmType + ":" + armory.equipment.map(({ item }) => item ? `${item.itemId}:${item.enchantIds.join(",")}:${item.gemIds.join(",")}` : "empty").join(";")} />
     <CharacterHeader armory={armory} saved={saved} headingLevel={headingLevel} />
     <nav aria-label="Character sections" className="my-6 flex flex-wrap gap-2 border-b border-[var(--border)] pb-4">
       <a className="button-secondary focus-ring" href="#character-equipment">Character</a><a className="button-secondary focus-ring" href="#character-talents">Talents</a>
-      {adviceHref && <a className="button-secondary focus-ring" href={adviceHref}>Advice</a>}{progressHref && <a className="button-secondary focus-ring" href={progressHref}>Progress</a>}
+      {logs && <a className="button-secondary focus-ring" href="#character-logs">Logs</a>}{adviceHref && <a className="button-secondary focus-ring" href={adviceHref}>Advice</a>}{progressHref && <a className="button-secondary focus-ring" href={progressHref}>Progress</a>}
     </nav>
     <CharacterEquipment armory={armory} />
     <div className="mt-6 grid items-start gap-6 lg:grid-cols-[.8fr_1.2fr]"><CharacterStatistics armory={armory} /><CharacterTalents talents={armory.talents} armory={armory} saved={saved} /></div>
+    {logs}
   </section>;
 }
 export function CharacterHeader({ armory, saved, headingLevel }: { armory: CharacterArmory; saved: boolean; headingLevel: 1 | 2 }) {

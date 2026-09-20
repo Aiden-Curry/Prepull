@@ -1,0 +1,22 @@
+{
+  "token": "PASS",
+  "context": "vanilla",
+  "character": "PASS",
+  "canonicalId": true,
+  "worldData": "PASS",
+  "standardEraZones": 7,
+  "zoneRankings": "PASS",
+  "encounterRankings": "PASS",
+  "recentReports": "PASS",
+  "raidsWithPublicData": 7,
+  "providerGraphqlHttpCalls": 3,
+  "providerColdHttpCallsIncludingToken": 4,
+  "providerCostWindowPoints": 172.01999999999998,
+  "costWindowIncludesFinalMeasurementQuery": true,
+  "measurementQueryPoints": 1,
+  "providerMeasuredPoints": 171.02,
+  "totalAuditGraphqlHttpCalls": 8,
+  "partialErrors": 0,
+  "cacheSecondLookupWclCalls": 0,
+  "cacheSecondFreshness": "fresh"
+}

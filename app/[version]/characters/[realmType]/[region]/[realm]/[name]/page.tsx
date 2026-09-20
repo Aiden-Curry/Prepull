@@ -1,4 +1,5 @@
 import { CharacterSheet } from "../../../../../../../components/character-sheet";
+import { CharacterLogsLoader } from "../../../../../../../components/character-logs-loader";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -41,7 +42,7 @@ export default async function PublicCharacterPage({ params }: { params: Promise<
   const saved = session?.user?.id && character.realmType === "era" ? await savedCharacterRepository.findSavedCharacterByIdentity(session.user.id, { region: character.region, realmSlug: character.realm, normalizedCharacterName: character.name, characterRealmType: character.realmType }) : undefined;
   return <VersionShell version={input.contentVersion}><main className="mx-auto min-h-[calc(100vh-148px)] max-w-[1240px] px-5 py-12 lg:px-8 lg:py-16">
     <Link href={`/${input.contentVersion}#character-search`} className="focus-ring text-xs text-[var(--text-muted)]">← Find another character</Link>
-    {character.armory ? <CharacterSheet armory={character.armory} /> : <section className="panel mt-8 rounded-3xl p-6"><h1 className="display text-5xl">{character.name}</h1><p className="mt-3">Level {character.level} {character.race} {character.className}</p><p className="mt-3">Equipment, statistics and talents are unavailable in this older cached profile.</p></section>}
+    {character.armory ? <CharacterSheet armory={character.armory} logs={<CharacterLogsLoader input={input} publicLookupAuthorized />} /> : <><section className="panel mt-8 rounded-3xl p-6"><h1 className="display text-5xl">{character.name}</h1><p className="mt-3">Level {character.level} {character.race} {character.className}</p><p className="mt-3">Equipment, statistics and talents are unavailable in this older cached profile.</p></section><CharacterLogsLoader input={input} publicLookupAuthorized /></>}
     <p className="mt-7 text-sm text-[var(--text-muted)]">Current public character information. Save this character for personal advice and progress.</p>
     <CharacterCta version={input.contentVersion} canonical={canonical} character={character} signedIn={Boolean(session?.user?.id)} saved={Boolean(saved)} />
   </main></VersionShell>;

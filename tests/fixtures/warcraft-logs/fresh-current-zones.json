@@ -1,0 +1,288 @@
+{
+  "fixtureKind": "sanitized-live-response",
+  "context": "fresh",
+  "expansionId": 1001,
+  "zones": [
+    {
+      "id": 1060,
+      "name": "BT / Hyjal",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "default": true
+        }
+      ],
+      "encounters": [
+        {
+          "id": 50601,
+          "name": "High Warlord Naj'entus",
+          "journalID": 0
+        },
+        {
+          "id": 50602,
+          "name": "Supremus",
+          "journalID": 0
+        },
+        {
+          "id": 50603,
+          "name": "Shade of Akama",
+          "journalID": 0
+        },
+        {
+          "id": 50604,
+          "name": "Teron Gorefiend",
+          "journalID": 0
+        },
+        {
+          "id": 50605,
+          "name": "Gurtogg Bloodboil",
+          "journalID": 0
+        },
+        {
+          "id": 50606,
+          "name": "Reliquary of Souls",
+          "journalID": 0
+        },
+        {
+          "id": 50607,
+          "name": "Mother Shahraz",
+          "journalID": 0
+        },
+        {
+          "id": 50608,
+          "name": "The Illidari Council",
+          "journalID": 0
+        },
+        {
+          "id": 50609,
+          "name": "Illidan Stormrage",
+          "journalID": 0
+        },
+        {
+          "id": 50618,
+          "name": "Rage Winterchill",
+          "journalID": 0
+        },
+        {
+          "id": 50619,
+          "name": "Anetheron",
+          "journalID": 0
+        },
+        {
+          "id": 50620,
+          "name": "Kaz'rogal",
+          "journalID": 0
+        },
+        {
+          "id": 50621,
+          "name": "Azgalor",
+          "journalID": 0
+        },
+        {
+          "id": 50622,
+          "name": "Archimonde",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1056,
+      "name": "SSC / TK",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "default": true
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 100623,
+          "name": "Hydross the Unstable",
+          "journalID": 0
+        },
+        {
+          "id": 100624,
+          "name": "The Lurker Below",
+          "journalID": 0
+        },
+        {
+          "id": 100625,
+          "name": "Leotheras the Blind",
+          "journalID": 0
+        },
+        {
+          "id": 100626,
+          "name": "Fathom-Lord Karathress",
+          "journalID": 0
+        },
+        {
+          "id": 100627,
+          "name": "Morogrim Tidewalker",
+          "journalID": 0
+        },
+        {
+          "id": 100628,
+          "name": "Lady Vashj",
+          "journalID": 0
+        },
+        {
+          "id": 100730,
+          "name": "Al'ar",
+          "journalID": 0
+        },
+        {
+          "id": 100731,
+          "name": "Void Reaver",
+          "journalID": 0
+        },
+        {
+          "id": 100732,
+          "name": "High Astromancer Solarian",
+          "journalID": 0
+        },
+        {
+          "id": 100733,
+          "name": "Kael'thas Sunstrider",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1048,
+      "name": "Gruul / Magtheridon",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 50649,
+          "name": "High King Maulgar",
+          "journalID": 0
+        },
+        {
+          "id": 50650,
+          "name": "Gruul the Dragonkiller",
+          "journalID": 0
+        },
+        {
+          "id": 50651,
+          "name": "Magtheridon",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1047,
+      "name": "Karazhan",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 50652,
+          "name": "Attumen the Huntsman",
+          "journalID": 0
+        },
+        {
+          "id": 50653,
+          "name": "Moroes",
+          "journalID": 0
+        },
+        {
+          "id": 50654,
+          "name": "Maiden of Virtue",
+          "journalID": 0
+        },
+        {
+          "id": 50655,
+          "name": "Opera Hall",
+          "journalID": 0
+        },
+        {
+          "id": 50656,
+          "name": "The Curator",
+          "journalID": 0
+        },
+        {
+          "id": 50657,
+          "name": "Terestian Illhoof",
+          "journalID": 0
+        },
+        {
+          "id": 50658,
+          "name": "Shade of Aran",
+          "journalID": 0
+        },
+        {
+          "id": 50659,
+          "name": "Netherspite",
+          "journalID": 0
+        },
+        {
+          "id": 50661,
+          "name": "Prince Malchezaar",
+          "journalID": 0
+        },
+        {
+          "id": 50662,
+          "name": "Nightbane",
+          "journalID": 0
+        }
+      ]
+    }
+  ]
+}

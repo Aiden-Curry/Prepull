@@ -1,0 +1,1951 @@
+{
+  "fixtureKind": "sanitized-live-response",
+  "auditedAt": "2026-09-18T22:11:03.378Z",
+  "context": "vanilla",
+  "endpoint": "https://vanilla.warcraftlogs.com/api/v2/client",
+  "requestedIdentity": {
+    "region": "eu",
+    "realm": "firemaw",
+    "name": "kankan"
+  },
+  "status": "OBSERVED",
+  "zone": {
+    "id": 2006,
+    "name": "Naxxramas",
+    "frozen": false,
+    "expansion": {
+      "id": 2000,
+      "name": "Classic"
+    },
+    "partitions": [
+      {
+        "id": 1,
+        "name": "S0",
+        "compactName": "S0",
+        "default": true
+      },
+      {
+        "id": 2,
+        "name": "S0 (Without World Buffs)",
+        "compactName": "S0 (No WB)",
+        "default": false
+      },
+      {
+        "id": 3,
+        "name": "SoM P1 & P2",
+        "compactName": "SoM P1 & P2",
+        "default": false
+      },
+      {
+        "id": 4,
+        "name": "SoM P3 & P4",
+        "compactName": "SoM P3 & P4",
+        "default": false
+      },
+      {
+        "id": 5,
+        "name": "SoM P5",
+        "compactName": "SoM P5",
+        "default": false
+      },
+      {
+        "id": 6,
+        "name": "SoM P6",
+        "compactName": "SoM P6",
+        "default": false
+      },
+      {
+        "id": 7,
+        "name": "Hardcore",
+        "compactName": "HC",
+        "default": false
+      },
+      {
+        "id": 8,
+        "name": "Hardcore (Fresh)",
+        "compactName": "HC2",
+        "default": false
+      },
+      {
+        "id": 9,
+        "name": "Hardcore (Fresh P2)",
+        "compactName": "HC2P2",
+        "default": false
+      },
+      {
+        "id": 10,
+        "name": "Hardcore (Fresh P3)",
+        "compactName": "HC2P3",
+        "default": false
+      },
+      {
+        "id": 11,
+        "name": "Hardcore (Fresh P4)",
+        "compactName": "HC2P4",
+        "default": false
+      }
+    ],
+    "encounters": [
+      {
+        "id": 51118,
+        "name": "Patchwerk",
+        "journalID": 0
+      },
+      {
+        "id": 51111,
+        "name": "Grobbulus",
+        "journalID": 0
+      },
+      {
+        "id": 51108,
+        "name": "Gluth",
+        "journalID": 0
+      },
+      {
+        "id": 51120,
+        "name": "Thaddius",
+        "journalID": 0
+      },
+      {
+        "id": 51117,
+        "name": "Noth the Plaguebringer",
+        "journalID": 0
+      },
+      {
+        "id": 51112,
+        "name": "Heigan the Unclean",
+        "journalID": 0
+      },
+      {
+        "id": 51115,
+        "name": "Loatheb",
+        "journalID": 0
+      },
+      {
+        "id": 51107,
+        "name": "Anub'Rekhan",
+        "journalID": 0
+      },
+      {
+        "id": 51110,
+        "name": "Grand Widow Faerlina",
+        "journalID": 0
+      },
+      {
+        "id": 51116,
+        "name": "Maexxna",
+        "journalID": 0
+      },
+      {
+        "id": 51113,
+        "name": "Instructor Razuvious",
+        "journalID": 0
+      },
+      {
+        "id": 51109,
+        "name": "Gothik the Harvester",
+        "journalID": 0
+      },
+      {
+        "id": 51121,
+        "name": "The Four Horsemen",
+        "journalID": 0
+      },
+      {
+        "id": 51119,
+        "name": "Sapphiron",
+        "journalID": 0
+      },
+      {
+        "id": 51114,
+        "name": "Kel'Thuzad",
+        "journalID": 0
+      }
+    ]
+  },
+  "partition": 1,
+  "queryFields": {
+    "zoneRankings": 2,
+    "encounterRankings": 1,
+    "recentReportsLimit": 5
+  },
+  "zoneDps": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2006,
+    "size": 40,
+    "bestPerformanceAverage": 99.57171428571428,
+    "medianPerformanceAverage": 91.07714999999999,
+    "allStars": [
+      {
+        "spec": "Fury",
+        "partition": 1
+      },
+      {
+        "spec": "Protection",
+        "partition": 1
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": 99.5225,
+        "medianPercent": 89.342,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2167.01,
+        "encounter": {
+          "id": 51118,
+          "name": "Patchwerk"
+        }
+      },
+      {
+        "rankPercent": 99.1711,
+        "medianPercent": 88.3667,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2117.07,
+        "encounter": {
+          "id": 51111,
+          "name": "Grobbulus"
+        }
+      },
+      {
+        "rankPercent": 99.1814,
+        "medianPercent": 84.2895,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2086.45,
+        "encounter": {
+          "id": 51108,
+          "name": "Gluth"
+        }
+      },
+      {
+        "rankPercent": 99.9527,
+        "medianPercent": 80.3427,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3796.42,
+        "encounter": {
+          "id": 51120,
+          "name": "Thaddius"
+        }
+      },
+      {
+        "rankPercent": 99.4531,
+        "medianPercent": 91.9481,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2667.65,
+        "encounter": {
+          "id": 51117,
+          "name": "Noth the Plaguebringer"
+        }
+      },
+      {
+        "rankPercent": 99.391,
+        "medianPercent": 89.9621,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2263.61,
+        "encounter": {
+          "id": 51112,
+          "name": "Heigan the Unclean"
+        }
+      },
+      {
+        "rankPercent": 99.8422,
+        "medianPercent": 98.4478,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2738.88,
+        "encounter": {
+          "id": 51115,
+          "name": "Loatheb"
+        }
+      },
+      {
+        "rankPercent": 99.4943,
+        "medianPercent": 96.1626,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3671.26,
+        "encounter": {
+          "id": 51107,
+          "name": "Anub'Rekhan"
+        }
+      },
+      {
+        "rankPercent": 99.3372,
+        "medianPercent": 94.5911,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2748.35,
+        "encounter": {
+          "id": 51110,
+          "name": "Grand Widow Faerlina"
+        }
+      },
+      {
+        "rankPercent": 99.5255,
+        "medianPercent": 91.9465,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2887.95,
+        "encounter": {
+          "id": 51116,
+          "name": "Maexxna"
+        }
+      },
+      {
+        "rankPercent": 99.4899,
+        "medianPercent": 94.5431,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2300.71,
+        "encounter": {
+          "id": 51113,
+          "name": "Instructor Razuvious"
+        }
+      },
+      {
+        "rankPercent": 100,
+        "medianPercent": 95.6959,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 1178.2,
+        "encounter": {
+          "id": 51109,
+          "name": "Gothik the Harvester"
+        }
+      },
+      {
+        "rankPercent": 100,
+        "medianPercent": 96.524,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 1890.76,
+        "encounter": {
+          "id": 51121,
+          "name": "The Four Horsemen"
+        }
+      },
+      {
+        "rankPercent": 99.751,
+        "medianPercent": 95.0994,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 9998.07,
+        "encounter": {
+          "id": 51119,
+          "name": "Sapphiron"
+        }
+      },
+      {
+        "rankPercent": 99.8921,
+        "medianPercent": 83.5145,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2138.65,
+        "encounter": {
+          "id": 51114,
+          "name": "Kel'Thuzad"
+        }
+      }
+    ]
+  },
+  "zoneHps": {
+    "difficulty": 3,
+    "metric": "hps",
+    "partition": 1,
+    "zone": 2006,
+    "size": 40,
+    "bestPerformanceAverage": 98.84803768106232,
+    "medianPerformanceAverage": 48.24995381425276,
+    "allStars": [],
+    "rankings": [
+      {
+        "rankPercent": 95.71003852939741,
+        "medianPercent": 27.12814878720669,
+        "totalKills": 132,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 31.5117,
+        "encounter": {
+          "id": 51118,
+          "name": "Patchwerk"
+        }
+      },
+      {
+        "rankPercent": 99.01804570358755,
+        "medianPercent": 33.19472564844295,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 48.5185,
+        "encounter": {
+          "id": 51111,
+          "name": "Grobbulus"
+        }
+      },
+      {
+        "rankPercent": 98.3857399914852,
+        "medianPercent": 26.97625731083853,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 43.5386,
+        "encounter": {
+          "id": 51108,
+          "name": "Gluth"
+        }
+      },
+      {
+        "rankPercent": 98.95356980746581,
+        "medianPercent": 37.99723219857092,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 40.1556,
+        "encounter": {
+          "id": 51120,
+          "name": "Thaddius"
+        }
+      },
+      {
+        "rankPercent": 99.22406129450717,
+        "medianPercent": 71.73070974018432,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 71.2094,
+        "encounter": {
+          "id": 51117,
+          "name": "Noth the Plaguebringer"
+        }
+      },
+      {
+        "rankPercent": 99.49234155703516,
+        "medianPercent": 50.27193344058277,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 67.4057,
+        "encounter": {
+          "id": 51112,
+          "name": "Heigan the Unclean"
+        }
+      },
+      {
+        "rankPercent": 99.10486119043227,
+        "medianPercent": 97.9052245799308,
+        "totalKills": 132,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 205.703,
+        "encounter": {
+          "id": 51115,
+          "name": "Loatheb"
+        }
+      },
+      {
+        "rankPercent": 97.70535124736668,
+        "medianPercent": 22.61379273642356,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 29.5153,
+        "encounter": {
+          "id": 51107,
+          "name": "Anub'Rekhan"
+        }
+      },
+      {
+        "rankPercent": 99.19508691591616,
+        "medianPercent": 40.387658695192954,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 119.718,
+        "encounter": {
+          "id": 51110,
+          "name": "Grand Widow Faerlina"
+        }
+      },
+      {
+        "rankPercent": 99.29589671143451,
+        "medianPercent": 22.883692161983895,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 58.1434,
+        "encounter": {
+          "id": 51116,
+          "name": "Maexxna"
+        }
+      },
+      {
+        "rankPercent": 99.0506994001077,
+        "medianPercent": 52.7633038892381,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 20.1265,
+        "encounter": {
+          "id": 51113,
+          "name": "Instructor Razuvious"
+        }
+      },
+      {
+        "rankPercent": 99.4891861063449,
+        "medianPercent": 58.006959457201916,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 35.1396,
+        "encounter": {
+          "id": 51109,
+          "name": "Gothik the Harvester"
+        }
+      },
+      {
+        "rankPercent": 99.318952289179,
+        "medianPercent": 57.687776942106076,
+        "totalKills": 132,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 64.7063,
+        "encounter": {
+          "id": 51121,
+          "name": "The Four Horsemen"
+        }
+      },
+      {
+        "rankPercent": 99.75862330377956,
+        "medianPercent": 74.57902477978503,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 340.265,
+        "encounter": {
+          "id": 51119,
+          "name": "Sapphiron"
+        }
+      },
+      {
+        "rankPercent": 99.01811116789578,
+        "medianPercent": 49.6228668461029,
+        "totalKills": 131,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 82.7631,
+        "encounter": {
+          "id": 51114,
+          "name": "Kel'Thuzad"
+        }
+      }
+    ]
+  },
+  "encounter": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2006,
+    "bestAmount": 2167.01,
+    "medianPerformance": 89.23228221565248,
+    "averagePerformance": 79.23395720830673,
+    "totalKills": 132,
+    "fastestKill": 86718,
+    "ranks": [
+      {
+        "rankPercent": 99.52245096107843,
+        "historicalPercent": 99.52245096107843,
+        "todayPercent": 99.37929642085955,
+        "startTime": 1765568328437,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2167.01,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.28440361611239,
+        "historicalPercent": 99.28440361611239,
+        "todayPercent": 99.17412148927829,
+        "startTime": 1763160302886,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2085,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.19999114066998,
+        "historicalPercent": 99.19999114066998,
+        "todayPercent": 99.08197915626845,
+        "startTime": 1753038679981,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2048.17,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.18264598590962,
+        "historicalPercent": 99.18264598590962,
+        "todayPercent": 99.05250761994327,
+        "startTime": 1747596472934,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2036.39,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.16017739093097,
+        "historicalPercent": 99.16017739093097,
+        "todayPercent": 99.03524500528762,
+        "startTime": 1750013629693,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2029.49,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.14917996524278,
+        "historicalPercent": 99.14917996524278,
+        "todayPercent": 98.95676745504575,
+        "startTime": 1735338213329,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2013.74,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.10644764625233,
+        "historicalPercent": 99.10644764625233,
+        "todayPercent": 98.89434905410114,
+        "startTime": 1750621052607,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2011.34,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.12836500755293,
+        "historicalPercent": 99.12836500755293,
+        "todayPercent": 98.81476559289679,
+        "startTime": 1740510290250,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2008.28,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.72452281208795,
+        "historicalPercent": 98.72452281208795,
+        "todayPercent": 98.00566707065244,
+        "startTime": 1763763677577,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1977.17,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.84619782869204,
+        "historicalPercent": 98.84619782869204,
+        "todayPercent": 97.9406479030018,
+        "startTime": 1754852069296,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1974.67,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.02174044665395,
+        "historicalPercent": 99.02174044665395,
+        "todayPercent": 97.93492621624856,
+        "startTime": 1744570926753,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1974.45,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.84001372798902,
+        "historicalPercent": 97.84001372798902,
+        "todayPercent": 96.77550441870262,
+        "startTime": 1753644724973,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1929.87,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.74508677988487,
+        "historicalPercent": 97.74508677988487,
+        "todayPercent": 96.75287774836022,
+        "startTime": 1755459431534,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1929,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.42862219208116,
+        "historicalPercent": 98.42862219208116,
+        "todayPercent": 96.69566088082767,
+        "startTime": 1728682973825,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1926.8,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.25960512288918,
+        "historicalPercent": 98.25960512288918,
+        "todayPercent": 96.69149965409804,
+        "startTime": 1739217948613,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1926.64,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.8644203082781,
+        "historicalPercent": 97.8644203082781,
+        "todayPercent": 96.28473974127573,
+        "startTime": 1737316890718,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1911,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.2812043374606,
+        "historicalPercent": 97.2812043374606,
+        "todayPercent": 96.25249023412101,
+        "startTime": 1757451439198,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1909.76,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.55352198684999,
+        "historicalPercent": 97.55352198684999,
+        "todayPercent": 96.07745863480554,
+        "startTime": 1742760540556,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1903.03,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.19693301049233,
+        "historicalPercent": 98.19693301049233,
+        "todayPercent": 95.96224466972863,
+        "startTime": 1720819922726,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1898.6,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.67375027915232,
+        "historicalPercent": 97.67375027915232,
+        "todayPercent": 95.92427347582067,
+        "startTime": 1729448007322,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1897.14,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.66279090728823,
+        "historicalPercent": 96.66279090728823,
+        "todayPercent": 95.7195931360565,
+        "startTime": 1762554562169,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1889.27,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.70777805100843,
+        "historicalPercent": 96.70777805100843,
+        "todayPercent": 94.99865604000625,
+        "startTime": 1737922591814,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1861.58,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.71671685891243,
+        "historicalPercent": 96.71671685891243,
+        "todayPercent": 94.91426785435225,
+        "startTime": 1731267283041,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1860.23,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.54404718870317,
+        "historicalPercent": 97.54404718870317,
+        "todayPercent": 94.45482106579153,
+        "startTime": 1713807038849,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1852.88,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.90464037956939,
+        "historicalPercent": 95.90464037956939,
+        "todayPercent": 94.42856696358807,
+        "startTime": 1756061224300,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1852.46,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.24428028266018,
+        "historicalPercent": 96.24428028266018,
+        "todayPercent": 93.7540865760275,
+        "startTime": 1734129046506,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1841.67,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.94555446330226,
+        "historicalPercent": 95.94555446330226,
+        "todayPercent": 93.57843413033285,
+        "startTime": 1745174304693,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1838.86,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.41575591298974,
+        "historicalPercent": 95.41575591298974,
+        "todayPercent": 93.3290201593999,
+        "startTime": 1758479828931,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1834.87,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.07867352692084,
+        "historicalPercent": 96.07867352692084,
+        "todayPercent": 93.31089232692608,
+        "startTime": 1738526857801,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1834.58,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.08923662066019,
+        "historicalPercent": 96.08923662066019,
+        "todayPercent": 92.65641506485387,
+        "startTime": 1728078101738,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1824.11,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.90432461446954,
+        "historicalPercent": 95.90432461446954,
+        "todayPercent": 91.6943897483982,
+        "startTime": 1723746437904,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1808.72,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.34370895136891,
+        "historicalPercent": 95.34370895136891,
+        "todayPercent": 91.5831223628692,
+        "startTime": 1740944732861,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1806.94,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.69467358645178,
+        "historicalPercent": 94.69467358645178,
+        "todayPercent": 90.7336146272855,
+        "startTime": 1745778217015,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1793.35,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.59675223158001,
+        "historicalPercent": 93.59675223158001,
+        "todayPercent": 89.60464700625559,
+        "startTime": 1749592081900,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1777.19,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.47800535115493,
+        "historicalPercent": 95.47800535115493,
+        "todayPercent": 89.28829311885613,
+        "startTime": 1718400615423,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1773.65,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.20716112531969,
+        "historicalPercent": 94.20716112531969,
+        "todayPercent": 89.26148346738158,
+        "startTime": 1733523935521,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1773.35,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.60219991456643,
+        "historicalPercent": 94.60219991456643,
+        "todayPercent": 88.56621983914208,
+        "startTime": 1726263393301,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1765.57,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.60956350076772,
+        "historicalPercent": 94.60956350076772,
+        "todayPercent": 87.79410187667561,
+        "startTime": 1722883403075,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1756.93,
+        "class": 11
+      },
+      {
+        "rankPercent": 92.41171341778339,
+        "historicalPercent": 92.41171341778339,
+        "todayPercent": 87.54387846291333,
+        "startTime": 1746989886920,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1754.13,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.0227684748356,
+        "historicalPercent": 95.0227684748356,
+        "todayPercent": 87.37944593386952,
+        "startTime": 1717795346947,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1752.29,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.30340959537448,
+        "historicalPercent": 94.30340959537448,
+        "todayPercent": 86.7851653261841,
+        "startTime": 1720464015237,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1745.64,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.65737724434247,
+        "historicalPercent": 91.65737724434247,
+        "todayPercent": 85.73243967828418,
+        "startTime": 1743362880401,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1733.86,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.52193421088197,
+        "historicalPercent": 94.52193421088197,
+        "todayPercent": 85.47953529937443,
+        "startTime": 1713119426273,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1731.03,
+        "class": 11
+      },
+      {
+        "rankPercent": 89.41004923404184,
+        "historicalPercent": 89.41004923404184,
+        "todayPercent": 85.35621090259161,
+        "startTime": 1760297934155,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1729.65,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.03115902282603,
+        "historicalPercent": 94.03115902282603,
+        "todayPercent": 85.33118856121536,
+        "startTime": 1715452633050,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1729.37,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.76134570472765,
+        "historicalPercent": 91.76134570472765,
+        "todayPercent": 85.08722073279715,
+        "startTime": 1736194316391,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1726.64,
+        "class": 11
+      },
+      {
+        "rankPercent": 88.42999835402357,
+        "historicalPercent": 88.42999835402357,
+        "todayPercent": 84.75299374441467,
+        "startTime": 1764368268277,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1722.9,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.24720920143481,
+        "historicalPercent": 91.24720920143481,
+        "todayPercent": 84.33744414655943,
+        "startTime": 1736716376753,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1718.25,
+        "class": 11
+      },
+      {
+        "rankPercent": 88.75436058878586,
+        "historicalPercent": 88.75436058878586,
+        "todayPercent": 83.65737265415551,
+        "startTime": 1754428356979,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1710.64,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.75382704716651,
+        "historicalPercent": 91.75382704716651,
+        "todayPercent": 83.30080428954425,
+        "startTime": 1723242566140,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1706.65,
+        "class": 11
+      },
+      {
+        "rankPercent": 86.9450261554504,
+        "historicalPercent": 86.9450261554504,
+        "todayPercent": 83.28918677390527,
+        "startTime": 1767565297368,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1706.52,
+        "class": 11
+      },
+      {
+        "rankPercent": 87.20073932724644,
+        "historicalPercent": 87.20073932724644,
+        "todayPercent": 82.85844504021449,
+        "startTime": 1759086203589,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1701.7,
+        "class": 11
+      },
+      {
+        "rankPercent": 89.27390931021795,
+        "historicalPercent": 89.27390931021795,
+        "todayPercent": 81.41161751563897,
+        "startTime": 1734733094422,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1685.51,
+        "class": 11
+      },
+      {
+        "rankPercent": 87.45247779530175,
+        "historicalPercent": 87.45247779530175,
+        "todayPercent": 78.89828919127302,
+        "startTime": 1730058299330,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1659.14,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.84197324414717,
+        "historicalPercent": 84.84197324414717,
+        "todayPercent": 77.0530746629436,
+        "startTime": 1744138177663,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1641.43,
+        "class": 11
+      },
+      {
+        "rankPercent": 82.10455604496522,
+        "historicalPercent": 82.10455604496522,
+        "todayPercent": 76.56025339140221,
+        "startTime": 1756846242688,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1636.7,
+        "class": 11
+      },
+      {
+        "rankPercent": 87.47497622957906,
+        "historicalPercent": 87.47497622957906,
+        "todayPercent": 76.54149909354227,
+        "startTime": 1719609751765,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1636.52,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.6206542216133,
+        "historicalPercent": 84.6206542216133,
+        "todayPercent": 74.26610003269043,
+        "startTime": 1725053042284,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1614.99,
+        "class": 11
+      },
+      {
+        "rankPercent": 78.41266619303765,
+        "historicalPercent": 78.41266619303765,
+        "todayPercent": 66.80630574048486,
+        "startTime": 1725658380539,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1545.33,
+        "class": 11
+      },
+      {
+        "rankPercent": 78.76670396250712,
+        "historicalPercent": 78.76670396250712,
+        "todayPercent": 66.00762048318889,
+        "startTime": 1719254113971,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1537.7,
+        "class": 11
+      },
+      {
+        "rankPercent": 72.20089571337171,
+        "historicalPercent": 72.20089571337171,
+        "todayPercent": 65.08332286563663,
+        "startTime": 1751226093937,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1528.87,
+        "class": 11
+      },
+      {
+        "rankPercent": 77.15233908144101,
+        "historicalPercent": 77.15233908144101,
+        "todayPercent": 63.732989992881976,
+        "startTime": 1717436613677,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1515.97,
+        "class": 11
+      },
+      {
+        "rankPercent": 74.79047173791577,
+        "historicalPercent": 74.79047173791577,
+        "todayPercent": 63.08399279822468,
+        "startTime": 1724448415378,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1509.77,
+        "class": 11
+      },
+      {
+        "rankPercent": 75.97714844996702,
+        "historicalPercent": 75.97714844996702,
+        "todayPercent": 62.5888707448813,
+        "startTime": 1716831193298,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1505.04,
+        "class": 11
+      },
+      {
+        "rankPercent": 75.26370284087231,
+        "historicalPercent": 75.26370284087231,
+        "todayPercent": 61.287736046560305,
+        "startTime": 1714412346560,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1492.61,
+        "class": 11
+      },
+      {
+        "rankPercent": 66.52835572464632,
+        "historicalPercent": 66.52835572464632,
+        "todayPercent": 55.525782437541416,
+        "startTime": 1722027863277,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1434.39,
+        "class": 11
+      },
+      {
+        "rankPercent": 64.34963703439247,
+        "historicalPercent": 64.34963703439247,
+        "todayPercent": 51.32809759519818,
+        "startTime": 1712352058620,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1391.31,
+        "class": 11
+      },
+      {
+        "rankPercent": 63.93023094528055,
+        "historicalPercent": 63.93023094528055,
+        "todayPercent": 49.853080413986746,
+        "startTime": 1707593845407,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1375.88,
+        "class": 11
+      },
+      {
+        "rankPercent": 61.157698579082236,
+        "historicalPercent": 61.157698579082236,
+        "todayPercent": 48.161872734989714,
+        "startTime": 1708714973828,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1355.16,
+        "class": 11
+      },
+      {
+        "rankPercent": 59.53388855657296,
+        "historicalPercent": 59.53388855657296,
+        "todayPercent": 47.884357961409115,
+        "startTime": 1711222115909,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1351.76,
+        "class": 11
+      },
+      {
+        "rankPercent": 59.26649305555556,
+        "historicalPercent": 59.26649305555556,
+        "todayPercent": 47.14649515165366,
+        "startTime": 1709924603545,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1342.72,
+        "class": 11
+      },
+      {
+        "rankPercent": 59.3602137148808,
+        "historicalPercent": 59.3602137148808,
+        "todayPercent": 46.81102876359005,
+        "startTime": 1708199344852,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1338.61,
+        "class": 11
+      },
+      {
+        "rankPercent": 52.78115158485333,
+        "historicalPercent": 52.78115158485333,
+        "todayPercent": 46.09683633158117,
+        "startTime": 1741992947566,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1329.86,
+        "class": 11
+      },
+      {
+        "rankPercent": 57.984717153284684,
+        "historicalPercent": 57.984717153284684,
+        "todayPercent": 45.89523001077411,
+        "startTime": 1709320032528,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1327.39,
+        "class": 11
+      },
+      {
+        "rankPercent": 56.86133032694477,
+        "historicalPercent": 56.86133032694477,
+        "todayPercent": 44.445623428776656,
+        "startTime": 1707000065224,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1309.63,
+        "class": 11
+      },
+      {
+        "rankPercent": 54.42391553821438,
+        "historicalPercent": 54.42391553821438,
+        "todayPercent": 44.22361160991218,
+        "startTime": 1711827300209,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1306.91,
+        "class": 11
+      },
+      {
+        "rankPercent": 51.3676703464461,
+        "historicalPercent": 51.3676703464461,
+        "todayPercent": 43.048254921806134,
+        "startTime": 1715967772098,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1292.51,
+        "class": 11
+      },
+      {
+        "rankPercent": 44.01911058399993,
+        "historicalPercent": 44.01911058399993,
+        "todayPercent": 40.56041659864834,
+        "startTime": 1760900078300,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1262.03,
+        "class": 11
+      },
+      {
+        "rankPercent": 44.70471417088279,
+        "historicalPercent": 44.70471417088279,
+        "todayPercent": 39.35117489452127,
+        "startTime": 1739734807281,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1244.63,
+        "class": 11
+      },
+      {
+        "rankPercent": 41.42270282751123,
+        "historicalPercent": 41.42270282751123,
+        "todayPercent": 37.336454066705684,
+        "startTime": 1731874884872,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1211.92,
+        "class": 11
+      },
+      {
+        "rankPercent": 45.45823822971876,
+        "historicalPercent": 45.45823822971876,
+        "todayPercent": 36.75131655939146,
+        "startTime": 1706384171387,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1202.42,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.12548272595738,
+        "historicalPercent": 99.12548272595738,
+        "todayPercent": 99.11664819647517,
+        "startTime": 1784500875347,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1198.69,
+        "class": 11
+      },
+      {
+        "rankPercent": 39.37639535323722,
+        "historicalPercent": 39.37639535323722,
+        "todayPercent": 35.686982230297815,
+        "startTime": 1733082996226,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1185.14,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.09547894849024,
+        "historicalPercent": 99.09547894849024,
+        "todayPercent": 99.08797558990707,
+        "startTime": 1786472071180,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1171.42,
+        "class": 11
+      },
+      {
+        "rankPercent": 35.54729876328922,
+        "historicalPercent": 35.54729876328922,
+        "todayPercent": 33.226940962705186,
+        "startTime": 1752433953724,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1145.2,
+        "class": 11
+      },
+      {
+        "rankPercent": 36.000568079889966,
+        "historicalPercent": 36.000568079889966,
+        "todayPercent": 32.28148193772905,
+        "startTime": 1721424495062,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1129.85,
+        "class": 11
+      },
+      {
+        "rankPercent": 38.75858541575332,
+        "historicalPercent": 38.75858541575332,
+        "todayPercent": 32.24021434510795,
+        "startTime": 1705847737971,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1129.18,
+        "class": 11
+      },
+      {
+        "rankPercent": 37.983609904050866,
+        "historicalPercent": 37.983609904050866,
+        "todayPercent": 31.31508114933326,
+        "startTime": 1705175715134,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1114.16,
+        "class": 11
+      },
+      {
+        "rankPercent": 31.087580885151745,
+        "historicalPercent": 31.087580885151745,
+        "todayPercent": 29.3117973505586,
+        "startTime": 1748200591515,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1077.19,
+        "class": 11
+      },
+      {
+        "rankPercent": 30.1537693912728,
+        "historicalPercent": 30.1537693912728,
+        "todayPercent": 28.71828370128683,
+        "startTime": 1730750764637,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1063.72,
+        "class": 11
+      },
+      {
+        "rankPercent": 29.82015399922135,
+        "historicalPercent": 29.82015399922135,
+        "todayPercent": 28.264886860083678,
+        "startTime": 1727462113710,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1053.43,
+        "class": 11
+      },
+      {
+        "rankPercent": 28.96135043392109,
+        "historicalPercent": 28.96135043392109,
+        "todayPercent": 27.56650591420709,
+        "startTime": 1726858882794,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1037.58,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.05520332137168,
+        "historicalPercent": 98.05520332137168,
+        "todayPercent": 97.9456230118347,
+        "startTime": 1785101399812,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1034.04,
+        "class": 11
+      },
+      {
+        "rankPercent": 28.647662571523952,
+        "historicalPercent": 28.647662571523952,
+        "todayPercent": 27.36558369886342,
+        "startTime": 1757877511382,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1033.02,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.72299756640042,
+        "historicalPercent": 97.72299756640042,
+        "todayPercent": 97.61109959114621,
+        "startTime": 1785705550704,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1017,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.49955771760638,
+        "historicalPercent": 97.49955771760638,
+        "todayPercent": 97.4929170211612,
+        "startTime": 1789497171068,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1010.98,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.16314140485754,
+        "historicalPercent": 97.16314140485754,
+        "todayPercent": 96.93828347178967,
+        "startTime": 1778165485605,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 982.728,
+        "class": 11
+      },
+      {
+        "rankPercent": 25.70390022229246,
+        "historicalPercent": 25.70390022229246,
+        "todayPercent": 24.894022803071536,
+        "startTime": 1741635814660,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 976.141,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.68612151594066,
+        "historicalPercent": 96.68612151594066,
+        "todayPercent": 96.64969812647743,
+        "startTime": 1788891773688,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 968.028,
+        "class": 11
+      },
+      {
+        "rankPercent": 26.219610590908125,
+        "historicalPercent": 26.219610590908125,
+        "todayPercent": 24.536132869253112,
+        "startTime": 1715018801700,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 965.364,
+        "class": 11
+      },
+      {
+        "rankPercent": 28.080481668999923,
+        "historicalPercent": 28.080481668999923,
+        "todayPercent": 24.507174901146062,
+        "startTime": 1704568150608,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 964.492,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.13206341112007,
+        "historicalPercent": 96.13206341112007,
+        "todayPercent": 95.96078404908307,
+        "startTime": 1781028075406,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 932.936,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.16890780798242,
+        "historicalPercent": 95.16890780798242,
+        "todayPercent": 95.1581437876483,
+        "startTime": 1787681792880,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 892.051,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.30827986076427,
+        "historicalPercent": 95.30827986076427,
+        "todayPercent": 95.1177025759923,
+        "startTime": 1776190903749,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 889.991,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.82528742314088,
+        "historicalPercent": 94.82528742314088,
+        "todayPercent": 94.41928746261203,
+        "startTime": 1779817761553,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 874.484,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.40223034265027,
+        "historicalPercent": 93.40223034265027,
+        "todayPercent": 93.07512151282165,
+        "startTime": 1782239338008,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 852.468,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.70603760067759,
+        "historicalPercent": 93.70603760067759,
+        "todayPercent": 92.84262769301779,
+        "startTime": 1770307935411,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 848.66,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.6293797611289,
+        "historicalPercent": 93.6293797611289,
+        "todayPercent": 92.5172706642009,
+        "startTime": 1759862135485,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 843.331,
+        "class": 11
+      },
+      {
+        "rankPercent": 92.089125600746,
+        "historicalPercent": 92.089125600746,
+        "todayPercent": 91.2044864957601,
+        "startTime": 1767123078355,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 821.829,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.22193397413774,
+        "historicalPercent": 91.22193397413774,
+        "todayPercent": 90.93206332770211,
+        "startTime": 1782843696286,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 817.367,
+        "class": 11
+      },
+      {
+        "rankPercent": 90.94260248196152,
+        "historicalPercent": 90.94260248196152,
+        "todayPercent": 90.11534330997202,
+        "startTime": 1772122774309,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 803.99,
+        "class": 11
+      },
+      {
+        "rankPercent": 89.190655121087,
+        "historicalPercent": 89.190655121087,
+        "todayPercent": 87.74041724682256,
+        "startTime": 1769704577920,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 778.797,
+        "class": 11
+      },
+      {
+        "rankPercent": 19.14335126853364,
+        "historicalPercent": 19.14335126853364,
+        "todayPercent": 18.889267599739767,
+        "startTime": 1710528834033,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 773.402,
+        "class": 11
+      },
+      {
+        "rankPercent": 87.93187940814144,
+        "historicalPercent": 87.93187940814144,
+        "todayPercent": 87.17871645600059,
+        "startTime": 1780424572102,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 773.004,
+        "class": 11
+      },
+      {
+        "rankPercent": 87.21850654123182,
+        "historicalPercent": 87.21850654123182,
+        "todayPercent": 85.73446765929886,
+        "startTime": 1766518303376,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 758.109,
+        "class": 11
+      },
+      {
+        "rankPercent": 86.37993175844952,
+        "historicalPercent": 86.37993175844952,
+        "todayPercent": 84.9866968153805,
+        "startTime": 1773170756145,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 750.397,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.55622861695646,
+        "historicalPercent": 84.55622861695646,
+        "todayPercent": 84.23911989543619,
+        "startTime": 1783891032351,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 742.687,
+        "class": 11
+      },
+      {
+        "rankPercent": 83.80608850322592,
+        "historicalPercent": 83.80608850322592,
+        "todayPercent": 83.70699251065612,
+        "startTime": 1788213015831,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 737.199,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.17230613580678,
+        "historicalPercent": 84.17230613580678,
+        "todayPercent": 82.90424422009595,
+        "startTime": 1773775756283,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 728.92,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.10751892565199,
+        "historicalPercent": 84.10751892565199,
+        "todayPercent": 82.64002280545935,
+        "startTime": 1771518290451,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 726.195,
+        "class": 11
+      },
+      {
+        "rankPercent": 82.82018268812527,
+        "historicalPercent": 82.82018268812527,
+        "todayPercent": 81.81730034557253,
+        "startTime": 1776795782879,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 717.71,
+        "class": 11
+      },
+      {
+        "rankPercent": 82.28604445652913,
+        "historicalPercent": 82.28604445652913,
+        "todayPercent": 81.14399630768753,
+        "startTime": 1775584646109,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 710.766,
+        "class": 11
+      },
+      {
+        "rankPercent": 81.88339928615767,
+        "historicalPercent": 81.88339928615767,
+        "todayPercent": 80.72453875182774,
+        "startTime": 1774981313015,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 706.44,
+        "class": 11
+      },
+      {
+        "rankPercent": 81.7165189067679,
+        "historicalPercent": 81.7165189067679,
+        "todayPercent": 80.22033641931019,
+        "startTime": 1769099378148,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 701.24,
+        "class": 11
+      },
+      {
+        "rankPercent": 72.45448741662725,
+        "historicalPercent": 72.45448741662725,
+        "todayPercent": 70.88641448534715,
+        "startTime": 1777401248720,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 636.608,
+        "class": 11
+      },
+      {
+        "rankPercent": 71.55877639397444,
+        "historicalPercent": 71.55877639397444,
+        "todayPercent": 68.85650151694514,
+        "startTime": 1770914267270,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 623.737,
+        "class": 11
+      },
+      {
+        "rankPercent": 69.77743026511983,
+        "historicalPercent": 69.77743026511983,
+        "todayPercent": 68.53613175752164,
+        "startTime": 1779214738915,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 621.756,
+        "class": 11
+      },
+      {
+        "rankPercent": 69.34776451680894,
+        "historicalPercent": 69.34776451680894,
+        "todayPercent": 67.40893477459294,
+        "startTime": 1774380061714,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 614.786,
+        "class": 11
+      },
+      {
+        "rankPercent": 67.17850601779173,
+        "historicalPercent": 67.17850601779173,
+        "todayPercent": 66.97875629904196,
+        "startTime": 1786916188605,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 612.126,
+        "class": 11
+      },
+      {
+        "rankPercent": 63.28763283048489,
+        "historicalPercent": 63.28763283048489,
+        "todayPercent": 61.833595321728225,
+        "startTime": 1778006856118,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 580.311,
+        "class": 11
+      },
+      {
+        "rankPercent": 14.777212358827375,
+        "historicalPercent": 14.777212358827375,
+        "todayPercent": 14.928043489468976,
+        "startTime": 1702842290126,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 575.945,
+        "class": 11
+      },
+      {
+        "rankPercent": 55.32452654566284,
+        "historicalPercent": 55.32452654566284,
+        "todayPercent": 53.033834402389466,
+        "startTime": 1768937853228,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 526.292,
+        "class": 11
+      }
+    ]
+  },
+  "reports": [
+    {
+      "code": "hHj8gKzJQNW63aFP",
+      "visibility": "public",
+      "startTime": 1789494667783,
+      "endTime": 1789499163470,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "1z6r7LdWDAVvkmCf",
+      "visibility": "public",
+      "startTime": 1789494399224,
+      "endTime": 1789499165505,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "zMcfG9Y7LJw6xpWb",
+      "visibility": "public",
+      "startTime": 1788888569739,
+      "endTime": 1788893827425,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "dH4GrKtP3DYM7LCV",
+      "visibility": "public",
+      "startTime": 1788889178197,
+      "endTime": 1788893826004,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "6g8ha7GrZbqcKvkC",
+      "visibility": "public",
+      "startTime": 1788210190245,
+      "endTime": 1788218079156,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    }
+  ],
+  "errors": []
+}

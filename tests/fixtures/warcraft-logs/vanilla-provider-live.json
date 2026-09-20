@@ -1,0 +1,4186 @@
+{
+  "fixtureKind": "sanitized live provider responses",
+  "captures": [
+    {
+      "operation": "PrePullLogsCharacter",
+      "errors": [],
+      "character": {
+        "id": 78611771,
+        "canonicalID": 78611771,
+        "hidden": false,
+        "recentReports": {
+          "data": [
+            {
+              "code": "hHj8gKzJQNW63aFP",
+              "visibility": "public",
+              "startTime": 1789494667783,
+              "zone": {
+                "id": 2006,
+                "name": "Naxxramas"
+              }
+            },
+            {
+              "code": "1z6r7LdWDAVvkmCf",
+              "visibility": "public",
+              "startTime": 1789494399224,
+              "zone": {
+                "id": 2006,
+                "name": "Naxxramas"
+              }
+            },
+            {
+              "code": "zMcfG9Y7LJw6xpWb",
+              "visibility": "public",
+              "startTime": 1788888569739,
+              "zone": {
+                "id": 2006,
+                "name": "Naxxramas"
+              }
+            },
+            {
+              "code": "dH4GrKtP3DYM7LCV",
+              "visibility": "public",
+              "startTime": 1788889178197,
+              "zone": {
+                "id": 2006,
+                "name": "Naxxramas"
+              }
+            },
+            {
+              "code": "6g8ha7GrZbqcKvkC",
+              "visibility": "public",
+              "startTime": 1788210190245,
+              "zone": {
+                "id": 2006,
+                "name": "Naxxramas"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "PrePullEraRankings",
+      "errors": [],
+      "character": {
+        "hidden": false,
+        "z2006DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2006,
+          "size": 40,
+          "bestPerformanceAverage": 99.57171428571428,
+          "medianPerformanceAverage": 91.07714999999999,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.5225,
+              "medianPercent": 89.342,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2167.01,
+              "encounter": {
+                "id": 51118,
+                "name": "Patchwerk"
+              }
+            },
+            {
+              "rankPercent": 99.1711,
+              "medianPercent": 88.3667,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2117.07,
+              "encounter": {
+                "id": 51111,
+                "name": "Grobbulus"
+              }
+            },
+            {
+              "rankPercent": 99.1814,
+              "medianPercent": 84.2895,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2086.45,
+              "encounter": {
+                "id": 51108,
+                "name": "Gluth"
+              }
+            },
+            {
+              "rankPercent": 99.9527,
+              "medianPercent": 80.3427,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3796.42,
+              "encounter": {
+                "id": 51120,
+                "name": "Thaddius"
+              }
+            },
+            {
+              "rankPercent": 99.4531,
+              "medianPercent": 91.9481,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2667.65,
+              "encounter": {
+                "id": 51117,
+                "name": "Noth the Plaguebringer"
+              }
+            },
+            {
+              "rankPercent": 99.391,
+              "medianPercent": 89.9621,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2263.61,
+              "encounter": {
+                "id": 51112,
+                "name": "Heigan the Unclean"
+              }
+            },
+            {
+              "rankPercent": 99.8422,
+              "medianPercent": 98.4478,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2738.88,
+              "encounter": {
+                "id": 51115,
+                "name": "Loatheb"
+              }
+            },
+            {
+              "rankPercent": 99.4943,
+              "medianPercent": 96.1626,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3671.26,
+              "encounter": {
+                "id": 51107,
+                "name": "Anub'Rekhan"
+              }
+            },
+            {
+              "rankPercent": 99.3372,
+              "medianPercent": 94.5911,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2748.35,
+              "encounter": {
+                "id": 51110,
+                "name": "Grand Widow Faerlina"
+              }
+            },
+            {
+              "rankPercent": 99.5255,
+              "medianPercent": 91.9465,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2887.95,
+              "encounter": {
+                "id": 51116,
+                "name": "Maexxna"
+              }
+            },
+            {
+              "rankPercent": 99.4899,
+              "medianPercent": 94.5431,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2300.71,
+              "encounter": {
+                "id": 51113,
+                "name": "Instructor Razuvious"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 95.6959,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1178.2,
+              "encounter": {
+                "id": 51109,
+                "name": "Gothik the Harvester"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 96.524,
+              "totalKills": 95,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1890.76,
+              "encounter": {
+                "id": 51121,
+                "name": "The Four Horsemen"
+              }
+            },
+            {
+              "rankPercent": 99.751,
+              "medianPercent": 95.0994,
+              "totalKills": 99,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 9998.07,
+              "encounter": {
+                "id": 51119,
+                "name": "Sapphiron"
+              }
+            },
+            {
+              "rankPercent": 99.8921,
+              "medianPercent": 83.5145,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2138.65,
+              "encounter": {
+                "id": 51114,
+                "name": "Kel'Thuzad"
+              }
+            }
+          ]
+        },
+        "z2006Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2006,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51118,
+                "name": "Patchwerk"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51111,
+                "name": "Grobbulus"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51108,
+                "name": "Gluth"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51120,
+                "name": "Thaddius"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51117,
+                "name": "Noth the Plaguebringer"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51112,
+                "name": "Heigan the Unclean"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51115,
+                "name": "Loatheb"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51107,
+                "name": "Anub'Rekhan"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51110,
+                "name": "Grand Widow Faerlina"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51116,
+                "name": "Maexxna"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51113,
+                "name": "Instructor Razuvious"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51109,
+                "name": "Gothik the Harvester"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51121,
+                "name": "The Four Horsemen"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51119,
+                "name": "Sapphiron"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51114,
+                "name": "Kel'Thuzad"
+              }
+            }
+          ]
+        },
+        "z2006Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2006,
+          "size": 40,
+          "bestPerformanceAverage": 97.11595714285716,
+          "medianPerformanceAverage": 83.98126428571429,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.1255,
+              "medianPercent": 88.5613,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1198.69,
+              "encounter": {
+                "id": 51118,
+                "name": "Patchwerk"
+              }
+            },
+            {
+              "rankPercent": 99.0904,
+              "medianPercent": 94.564,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1251.1,
+              "encounter": {
+                "id": 51111,
+                "name": "Grobbulus"
+              }
+            },
+            {
+              "rankPercent": 97.6836,
+              "medianPercent": 83.7579,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1082.79,
+              "encounter": {
+                "id": 51108,
+                "name": "Gluth"
+              }
+            },
+            {
+              "rankPercent": 96.1361,
+              "medianPercent": 87.8227,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2061.31,
+              "encounter": {
+                "id": 51120,
+                "name": "Thaddius"
+              }
+            },
+            {
+              "rankPercent": 96.4972,
+              "medianPercent": 87.6019,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1160.92,
+              "encounter": {
+                "id": 51117,
+                "name": "Noth the Plaguebringer"
+              }
+            },
+            {
+              "rankPercent": 99.2178,
+              "medianPercent": 93.4987,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1295.05,
+              "encounter": {
+                "id": 51112,
+                "name": "Heigan the Unclean"
+              }
+            },
+            {
+              "rankPercent": 96.7725,
+              "medianPercent": 91.1326,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 697.018,
+              "encounter": {
+                "id": 51115,
+                "name": "Loatheb"
+              }
+            },
+            {
+              "rankPercent": 97.5991,
+              "medianPercent": 91.1752,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1631.07,
+              "encounter": {
+                "id": 51107,
+                "name": "Anub'Rekhan"
+              }
+            },
+            {
+              "rankPercent": 99.219,
+              "medianPercent": 90.2824,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1662.65,
+              "encounter": {
+                "id": 51110,
+                "name": "Grand Widow Faerlina"
+              }
+            },
+            {
+              "rankPercent": 97.6362,
+              "medianPercent": 93.0165,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1110.32,
+              "encounter": {
+                "id": 51116,
+                "name": "Maexxna"
+              }
+            },
+            {
+              "rankPercent": 88.4814,
+              "medianPercent": 20.074,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 233.929,
+              "encounter": {
+                "id": 51113,
+                "name": "Instructor Razuvious"
+              }
+            },
+            {
+              "rankPercent": 98.6184,
+              "medianPercent": 64.8473,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 405.401,
+              "encounter": {
+                "id": 51109,
+                "name": "Gothik the Harvester"
+              }
+            },
+            {
+              "rankPercent": 99.3259,
+              "medianPercent": 90.1534,
+              "totalKills": 37,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 696.671,
+              "encounter": {
+                "id": 51121,
+                "name": "The Four Horsemen"
+              }
+            },
+            {
+              "rankPercent": 96.9595,
+              "medianPercent": 83.9308,
+              "totalKills": 32,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 687.89,
+              "encounter": {
+                "id": 51119,
+                "name": "Sapphiron"
+              }
+            },
+            {
+              "rankPercent": 95.8792,
+              "medianPercent": 80.1663,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 966.608,
+              "encounter": {
+                "id": 51114,
+                "name": "Kel'Thuzad"
+              }
+            }
+          ]
+        },
+        "z2005DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2005,
+          "size": 40,
+          "bestPerformanceAverage": 99.54146250000001,
+          "medianPerformanceAverage": 96.25731250000001,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.1069,
+              "medianPercent": 95.912,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1348.65,
+              "encounter": {
+                "id": 50709,
+                "name": "The Prophet Skeram"
+              }
+            },
+            {
+              "rankPercent": 99.6337,
+              "medianPercent": 96.6265,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2260.84,
+              "encounter": {
+                "id": 50710,
+                "name": "Silithid Royalty"
+              }
+            },
+            {
+              "rankPercent": 99.5129,
+              "medianPercent": 96.9546,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2491.86,
+              "encounter": {
+                "id": 50711,
+                "name": "Battleguard Sartura"
+              }
+            },
+            {
+              "rankPercent": 99.3446,
+              "medianPercent": 95.194,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2247.38,
+              "encounter": {
+                "id": 50712,
+                "name": "Fankriss the Unyielding"
+              }
+            },
+            {
+              "rankPercent": 99.3083,
+              "medianPercent": 87.33,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 519.305,
+              "encounter": {
+                "id": 50713,
+                "name": "Viscidus"
+              }
+            },
+            {
+              "rankPercent": 99.5207,
+              "medianPercent": 95.2741,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2182.18,
+              "encounter": {
+                "id": 50714,
+                "name": "Princess Huhuran"
+              }
+            },
+            {
+              "rankPercent": 99.516,
+              "medianPercent": 97.9196,
+              "totalKills": 55,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1136.19,
+              "encounter": {
+                "id": 50715,
+                "name": "Twin Emperors"
+              }
+            },
+            {
+              "rankPercent": 99.6969,
+              "medianPercent": 96.8062,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2049.24,
+              "encounter": {
+                "id": 50716,
+                "name": "Ouro"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 95.3715,
+              "totalKills": 59,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1228.17,
+              "encounter": {
+                "id": 50717,
+                "name": "C'Thun"
+              }
+            }
+          ]
+        },
+        "z2005Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2005,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50709,
+                "name": "The Prophet Skeram"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50710,
+                "name": "Silithid Royalty"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50711,
+                "name": "Battleguard Sartura"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50712,
+                "name": "Fankriss the Unyielding"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50713,
+                "name": "Viscidus"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50714,
+                "name": "Princess Huhuran"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50715,
+                "name": "Twin Emperors"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50716,
+                "name": "Ouro"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50717,
+                "name": "C'Thun"
+              }
+            }
+          ]
+        },
+        "z2005Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2005,
+          "size": 40,
+          "bestPerformanceAverage": 96.95648750000001,
+          "medianPerformanceAverage": 95.1657125,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 96.5441,
+              "medianPercent": 95.1412,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 668.087,
+              "encounter": {
+                "id": 50709,
+                "name": "The Prophet Skeram"
+              }
+            },
+            {
+              "rankPercent": 97.8367,
+              "medianPercent": 96.0063,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 850.122,
+              "encounter": {
+                "id": 50710,
+                "name": "Silithid Royalty"
+              }
+            },
+            {
+              "rankPercent": 95.3356,
+              "medianPercent": 92.8456,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 830.329,
+              "encounter": {
+                "id": 50711,
+                "name": "Battleguard Sartura"
+              }
+            },
+            {
+              "rankPercent": 96.3294,
+              "medianPercent": 95.9355,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 983.806,
+              "encounter": {
+                "id": 50712,
+                "name": "Fankriss the Unyielding"
+              }
+            },
+            {
+              "rankPercent": 97.6625,
+              "medianPercent": 67.8663,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 400.592,
+              "encounter": {
+                "id": 50713,
+                "name": "Viscidus"
+              }
+            },
+            {
+              "rankPercent": 96.1082,
+              "medianPercent": 93.3919,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 927.575,
+              "encounter": {
+                "id": 50714,
+                "name": "Princess Huhuran"
+              }
+            },
+            {
+              "rankPercent": 98.6855,
+              "medianPercent": 97.7588,
+              "totalKills": 5,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 421.373,
+              "encounter": {
+                "id": 50715,
+                "name": "Twin Emperors"
+              }
+            },
+            {
+              "rankPercent": 99,
+              "medianPercent": 94.434,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1094.39,
+              "encounter": {
+                "id": 50716,
+                "name": "Ouro"
+              }
+            },
+            {
+              "rankPercent": 95.8124,
+              "medianPercent": 95.8124,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 422.524,
+              "encounter": {
+                "id": 50717,
+                "name": "C'Thun"
+              }
+            }
+          ]
+        },
+        "z2004DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2004,
+          "size": 20,
+          "bestPerformanceAverage": 92.46925,
+          "medianPerformanceAverage": 85.60365,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 81.0228,
+              "medianPercent": 76.7888,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 605.912,
+              "encounter": {
+                "id": 50718,
+                "name": "Kurinnaxx"
+              }
+            },
+            {
+              "rankPercent": 96.8659,
+              "medianPercent": 91.9299,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 546.032,
+              "encounter": {
+                "id": 50719,
+                "name": "General Rajaxx"
+              }
+            },
+            {
+              "rankPercent": 90.3488,
+              "medianPercent": 87.786,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 954.459,
+              "encounter": {
+                "id": 50720,
+                "name": "Moam"
+              }
+            },
+            {
+              "rankPercent": 98.0726,
+              "medianPercent": 91.7351,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 726.578,
+              "encounter": {
+                "id": 50721,
+                "name": "Buru the Gorger"
+              }
+            },
+            {
+              "rankPercent": 94.1189,
+              "medianPercent": 94.1189,
+              "totalKills": 1,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 366.086,
+              "encounter": {
+                "id": 50722,
+                "name": "Ayamiss the Hunter"
+              }
+            },
+            {
+              "rankPercent": 94.3865,
+              "medianPercent": 71.2632,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 607.584,
+              "encounter": {
+                "id": 50723,
+                "name": "Ossirian the Unscarred"
+              }
+            }
+          ]
+        },
+        "z2004Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2004,
+          "size": 20,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50718,
+                "name": "Kurinnaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50719,
+                "name": "General Rajaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50720,
+                "name": "Moam"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50721,
+                "name": "Buru the Gorger"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50722,
+                "name": "Ayamiss the Hunter"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50723,
+                "name": "Ossirian the Unscarred"
+              }
+            }
+          ]
+        },
+        "z2004Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2004,
+          "size": 20,
+          "bestPerformanceAverage": 97.806,
+          "medianPerformanceAverage": 97.806,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50718,
+                "name": "Kurinnaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50719,
+                "name": "General Rajaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50720,
+                "name": "Moam"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50721,
+                "name": "Buru the Gorger"
+              }
+            },
+            {
+              "rankPercent": 97.806,
+              "medianPercent": 97.806,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 427.194,
+              "encounter": {
+                "id": 50722,
+                "name": "Ayamiss the Hunter"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50723,
+                "name": "Ossirian the Unscarred"
+              }
+            }
+          ]
+        },
+        "z2003DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2003,
+          "size": 20,
+          "bestPerformanceAverage": 93.51677777777778,
+          "medianPerformanceAverage": 80.0452111111111,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 90.2937,
+              "medianPercent": 73.3535,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 792.631,
+              "encounter": {
+                "id": 50784,
+                "name": "High Priest Venoxis"
+              }
+            },
+            {
+              "rankPercent": 97.2246,
+              "medianPercent": 80.3361,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1064.68,
+              "encounter": {
+                "id": 50785,
+                "name": "High Priestess Jeklik"
+              }
+            },
+            {
+              "rankPercent": 97.0861,
+              "medianPercent": 82.9934,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1089.25,
+              "encounter": {
+                "id": 50786,
+                "name": "High Priestess Mar'li"
+              }
+            },
+            {
+              "rankPercent": 96.0804,
+              "medianPercent": 82.966,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 938.789,
+              "encounter": {
+                "id": 50787,
+                "name": "Bloodlord Mandokir"
+              }
+            },
+            {
+              "rankPercent": 84.6852,
+              "medianPercent": 82.859,
+              "totalKills": 3,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 639.748,
+              "encounter": {
+                "id": 50788,
+                "name": "Edge of Madness"
+              }
+            },
+            {
+              "rankPercent": 97.9744,
+              "medianPercent": 79.733,
+              "totalKills": 10,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1022.73,
+              "encounter": {
+                "id": 50789,
+                "name": "High Priest Thekal"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50790,
+                "name": "Gahz'ranka"
+              }
+            },
+            {
+              "rankPercent": 96.5015,
+              "medianPercent": 85.6033,
+              "totalKills": 11,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1449.31,
+              "encounter": {
+                "id": 50791,
+                "name": "High Priestess Arlokk"
+              }
+            },
+            {
+              "rankPercent": 91.3337,
+              "medianPercent": 76.2289,
+              "totalKills": 9,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 803.412,
+              "encounter": {
+                "id": 50792,
+                "name": "Jin'do the Hexxer"
+              }
+            },
+            {
+              "rankPercent": 90.4714,
+              "medianPercent": 76.3337,
+              "totalKills": 8,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 691.379,
+              "encounter": {
+                "id": 50793,
+                "name": "Hakkar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50794,
+                "name": "Hakkar (Hard Mode)"
+              }
+            }
+          ]
+        },
+        "z2003Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2003,
+          "size": 20,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50784,
+                "name": "High Priest Venoxis"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50785,
+                "name": "High Priestess Jeklik"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50786,
+                "name": "High Priestess Mar'li"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50787,
+                "name": "Bloodlord Mandokir"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50788,
+                "name": "Edge of Madness"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50789,
+                "name": "High Priest Thekal"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50790,
+                "name": "Gahz'ranka"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50791,
+                "name": "High Priestess Arlokk"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50792,
+                "name": "Jin'do the Hexxer"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50793,
+                "name": "Hakkar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50794,
+                "name": "Hakkar (Hard Mode)"
+              }
+            }
+          ]
+        },
+        "z2003Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2003,
+          "size": 20,
+          "bestPerformanceAverage": 93.1394375,
+          "medianPerformanceAverage": 86.5426125,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 94.9952,
+              "medianPercent": 94.9952,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 662.496,
+              "encounter": {
+                "id": 50784,
+                "name": "High Priest Venoxis"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50785,
+                "name": "High Priestess Jeklik"
+              }
+            },
+            {
+              "rankPercent": 98.055,
+              "medianPercent": 98.055,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 994.958,
+              "encounter": {
+                "id": 50786,
+                "name": "High Priestess Mar'li"
+              }
+            },
+            {
+              "rankPercent": 93.0843,
+              "medianPercent": 81.0091,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 569.954,
+              "encounter": {
+                "id": 50787,
+                "name": "Bloodlord Mandokir"
+              }
+            },
+            {
+              "rankPercent": 82.5201,
+              "medianPercent": 61.2812,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 475.335,
+              "encounter": {
+                "id": 50788,
+                "name": "Edge of Madness"
+              }
+            },
+            {
+              "rankPercent": 97.5909,
+              "medianPercent": 93.3745,
+              "totalKills": 3,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 742.77,
+              "encounter": {
+                "id": 50789,
+                "name": "High Priest Thekal"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50790,
+                "name": "Gahz'ranka"
+              }
+            },
+            {
+              "rankPercent": 92.0673,
+              "medianPercent": 92.0673,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 984.988,
+              "encounter": {
+                "id": 50791,
+                "name": "High Priestess Arlokk"
+              }
+            },
+            {
+              "rankPercent": 91.1586,
+              "medianPercent": 78.7084,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 773.018,
+              "encounter": {
+                "id": 50792,
+                "name": "Jin'do the Hexxer"
+              }
+            },
+            {
+              "rankPercent": 95.6441,
+              "medianPercent": 92.8502,
+              "totalKills": 3,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 534.331,
+              "encounter": {
+                "id": 50793,
+                "name": "Hakkar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50794,
+                "name": "Hakkar (Hard Mode)"
+              }
+            }
+          ]
+        },
+        "z2002DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2002,
+          "size": 40,
+          "bestPerformanceAverage": 99.54125,
+          "medianPerformanceAverage": 95.32522499999999,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.3972,
+              "medianPercent": 92.62,
+              "totalKills": 52,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2282.65,
+              "encounter": {
+                "id": 50610,
+                "name": "Razorgore the Untamed"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 96.1708,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 4823.87,
+              "encounter": {
+                "id": 50611,
+                "name": "Vaelastrasz the Corrupt"
+              }
+            },
+            {
+              "rankPercent": 99.5475,
+              "medianPercent": 95.5384,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2152.6,
+              "encounter": {
+                "id": 50612,
+                "name": "Broodlord Lashlayer"
+              }
+            },
+            {
+              "rankPercent": 99.5996,
+              "medianPercent": 95.7918,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2371.93,
+              "encounter": {
+                "id": 50613,
+                "name": "Firemaw"
+              }
+            },
+            {
+              "rankPercent": 99.3496,
+              "medianPercent": 95.932,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1808.7,
+              "encounter": {
+                "id": 50614,
+                "name": "Ebonroc"
+              }
+            },
+            {
+              "rankPercent": 99.2199,
+              "medianPercent": 95.0866,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1681.41,
+              "encounter": {
+                "id": 50615,
+                "name": "Flamegor"
+              }
+            },
+            {
+              "rankPercent": 99.6446,
+              "medianPercent": 95.8895,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1946.42,
+              "encounter": {
+                "id": 50616,
+                "name": "Chromaggus"
+              }
+            },
+            {
+              "rankPercent": 99.5716,
+              "medianPercent": 95.5727,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2134.55,
+              "encounter": {
+                "id": 50617,
+                "name": "Nefarian"
+              }
+            },
+            {
+              "rankPercent": 89.7008308622765,
+              "medianPercent": 89.7008308622765,
+              "totalKills": 1,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1436.82,
+              "encounter": {
+                "id": 50631,
+                "name": "Ebonroc / Flamegor"
+              }
+            }
+          ]
+        },
+        "z2002Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2002,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50610,
+                "name": "Razorgore the Untamed"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50611,
+                "name": "Vaelastrasz the Corrupt"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50612,
+                "name": "Broodlord Lashlayer"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50613,
+                "name": "Firemaw"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50614,
+                "name": "Ebonroc"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50615,
+                "name": "Flamegor"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50616,
+                "name": "Chromaggus"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50617,
+                "name": "Nefarian"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50631,
+                "name": "Ebonroc / Flamegor"
+              }
+            }
+          ]
+        },
+        "z2002Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2002,
+          "size": 40,
+          "bestPerformanceAverage": 98.1023375,
+          "medianPerformanceAverage": 91.9983875,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 96.7965,
+              "medianPercent": 67.6366,
+              "totalKills": 7,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 892.631,
+              "encounter": {
+                "id": 50610,
+                "name": "Razorgore the Untamed"
+              }
+            },
+            {
+              "rankPercent": 99.2042,
+              "medianPercent": 95.869,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2244.75,
+              "encounter": {
+                "id": 50611,
+                "name": "Vaelastrasz the Corrupt"
+              }
+            },
+            {
+              "rankPercent": 99.3918,
+              "medianPercent": 96.4327,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1391.5,
+              "encounter": {
+                "id": 50612,
+                "name": "Broodlord Lashlayer"
+              }
+            },
+            {
+              "rankPercent": 99.0773,
+              "medianPercent": 97.2362,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 981.7,
+              "encounter": {
+                "id": 50613,
+                "name": "Firemaw"
+              }
+            },
+            {
+              "rankPercent": 95.8926,
+              "medianPercent": 91.1084,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 739.575,
+              "encounter": {
+                "id": 50614,
+                "name": "Ebonroc"
+              }
+            },
+            {
+              "rankPercent": 97.8771,
+              "medianPercent": 94.6952,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 926.079,
+              "encounter": {
+                "id": 50615,
+                "name": "Flamegor"
+              }
+            },
+            {
+              "rankPercent": 97.7466,
+              "medianPercent": 96.4721,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 911.313,
+              "encounter": {
+                "id": 50616,
+                "name": "Chromaggus"
+              }
+            },
+            {
+              "rankPercent": 98.8326,
+              "medianPercent": 96.5369,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 974.577,
+              "encounter": {
+                "id": 50617,
+                "name": "Nefarian"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50631,
+                "name": "Ebonroc / Flamegor"
+              }
+            }
+          ]
+        },
+        "z2001DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2001,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51084,
+                "name": "Onyxia"
+              }
+            }
+          ]
+        },
+        "z2001Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2001,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 51084,
+                "name": "Onyxia"
+              }
+            }
+          ]
+        },
+        "z2001Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2001,
+          "size": 40,
+          "bestPerformanceAverage": 91.6666,
+          "medianPerformanceAverage": 68.708,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 91.6666,
+              "medianPercent": 68.708,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 367.206,
+              "encounter": {
+                "id": 51084,
+                "name": "Onyxia"
+              }
+            }
+          ]
+        },
+        "z2000DPS": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2000,
+          "size": 40,
+          "bestPerformanceAverage": 99.59358,
+          "medianPerformanceAverage": 93.19715,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.6576,
+              "medianPercent": 96.0101,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3551.98,
+              "encounter": {
+                "id": 50663,
+                "name": "Lucifron"
+              }
+            },
+            {
+              "rankPercent": 99.491,
+              "medianPercent": 90.2885,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2410.88,
+              "encounter": {
+                "id": 50664,
+                "name": "Magmadar"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 93.359,
+              "totalKills": 44,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3911.03,
+              "encounter": {
+                "id": 50665,
+                "name": "Gehennas"
+              }
+            },
+            {
+              "rankPercent": 99.2364,
+              "medianPercent": 95.1498,
+              "totalKills": 47,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2077.36,
+              "encounter": {
+                "id": 50666,
+                "name": "Garr"
+              }
+            },
+            {
+              "rankPercent": 99.5957,
+              "medianPercent": 84.983,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2377.28,
+              "encounter": {
+                "id": 50667,
+                "name": "Shazzrah"
+              }
+            },
+            {
+              "rankPercent": 99.2792,
+              "medianPercent": 95.3667,
+              "totalKills": 48,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1913.89,
+              "encounter": {
+                "id": 50668,
+                "name": "Baron Geddon"
+              }
+            },
+            {
+              "rankPercent": 99.7042,
+              "medianPercent": 94.9732,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2689.48,
+              "encounter": {
+                "id": 50669,
+                "name": "Sulfuron Harbinger"
+              }
+            },
+            {
+              "rankPercent": 99.61,
+              "medianPercent": 91.5209,
+              "totalKills": 44,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2983.64,
+              "encounter": {
+                "id": 50670,
+                "name": "Golemagg the Incinerator"
+              }
+            },
+            {
+              "rankPercent": 99.7529,
+              "medianPercent": 96.4485,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2825.8,
+              "encounter": {
+                "id": 50671,
+                "name": "Majordomo Executus"
+              }
+            },
+            {
+              "rankPercent": 99.6088,
+              "medianPercent": 93.8718,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2411.04,
+              "encounter": {
+                "id": 50672,
+                "name": "Ragnaros"
+              }
+            }
+          ]
+        },
+        "z2000Healer": {
+          "difficulty": 3,
+          "metric": "hps",
+          "partition": 1,
+          "zone": 2000,
+          "size": 40,
+          "bestPerformanceAverage": null,
+          "medianPerformanceAverage": null,
+          "allStars": [],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50663,
+                "name": "Lucifron"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50664,
+                "name": "Magmadar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50665,
+                "name": "Gehennas"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50666,
+                "name": "Garr"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50667,
+                "name": "Shazzrah"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50668,
+                "name": "Baron Geddon"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50669,
+                "name": "Sulfuron Harbinger"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50670,
+                "name": "Golemagg the Incinerator"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50671,
+                "name": "Majordomo Executus"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50672,
+                "name": "Ragnaros"
+              }
+            }
+          ]
+        },
+        "z2000Tank": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2000,
+          "size": 40,
+          "bestPerformanceAverage": 96.79986,
+          "medianPerformanceAverage": 92.42421,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.3211,
+              "medianPercent": 97.5945,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2117.82,
+              "encounter": {
+                "id": 50663,
+                "name": "Lucifron"
+              }
+            },
+            {
+              "rankPercent": 97.6236,
+              "medianPercent": 90.1506,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1205.38,
+              "encounter": {
+                "id": 50664,
+                "name": "Magmadar"
+              }
+            },
+            {
+              "rankPercent": 99.7695,
+              "medianPercent": 96.5423,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2622.81,
+              "encounter": {
+                "id": 50665,
+                "name": "Gehennas"
+              }
+            },
+            {
+              "rankPercent": 99.3308,
+              "medianPercent": 97.2183,
+              "totalKills": 9,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1747.74,
+              "encounter": {
+                "id": 50666,
+                "name": "Garr"
+              }
+            },
+            {
+              "rankPercent": 89.3687,
+              "medianPercent": 82.6885,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 950.143,
+              "encounter": {
+                "id": 50667,
+                "name": "Shazzrah"
+              }
+            },
+            {
+              "rankPercent": 99.128,
+              "medianPercent": 97.4814,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1104.12,
+              "encounter": {
+                "id": 50668,
+                "name": "Baron Geddon"
+              }
+            },
+            {
+              "rankPercent": 99.0336,
+              "medianPercent": 88.5669,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1107.72,
+              "encounter": {
+                "id": 50669,
+                "name": "Sulfuron Harbinger"
+              }
+            },
+            {
+              "rankPercent": 99.1822,
+              "medianPercent": 95.87,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1401.85,
+              "encounter": {
+                "id": 50670,
+                "name": "Golemagg the Incinerator"
+              }
+            },
+            {
+              "rankPercent": 86.7383,
+              "medianPercent": 86.7383,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 544.803,
+              "encounter": {
+                "id": 50671,
+                "name": "Majordomo Executus"
+              }
+            },
+            {
+              "rankPercent": 98.5028,
+              "medianPercent": 91.3913,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1037.37,
+              "encounter": {
+                "id": 50672,
+                "name": "Ragnaros"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "PrePullEraRankings",
+      "errors": [],
+      "character": {
+        "hidden": false,
+        "z2006DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2006,
+          "size": 40,
+          "bestPerformanceAverage": 99.57171428571428,
+          "medianPerformanceAverage": 91.07714999999999,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.5225,
+              "medianPercent": 89.342,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2167.01,
+              "encounter": {
+                "id": 51118,
+                "name": "Patchwerk"
+              }
+            },
+            {
+              "rankPercent": 99.1711,
+              "medianPercent": 88.3667,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2117.07,
+              "encounter": {
+                "id": 51111,
+                "name": "Grobbulus"
+              }
+            },
+            {
+              "rankPercent": 99.1814,
+              "medianPercent": 84.2895,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2086.45,
+              "encounter": {
+                "id": 51108,
+                "name": "Gluth"
+              }
+            },
+            {
+              "rankPercent": 99.9527,
+              "medianPercent": 80.3427,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3796.42,
+              "encounter": {
+                "id": 51120,
+                "name": "Thaddius"
+              }
+            },
+            {
+              "rankPercent": 99.4531,
+              "medianPercent": 91.9481,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2667.65,
+              "encounter": {
+                "id": 51117,
+                "name": "Noth the Plaguebringer"
+              }
+            },
+            {
+              "rankPercent": 99.391,
+              "medianPercent": 89.9621,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2263.61,
+              "encounter": {
+                "id": 51112,
+                "name": "Heigan the Unclean"
+              }
+            },
+            {
+              "rankPercent": 99.8422,
+              "medianPercent": 98.4478,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2738.88,
+              "encounter": {
+                "id": 51115,
+                "name": "Loatheb"
+              }
+            },
+            {
+              "rankPercent": 99.4943,
+              "medianPercent": 96.1626,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3671.26,
+              "encounter": {
+                "id": 51107,
+                "name": "Anub'Rekhan"
+              }
+            },
+            {
+              "rankPercent": 99.3372,
+              "medianPercent": 94.5911,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2748.35,
+              "encounter": {
+                "id": 51110,
+                "name": "Grand Widow Faerlina"
+              }
+            },
+            {
+              "rankPercent": 99.5255,
+              "medianPercent": 91.9465,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2887.95,
+              "encounter": {
+                "id": 51116,
+                "name": "Maexxna"
+              }
+            },
+            {
+              "rankPercent": 99.4899,
+              "medianPercent": 94.5431,
+              "totalKills": 98,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2300.71,
+              "encounter": {
+                "id": 51113,
+                "name": "Instructor Razuvious"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 95.6959,
+              "totalKills": 96,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1178.2,
+              "encounter": {
+                "id": 51109,
+                "name": "Gothik the Harvester"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 96.524,
+              "totalKills": 95,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1890.76,
+              "encounter": {
+                "id": 51121,
+                "name": "The Four Horsemen"
+              }
+            },
+            {
+              "rankPercent": 99.751,
+              "medianPercent": 95.0994,
+              "totalKills": 99,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 9998.07,
+              "encounter": {
+                "id": 51119,
+                "name": "Sapphiron"
+              }
+            },
+            {
+              "rankPercent": 99.8921,
+              "medianPercent": 83.5145,
+              "totalKills": 97,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2138.65,
+              "encounter": {
+                "id": 51114,
+                "name": "Kel'Thuzad"
+              }
+            }
+          ]
+        },
+        "z2006Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2006,
+          "size": 40,
+          "bestPerformanceAverage": 97.11595714285716,
+          "medianPerformanceAverage": 83.98126428571429,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.1255,
+              "medianPercent": 88.5613,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1198.69,
+              "encounter": {
+                "id": 51118,
+                "name": "Patchwerk"
+              }
+            },
+            {
+              "rankPercent": 99.0904,
+              "medianPercent": 94.564,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1251.1,
+              "encounter": {
+                "id": 51111,
+                "name": "Grobbulus"
+              }
+            },
+            {
+              "rankPercent": 97.6836,
+              "medianPercent": 83.7579,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1082.79,
+              "encounter": {
+                "id": 51108,
+                "name": "Gluth"
+              }
+            },
+            {
+              "rankPercent": 96.1361,
+              "medianPercent": 87.8227,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2061.31,
+              "encounter": {
+                "id": 51120,
+                "name": "Thaddius"
+              }
+            },
+            {
+              "rankPercent": 96.4972,
+              "medianPercent": 87.6019,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1160.92,
+              "encounter": {
+                "id": 51117,
+                "name": "Noth the Plaguebringer"
+              }
+            },
+            {
+              "rankPercent": 99.2178,
+              "medianPercent": 93.4987,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1295.05,
+              "encounter": {
+                "id": 51112,
+                "name": "Heigan the Unclean"
+              }
+            },
+            {
+              "rankPercent": 96.7725,
+              "medianPercent": 91.1326,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 697.018,
+              "encounter": {
+                "id": 51115,
+                "name": "Loatheb"
+              }
+            },
+            {
+              "rankPercent": 97.5991,
+              "medianPercent": 91.1752,
+              "totalKills": 35,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1631.07,
+              "encounter": {
+                "id": 51107,
+                "name": "Anub'Rekhan"
+              }
+            },
+            {
+              "rankPercent": 99.219,
+              "medianPercent": 90.2824,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1662.65,
+              "encounter": {
+                "id": 51110,
+                "name": "Grand Widow Faerlina"
+              }
+            },
+            {
+              "rankPercent": 97.6362,
+              "medianPercent": 93.0165,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1110.32,
+              "encounter": {
+                "id": 51116,
+                "name": "Maexxna"
+              }
+            },
+            {
+              "rankPercent": 88.4814,
+              "medianPercent": 20.074,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 233.929,
+              "encounter": {
+                "id": 51113,
+                "name": "Instructor Razuvious"
+              }
+            },
+            {
+              "rankPercent": 98.6184,
+              "medianPercent": 64.8473,
+              "totalKills": 36,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 405.401,
+              "encounter": {
+                "id": 51109,
+                "name": "Gothik the Harvester"
+              }
+            },
+            {
+              "rankPercent": 99.3259,
+              "medianPercent": 90.1534,
+              "totalKills": 37,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 696.671,
+              "encounter": {
+                "id": 51121,
+                "name": "The Four Horsemen"
+              }
+            },
+            {
+              "rankPercent": 96.9595,
+              "medianPercent": 83.9308,
+              "totalKills": 32,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 687.89,
+              "encounter": {
+                "id": 51119,
+                "name": "Sapphiron"
+              }
+            },
+            {
+              "rankPercent": 95.8792,
+              "medianPercent": 80.1663,
+              "totalKills": 34,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 966.608,
+              "encounter": {
+                "id": 51114,
+                "name": "Kel'Thuzad"
+              }
+            }
+          ]
+        },
+        "z2005DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2005,
+          "size": 40,
+          "bestPerformanceAverage": 99.54146250000001,
+          "medianPerformanceAverage": 96.25731250000001,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.1069,
+              "medianPercent": 95.912,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1348.65,
+              "encounter": {
+                "id": 50709,
+                "name": "The Prophet Skeram"
+              }
+            },
+            {
+              "rankPercent": 99.6337,
+              "medianPercent": 96.6265,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2260.84,
+              "encounter": {
+                "id": 50710,
+                "name": "Silithid Royalty"
+              }
+            },
+            {
+              "rankPercent": 99.5129,
+              "medianPercent": 96.9546,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2491.86,
+              "encounter": {
+                "id": 50711,
+                "name": "Battleguard Sartura"
+              }
+            },
+            {
+              "rankPercent": 99.3446,
+              "medianPercent": 95.194,
+              "totalKills": 53,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2247.38,
+              "encounter": {
+                "id": 50712,
+                "name": "Fankriss the Unyielding"
+              }
+            },
+            {
+              "rankPercent": 99.3083,
+              "medianPercent": 87.33,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 519.305,
+              "encounter": {
+                "id": 50713,
+                "name": "Viscidus"
+              }
+            },
+            {
+              "rankPercent": 99.5207,
+              "medianPercent": 95.2741,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2182.18,
+              "encounter": {
+                "id": 50714,
+                "name": "Princess Huhuran"
+              }
+            },
+            {
+              "rankPercent": 99.516,
+              "medianPercent": 97.9196,
+              "totalKills": 55,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1136.19,
+              "encounter": {
+                "id": 50715,
+                "name": "Twin Emperors"
+              }
+            },
+            {
+              "rankPercent": 99.6969,
+              "medianPercent": 96.8062,
+              "totalKills": 54,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2049.24,
+              "encounter": {
+                "id": 50716,
+                "name": "Ouro"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 95.3715,
+              "totalKills": 59,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1228.17,
+              "encounter": {
+                "id": 50717,
+                "name": "C'Thun"
+              }
+            }
+          ]
+        },
+        "z2005Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2005,
+          "size": 40,
+          "bestPerformanceAverage": 96.95648750000001,
+          "medianPerformanceAverage": 95.1657125,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 96.5441,
+              "medianPercent": 95.1412,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 668.087,
+              "encounter": {
+                "id": 50709,
+                "name": "The Prophet Skeram"
+              }
+            },
+            {
+              "rankPercent": 97.8367,
+              "medianPercent": 96.0063,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 850.122,
+              "encounter": {
+                "id": 50710,
+                "name": "Silithid Royalty"
+              }
+            },
+            {
+              "rankPercent": 95.3356,
+              "medianPercent": 92.8456,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 830.329,
+              "encounter": {
+                "id": 50711,
+                "name": "Battleguard Sartura"
+              }
+            },
+            {
+              "rankPercent": 96.3294,
+              "medianPercent": 95.9355,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 983.806,
+              "encounter": {
+                "id": 50712,
+                "name": "Fankriss the Unyielding"
+              }
+            },
+            {
+              "rankPercent": 97.6625,
+              "medianPercent": 67.8663,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 400.592,
+              "encounter": {
+                "id": 50713,
+                "name": "Viscidus"
+              }
+            },
+            {
+              "rankPercent": 96.1082,
+              "medianPercent": 93.3919,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 927.575,
+              "encounter": {
+                "id": 50714,
+                "name": "Princess Huhuran"
+              }
+            },
+            {
+              "rankPercent": 98.6855,
+              "medianPercent": 97.7588,
+              "totalKills": 5,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 421.373,
+              "encounter": {
+                "id": 50715,
+                "name": "Twin Emperors"
+              }
+            },
+            {
+              "rankPercent": 99,
+              "medianPercent": 94.434,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1094.39,
+              "encounter": {
+                "id": 50716,
+                "name": "Ouro"
+              }
+            },
+            {
+              "rankPercent": 95.8124,
+              "medianPercent": 95.8124,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 422.524,
+              "encounter": {
+                "id": 50717,
+                "name": "C'Thun"
+              }
+            }
+          ]
+        },
+        "z2004DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2004,
+          "size": 20,
+          "bestPerformanceAverage": 92.46925,
+          "medianPerformanceAverage": 85.60365,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 81.0228,
+              "medianPercent": 76.7888,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 605.912,
+              "encounter": {
+                "id": 50718,
+                "name": "Kurinnaxx"
+              }
+            },
+            {
+              "rankPercent": 96.8659,
+              "medianPercent": 91.9299,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 546.032,
+              "encounter": {
+                "id": 50719,
+                "name": "General Rajaxx"
+              }
+            },
+            {
+              "rankPercent": 90.3488,
+              "medianPercent": 87.786,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 954.459,
+              "encounter": {
+                "id": 50720,
+                "name": "Moam"
+              }
+            },
+            {
+              "rankPercent": 98.0726,
+              "medianPercent": 91.7351,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 726.578,
+              "encounter": {
+                "id": 50721,
+                "name": "Buru the Gorger"
+              }
+            },
+            {
+              "rankPercent": 94.1189,
+              "medianPercent": 94.1189,
+              "totalKills": 1,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 366.086,
+              "encounter": {
+                "id": 50722,
+                "name": "Ayamiss the Hunter"
+              }
+            },
+            {
+              "rankPercent": 94.3865,
+              "medianPercent": 71.2632,
+              "totalKills": 2,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 607.584,
+              "encounter": {
+                "id": 50723,
+                "name": "Ossirian the Unscarred"
+              }
+            }
+          ]
+        },
+        "z2004Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2004,
+          "size": 20,
+          "bestPerformanceAverage": 97.806,
+          "medianPerformanceAverage": 97.806,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50718,
+                "name": "Kurinnaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50719,
+                "name": "General Rajaxx"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50720,
+                "name": "Moam"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50721,
+                "name": "Buru the Gorger"
+              }
+            },
+            {
+              "rankPercent": 97.806,
+              "medianPercent": 97.806,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 427.194,
+              "encounter": {
+                "id": 50722,
+                "name": "Ayamiss the Hunter"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50723,
+                "name": "Ossirian the Unscarred"
+              }
+            }
+          ]
+        },
+        "z2003DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2003,
+          "size": 20,
+          "bestPerformanceAverage": 93.51677777777778,
+          "medianPerformanceAverage": 80.0452111111111,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 90.2937,
+              "medianPercent": 73.3535,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 792.631,
+              "encounter": {
+                "id": 50784,
+                "name": "High Priest Venoxis"
+              }
+            },
+            {
+              "rankPercent": 97.2246,
+              "medianPercent": 80.3361,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1064.68,
+              "encounter": {
+                "id": 50785,
+                "name": "High Priestess Jeklik"
+              }
+            },
+            {
+              "rankPercent": 97.0861,
+              "medianPercent": 82.9934,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1089.25,
+              "encounter": {
+                "id": 50786,
+                "name": "High Priestess Mar'li"
+              }
+            },
+            {
+              "rankPercent": 96.0804,
+              "medianPercent": 82.966,
+              "totalKills": 12,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 938.789,
+              "encounter": {
+                "id": 50787,
+                "name": "Bloodlord Mandokir"
+              }
+            },
+            {
+              "rankPercent": 84.6852,
+              "medianPercent": 82.859,
+              "totalKills": 3,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 639.748,
+              "encounter": {
+                "id": 50788,
+                "name": "Edge of Madness"
+              }
+            },
+            {
+              "rankPercent": 97.9744,
+              "medianPercent": 79.733,
+              "totalKills": 10,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1022.73,
+              "encounter": {
+                "id": 50789,
+                "name": "High Priest Thekal"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50790,
+                "name": "Gahz'ranka"
+              }
+            },
+            {
+              "rankPercent": 96.5015,
+              "medianPercent": 85.6033,
+              "totalKills": 11,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1449.31,
+              "encounter": {
+                "id": 50791,
+                "name": "High Priestess Arlokk"
+              }
+            },
+            {
+              "rankPercent": 91.3337,
+              "medianPercent": 76.2289,
+              "totalKills": 9,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 803.412,
+              "encounter": {
+                "id": 50792,
+                "name": "Jin'do the Hexxer"
+              }
+            },
+            {
+              "rankPercent": 90.4714,
+              "medianPercent": 76.3337,
+              "totalKills": 8,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 691.379,
+              "encounter": {
+                "id": 50793,
+                "name": "Hakkar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50794,
+                "name": "Hakkar (Hard Mode)"
+              }
+            }
+          ]
+        },
+        "z2003Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2003,
+          "size": 20,
+          "bestPerformanceAverage": 93.1394375,
+          "medianPerformanceAverage": 86.5426125,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 94.9952,
+              "medianPercent": 94.9952,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 662.496,
+              "encounter": {
+                "id": 50784,
+                "name": "High Priest Venoxis"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50785,
+                "name": "High Priestess Jeklik"
+              }
+            },
+            {
+              "rankPercent": 98.055,
+              "medianPercent": 98.055,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 994.958,
+              "encounter": {
+                "id": 50786,
+                "name": "High Priestess Mar'li"
+              }
+            },
+            {
+              "rankPercent": 93.0843,
+              "medianPercent": 81.0091,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 569.954,
+              "encounter": {
+                "id": 50787,
+                "name": "Bloodlord Mandokir"
+              }
+            },
+            {
+              "rankPercent": 82.5201,
+              "medianPercent": 61.2812,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 475.335,
+              "encounter": {
+                "id": 50788,
+                "name": "Edge of Madness"
+              }
+            },
+            {
+              "rankPercent": 97.5909,
+              "medianPercent": 93.3745,
+              "totalKills": 3,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 742.77,
+              "encounter": {
+                "id": 50789,
+                "name": "High Priest Thekal"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50790,
+                "name": "Gahz'ranka"
+              }
+            },
+            {
+              "rankPercent": 92.0673,
+              "medianPercent": 92.0673,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 984.988,
+              "encounter": {
+                "id": 50791,
+                "name": "High Priestess Arlokk"
+              }
+            },
+            {
+              "rankPercent": 91.1586,
+              "medianPercent": 78.7084,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 773.018,
+              "encounter": {
+                "id": 50792,
+                "name": "Jin'do the Hexxer"
+              }
+            },
+            {
+              "rankPercent": 95.6441,
+              "medianPercent": 92.8502,
+              "totalKills": 3,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 534.331,
+              "encounter": {
+                "id": 50793,
+                "name": "Hakkar"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50794,
+                "name": "Hakkar (Hard Mode)"
+              }
+            }
+          ]
+        },
+        "z2002DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2002,
+          "size": 40,
+          "bestPerformanceAverage": 99.54125,
+          "medianPerformanceAverage": 95.32522499999999,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.3972,
+              "medianPercent": 92.62,
+              "totalKills": 52,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2282.65,
+              "encounter": {
+                "id": 50610,
+                "name": "Razorgore the Untamed"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 96.1708,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 4823.87,
+              "encounter": {
+                "id": 50611,
+                "name": "Vaelastrasz the Corrupt"
+              }
+            },
+            {
+              "rankPercent": 99.5475,
+              "medianPercent": 95.5384,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2152.6,
+              "encounter": {
+                "id": 50612,
+                "name": "Broodlord Lashlayer"
+              }
+            },
+            {
+              "rankPercent": 99.5996,
+              "medianPercent": 95.7918,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2371.93,
+              "encounter": {
+                "id": 50613,
+                "name": "Firemaw"
+              }
+            },
+            {
+              "rankPercent": 99.3496,
+              "medianPercent": 95.932,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1808.7,
+              "encounter": {
+                "id": 50614,
+                "name": "Ebonroc"
+              }
+            },
+            {
+              "rankPercent": 99.2199,
+              "medianPercent": 95.0866,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1681.41,
+              "encounter": {
+                "id": 50615,
+                "name": "Flamegor"
+              }
+            },
+            {
+              "rankPercent": 99.6446,
+              "medianPercent": 95.8895,
+              "totalKills": 51,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1946.42,
+              "encounter": {
+                "id": 50616,
+                "name": "Chromaggus"
+              }
+            },
+            {
+              "rankPercent": 99.5716,
+              "medianPercent": 95.5727,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2134.55,
+              "encounter": {
+                "id": 50617,
+                "name": "Nefarian"
+              }
+            },
+            {
+              "rankPercent": 89.7008308622765,
+              "medianPercent": 89.7008308622765,
+              "totalKills": 1,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1436.82,
+              "encounter": {
+                "id": 50631,
+                "name": "Ebonroc / Flamegor"
+              }
+            }
+          ]
+        },
+        "z2002Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2002,
+          "size": 40,
+          "bestPerformanceAverage": 98.1023375,
+          "medianPerformanceAverage": 91.9983875,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 96.7965,
+              "medianPercent": 67.6366,
+              "totalKills": 7,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 892.631,
+              "encounter": {
+                "id": 50610,
+                "name": "Razorgore the Untamed"
+              }
+            },
+            {
+              "rankPercent": 99.2042,
+              "medianPercent": 95.869,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2244.75,
+              "encounter": {
+                "id": 50611,
+                "name": "Vaelastrasz the Corrupt"
+              }
+            },
+            {
+              "rankPercent": 99.3918,
+              "medianPercent": 96.4327,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1391.5,
+              "encounter": {
+                "id": 50612,
+                "name": "Broodlord Lashlayer"
+              }
+            },
+            {
+              "rankPercent": 99.0773,
+              "medianPercent": 97.2362,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 981.7,
+              "encounter": {
+                "id": 50613,
+                "name": "Firemaw"
+              }
+            },
+            {
+              "rankPercent": 95.8926,
+              "medianPercent": 91.1084,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 739.575,
+              "encounter": {
+                "id": 50614,
+                "name": "Ebonroc"
+              }
+            },
+            {
+              "rankPercent": 97.8771,
+              "medianPercent": 94.6952,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 926.079,
+              "encounter": {
+                "id": 50615,
+                "name": "Flamegor"
+              }
+            },
+            {
+              "rankPercent": 97.7466,
+              "medianPercent": 96.4721,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 911.313,
+              "encounter": {
+                "id": 50616,
+                "name": "Chromaggus"
+              }
+            },
+            {
+              "rankPercent": 98.8326,
+              "medianPercent": 96.5369,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 974.577,
+              "encounter": {
+                "id": 50617,
+                "name": "Nefarian"
+              }
+            },
+            {
+              "rankPercent": null,
+              "medianPercent": null,
+              "totalKills": 0,
+              "spec": null,
+              "bestAmount": 0,
+              "encounter": {
+                "id": 50631,
+                "name": "Ebonroc / Flamegor"
+              }
+            }
+          ]
+        },
+        "z2001Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2001,
+          "size": 40,
+          "bestPerformanceAverage": 91.6666,
+          "medianPerformanceAverage": 68.708,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 91.6666,
+              "medianPercent": 68.708,
+              "totalKills": 2,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 367.206,
+              "encounter": {
+                "id": 51084,
+                "name": "Onyxia"
+              }
+            }
+          ]
+        },
+        "z2000DPSs0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2000,
+          "size": 40,
+          "bestPerformanceAverage": 99.59358,
+          "medianPerformanceAverage": 93.19715,
+          "allStars": [
+            {
+              "spec": "Fury",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.6576,
+              "medianPercent": 96.0101,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3551.98,
+              "encounter": {
+                "id": 50663,
+                "name": "Lucifron"
+              }
+            },
+            {
+              "rankPercent": 99.491,
+              "medianPercent": 90.2885,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2410.88,
+              "encounter": {
+                "id": 50664,
+                "name": "Magmadar"
+              }
+            },
+            {
+              "rankPercent": 100,
+              "medianPercent": 93.359,
+              "totalKills": 44,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 3911.03,
+              "encounter": {
+                "id": 50665,
+                "name": "Gehennas"
+              }
+            },
+            {
+              "rankPercent": 99.2364,
+              "medianPercent": 95.1498,
+              "totalKills": 47,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2077.36,
+              "encounter": {
+                "id": 50666,
+                "name": "Garr"
+              }
+            },
+            {
+              "rankPercent": 99.5957,
+              "medianPercent": 84.983,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2377.28,
+              "encounter": {
+                "id": 50667,
+                "name": "Shazzrah"
+              }
+            },
+            {
+              "rankPercent": 99.2792,
+              "medianPercent": 95.3667,
+              "totalKills": 48,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 1913.89,
+              "encounter": {
+                "id": 50668,
+                "name": "Baron Geddon"
+              }
+            },
+            {
+              "rankPercent": 99.7042,
+              "medianPercent": 94.9732,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2689.48,
+              "encounter": {
+                "id": 50669,
+                "name": "Sulfuron Harbinger"
+              }
+            },
+            {
+              "rankPercent": 99.61,
+              "medianPercent": 91.5209,
+              "totalKills": 44,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2983.64,
+              "encounter": {
+                "id": 50670,
+                "name": "Golemagg the Incinerator"
+              }
+            },
+            {
+              "rankPercent": 99.7529,
+              "medianPercent": 96.4485,
+              "totalKills": 50,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2825.8,
+              "encounter": {
+                "id": 50671,
+                "name": "Majordomo Executus"
+              }
+            },
+            {
+              "rankPercent": 99.6088,
+              "medianPercent": 93.8718,
+              "totalKills": 45,
+              "spec": "Fury",
+              "bestSpec": "Fury",
+              "bestAmount": 2411.04,
+              "encounter": {
+                "id": 50672,
+                "name": "Ragnaros"
+              }
+            }
+          ]
+        },
+        "z2000Tanks0": {
+          "difficulty": 3,
+          "metric": "dps",
+          "partition": 1,
+          "zone": 2000,
+          "size": 40,
+          "bestPerformanceAverage": 96.79986,
+          "medianPerformanceAverage": 92.42421,
+          "allStars": [
+            {
+              "spec": "Protection",
+              "partition": 1
+            }
+          ],
+          "rankings": [
+            {
+              "rankPercent": 99.3211,
+              "medianPercent": 97.5945,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2117.82,
+              "encounter": {
+                "id": 50663,
+                "name": "Lucifron"
+              }
+            },
+            {
+              "rankPercent": 97.6236,
+              "medianPercent": 90.1506,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1205.38,
+              "encounter": {
+                "id": 50664,
+                "name": "Magmadar"
+              }
+            },
+            {
+              "rankPercent": 99.7695,
+              "medianPercent": 96.5423,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 2622.81,
+              "encounter": {
+                "id": 50665,
+                "name": "Gehennas"
+              }
+            },
+            {
+              "rankPercent": 99.3308,
+              "medianPercent": 97.2183,
+              "totalKills": 9,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1747.74,
+              "encounter": {
+                "id": 50666,
+                "name": "Garr"
+              }
+            },
+            {
+              "rankPercent": 89.3687,
+              "medianPercent": 82.6885,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 950.143,
+              "encounter": {
+                "id": 50667,
+                "name": "Shazzrah"
+              }
+            },
+            {
+              "rankPercent": 99.128,
+              "medianPercent": 97.4814,
+              "totalKills": 8,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1104.12,
+              "encounter": {
+                "id": 50668,
+                "name": "Baron Geddon"
+              }
+            },
+            {
+              "rankPercent": 99.0336,
+              "medianPercent": 88.5669,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1107.72,
+              "encounter": {
+                "id": 50669,
+                "name": "Sulfuron Harbinger"
+              }
+            },
+            {
+              "rankPercent": 99.1822,
+              "medianPercent": 95.87,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1401.85,
+              "encounter": {
+                "id": 50670,
+                "name": "Golemagg the Incinerator"
+              }
+            },
+            {
+              "rankPercent": 86.7383,
+              "medianPercent": 86.7383,
+              "totalKills": 1,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 544.803,
+              "encounter": {
+                "id": 50671,
+                "name": "Majordomo Executus"
+              }
+            },
+            {
+              "rankPercent": 98.5028,
+              "medianPercent": 91.3913,
+              "totalKills": 6,
+              "spec": "Protection",
+              "bestSpec": "Protection",
+              "bestAmount": 1037.37,
+              "encounter": {
+                "id": 50672,
+                "name": "Ragnaros"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "auditedAt": "2026-09-19T12:19:32.520Z",
+  "context": "vanilla",
+  "requestedIdentity": {
+    "region": "eu",
+    "realm": "firemaw",
+    "name": "kankan"
+  }
+}

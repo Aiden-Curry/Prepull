@@ -1,0 +1,400 @@
+{
+  "context": "vanilla",
+  "zoneId": 2006,
+  "partition": 1,
+  "errors": [],
+  "fury": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2006,
+    "size": 40,
+    "bestPerformanceAverage": 99.57171428571428,
+    "medianPerformanceAverage": 91.07714999999999,
+    "allStars": [
+      {
+        "spec": "Fury",
+        "partition": 1
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": 99.5225,
+        "medianPercent": 89.342,
+        "totalKills": 96,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2167.01,
+        "encounter": {
+          "id": 51118,
+          "name": "Patchwerk"
+        }
+      },
+      {
+        "rankPercent": 99.1711,
+        "medianPercent": 88.3667,
+        "totalKills": 97,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2117.07,
+        "encounter": {
+          "id": 51111,
+          "name": "Grobbulus"
+        }
+      },
+      {
+        "rankPercent": 99.1814,
+        "medianPercent": 84.2895,
+        "totalKills": 98,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2086.45,
+        "encounter": {
+          "id": 51108,
+          "name": "Gluth"
+        }
+      },
+      {
+        "rankPercent": 99.9527,
+        "medianPercent": 80.3427,
+        "totalKills": 96,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3796.42,
+        "encounter": {
+          "id": 51120,
+          "name": "Thaddius"
+        }
+      },
+      {
+        "rankPercent": 99.4531,
+        "medianPercent": 91.9481,
+        "totalKills": 98,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2667.65,
+        "encounter": {
+          "id": 51117,
+          "name": "Noth the Plaguebringer"
+        }
+      },
+      {
+        "rankPercent": 99.391,
+        "medianPercent": 89.9621,
+        "totalKills": 98,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2263.61,
+        "encounter": {
+          "id": 51112,
+          "name": "Heigan the Unclean"
+        }
+      },
+      {
+        "rankPercent": 99.8422,
+        "medianPercent": 98.4478,
+        "totalKills": 97,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2738.88,
+        "encounter": {
+          "id": 51115,
+          "name": "Loatheb"
+        }
+      },
+      {
+        "rankPercent": 99.4943,
+        "medianPercent": 96.1626,
+        "totalKills": 97,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3671.26,
+        "encounter": {
+          "id": 51107,
+          "name": "Anub'Rekhan"
+        }
+      },
+      {
+        "rankPercent": 99.3372,
+        "medianPercent": 94.5911,
+        "totalKills": 96,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2748.35,
+        "encounter": {
+          "id": 51110,
+          "name": "Grand Widow Faerlina"
+        }
+      },
+      {
+        "rankPercent": 99.5255,
+        "medianPercent": 91.9465,
+        "totalKills": 97,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2887.95,
+        "encounter": {
+          "id": 51116,
+          "name": "Maexxna"
+        }
+      },
+      {
+        "rankPercent": 99.4899,
+        "medianPercent": 94.5431,
+        "totalKills": 98,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2300.71,
+        "encounter": {
+          "id": 51113,
+          "name": "Instructor Razuvious"
+        }
+      },
+      {
+        "rankPercent": 100,
+        "medianPercent": 95.6959,
+        "totalKills": 96,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 1178.2,
+        "encounter": {
+          "id": 51109,
+          "name": "Gothik the Harvester"
+        }
+      },
+      {
+        "rankPercent": 100,
+        "medianPercent": 96.524,
+        "totalKills": 95,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 1890.76,
+        "encounter": {
+          "id": 51121,
+          "name": "The Four Horsemen"
+        }
+      },
+      {
+        "rankPercent": 99.751,
+        "medianPercent": 95.0994,
+        "totalKills": 99,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 9998.07,
+        "encounter": {
+          "id": 51119,
+          "name": "Sapphiron"
+        }
+      },
+      {
+        "rankPercent": 99.8921,
+        "medianPercent": 83.5145,
+        "totalKills": 97,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2138.65,
+        "encounter": {
+          "id": 51114,
+          "name": "Kel'Thuzad"
+        }
+      }
+    ]
+  },
+  "protection": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2006,
+    "size": 40,
+    "bestPerformanceAverage": 97.11595714285716,
+    "medianPerformanceAverage": 83.98126428571429,
+    "allStars": [
+      {
+        "spec": "Protection",
+        "partition": 1
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": 99.1255,
+        "medianPercent": 88.5613,
+        "totalKills": 36,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1198.69,
+        "encounter": {
+          "id": 51118,
+          "name": "Patchwerk"
+        }
+      },
+      {
+        "rankPercent": 99.0904,
+        "medianPercent": 94.564,
+        "totalKills": 35,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1251.1,
+        "encounter": {
+          "id": 51111,
+          "name": "Grobbulus"
+        }
+      },
+      {
+        "rankPercent": 97.6836,
+        "medianPercent": 83.7579,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1082.79,
+        "encounter": {
+          "id": 51108,
+          "name": "Gluth"
+        }
+      },
+      {
+        "rankPercent": 96.1361,
+        "medianPercent": 87.8227,
+        "totalKills": 36,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 2061.31,
+        "encounter": {
+          "id": 51120,
+          "name": "Thaddius"
+        }
+      },
+      {
+        "rankPercent": 96.4972,
+        "medianPercent": 87.6019,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1160.92,
+        "encounter": {
+          "id": 51117,
+          "name": "Noth the Plaguebringer"
+        }
+      },
+      {
+        "rankPercent": 99.2178,
+        "medianPercent": 93.4987,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1295.05,
+        "encounter": {
+          "id": 51112,
+          "name": "Heigan the Unclean"
+        }
+      },
+      {
+        "rankPercent": 96.7725,
+        "medianPercent": 91.1326,
+        "totalKills": 35,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 697.018,
+        "encounter": {
+          "id": 51115,
+          "name": "Loatheb"
+        }
+      },
+      {
+        "rankPercent": 97.5991,
+        "medianPercent": 91.1752,
+        "totalKills": 35,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1631.07,
+        "encounter": {
+          "id": 51107,
+          "name": "Anub'Rekhan"
+        }
+      },
+      {
+        "rankPercent": 99.219,
+        "medianPercent": 90.2824,
+        "totalKills": 36,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1662.65,
+        "encounter": {
+          "id": 51110,
+          "name": "Grand Widow Faerlina"
+        }
+      },
+      {
+        "rankPercent": 97.6362,
+        "medianPercent": 93.0165,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1110.32,
+        "encounter": {
+          "id": 51116,
+          "name": "Maexxna"
+        }
+      },
+      {
+        "rankPercent": 88.4814,
+        "medianPercent": 20.074,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 233.929,
+        "encounter": {
+          "id": 51113,
+          "name": "Instructor Razuvious"
+        }
+      },
+      {
+        "rankPercent": 98.6184,
+        "medianPercent": 64.8473,
+        "totalKills": 36,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 405.401,
+        "encounter": {
+          "id": 51109,
+          "name": "Gothik the Harvester"
+        }
+      },
+      {
+        "rankPercent": 99.3259,
+        "medianPercent": 90.1534,
+        "totalKills": 37,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 696.671,
+        "encounter": {
+          "id": 51121,
+          "name": "The Four Horsemen"
+        }
+      },
+      {
+        "rankPercent": 96.9595,
+        "medianPercent": 83.9308,
+        "totalKills": 32,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 687.89,
+        "encounter": {
+          "id": 51119,
+          "name": "Sapphiron"
+        }
+      },
+      {
+        "rankPercent": 95.8792,
+        "medianPercent": 80.1663,
+        "totalKills": 34,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 966.608,
+        "encounter": {
+          "id": 51114,
+          "name": "Kel'Thuzad"
+        }
+      }
+    ]
+  }
+}

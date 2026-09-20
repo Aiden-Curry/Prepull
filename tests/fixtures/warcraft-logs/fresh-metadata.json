@@ -1,0 +1,2971 @@
+{
+  "auditedAt": "2026-09-18T22:11:09.185Z",
+  "context": "fresh",
+  "endpoint": "https://fresh.warcraftlogs.com/api/v2/client",
+  "requestedIdentity": {
+    "region": "eu",
+    "realm": "spineshatter",
+    "name": "carlisha"
+  },
+  "character": {
+    "id": 112198482,
+    "canonicalID": 112198482,
+    "name": "Carlisha",
+    "level": 70,
+    "hidden": false,
+    "server": {
+      "id": 5216,
+      "name": "Spineshatter",
+      "slug": "spineshatter",
+      "region": {
+        "id": 7,
+        "name": "Europe",
+        "slug": "EU",
+        "compactName": "EU"
+      }
+    }
+  },
+  "zones": [
+    {
+      "id": 1054,
+      "name": "Siege of Orgrimmar",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1/2",
+          "compactName": "P1/P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3.5",
+          "compactName": "P3.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 5",
+          "compactName": "P5",
+          "default": true
+        }
+      ],
+      "encounters": [
+        {
+          "id": 51602,
+          "name": "Immerseus",
+          "journalID": 0
+        },
+        {
+          "id": 51598,
+          "name": "Fallen Protectors",
+          "journalID": 0
+        },
+        {
+          "id": 51624,
+          "name": "Norushen",
+          "journalID": 0
+        },
+        {
+          "id": 51604,
+          "name": "Sha of Pride",
+          "journalID": 0
+        },
+        {
+          "id": 51622,
+          "name": "Galakras",
+          "journalID": 0
+        },
+        {
+          "id": 51600,
+          "name": "Iron Juggernaut",
+          "journalID": 0
+        },
+        {
+          "id": 51606,
+          "name": "Kor'kron Dark Shaman",
+          "journalID": 0
+        },
+        {
+          "id": 51603,
+          "name": "General Nazgrim",
+          "journalID": 0
+        },
+        {
+          "id": 51595,
+          "name": "Malkorok",
+          "journalID": 0
+        },
+        {
+          "id": 51594,
+          "name": "Spoils of Pandaria",
+          "journalID": 0
+        },
+        {
+          "id": 51599,
+          "name": "Thok the Bloodthirsty",
+          "journalID": 0
+        },
+        {
+          "id": 51601,
+          "name": "Siegecrafter Blackfuse",
+          "journalID": 0
+        },
+        {
+          "id": 51593,
+          "name": "Paragons of the Klaxxi",
+          "journalID": 0
+        },
+        {
+          "id": 51623,
+          "name": "Garrosh Hellscream",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1046,
+      "name": "Throne of Thunder",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1/2",
+          "compactName": "P1/P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3.5",
+          "compactName": "P3.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": true
+        },
+        {
+          "id": 5,
+          "name": "Phase 5",
+          "compactName": "P5",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 51577,
+          "name": "Jin'rokh the Breaker",
+          "journalID": 0
+        },
+        {
+          "id": 51575,
+          "name": "Horridon",
+          "journalID": 0
+        },
+        {
+          "id": 51570,
+          "name": "Council of Elders",
+          "journalID": 0
+        },
+        {
+          "id": 51565,
+          "name": "Tortos",
+          "journalID": 0
+        },
+        {
+          "id": 51578,
+          "name": "Megaera",
+          "journalID": 0
+        },
+        {
+          "id": 51573,
+          "name": "Ji-Kun",
+          "journalID": 0
+        },
+        {
+          "id": 51572,
+          "name": "Durumu the Forgotten",
+          "journalID": 0
+        },
+        {
+          "id": 51574,
+          "name": "Primordius",
+          "journalID": 0
+        },
+        {
+          "id": 51576,
+          "name": "Dark Animus",
+          "journalID": 0
+        },
+        {
+          "id": 51559,
+          "name": "Iron Qon",
+          "journalID": 0
+        },
+        {
+          "id": 51560,
+          "name": "Twin Empyreans",
+          "journalID": 0
+        },
+        {
+          "id": 51579,
+          "name": "Lei Shen",
+          "journalID": 0
+        },
+        {
+          "id": 51580,
+          "name": "Ra-den",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1040,
+      "name": "HoF / ToES",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1/2",
+          "compactName": "P1/P2",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3.5",
+          "compactName": "P3.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 5",
+          "compactName": "P5",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1507,
+          "name": "Imperial Vizier Zor'lok",
+          "journalID": 0
+        },
+        {
+          "id": 1504,
+          "name": "Blade Lord Ta'yak",
+          "journalID": 0
+        },
+        {
+          "id": 1463,
+          "name": "Garalon",
+          "journalID": 0
+        },
+        {
+          "id": 1498,
+          "name": "Wind Lord Mel'jarak",
+          "journalID": 0
+        },
+        {
+          "id": 1499,
+          "name": "Amber-Shaper Un'sok",
+          "journalID": 0
+        },
+        {
+          "id": 1501,
+          "name": "Grand Empress Shek'zeer",
+          "journalID": 0
+        },
+        {
+          "id": 1409,
+          "name": "Protectors of the Endless",
+          "journalID": 0
+        },
+        {
+          "id": 1505,
+          "name": "Tsulong",
+          "journalID": 0
+        },
+        {
+          "id": 1506,
+          "name": "Lei Shi",
+          "journalID": 0
+        },
+        {
+          "id": 1431,
+          "name": "Sha of Fear",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1039,
+      "name": "Challenge Modes",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1/2",
+          "compactName": "P1/P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3.5",
+          "compactName": "P3.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 5",
+          "compactName": "P5",
+          "default": true
+        }
+      ],
+      "encounters": [
+        {
+          "id": 10962,
+          "name": "Gate of the Setting Sun",
+          "journalID": 0
+        },
+        {
+          "id": 10994,
+          "name": "Mogu'shan Palace",
+          "journalID": 0
+        },
+        {
+          "id": 11001,
+          "name": "Scarlet Halls",
+          "journalID": 0
+        },
+        {
+          "id": 11004,
+          "name": "Scarlet Monastery",
+          "journalID": 0
+        },
+        {
+          "id": 11007,
+          "name": "Scholomance",
+          "journalID": 0
+        },
+        {
+          "id": 10959,
+          "name": "Shado-Pan Monastery",
+          "journalID": 0
+        },
+        {
+          "id": 11011,
+          "name": "Siege of Niuzao Temple",
+          "journalID": 0
+        },
+        {
+          "id": 10961,
+          "name": "Stormstout Brewery",
+          "journalID": 0
+        },
+        {
+          "id": 60960,
+          "name": "Temple of the Jade Serpent",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1038,
+      "name": "Mogu'shan Vaults",
+      "frozen": false,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1/2",
+          "compactName": "P1/P2",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3.5",
+          "compactName": "P3.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 5",
+          "compactName": "P5",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1395,
+          "name": "The Stone Guard",
+          "journalID": 0
+        },
+        {
+          "id": 1390,
+          "name": "Feng the Accursed",
+          "journalID": 0
+        },
+        {
+          "id": 1434,
+          "name": "Gara'jal the Spiritbinder",
+          "journalID": 0
+        },
+        {
+          "id": 1436,
+          "name": "The Spirit Kings",
+          "journalID": 0
+        },
+        {
+          "id": 1500,
+          "name": "Elegon",
+          "journalID": 0
+        },
+        {
+          "id": 1407,
+          "name": "Will of the Emperor",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1033,
+      "name": "Dragon Soul",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1292,
+          "name": "Morchok",
+          "journalID": 0
+        },
+        {
+          "id": 1294,
+          "name": "Warlord Zon'ozz",
+          "journalID": 0
+        },
+        {
+          "id": 1295,
+          "name": "Yor'sahj the Unsleeping",
+          "journalID": 0
+        },
+        {
+          "id": 1296,
+          "name": "Hagara the Stormbinder",
+          "journalID": 0
+        },
+        {
+          "id": 1297,
+          "name": "Ultraxion",
+          "journalID": 0
+        },
+        {
+          "id": 1298,
+          "name": "Warmaster Blackhorn",
+          "journalID": 0
+        },
+        {
+          "id": 1291,
+          "name": "Spine of Deathwing",
+          "journalID": 0
+        },
+        {
+          "id": 1299,
+          "name": "Madness of Deathwing",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1027,
+      "name": "Firelands",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1205,
+          "name": "Shannox",
+          "journalID": 0
+        },
+        {
+          "id": 1204,
+          "name": "Lord Rhyolith",
+          "journalID": 0
+        },
+        {
+          "id": 1197,
+          "name": "Beth'tilac",
+          "journalID": 0
+        },
+        {
+          "id": 1206,
+          "name": "Alysrazor",
+          "journalID": 0
+        },
+        {
+          "id": 1200,
+          "name": "Baleroc",
+          "journalID": 0
+        },
+        {
+          "id": 1185,
+          "name": "Majordomo Staghelm",
+          "journalID": 0
+        },
+        {
+          "id": 1203,
+          "name": "Ragnaros",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1024,
+      "name": "Baradin Hold",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1033,
+          "name": "Argaloth",
+          "journalID": 0
+        },
+        {
+          "id": 1250,
+          "name": "Occu'thar",
+          "journalID": 0
+        },
+        {
+          "id": 1332,
+          "name": "Alizabal",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1023,
+      "name": "TotFW / BWD / BoT",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1035,
+          "name": "Conclave of Wind",
+          "journalID": 0
+        },
+        {
+          "id": 1034,
+          "name": "Al'Akir",
+          "journalID": 0
+        },
+        {
+          "id": 1027,
+          "name": "Omnotron Defense System",
+          "journalID": 0
+        },
+        {
+          "id": 1024,
+          "name": "Magmaw",
+          "journalID": 0
+        },
+        {
+          "id": 1022,
+          "name": "Atramedes",
+          "journalID": 0
+        },
+        {
+          "id": 1023,
+          "name": "Chimaeron",
+          "journalID": 0
+        },
+        {
+          "id": 1025,
+          "name": "Maloriak",
+          "journalID": 0
+        },
+        {
+          "id": 1026,
+          "name": "Nefarian's End",
+          "journalID": 0
+        },
+        {
+          "id": 1030,
+          "name": "Halfus Wyrmbreaker",
+          "journalID": 0
+        },
+        {
+          "id": 1032,
+          "name": "Theralion and Valiona",
+          "journalID": 0
+        },
+        {
+          "id": 1028,
+          "name": "Ascendant Council",
+          "journalID": 0
+        },
+        {
+          "id": 1029,
+          "name": "Cho'gall",
+          "journalID": 0
+        },
+        {
+          "id": 1082,
+          "name": "Sinestra",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1021,
+      "name": "Ruby Sanctum",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 887,
+          "name": "Halion",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1020,
+      "name": "Icecrown Citadel",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 845,
+          "name": "Lord Marrowgar",
+          "journalID": 0
+        },
+        {
+          "id": 846,
+          "name": "Lady Deathwhisper",
+          "journalID": 0
+        },
+        {
+          "id": 847,
+          "name": "Icecrown Gunship Battle",
+          "journalID": 0
+        },
+        {
+          "id": 848,
+          "name": "Deathbringer Saurfang",
+          "journalID": 0
+        },
+        {
+          "id": 849,
+          "name": "Festergut",
+          "journalID": 0
+        },
+        {
+          "id": 850,
+          "name": "Rotface",
+          "journalID": 0
+        },
+        {
+          "id": 851,
+          "name": "Professor Putricide",
+          "journalID": 0
+        },
+        {
+          "id": 852,
+          "name": "Blood Council",
+          "journalID": 0
+        },
+        {
+          "id": 853,
+          "name": "Queen Lana'thel",
+          "journalID": 0
+        },
+        {
+          "id": 854,
+          "name": "Valithria Dreamwalker",
+          "journalID": 0
+        },
+        {
+          "id": 855,
+          "name": "Sindragosa",
+          "journalID": 0
+        },
+        {
+          "id": 856,
+          "name": "The Lich King",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1019,
+      "name": "Onyxia",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 101084,
+          "name": "Onyxia",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1018,
+      "name": "Trial of the Crusader",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 629,
+          "name": "Northrend Beasts",
+          "journalID": 0
+        },
+        {
+          "id": 633,
+          "name": "Lord Jaraxxus",
+          "journalID": 0
+        },
+        {
+          "id": 637,
+          "name": "Faction Champions",
+          "journalID": 0
+        },
+        {
+          "id": 641,
+          "name": "Val'kyr Twins",
+          "journalID": 0
+        },
+        {
+          "id": 645,
+          "name": "Anub'arak",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1017,
+      "name": "Ulduar",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 744,
+          "name": "Flame Leviathan",
+          "journalID": 0
+        },
+        {
+          "id": 745,
+          "name": "Ignis the Furnace Master",
+          "journalID": 0
+        },
+        {
+          "id": 746,
+          "name": "Razorscale",
+          "journalID": 0
+        },
+        {
+          "id": 747,
+          "name": "XT-002 Deconstructor",
+          "journalID": 0
+        },
+        {
+          "id": 748,
+          "name": "The Iron Council",
+          "journalID": 0
+        },
+        {
+          "id": 749,
+          "name": "Kologarn",
+          "journalID": 0
+        },
+        {
+          "id": 750,
+          "name": "Auriaya",
+          "journalID": 0
+        },
+        {
+          "id": 751,
+          "name": "Hodir",
+          "journalID": 0
+        },
+        {
+          "id": 752,
+          "name": "Thorim",
+          "journalID": 0
+        },
+        {
+          "id": 753,
+          "name": "Freya",
+          "journalID": 0
+        },
+        {
+          "id": 754,
+          "name": "Mimiron",
+          "journalID": 0
+        },
+        {
+          "id": 755,
+          "name": "General Vezax",
+          "journalID": 0
+        },
+        {
+          "id": 756,
+          "name": "Yogg-Saron",
+          "journalID": 0
+        },
+        {
+          "id": 757,
+          "name": "Algalon the Observer",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1016,
+      "name": "Vault of Archavon",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 772,
+          "name": "Archavon the Stone Watcher",
+          "journalID": 0
+        },
+        {
+          "id": 774,
+          "name": "Emalon the Storm Watcher",
+          "journalID": 0
+        },
+        {
+          "id": 776,
+          "name": "Koralon the Flame Watcher",
+          "journalID": 0
+        },
+        {
+          "id": 885,
+          "name": "Toravon the Ice Watcher",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1015,
+      "name": "Naxx / Sarth / Maly",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 101118,
+          "name": "Patchwerk",
+          "journalID": 0
+        },
+        {
+          "id": 101111,
+          "name": "Grobbulus",
+          "journalID": 0
+        },
+        {
+          "id": 101108,
+          "name": "Gluth",
+          "journalID": 0
+        },
+        {
+          "id": 101120,
+          "name": "Thaddius",
+          "journalID": 0
+        },
+        {
+          "id": 101117,
+          "name": "Noth the Plaguebringer",
+          "journalID": 0
+        },
+        {
+          "id": 101112,
+          "name": "Heigan the Unclean",
+          "journalID": 0
+        },
+        {
+          "id": 101115,
+          "name": "Loatheb",
+          "journalID": 0
+        },
+        {
+          "id": 101107,
+          "name": "Anub'Rekhan",
+          "journalID": 0
+        },
+        {
+          "id": 101110,
+          "name": "Grand Widow Faerlina",
+          "journalID": 0
+        },
+        {
+          "id": 101116,
+          "name": "Maexxna",
+          "journalID": 0
+        },
+        {
+          "id": 101113,
+          "name": "Instructor Razuvious",
+          "journalID": 0
+        },
+        {
+          "id": 101109,
+          "name": "Gothik the Harvester",
+          "journalID": 0
+        },
+        {
+          "id": 101121,
+          "name": "The Four Horsemen",
+          "journalID": 0
+        },
+        {
+          "id": 101119,
+          "name": "Sapphiron",
+          "journalID": 0
+        },
+        {
+          "id": 101114,
+          "name": "Kel'Thuzad",
+          "journalID": 0
+        },
+        {
+          "id": 742,
+          "name": "Sartharion",
+          "journalID": 0
+        },
+        {
+          "id": 734,
+          "name": "Malygos",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "name": "Sunwell Plateau",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 724,
+          "name": "Kalecgos",
+          "journalID": 0
+        },
+        {
+          "id": 725,
+          "name": "Brutallus",
+          "journalID": 0
+        },
+        {
+          "id": 726,
+          "name": "Felmyst",
+          "journalID": 0
+        },
+        {
+          "id": 727,
+          "name": "Eredar Twins",
+          "journalID": 0
+        },
+        {
+          "id": 728,
+          "name": "M'uru",
+          "journalID": 0
+        },
+        {
+          "id": 729,
+          "name": "Kil'jaeden",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "name": "BT / Hyjal",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 601,
+          "name": "High Warlord Naj'entus",
+          "journalID": 0
+        },
+        {
+          "id": 602,
+          "name": "Supremus",
+          "journalID": 0
+        },
+        {
+          "id": 603,
+          "name": "Shade of Akama",
+          "journalID": 0
+        },
+        {
+          "id": 604,
+          "name": "Teron Gorefiend",
+          "journalID": 0
+        },
+        {
+          "id": 605,
+          "name": "Gurtogg Bloodboil",
+          "journalID": 0
+        },
+        {
+          "id": 606,
+          "name": "Reliquary of Souls",
+          "journalID": 0
+        },
+        {
+          "id": 607,
+          "name": "Mother Shahraz",
+          "journalID": 0
+        },
+        {
+          "id": 608,
+          "name": "The Illidari Council",
+          "journalID": 0
+        },
+        {
+          "id": 609,
+          "name": "Illidan Stormrage",
+          "journalID": 0
+        },
+        {
+          "id": 618,
+          "name": "Rage Winterchill",
+          "journalID": 0
+        },
+        {
+          "id": 619,
+          "name": "Anetheron",
+          "journalID": 0
+        },
+        {
+          "id": 620,
+          "name": "Kaz'rogal",
+          "journalID": 0
+        },
+        {
+          "id": 621,
+          "name": "Azgalor",
+          "journalID": 0
+        },
+        {
+          "id": 622,
+          "name": "Archimonde",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "name": "SSC / TK",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": true
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 623,
+          "name": "Hydross the Unstable",
+          "journalID": 0
+        },
+        {
+          "id": 624,
+          "name": "The Lurker Below",
+          "journalID": 0
+        },
+        {
+          "id": 625,
+          "name": "Leotheras the Blind",
+          "journalID": 0
+        },
+        {
+          "id": 626,
+          "name": "Fathom-Lord Karathress",
+          "journalID": 0
+        },
+        {
+          "id": 627,
+          "name": "Morogrim Tidewalker",
+          "journalID": 0
+        },
+        {
+          "id": 628,
+          "name": "Lady Vashj",
+          "journalID": 0
+        },
+        {
+          "id": 730,
+          "name": "Al'ar",
+          "journalID": 0
+        },
+        {
+          "id": 731,
+          "name": "Void Reaver",
+          "journalID": 0
+        },
+        {
+          "id": 732,
+          "name": "High Astromancer Solarian",
+          "journalID": 0
+        },
+        {
+          "id": 733,
+          "name": "Kael'thas Sunstrider",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "name": "Gruul / Magtheridon",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 649,
+          "name": "High King Maulgar",
+          "journalID": 0
+        },
+        {
+          "id": 650,
+          "name": "Gruul the Dragonkiller",
+          "journalID": 0
+        },
+        {
+          "id": 651,
+          "name": "Magtheridon",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "name": "Naxxramas",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1118,
+          "name": "Patchwerk",
+          "journalID": 0
+        },
+        {
+          "id": 1111,
+          "name": "Grobbulus",
+          "journalID": 0
+        },
+        {
+          "id": 1108,
+          "name": "Gluth",
+          "journalID": 0
+        },
+        {
+          "id": 1120,
+          "name": "Thaddius",
+          "journalID": 0
+        },
+        {
+          "id": 1117,
+          "name": "Noth the Plaguebringer",
+          "journalID": 0
+        },
+        {
+          "id": 1112,
+          "name": "Heigan the Unclean",
+          "journalID": 0
+        },
+        {
+          "id": 1115,
+          "name": "Loatheb",
+          "journalID": 0
+        },
+        {
+          "id": 1107,
+          "name": "Anub'Rekhan",
+          "journalID": 0
+        },
+        {
+          "id": 1110,
+          "name": "Grand Widow Faerlina",
+          "journalID": 0
+        },
+        {
+          "id": 1116,
+          "name": "Maexxna",
+          "journalID": 0
+        },
+        {
+          "id": 1113,
+          "name": "Instructor Razuvious",
+          "journalID": 0
+        },
+        {
+          "id": 1109,
+          "name": "Gothik the Harvester",
+          "journalID": 0
+        },
+        {
+          "id": 1121,
+          "name": "The Four Horsemen",
+          "journalID": 0
+        },
+        {
+          "id": 1119,
+          "name": "Sapphiron",
+          "journalID": 0
+        },
+        {
+          "id": 1114,
+          "name": "Kel'Thuzad",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "name": "Temple of Ahn'Qiraj",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 709,
+          "name": "The Prophet Skeram",
+          "journalID": 0
+        },
+        {
+          "id": 710,
+          "name": "Silithid Royalty",
+          "journalID": 0
+        },
+        {
+          "id": 711,
+          "name": "Battleguard Sartura",
+          "journalID": 0
+        },
+        {
+          "id": 712,
+          "name": "Fankriss the Unyielding",
+          "journalID": 0
+        },
+        {
+          "id": 713,
+          "name": "Viscidus",
+          "journalID": 0
+        },
+        {
+          "id": 714,
+          "name": "Princess Huhuran",
+          "journalID": 0
+        },
+        {
+          "id": 715,
+          "name": "Twin Emperors",
+          "journalID": 0
+        },
+        {
+          "id": 716,
+          "name": "Ouro",
+          "journalID": 0
+        },
+        {
+          "id": 717,
+          "name": "C'Thun",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "Ruins of Ahn'Qiraj",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 718,
+          "name": "Kurinnaxx",
+          "journalID": 0
+        },
+        {
+          "id": 719,
+          "name": "General Rajaxx",
+          "journalID": 0
+        },
+        {
+          "id": 720,
+          "name": "Moam",
+          "journalID": 0
+        },
+        {
+          "id": 721,
+          "name": "Buru the Gorger",
+          "journalID": 0
+        },
+        {
+          "id": 722,
+          "name": "Ayamiss the Hunter",
+          "journalID": 0
+        },
+        {
+          "id": 723,
+          "name": "Ossirian the Unscarred",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "Zul'Gurub",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 784,
+          "name": "High Priest Venoxis",
+          "journalID": 0
+        },
+        {
+          "id": 785,
+          "name": "High Priestess Jeklik",
+          "journalID": 0
+        },
+        {
+          "id": 786,
+          "name": "High Priestess Mar'li",
+          "journalID": 0
+        },
+        {
+          "id": 787,
+          "name": "Bloodlord Mandokir",
+          "journalID": 0
+        },
+        {
+          "id": 788,
+          "name": "Edge of Madness",
+          "journalID": 0
+        },
+        {
+          "id": 789,
+          "name": "High Priest Thekal",
+          "journalID": 0
+        },
+        {
+          "id": 790,
+          "name": "Gahz'ranka",
+          "journalID": 0
+        },
+        {
+          "id": 791,
+          "name": "High Priestess Arlokk",
+          "journalID": 0
+        },
+        {
+          "id": 792,
+          "name": "Jin'do the Hexxer",
+          "journalID": 0
+        },
+        {
+          "id": 793,
+          "name": "Hakkar",
+          "journalID": 0
+        },
+        {
+          "id": 794,
+          "name": "Hakkar (Hard Mode)",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "Blackwing Lair",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 610,
+          "name": "Razorgore the Untamed",
+          "journalID": 0
+        },
+        {
+          "id": 611,
+          "name": "Vaelastrasz the Corrupt",
+          "journalID": 0
+        },
+        {
+          "id": 612,
+          "name": "Broodlord Lashlayer",
+          "journalID": 0
+        },
+        {
+          "id": 613,
+          "name": "Firemaw",
+          "journalID": 0
+        },
+        {
+          "id": 614,
+          "name": "Ebonroc",
+          "journalID": 0
+        },
+        {
+          "id": 615,
+          "name": "Flamegor",
+          "journalID": 0
+        },
+        {
+          "id": 616,
+          "name": "Chromaggus",
+          "journalID": 0
+        },
+        {
+          "id": 617,
+          "name": "Nefarian",
+          "journalID": 0
+        },
+        {
+          "id": 631,
+          "name": "Ebonroc / Flamegor",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "name": "Onyxia",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1084,
+          "name": "Onyxia",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1000,
+      "name": "Molten Core",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1 & P2",
+          "compactName": "P1 & P2",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P3 & P4",
+          "compactName": "P3 & P4",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P5 (Without World Buffs)",
+          "compactName": "P5 (No WB)",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P6",
+          "compactName": "P6",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P6 (Without World Buffs)",
+          "compactName": "P6 (No WB)",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 663,
+          "name": "Lucifron",
+          "journalID": 0
+        },
+        {
+          "id": 664,
+          "name": "Magmadar",
+          "journalID": 0
+        },
+        {
+          "id": 665,
+          "name": "Gehennas",
+          "journalID": 0
+        },
+        {
+          "id": 666,
+          "name": "Garr",
+          "journalID": 0
+        },
+        {
+          "id": 667,
+          "name": "Shazzrah",
+          "journalID": 0
+        },
+        {
+          "id": 668,
+          "name": "Baron Geddon",
+          "journalID": 0
+        },
+        {
+          "id": 669,
+          "name": "Sulfuron Harbinger",
+          "journalID": 0
+        },
+        {
+          "id": 670,
+          "name": "Golemagg the Incinerator",
+          "journalID": 0
+        },
+        {
+          "id": 671,
+          "name": "Majordomo Executus",
+          "journalID": 0
+        },
+        {
+          "id": 672,
+          "name": "Ragnaros",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1012,
+      "name": "Zul'Aman",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 1189,
+          "name": "Akil'zon",
+          "journalID": 0
+        },
+        {
+          "id": 1190,
+          "name": "Nalorakk",
+          "journalID": 0
+        },
+        {
+          "id": 1191,
+          "name": "Jan'alai",
+          "journalID": 0
+        },
+        {
+          "id": 1192,
+          "name": "Halazzi",
+          "journalID": 0
+        },
+        {
+          "id": 1193,
+          "name": "Hex Lord Malacrass",
+          "journalID": 0
+        },
+        {
+          "id": 1194,
+          "name": "Daakara",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "name": "Karazhan",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": true
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": false
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 652,
+          "name": "Attumen the Huntsman",
+          "journalID": 0
+        },
+        {
+          "id": 653,
+          "name": "Moroes",
+          "journalID": 0
+        },
+        {
+          "id": 654,
+          "name": "Maiden of Virtue",
+          "journalID": 0
+        },
+        {
+          "id": 655,
+          "name": "Opera Hall",
+          "journalID": 0
+        },
+        {
+          "id": 656,
+          "name": "The Curator",
+          "journalID": 0
+        },
+        {
+          "id": 657,
+          "name": "Terestian Illhoof",
+          "journalID": 0
+        },
+        {
+          "id": 658,
+          "name": "Shade of Aran",
+          "journalID": 0
+        },
+        {
+          "id": 659,
+          "name": "Netherspite",
+          "journalID": 0
+        },
+        {
+          "id": 661,
+          "name": "Prince Malchezaar",
+          "journalID": 0
+        },
+        {
+          "id": 662,
+          "name": "Nightbane",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1022,
+      "name": "Heroic Dungeons",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 6,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 100035,
+          "name": "Blackrock Caverns",
+          "journalID": 0
+        },
+        {
+          "id": 100037,
+          "name": "Grim Batol",
+          "journalID": 0
+        },
+        {
+          "id": 100034,
+          "name": "Halls of Origination",
+          "journalID": 0
+        },
+        {
+          "id": 100039,
+          "name": "Lost City of the Tol'vir",
+          "journalID": 0
+        },
+        {
+          "id": 100038,
+          "name": "The Stonecore",
+          "journalID": 0
+        },
+        {
+          "id": 100033,
+          "name": "Throne of the Tides",
+          "journalID": 0
+        },
+        {
+          "id": 100036,
+          "name": "Vortex Pinnacle",
+          "journalID": 0
+        },
+        {
+          "id": 100040,
+          "name": "Deadmines",
+          "journalID": 0
+        },
+        {
+          "id": 100041,
+          "name": "Shadowfang Keep",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1014,
+      "name": "Heroic Dungeons",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "Phase 1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "Phase 2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "Phase 3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "Phase 4",
+          "compactName": "P4",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "Phase 4 (Buff)",
+          "compactName": "P4 (Buff)",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "Phase 4.5",
+          "compactName": "P4.5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 100017,
+          "name": "Utgarde Keep",
+          "journalID": 0
+        },
+        {
+          "id": 100018,
+          "name": "Utgarde Pinnacle",
+          "journalID": 0
+        },
+        {
+          "id": 100019,
+          "name": "The Nexus",
+          "journalID": 0
+        },
+        {
+          "id": 100020,
+          "name": "The Oculus",
+          "journalID": 0
+        },
+        {
+          "id": 100021,
+          "name": "The Culling of Stratholme",
+          "journalID": 0
+        },
+        {
+          "id": 100022,
+          "name": "Halls of Stone",
+          "journalID": 0
+        },
+        {
+          "id": 100023,
+          "name": "Drak'Tharon Keep",
+          "journalID": 0
+        },
+        {
+          "id": 100024,
+          "name": "Azjol-Nerub",
+          "journalID": 0
+        },
+        {
+          "id": 100025,
+          "name": "Halls of Lightning",
+          "journalID": 0
+        },
+        {
+          "id": 100026,
+          "name": "Gundrak",
+          "journalID": 0
+        },
+        {
+          "id": 100027,
+          "name": "Violet Hold",
+          "journalID": 0
+        },
+        {
+          "id": 100028,
+          "name": "Ahn'kahet: The Old Kingdom",
+          "journalID": 0
+        },
+        {
+          "id": 100029,
+          "name": "Forge of Souls",
+          "journalID": 0
+        },
+        {
+          "id": 100030,
+          "name": "Trial of the Champion",
+          "journalID": 0
+        },
+        {
+          "id": 100031,
+          "name": "Pit of Saron",
+          "journalID": 0
+        },
+        {
+          "id": 100032,
+          "name": "Halls of Reflection",
+          "journalID": 0
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "name": "Heroic Dungeons",
+      "frozen": true,
+      "partitions": [
+        {
+          "id": 1,
+          "name": "P1",
+          "compactName": "P1",
+          "default": false
+        },
+        {
+          "id": 2,
+          "name": "P2",
+          "compactName": "P2",
+          "default": false
+        },
+        {
+          "id": 3,
+          "name": "P2.5",
+          "compactName": "P2.5",
+          "default": false
+        },
+        {
+          "id": 4,
+          "name": "P3",
+          "compactName": "P3",
+          "default": false
+        },
+        {
+          "id": 5,
+          "name": "P3.5 & P4",
+          "compactName": "P3.5 & P4",
+          "default": false
+        },
+        {
+          "id": 6,
+          "name": "P5",
+          "compactName": "P5",
+          "default": true
+        },
+        {
+          "id": 7,
+          "name": "Pre-Patch",
+          "compactName": "Pre-Patch",
+          "default": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": 100001,
+          "name": "Hellfire Ramparts",
+          "journalID": 0
+        },
+        {
+          "id": 100002,
+          "name": "The Blood Furnace",
+          "journalID": 0
+        },
+        {
+          "id": 100003,
+          "name": "The Shattered Halls",
+          "journalID": 0
+        },
+        {
+          "id": 100004,
+          "name": "The Slave Pens",
+          "journalID": 0
+        },
+        {
+          "id": 100005,
+          "name": "The Underbog",
+          "journalID": 0
+        },
+        {
+          "id": 100006,
+          "name": "The Steamvault",
+          "journalID": 0
+        },
+        {
+          "id": 100007,
+          "name": "Mana-Tombs",
+          "journalID": 0
+        },
+        {
+          "id": 100008,
+          "name": "Auchenai Crypts",
+          "journalID": 0
+        },
+        {
+          "id": 100009,
+          "name": "Sethekk Halls",
+          "journalID": 0
+        },
+        {
+          "id": 100010,
+          "name": "Shadow Labyrinth",
+          "journalID": 0
+        },
+        {
+          "id": 100011,
+          "name": "Old Hillsbrad Foothills",
+          "journalID": 0
+        },
+        {
+          "id": 100012,
+          "name": "The Black Morass",
+          "journalID": 0
+        },
+        {
+          "id": 100013,
+          "name": "The Botanica",
+          "journalID": 0
+        },
+        {
+          "id": 100014,
+          "name": "The Mechanar",
+          "journalID": 0
+        },
+        {
+          "id": 100015,
+          "name": "The Arcatraz",
+          "journalID": 0
+        },
+        {
+          "id": 100016,
+          "name": "Magisters' Terrace",
+          "journalID": 0
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

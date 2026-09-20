@@ -1,8 +1,9 @@
-export type AbuseEndpoint = "public_lookup" | "signup" | "signin" | "oauth_start" | "battle_net_import";
+export type AbuseEndpoint = "public_lookup" | "signup" | "signin" | "oauth_start" | "battle_net_import" | "logs_lookup";
 export type AbuseDimension = "client" | "account";
 export type AbusePolicy = { bucket: string; endpoint: AbuseEndpoint; dimension: AbuseDimension; limit: number; windowMs: number };
 
 export const ABUSE_POLICIES: readonly AbusePolicy[] = [
+  { bucket: "logs_lookup:client:v1", endpoint: "logs_lookup", dimension: "client", limit: 20, windowMs: 60_000 },
   { bucket: "public_lookup:client:v1", endpoint: "public_lookup", dimension: "client", limit: 20, windowMs: 60_000 },
   { bucket: "signup:client:v1", endpoint: "signup", dimension: "client", limit: 5, windowMs: 10 * 60_000 },
   { bucket: "signup:account:v1", endpoint: "signup", dimension: "account", limit: 5, windowMs: 10 * 60_000 },

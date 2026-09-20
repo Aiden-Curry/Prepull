@@ -1,0 +1,206 @@
+{
+  "fixtureKind": "sanitized-live-response",
+  "auditedAt": "2026-09-18T22:11:09.185Z",
+  "context": "fresh",
+  "endpoint": "https://fresh.warcraftlogs.com/api/v2/client",
+  "requestedIdentity": {
+    "region": "eu",
+    "realm": "spineshatter",
+    "name": "carlisha"
+  },
+  "status": "OBSERVED",
+  "zone": {
+    "id": 1048,
+    "name": "Gruul / Magtheridon",
+    "frozen": false,
+    "expansion": {
+      "id": 1001,
+      "name": "The Burning Crusade"
+    },
+    "partitions": [
+      {
+        "id": 1,
+        "name": "Phase 1",
+        "compactName": "P1",
+        "default": true
+      },
+      {
+        "id": 2,
+        "name": "Phase 2",
+        "compactName": "P2",
+        "default": false
+      },
+      {
+        "id": 3,
+        "name": "Phase 3",
+        "compactName": "P3",
+        "default": false
+      }
+    ],
+    "encounters": [
+      {
+        "id": 50649,
+        "name": "High King Maulgar",
+        "journalID": 0
+      },
+      {
+        "id": 50650,
+        "name": "Gruul the Dragonkiller",
+        "journalID": 0
+      },
+      {
+        "id": 50651,
+        "name": "Magtheridon",
+        "journalID": 0
+      }
+    ]
+  },
+  "partition": 3,
+  "queryFields": {
+    "zoneRankings": 2,
+    "encounterRankings": 1,
+    "recentReportsLimit": 5
+  },
+  "zoneDps": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 3,
+    "zone": 1048,
+    "size": 25,
+    "bestPerformanceAverage": 62.94680750555504,
+    "medianPerformanceAverage": 62.94680750555504,
+    "allStars": [],
+    "rankings": [
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50649,
+          "name": "High King Maulgar"
+        }
+      },
+      {
+        "rankPercent": 62.94680750555504,
+        "medianPercent": 62.94680750555504,
+        "totalKills": 1,
+        "spec": "Holy",
+        "bestSpec": "Holy",
+        "bestAmount": 0.43615555051554,
+        "encounter": {
+          "id": 50650,
+          "name": "Gruul the Dragonkiller"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50651,
+          "name": "Magtheridon"
+        }
+      }
+    ]
+  },
+  "zoneHps": {
+    "difficulty": 3,
+    "metric": "hps",
+    "partition": 3,
+    "zone": 1048,
+    "size": 25,
+    "bestPerformanceAverage": 9.16615,
+    "medianPerformanceAverage": 9.16615,
+    "allStars": [
+      {
+        "spec": "Holy",
+        "partition": 3
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50649,
+          "name": "High King Maulgar"
+        }
+      },
+      {
+        "rankPercent": 9.16615,
+        "medianPercent": 9.16615,
+        "totalKills": 1,
+        "spec": "Holy",
+        "bestSpec": "Holy",
+        "bestAmount": 259.46021389068,
+        "encounter": {
+          "id": 50650,
+          "name": "Gruul the Dragonkiller"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50651,
+          "name": "Magtheridon"
+        }
+      }
+    ]
+  },
+  "encounter": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 3,
+    "zone": 1048,
+    "bestAmount": 0,
+    "medianPerformance": null,
+    "averagePerformance": null,
+    "totalKills": 0,
+    "fastestKill": 0,
+    "ranks": []
+  },
+  "reports": [
+    {
+      "code": "HmyJvAzb4KBd3p9P",
+      "visibility": "public",
+      "startTime": 1788087999370,
+      "endTime": 1788088793328,
+      "zone": {
+        "id": 1048,
+        "name": "Gruul / Magtheridon"
+      }
+    },
+    {
+      "code": "dGMx4Jyhkm3LbATt",
+      "visibility": "public",
+      "startTime": 1788087999370,
+      "endTime": 1788088793328,
+      "zone": {
+        "id": 1048,
+        "name": "Gruul / Magtheridon"
+      }
+    },
+    {
+      "code": "jFxRgDmqQnkVCB4H",
+      "visibility": "public",
+      "startTime": 1788087999370,
+      "endTime": 1788088793328,
+      "zone": {
+        "id": 1048,
+        "name": "Gruul / Magtheridon"
+      }
+    }
+  ],
+  "errors": []
+}

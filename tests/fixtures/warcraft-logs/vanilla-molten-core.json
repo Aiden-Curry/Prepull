@@ -1,0 +1,1195 @@
+{
+  "fixtureKind": "observed sanitized live response",
+  "reports": [
+    {
+      "code": "hHj8gKzJQNW63aFP",
+      "title": "Naxxramas",
+      "visibility": "public",
+      "startTime": 1789494667783,
+      "endTime": 1789499163470,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "1z6r7LdWDAVvkmCf",
+      "title": "Best mage in the world? Gz Colmano! TUE NAXX1900",
+      "visibility": "public",
+      "startTime": 1789494399224,
+      "endTime": 1789499165505,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "zMcfG9Y7LJw6xpWb",
+      "title": "XD boon next time krobi",
+      "visibility": "public",
+      "startTime": 1788888569739,
+      "endTime": 1788893827425,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "dH4GrKtP3DYM7LCV",
+      "title": "Naxxramas",
+      "visibility": "public",
+      "startTime": 1788889178197,
+      "endTime": 1788893826004,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    },
+    {
+      "code": "6g8ha7GrZbqcKvkC",
+      "title": "Naxxramas",
+      "visibility": "public",
+      "startTime": 1788210190245,
+      "endTime": 1788218079156,
+      "zone": {
+        "id": 2006,
+        "name": "Naxxramas"
+      }
+    }
+  ],
+  "mc": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2000,
+    "size": 40,
+    "bestPerformanceAverage": 99.60301999999999,
+    "medianPerformanceAverage": 93.404,
+    "allStars": [
+      {
+        "spec": "Fury",
+        "partition": 1
+      },
+      {
+        "spec": "Protection",
+        "partition": 1
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": 99.6576,
+        "medianPercent": 96.0101,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3551.98,
+        "encounter": {
+          "id": 50663,
+          "name": "Lucifron"
+        }
+      },
+      {
+        "rankPercent": 99.491,
+        "medianPercent": 90.2885,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2410.88,
+        "encounter": {
+          "id": 50664,
+          "name": "Magmadar"
+        }
+      },
+      {
+        "rankPercent": 100,
+        "medianPercent": 93.359,
+        "totalKills": 50,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 3911.03,
+        "encounter": {
+          "id": 50665,
+          "name": "Gehennas"
+        }
+      },
+      {
+        "rankPercent": 99.3308,
+        "medianPercent": 97.2183,
+        "totalKills": 56,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1747.74,
+        "encounter": {
+          "id": 50666,
+          "name": "Garr"
+        }
+      },
+      {
+        "rankPercent": 99.5957,
+        "medianPercent": 84.983,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2377.28,
+        "encounter": {
+          "id": 50667,
+          "name": "Shazzrah"
+        }
+      },
+      {
+        "rankPercent": 99.2792,
+        "medianPercent": 95.3667,
+        "totalKills": 56,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 1913.89,
+        "encounter": {
+          "id": 50668,
+          "name": "Baron Geddon"
+        }
+      },
+      {
+        "rankPercent": 99.7042,
+        "medianPercent": 94.9732,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2689.48,
+        "encounter": {
+          "id": 50669,
+          "name": "Sulfuron Harbinger"
+        }
+      },
+      {
+        "rankPercent": 99.61,
+        "medianPercent": 91.5209,
+        "totalKills": 50,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2983.64,
+        "encounter": {
+          "id": 50670,
+          "name": "Golemagg the Incinerator"
+        }
+      },
+      {
+        "rankPercent": 99.7529,
+        "medianPercent": 96.4485,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2825.8,
+        "encounter": {
+          "id": 50671,
+          "name": "Majordomo Executus"
+        }
+      },
+      {
+        "rankPercent": 99.6088,
+        "medianPercent": 93.8718,
+        "totalKills": 51,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "bestAmount": 2411.04,
+        "encounter": {
+          "id": 50672,
+          "name": "Ragnaros"
+        }
+      }
+    ]
+  },
+  "healer": {
+    "difficulty": 3,
+    "metric": "hps",
+    "partition": 1,
+    "zone": 2000,
+    "size": 40,
+    "bestPerformanceAverage": null,
+    "medianPerformanceAverage": null,
+    "allStars": [],
+    "rankings": [
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50663,
+          "name": "Lucifron"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50664,
+          "name": "Magmadar"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50665,
+          "name": "Gehennas"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50666,
+          "name": "Garr"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50667,
+          "name": "Shazzrah"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50668,
+          "name": "Baron Geddon"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50669,
+          "name": "Sulfuron Harbinger"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50670,
+          "name": "Golemagg the Incinerator"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50671,
+          "name": "Majordomo Executus"
+        }
+      },
+      {
+        "rankPercent": null,
+        "medianPercent": null,
+        "totalKills": 0,
+        "spec": null,
+        "bestAmount": 0,
+        "encounter": {
+          "id": 50672,
+          "name": "Ragnaros"
+        }
+      }
+    ]
+  },
+  "tank": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2000,
+    "size": 40,
+    "bestPerformanceAverage": 96.79986,
+    "medianPerformanceAverage": 92.42421,
+    "allStars": [
+      {
+        "spec": "Protection",
+        "partition": 1
+      }
+    ],
+    "rankings": [
+      {
+        "rankPercent": 99.3211,
+        "medianPercent": 97.5945,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 2117.82,
+        "encounter": {
+          "id": 50663,
+          "name": "Lucifron"
+        }
+      },
+      {
+        "rankPercent": 97.6236,
+        "medianPercent": 90.1506,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1205.38,
+        "encounter": {
+          "id": 50664,
+          "name": "Magmadar"
+        }
+      },
+      {
+        "rankPercent": 99.7695,
+        "medianPercent": 96.5423,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 2622.81,
+        "encounter": {
+          "id": 50665,
+          "name": "Gehennas"
+        }
+      },
+      {
+        "rankPercent": 99.3308,
+        "medianPercent": 97.2183,
+        "totalKills": 9,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1747.74,
+        "encounter": {
+          "id": 50666,
+          "name": "Garr"
+        }
+      },
+      {
+        "rankPercent": 89.3687,
+        "medianPercent": 82.6885,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 950.143,
+        "encounter": {
+          "id": 50667,
+          "name": "Shazzrah"
+        }
+      },
+      {
+        "rankPercent": 99.128,
+        "medianPercent": 97.4814,
+        "totalKills": 8,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1104.12,
+        "encounter": {
+          "id": 50668,
+          "name": "Baron Geddon"
+        }
+      },
+      {
+        "rankPercent": 99.0336,
+        "medianPercent": 88.5669,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1107.72,
+        "encounter": {
+          "id": 50669,
+          "name": "Sulfuron Harbinger"
+        }
+      },
+      {
+        "rankPercent": 99.1822,
+        "medianPercent": 95.87,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1401.85,
+        "encounter": {
+          "id": 50670,
+          "name": "Golemagg the Incinerator"
+        }
+      },
+      {
+        "rankPercent": 86.7383,
+        "medianPercent": 86.7383,
+        "totalKills": 1,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 544.803,
+        "encounter": {
+          "id": 50671,
+          "name": "Majordomo Executus"
+        }
+      },
+      {
+        "rankPercent": 98.5028,
+        "medianPercent": 91.3913,
+        "totalKills": 6,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "bestAmount": 1037.37,
+        "encounter": {
+          "id": 50672,
+          "name": "Ragnaros"
+        }
+      }
+    ]
+  },
+  "encounter": {
+    "difficulty": 3,
+    "metric": "dps",
+    "partition": 1,
+    "zone": 2000,
+    "bestAmount": 3551.98,
+    "medianPerformance": 96.1979492138054,
+    "averagePerformance": 90.75224838987059,
+    "totalKills": 51,
+    "fastestKill": 15016,
+    "ranks": [
+      {
+        "rankPercent": 99.65757030408179,
+        "historicalPercent": 99.65757030408179,
+        "todayPercent": 99.54157763992637,
+        "rankTotalParses": 31168,
+        "historicalTotalParses": 31168,
+        "todayTotalParses": 57662,
+        "duration": 17852,
+        "startTime": 1722979494274,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 3551.98,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.55363906161917,
+        "historicalPercent": 99.55363906161917,
+        "todayPercent": 99.44747404633188,
+        "rankTotalParses": 31533,
+        "historicalTotalParses": 31533,
+        "todayTotalParses": 57662,
+        "duration": 16744,
+        "startTime": 1723850055764,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 3312.59,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.4723166877867,
+        "historicalPercent": 99.4723166877867,
+        "todayPercent": 99.37296242861252,
+        "rankTotalParses": 31322,
+        "historicalTotalParses": 31322,
+        "todayTotalParses": 57662,
+        "duration": 20066,
+        "startTime": 1723302731934,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 3123.04,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.33578886896335,
+        "historicalPercent": 99.33578886896335,
+        "todayPercent": 99.319623038434,
+        "rankTotalParses": 40389,
+        "historicalTotalParses": 40389,
+        "todayTotalParses": 57662,
+        "duration": 17788,
+        "startTime": 1749823772106,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2987.35,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.6453401865234,
+        "historicalPercent": 99.6453401865234,
+        "todayPercent": 99.27975509715678,
+        "rankTotalParses": 27528,
+        "historicalTotalParses": 27528,
+        "todayTotalParses": 57662,
+        "duration": 20592,
+        "startTime": 1712870769197,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2885.93,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.29847775393081,
+        "historicalPercent": 99.29847775393081,
+        "todayPercent": 99.26339831312458,
+        "rankTotalParses": 32863,
+        "historicalTotalParses": 32863,
+        "todayTotalParses": 57662,
+        "duration": 22527,
+        "startTime": 1727274140000,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2844.32,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.1405004175764,
+        "historicalPercent": 99.1405004175764,
+        "todayPercent": 99.09783746883622,
+        "rankTotalParses": 33090,
+        "historicalTotalParses": 33090,
+        "todayTotalParses": 57662,
+        "duration": 15016,
+        "startTime": 1727878851886,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2423.15,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.07125573165811,
+        "historicalPercent": 99.07125573165811,
+        "todayPercent": 99.04687631810482,
+        "rankTotalParses": 38228,
+        "historicalTotalParses": 38228,
+        "todayTotalParses": 57662,
+        "duration": 15754,
+        "startTime": 1743775716261,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2293.51,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.10293346737504,
+        "historicalPercent": 99.10293346737504,
+        "todayPercent": 99.03836575876099,
+        "rankTotalParses": 32365,
+        "historicalTotalParses": 32365,
+        "todayTotalParses": 57662,
+        "duration": 23534,
+        "startTime": 1725978123758,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2271.86,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.02419952322056,
+        "historicalPercent": 99.02419952322056,
+        "todayPercent": 98.86300982596039,
+        "rankTotalParses": 34786,
+        "historicalTotalParses": 34786,
+        "todayTotalParses": 57662,
+        "duration": 20462,
+        "startTime": 1731683611515,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2152.48,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.0154875573695,
+        "historicalPercent": 99.0154875573695,
+        "todayPercent": 98.75087126723018,
+        "rankTotalParses": 34929,
+        "historicalTotalParses": 34929,
+        "todayTotalParses": 57662,
+        "duration": 25258,
+        "startTime": 1732146693541,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 2134.65,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.32105609269615,
+        "historicalPercent": 99.32105609269615,
+        "todayPercent": 99.2314381763032,
+        "rankTotalParses": 9433,
+        "historicalTotalParses": 9433,
+        "todayTotalParses": 18483,
+        "duration": 30597,
+        "startTime": 1719354423303,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 2117.82,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.88999559228726,
+        "historicalPercent": 98.88999559228726,
+        "todayPercent": 97.67030336058757,
+        "rankTotalParses": 30302,
+        "historicalTotalParses": 30302,
+        "todayTotalParses": 57662,
+        "duration": 20643,
+        "startTime": 1720564691684,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1962.84,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.00048697074367,
+        "historicalPercent": 99.00048697074367,
+        "todayPercent": 97.48237850725843,
+        "rankTotalParses": 28907,
+        "historicalTotalParses": 28907,
+        "todayTotalParses": 57662,
+        "duration": 21344,
+        "startTime": 1716504752747,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1932.96,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.82362195354968,
+        "historicalPercent": 98.82362195354968,
+        "todayPercent": 96.83350946047234,
+        "rankTotalParses": 27013,
+        "historicalTotalParses": 27013,
+        "todayTotalParses": 57662,
+        "duration": 22678,
+        "startTime": 1711495791403,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1829.79,
+        "class": 11
+      },
+      {
+        "rankPercent": 98.4341744970284,
+        "historicalPercent": 98.4341744970284,
+        "todayPercent": 96.36703066624801,
+        "rankTotalParses": 25964,
+        "historicalTotalParses": 25964,
+        "todayTotalParses": 57662,
+        "duration": 20595,
+        "startTime": 1709076409455,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1755.62,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.75387588235002,
+        "historicalPercent": 97.75387588235002,
+        "todayPercent": 96.36533255010346,
+        "rankTotalParses": 28845,
+        "historicalTotalParses": 28845,
+        "todayTotalParses": 57662,
+        "duration": 22375,
+        "startTime": 1716330145227,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1755.35,
+        "class": 11
+      },
+      {
+        "rankPercent": 99.13838424437117,
+        "historicalPercent": 99.13838424437117,
+        "todayPercent": 99.09405140854476,
+        "rankTotalParses": 9475,
+        "historicalTotalParses": 9475,
+        "todayTotalParses": 18483,
+        "duration": 29302,
+        "startTime": 1719673893842,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1723.81,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.74698017636068,
+        "historicalPercent": 97.74698017636068,
+        "todayPercent": 95.97149539095115,
+        "rankTotalParses": 27242,
+        "historicalTotalParses": 27242,
+        "todayTotalParses": 57662,
+        "duration": 24431,
+        "startTime": 1712097160580,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1692.73,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.1979492138054,
+        "historicalPercent": 96.1979492138054,
+        "todayPercent": 95.88369649695935,
+        "rankTotalParses": 38406,
+        "historicalTotalParses": 38406,
+        "todayTotalParses": 57662,
+        "duration": 24260,
+        "startTime": 1744314832857,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1678.77,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.91113445910379,
+        "historicalPercent": 96.91113445910379,
+        "todayPercent": 95.71853897860515,
+        "rankTotalParses": 29573,
+        "historicalTotalParses": 29573,
+        "todayTotalParses": 57662,
+        "duration": 27926,
+        "startTime": 1718465022759,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1652.51,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.72224059919955,
+        "historicalPercent": 96.72224059919955,
+        "todayPercent": 95.5015574712472,
+        "rankTotalParses": 29445,
+        "historicalTotalParses": 29445,
+        "todayTotalParses": 57662,
+        "duration": 15071,
+        "startTime": 1718143718125,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1618.01,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.23065399397687,
+        "historicalPercent": 97.23065399397687,
+        "todayPercent": 95.48300398003833,
+        "rankTotalParses": 26734,
+        "historicalTotalParses": 26734,
+        "todayTotalParses": 57662,
+        "duration": 17278,
+        "startTime": 1710890234249,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1615.06,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.97894268932218,
+        "historicalPercent": 95.97894268932218,
+        "todayPercent": 95.47250081721839,
+        "rankTotalParses": 33419,
+        "historicalTotalParses": 33419,
+        "todayTotalParses": 57662,
+        "duration": 16197,
+        "startTime": 1728585614833,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1613.39,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.29224100850345,
+        "historicalPercent": 95.29224100850345,
+        "todayPercent": 94.6551654873795,
+        "rankTotalParses": 33783,
+        "historicalTotalParses": 33783,
+        "todayTotalParses": 57662,
+        "duration": 32016,
+        "startTime": 1729347569699,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1518.52,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.4902735291153,
+        "historicalPercent": 96.4902735291153,
+        "todayPercent": 94.27491742660968,
+        "rankTotalParses": 25317,
+        "historicalTotalParses": 25317,
+        "todayTotalParses": 57662,
+        "duration": 29719,
+        "startTime": 1707429397264,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1496.75,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.82895455778366,
+        "historicalPercent": 95.82895455778366,
+        "todayPercent": 94.17448442939211,
+        "rankTotalParses": 29222,
+        "historicalTotalParses": 29222,
+        "todayTotalParses": 57662,
+        "duration": 23607,
+        "startTime": 1717537771274,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1491,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.72704089846542,
+        "historicalPercent": 95.72704089846542,
+        "todayPercent": 93.51337330857733,
+        "rankTotalParses": 28039,
+        "historicalTotalParses": 28039,
+        "todayTotalParses": 57662,
+        "duration": 28004,
+        "startTime": 1714230130391,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1453.15,
+        "class": 11
+      },
+      {
+        "rankPercent": 96.01009932522464,
+        "historicalPercent": 96.01009932522464,
+        "todayPercent": 93.4283109265861,
+        "rankTotalParses": 26208,
+        "historicalTotalParses": 26208,
+        "todayTotalParses": 57662,
+        "duration": 23492,
+        "startTime": 1709681141944,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1448.28,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.58112485542945,
+        "historicalPercent": 95.58112485542945,
+        "todayPercent": 93.32211394865865,
+        "rankTotalParses": 28430,
+        "historicalTotalParses": 28430,
+        "todayTotalParses": 57662,
+        "duration": 24862,
+        "startTime": 1715289766991,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1442.2,
+        "class": 11
+      },
+      {
+        "rankPercent": 95.44616181472217,
+        "historicalPercent": 95.44616181472217,
+        "todayPercent": 92.22590961728915,
+        "rankTotalParses": 26370,
+        "historicalTotalParses": 26370,
+        "todayTotalParses": 57662,
+        "duration": 24573,
+        "startTime": 1709999602414,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1379.44,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.65148490896993,
+        "historicalPercent": 93.65148490896993,
+        "todayPercent": 91.54785588650897,
+        "rankTotalParses": 30633,
+        "historicalTotalParses": 30633,
+        "todayTotalParses": 57662,
+        "duration": 29012,
+        "startTime": 1721490251820,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1340.62,
+        "class": 11
+      },
+      {
+        "rankPercent": 92.4088812049574,
+        "historicalPercent": 92.4088812049574,
+        "todayPercent": 91.07486013613475,
+        "rankTotalParses": 32437,
+        "historicalTotalParses": 32437,
+        "todayTotalParses": 57662,
+        "duration": 19506,
+        "startTime": 1726165654721,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1313.54,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.86936180856652,
+        "historicalPercent": 97.86936180856652,
+        "todayPercent": 97.64742905618039,
+        "rankTotalParses": 10074,
+        "historicalTotalParses": 10074,
+        "todayTotalParses": 18483,
+        "duration": 23993,
+        "startTime": 1725373481872,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1305.8,
+        "class": 11
+      },
+      {
+        "rankPercent": 94.57112072986436,
+        "historicalPercent": 94.57112072986436,
+        "todayPercent": 90.30423338183229,
+        "rankTotalParses": 25234,
+        "historicalTotalParses": 25234,
+        "todayTotalParses": 57662,
+        "duration": 22578,
+        "startTime": 1704742094947,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1269.42,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.91079150633713,
+        "historicalPercent": 91.91079150633713,
+        "todayPercent": 90.00380772059016,
+        "rankTotalParses": 30504,
+        "historicalTotalParses": 30504,
+        "todayTotalParses": 57662,
+        "duration": 27920,
+        "startTime": 1721167308570,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1252.22,
+        "class": 11
+      },
+      {
+        "rankPercent": 97.319654833592,
+        "historicalPercent": 97.319654833592,
+        "todayPercent": 97.06628720502786,
+        "rankTotalParses": 10024,
+        "historicalTotalParses": 10024,
+        "todayTotalParses": 18483,
+        "duration": 27432,
+        "startTime": 1724770116228,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 1242.09,
+        "class": 11
+      },
+      {
+        "rankPercent": 92.16079849436444,
+        "historicalPercent": 92.16079849436444,
+        "todayPercent": 88.68216021414896,
+        "rankTotalParses": 27911,
+        "historicalTotalParses": 27911,
+        "todayTotalParses": 57662,
+        "duration": 35427,
+        "startTime": 1713912575875,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1215.01,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.13835008179481,
+        "historicalPercent": 91.13835008179481,
+        "todayPercent": 85.33269825843654,
+        "rankTotalParses": 24480,
+        "historicalTotalParses": 24480,
+        "todayTotalParses": 57662,
+        "duration": 24382,
+        "startTime": 1703630772557,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1120.99,
+        "class": 11
+      },
+      {
+        "rankPercent": 89.3723890270075,
+        "historicalPercent": 89.3723890270075,
+        "todayPercent": 84.3173859234248,
+        "rankTotalParses": 27454,
+        "historicalTotalParses": 27454,
+        "todayTotalParses": 57662,
+        "duration": 24110,
+        "startTime": 1712701992203,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1092.49,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.63847341957292,
+        "historicalPercent": 84.63847341957292,
+        "todayPercent": 83.51154855437336,
+        "rankTotalParses": 34542,
+        "historicalTotalParses": 34542,
+        "todayTotalParses": 57662,
+        "duration": 28038,
+        "startTime": 1731008963748,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 1069.87,
+        "class": 11
+      },
+      {
+        "rankPercent": 84.60005742610167,
+        "historicalPercent": 84.60005742610167,
+        "todayPercent": 80.65367589377766,
+        "rankTotalParses": 28340,
+        "historicalTotalParses": 28340,
+        "todayTotalParses": 57662,
+        "duration": 32363,
+        "startTime": 1715119025763,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 989.649,
+        "class": 11
+      },
+      {
+        "rankPercent": 81.87900148232252,
+        "historicalPercent": 81.87900148232252,
+        "todayPercent": 79.1537832980967,
+        "rankTotalParses": 30779,
+        "historicalTotalParses": 30779,
+        "todayTotalParses": 57662,
+        "duration": 29467,
+        "startTime": 1721943278598,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 955.238,
+        "class": 11
+      },
+      {
+        "rankPercent": 93.09152020284392,
+        "historicalPercent": 93.09152020284392,
+        "todayPercent": 92.47397761192063,
+        "rankTotalParses": 10283,
+        "historicalTotalParses": 10283,
+        "todayTotalParses": 18483,
+        "duration": 17655,
+        "startTime": 1727187700175,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 919.683,
+        "class": 11
+      },
+      {
+        "rankPercent": 82.80883247535927,
+        "historicalPercent": 82.80883247535927,
+        "todayPercent": 77.2532702111933,
+        "rankTotalParses": 26019,
+        "historicalTotalParses": 26019,
+        "todayTotalParses": 57662,
+        "duration": 25991,
+        "startTime": 1705955198807,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 919.164,
+        "class": 11
+      },
+      {
+        "rankPercent": 82.08408568970283,
+        "historicalPercent": 82.08408568970283,
+        "todayPercent": 76.20038575031386,
+        "rankTotalParses": 24781,
+        "historicalTotalParses": 24781,
+        "todayTotalParses": 57662,
+        "duration": 27405,
+        "startTime": 1704138195235,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 899.179,
+        "class": 11
+      },
+      {
+        "rankPercent": 91.29149710858856,
+        "historicalPercent": 91.29149710858856,
+        "todayPercent": 91.1845686119022,
+        "rankTotalParses": 10690,
+        "historicalTotalParses": 10690,
+        "todayTotalParses": 18483,
+        "duration": 21948,
+        "startTime": 1730560594927,
+        "spec": "Protection",
+        "bestSpec": "Protection",
+        "amount": 870.74,
+        "class": 11
+      },
+      {
+        "rankPercent": 55.541535111446635,
+        "historicalPercent": 55.541535111446635,
+        "todayPercent": 49.20062072734672,
+        "rankTotalParses": 25383,
+        "historicalTotalParses": 25383,
+        "todayTotalParses": 57662,
+        "duration": 23428,
+        "startTime": 1705007460588,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 603.893,
+        "class": 11
+      },
+      {
+        "rankPercent": 38.93981642848845,
+        "historicalPercent": 38.93981642848845,
+        "todayPercent": 33.742311858434405,
+        "rankTotalParses": 24088,
+        "historicalTotalParses": 24088,
+        "todayTotalParses": 57662,
+        "duration": 29862,
+        "startTime": 1703029763546,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 487.677,
+        "class": 11
+      },
+      {
+        "rankPercent": 35.83555446699996,
+        "historicalPercent": 35.83555446699996,
+        "todayPercent": 31.21956347590495,
+        "rankTotalParses": 26104,
+        "historicalTotalParses": 26104,
+        "todayTotalParses": 57662,
+        "duration": 37579,
+        "startTime": 1706124201012,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 468.719,
+        "class": 11
+      },
+      {
+        "rankPercent": 22.40855956237521,
+        "historicalPercent": 22.40855956237521,
+        "todayPercent": 19.565882100272834,
+        "rankTotalParses": 25236,
+        "historicalTotalParses": 25236,
+        "todayTotalParses": 57662,
+        "duration": 46671,
+        "startTime": 1707262291973,
+        "spec": "Fury",
+        "bestSpec": "Fury",
+        "amount": 368.387,
+        "class": 11
+      }
+    ]
+  },
+  "errors": [],
+  "auditedAt": "2026-09-19T12:26:49.638Z",
+  "context": "vanilla",
+  "requestedIdentity": {
+    "region": "eu",
+    "realm": "firemaw",
+    "name": "kankan"
+  }
+}
