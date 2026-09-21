@@ -3,6 +3,7 @@ import { guideContent } from "./content.ts";
 import { resolveGuideGear } from "./gear.ts";
 import { guideRegistry, publishedGuides } from "./registry.ts";
 import type { Guide, GuideContent } from "./types.ts";
+import { guideTalentBuild, validateTalentBuild } from "../talents/registry.ts";
 
 const date = (value: string) => /^\d{4}-\d{2}-\d{2}$/.test(value) && new Date(value).toISOString().slice(0, 10) === value;
 const safeUrl = (value: string) => { try { const url = new URL(value); return url.protocol === "https:" && !url.username && !url.password; } catch { return false; } };
@@ -37,6 +38,11 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
       anchors.add(section.id); anchors.add(`${section.id}-heading`);
       if (!section.title.trim() || !section.blocks.length) fail("empty section");
       for (const block of section.blocks) {
+        if (block.kind === "talent-build") {
+          const data = guideTalentBuild(block.buildId);
+          if (!data || guide.type !== "spec" || data.metadata.className !== guide.className || guide.contentVersion !== data.metadata.contentVersion) fail("invalid guide talent build identity");
+          else for (const error of validateTalentBuild(data.metadata, data.build)) fail(error);
+        }
         if (block.kind === "links") for (const id of block.guideIds) if (!entries.some(target => target.id === id && target.status === "published" && target.contentVersion === guide.contentVersion)) fail(`broken internal guide link: ${id}`);
         if (block.kind === "wowhead") for (const entry of block.entries) if (!["item", "spell"].includes(entry.type) || !Number.isSafeInteger(entry.id) || entry.id <= 0 || !entry.name.trim()) fail("invalid Wowhead reference");
         if (block.kind === "gear") {

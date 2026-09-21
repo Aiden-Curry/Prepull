@@ -11,6 +11,8 @@ import { Header } from "../header";
 import { Footer } from "../footer";
 import { WowheadTooltips } from "../wowhead-tooltips";
 import { GuideDiscovery } from "./guide-discovery";
+import { ClassicTalentTree } from "./classic-talent-tree";
+import { guideTalentBuild } from "../../lib/talents/registry";
 
 const linkStyle = "focus-ring inline-flex min-h-11 items-center py-2 text-[var(--accent-hover)] underline underline-offset-4";
 export function GuideShell({ version, children }: { version: ContentVersion; children: ReactNode }) {
@@ -36,6 +38,7 @@ function WowheadEntry({ version, type, id, name }: { version: ContentVersion; ty
   return <a className={linkStyle} href={wowheadLink(version, version === "era" ? "era" : "anniversary", type, id)} data-wowhead={`domain=${version === "era" ? "classic" : "tbc"}&${type}=${id}`} data-wh-rename-link="false" target="_blank" rel="noopener noreferrer">{name}<span className="sr-only"> on Wowhead (opens in a new tab)</span></a>;
 }
 function Block({ block, guide }: { block: GuideBlock; guide: Guide }) {
+  if (block.kind === "talent-build") { const data = guideTalentBuild(block.buildId); return data ? <ClassicTalentTree {...data} /> : null; }
   if (block.kind === "paragraph") return <p>{block.text}</p>;
   if (block.kind === "list") return <ul className="list-disc space-y-3 pl-5">{block.items.map(item => <li key={item}>{item}</li>)}</ul>;
   if (block.kind === "callout") return <aside className="rounded-xl border-l-4 border-[var(--accent)] bg-[var(--accent-soft)] p-4"><strong>{block.label}</strong><p className="mt-2">{block.text}</p></aside>;
