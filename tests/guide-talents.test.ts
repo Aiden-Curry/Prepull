@@ -8,6 +8,25 @@ import { mageTalents } from "../lib/talents/mage.ts";
 import { frostGuideBuilds } from "../lib/talents/mage-builds.ts";
 import { rogueTalents } from "../lib/talents/rogue.ts";
 import { combatGuideBuilds } from "../lib/talents/rogue-builds.ts";
+import { hunterTalents } from "../lib/talents/hunter.ts";
+import { marksmanshipGuideBuilds } from "../lib/talents/hunter-builds.ts";
+
+test("complete Hunter metadata and two useful legal Marksmanship builds", () => {
+  assert.equal(hunterTalents.talents.length, 46);
+  assert.deepEqual(hunterTalents.trees.map(t => t.name), ["Beast Mastery", "Marksmanship", "Survival"]);
+  assert.deepEqual(hunterTalents.talents.find(t => t.id === "deflection")!.spellIds, [19295, 19297, 19298, 19301, 19300]);
+  for (const [index, build] of marksmanshipGuideBuilds.entries()) {
+    assert.deepEqual(validateTalentBuild(hunterTalents, build), []);
+    assert.deepEqual(talentAllocation(hunterTalents, build), index ? [2, 31, 18] : [20, 31, 0]);
+    assert.equal(Object.values(build.selectedRanks).reduce((a, b) => a + b, 0), 51);
+    assert.equal(build.selectedRanks.trueshotAura, 1);
+  }
+  assert.equal(marksmanshipGuideBuilds[1].selectedRanks.surefooted, 3);
+  const build = marksmanshipGuideBuilds[0];
+  const dependency = hunterTalents.talents.find(t => t.prerequisite && build.selectedRanks[t.id])!;
+  assert.ok(validateTalentBuild(hunterTalents, { ...build, selectedRanks: { ...build.selectedRanks, [dependency.prerequisite!]: 0 } }).some(e => e.includes("Unfilled prerequisite")));
+  assert.ok(validateTalentBuild(hunterTalents, { ...build, selectedRanks: { trueshotAura: 1 } }).some(e => e.includes("Locked row")));
+});
 
 test("complete Classic Rogue metadata and legal weapon-specific raid builds", () => {
   assert.equal(rogueTalents.talents.length, 51);
@@ -68,7 +87,7 @@ test("invalid ranks, tier gates, dependencies and totals are rejected", () => {
     [{ cruelty: 4 }, /Invalid level-60 allocation/],
   ] as const) assert.ok(validateTalentBuild(warriorTalents, { ...furyGuideBuild, selectedRanks: { ...furyGuideBuild.selectedRanks, ...changes } }).some(e => expected.test(e)));
 });
-test("only the three accepted spec guides use visual talents", () => {
+test("only the four accepted spec guides use visual talents", () => {
   const owners = Object.entries(guideContent).filter(([, content]) => content.sections.some(s => s.blocks.some(b => b.kind === "talent-build"))).map(([id]) => id);
-  assert.deepEqual(owners, ["era-fury", "era-frost", "era-combat"]);
+  assert.deepEqual(owners, ["era-fury", "era-frost", "era-combat", "era-marksmanship"]);
 });

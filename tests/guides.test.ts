@@ -9,9 +9,20 @@ import { wowheadLink } from "../lib/armory/wowhead.ts";
 import { siteOrigin } from "../lib/guides/metadata.ts";
 import type { Guide, GuideContent } from "../lib/guides/types.ts";
 
+test("Hunter uses accepted gear and exact specialization without TBC fallback", () => {
+  assert.equal(specGuide("era", "Hunter", "Marksmanship")?.id, "era-marksmanship");
+  for (const spec of ["Beast Mastery", "Survival"]) assert.equal(specGuide("era", "Hunter", spec), undefined);
+  assert.equal(specGuide("tbc", "Hunter", "Marksmanship"), undefined);
+  assert.deepEqual(resolveGuideGear("era-hunter-marksman", [0, 1]).map(({ set }) => set.id), ["era-marksmanship-hunter-pre-raid", "era-marksmanship-hunter-phase-1"]);
+  const contents = structuredClone(guideContent);
+  const gear = contents["era-marksmanship"].sections.flatMap(s => s.blocks).find(b => b.kind === "gear")!;
+  if (gear.kind === "gear") gear.phases = [0];
+  assert.ok(validateGuides(guideRegistry, contents).some(e => e.includes("Marksmanship Hunter must reference")));
+});
+
 test("published guide manifest resolves routes and all ten accepted encounters in order", () => {
   assert.deepEqual(validateGuides(), []);
-  assert.equal(publishedGuides().length, 14);
+  assert.equal(publishedGuides().length, 15);
   for (const guide of publishedGuides()) assert.equal(resolveGuide(guide.contentVersion, guide.slug)?.id, guide.id);
   const bosses = publishedGuides("era").filter(guide => guide.type === "boss");
   assert.deepEqual(bosses.map(guide => guide.encounterId), moltenCoreEncounters.map(boss => boss.id));
