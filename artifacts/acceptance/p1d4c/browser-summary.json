@@ -1,0 +1,14 @@
+{
+  "combinedRun": {
+    "passed": 7,
+    "failed": 0
+  },
+  "finalRogueRun": {
+    "startTime": "2026-09-21T18:27:37.251Z",
+    "duration": 9315.457,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

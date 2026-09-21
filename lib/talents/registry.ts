@@ -2,12 +2,16 @@ import { warriorTalents } from "./warrior.ts";
 import { furyGuideBuild } from "./builds.ts";
 import { mageTalents } from "./mage.ts";
 import { frostGuideBuilds } from "./mage-builds.ts";
+import { rogueTalents } from "./rogue.ts";
+import { combatGuideBuilds } from "./rogue-builds.ts";
 import type { ClassicTalentClass, GuideTalentBuild } from "./types.ts";
 
 export function guideTalentBuild(id: string) {
   if (id === furyGuideBuild.id) return { metadata: warriorTalents, build: furyGuideBuild };
   const build = frostGuideBuilds.find(build => build.id === id);
-  return build ? { metadata: mageTalents, build } : undefined;
+  if (build) return { metadata: mageTalents, build };
+  const combat = combatGuideBuilds.find(build => build.id === id);
+  return combat ? { metadata: rogueTalents, build: combat } : undefined;
 }
 export function talentAllocation(metadata: ClassicTalentClass, build: GuideTalentBuild) {
   return metadata.trees.map(tree => metadata.talents.filter(t => t.tree === tree.id).reduce((sum, t) => sum + (build.selectedRanks[t.id] ?? 0), 0));

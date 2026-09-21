@@ -6,6 +6,32 @@ import { talentAllocation, validateTalentBuild } from "../lib/talents/registry.t
 import { guideContent } from "../lib/guides/content.ts";
 import { mageTalents } from "../lib/talents/mage.ts";
 import { frostGuideBuilds } from "../lib/talents/mage-builds.ts";
+import { rogueTalents } from "../lib/talents/rogue.ts";
+import { combatGuideBuilds } from "../lib/talents/rogue-builds.ts";
+
+test("complete Classic Rogue metadata and legal weapon-specific raid builds", () => {
+  assert.equal(rogueTalents.talents.length, 51);
+  assert.deepEqual(rogueTalents.talents.find(t => t.id === "improvedGouge")!.spellIds, [13741, 13793, 13792]);
+  assert.deepEqual(rogueTalents.trees.map(t => t.name), ["Assassination", "Combat", "Subtlety"]);
+  for (const [index, build] of combatGuideBuilds.entries()) {
+    assert.deepEqual(validateTalentBuild(rogueTalents, build), []);
+    assert.deepEqual(talentAllocation(rogueTalents, build), index ? [15, 31, 5] : [19, 32, 0]);
+    assert.equal(Object.values(build.selectedRanks).reduce((a, b) => a + b, 0), 51);
+  }
+  const [swords, daggers] = combatGuideBuilds;
+  assert.equal(swords.selectedRanks.swordSpecialization, 5);
+  assert.equal(swords.selectedRanks.daggerSpecialization, undefined);
+  assert.equal(daggers.selectedRanks.daggerSpecialization, 5);
+  assert.equal(daggers.selectedRanks.swordSpecialization, undefined);
+  assert.equal(daggers.selectedRanks.improvedBackstab, 3);
+  assert.equal(daggers.selectedRanks.opportunity, 5);
+  assert.equal(swords.selectedRanks.relentlessStrikes, 1);
+  assert.equal(daggers.selectedRanks.relentlessStrikes, undefined);
+  const dependency = rogueTalents.talents.find(t => t.prerequisite && swords.selectedRanks[t.id]);
+  assert.ok(dependency?.prerequisite);
+  assert.ok(validateTalentBuild(rogueTalents, { ...swords, selectedRanks: { ...swords.selectedRanks, [dependency.prerequisite]: 0 } }).some(e => e.includes("Unfilled prerequisite")));
+  assert.ok(validateTalentBuild(rogueTalents, { ...swords, selectedRanks: { adrenalineRush: 1 } }).some(e => e.includes("Locked row")));
+});
 
 test("complete Classic Mage metadata and both legal sourced Frost builds", () => {
   assert.equal(mageTalents.talents.length, 49);
@@ -42,7 +68,7 @@ test("invalid ranks, tier gates, dependencies and totals are rejected", () => {
     [{ cruelty: 4 }, /Invalid level-60 allocation/],
   ] as const) assert.ok(validateTalentBuild(warriorTalents, { ...furyGuideBuild, selectedRanks: { ...furyGuideBuild.selectedRanks, ...changes } }).some(e => expected.test(e)));
 });
-test("only Fury and Frost guides use visual talents", () => {
+test("only the three accepted spec guides use visual talents", () => {
   const owners = Object.entries(guideContent).filter(([, content]) => content.sections.some(s => s.blocks.some(b => b.kind === "talent-build"))).map(([id]) => id);
-  assert.deepEqual(owners, ["era-fury", "era-frost"]);
+  assert.deepEqual(owners, ["era-fury", "era-frost", "era-combat"]);
 });
