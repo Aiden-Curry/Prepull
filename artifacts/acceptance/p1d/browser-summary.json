@@ -1,0 +1,352 @@
+{
+  "uniqueCases": 86,
+  "statuses": {
+    "passed": 86
+  },
+  "cases": [
+    {
+      "title": "realm combobox supports keyboard, region clearing and ecosystem separation without character quota calls",
+      "status": "passed"
+    },
+    {
+      "title": "public Armory renders safe slot equipment and remains usable with Wowhead blocked on mobile",
+      "status": "passed"
+    },
+    {
+      "title": "saved Armory changes only through a persisted refresh and preserves the last success after provider failure",
+      "status": "passed"
+    },
+    {
+      "title": "observed Classic talent fixture renders active totals and spell links without invented positions",
+      "status": "passed"
+    },
+    {
+      "title": "anonymous Era lookup opens a safe shareable public character",
+      "status": "passed"
+    },
+    {
+      "title": "anonymous TBC lookup preserves version and Anniversary stays truthfully unsupported",
+      "status": "passed"
+    },
+    {
+      "title": "signup from a result returns to the exact character and completes trusted initial sync",
+      "status": "passed"
+    },
+    {
+      "title": "sign-in restores the exact public result and an already-saved lookup opens without duplication",
+      "status": "passed"
+    },
+    {
+      "title": "not-found and temporary provider errors are distinct and safe",
+      "status": "passed"
+    },
+    {
+      "title": "public search and profile are mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "public API returns 429 before protected work at the lookup threshold",
+      "status": "passed"
+    },
+    {
+      "title": "signup and credentials sign-in endpoints enforce separate durable limits",
+      "status": "passed"
+    },
+    {
+      "title": "full clear, kills, provider aggregate labels, recent raids and attribution",
+      "status": "passed"
+    },
+    {
+      "title": "partial raid progression is not a clear and absent aggregates stay absent",
+      "status": "passed"
+    },
+    {
+      "title": "multiple observed specs and tank metrics stay separate",
+      "status": "passed"
+    },
+    {
+      "title": "healer logs use HPS",
+      "status": "passed"
+    },
+    {
+      "title": "isolated Logs state: Warcraft Logs rankings are hidden",
+      "status": "passed"
+    },
+    {
+      "title": "isolated Logs state: No public Warcraft Logs data found",
+      "status": "passed"
+    },
+    {
+      "title": "isolated Logs state: Warcraft Logs is temporarily unavailable",
+      "status": "passed"
+    },
+    {
+      "title": "a failed raid does not discard successful raids",
+      "status": "passed"
+    },
+    {
+      "title": "not-found remains distinct while the public Armory stays available",
+      "status": "passed"
+    },
+    {
+      "title": "unverified Anniversary context never substitutes Era raids",
+      "status": "passed"
+    },
+    {
+      "title": "390px layout, keyboard navigation and raid expansion",
+      "status": "passed"
+    },
+    {
+      "title": "public cache is reused by saved Logs without a Blizzard refresh",
+      "status": "passed"
+    },
+    {
+      "title": "Battle.net login discovers, bulk imports with partial success, and reaches dashboard",
+      "status": "passed"
+    },
+    {
+      "title": "Battle.net cancellation is safe and creates no account",
+      "status": "passed"
+    },
+    {
+      "title": "an email user can link Battle.net and another user cannot steal that identity",
+      "status": "passed"
+    },
+    {
+      "title": "returning Battle.net login reuses its user and preserves TBC content context",
+      "status": "passed"
+    },
+    {
+      "title": "supported Fury dashboard shows ranked advice and activity detail",
+      "status": "passed"
+    },
+    {
+      "title": "supported Frost Mage refreshes, ranks activities, shows detail, and records a completed target",
+      "status": "passed"
+    },
+    {
+      "title": "switching Fury to Frost to unsupported and back recalculates dashboard advice",
+      "status": "passed"
+    },
+    {
+      "title": "player onboarding surfaces have no serious or critical axe violations",
+      "status": "passed"
+    },
+    {
+      "title": "player dashboard remains usable on mobile without horizontal scrolling",
+      "status": "passed"
+    },
+    {
+      "title": "synced Frost Mage dashboard is mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "onboarding and dashboard redirect anonymously",
+      "status": "passed"
+    },
+    {
+      "title": "authenticated player can search the deterministic character provider",
+      "status": "passed"
+    },
+    {
+      "title": "authenticated player can save, choose, and remove a character",
+      "status": "passed"
+    },
+    {
+      "title": "anniversary search preserves its unsupported state",
+      "status": "passed"
+    },
+    {
+      "title": "dashboard has keyboard-reachable character controls on mobile",
+      "status": "passed"
+    },
+    {
+      "title": "first character refresh establishes a baseline and keeps advice visible",
+      "status": "passed"
+    },
+    {
+      "title": "Anniversary refresh remains explicitly unsupported",
+      "status": "passed"
+    },
+    {
+      "title": "new Era visitor registers, auto-signs in, finds, saves, syncs, and reaches advice",
+      "status": "passed"
+    },
+    {
+      "title": "new TBC visitor preserves version through registration, finder, save, and dashboard",
+      "status": "passed"
+    },
+    {
+      "title": "signup and finder failures are safe and Anniversary remains unsupported",
+      "status": "passed"
+    },
+    {
+      "title": "builds, switches, and copies a persisted Fury session plan",
+      "status": "passed"
+    },
+    {
+      "title": "keeps unsupported planning safe after initial sync",
+      "status": "passed"
+    },
+    {
+      "title": "builds and copies a Frost Mage session plan",
+      "status": "passed"
+    },
+    {
+      "title": "planner remains keyboard reachable on a narrow dashboard",
+      "status": "passed"
+    },
+    {
+      "title": "public Era calendar supports regions, filters, provenance, and version switching",
+      "status": "passed"
+    },
+    {
+      "title": "direct TBC calendar is public, mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "dashboard previews keep Era and TBC events isolated",
+      "status": "passed"
+    },
+    {
+      "title": "officer opens a multi-spec Prep Board with accurate selected activity counts",
+      "status": "passed"
+    },
+    {
+      "title": "Prep Board authorization follows assigned-leader and cross-guild rules",
+      "status": "passed"
+    },
+    {
+      "title": "disabled consent disappears from every derived activity immediately",
+      "status": "passed"
+    },
+    {
+      "title": "Prep Board is mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "organizer creates a canonical run and member RSVP remains after readiness consent is revoked",
+      "status": "passed"
+    },
+    {
+      "title": "assigned leader may manage while ordinary, unassigned, and cross-guild members cannot",
+      "status": "passed"
+    },
+    {
+      "title": "Prep Run list and detail are mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "member explicitly enables and immediately disables readiness sharing",
+      "status": "passed"
+    },
+    {
+      "title": "pending claims and mismatched saved characters cannot be shared",
+      "status": "passed"
+    },
+    {
+      "title": "officer sees factual selected summary and a separate bench without private data",
+      "status": "passed"
+    },
+    {
+      "title": "assigned raid leader has access while an unassigned raid leader does not",
+      "status": "passed"
+    },
+    {
+      "title": "another guild cannot discover readiness through the raid URL",
+      "status": "passed"
+    },
+    {
+      "title": "a member cannot disable another member's readiness share",
+      "status": "passed"
+    },
+    {
+      "title": "raid readiness is mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "authorized timezone changes persist and alter presentation without shifting stored raid instants",
+      "status": "passed"
+    },
+    {
+      "title": "schedule is browser-timezone independent, versioned, private across guilds, mobile, keyboard and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "signed-out TBC schedule sign-in returns to the TBC schedule",
+      "status": "passed"
+    },
+    {
+      "title": "owner sees only accessible guild workspaces and persisted roster summary",
+      "status": "passed"
+    },
+    {
+      "title": "guild creation form preserves independent content and realm concepts",
+      "status": "passed"
+    },
+    {
+      "title": "member sees game, raid, Prep Run, filters, region isolation, timezone changes, and version switching",
+      "status": "passed"
+    },
+    {
+      "title": "unified route is membership-protected and exact TBC callback is restored",
+      "status": "passed"
+    },
+    {
+      "title": "unified calendar is mobile, keyboard, and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "Era and TBC primary navigation preserve their route version",
+      "status": "passed"
+    },
+    {
+      "title": "expansion selector preserves equivalent nested paths, query, and hash",
+      "status": "passed"
+    },
+    {
+      "title": "TBC guild raid, readiness, Prep Board, and Profile flow never resets to Era",
+      "status": "passed"
+    },
+    {
+      "title": "direct TBC links retain theme on refresh and mobile selector is keyboard and axe safe",
+      "status": "passed"
+    },
+    {
+      "title": "published discovery, filtering, indices and direct unpublished routes",
+      "status": "passed"
+    },
+    {
+      "title": "Fury sections and central gear render with one reusable Wowhead script",
+      "status": "passed"
+    },
+    {
+      "title": "Molten Core has ten ordered ID-mapped cards and every boss route is complete",
+      "status": "passed"
+    },
+    {
+      "title": "indexable guide metadata, sitemap and character crawl policy remain separate",
+      "status": "passed"
+    },
+    {
+      "title": "TBC empty state and guide version switch never relabel Era content",
+      "status": "passed"
+    },
+    {
+      "title": "public, saved and Advice links require matching Fury specialization",
+      "status": "passed"
+    },
+    {
+      "title": "Logs links use exact raid and encounter IDs, never display strings",
+      "status": "passed"
+    },
+    {
+      "title": "guides axe, keyboard, readable blocked tooltips and no overflow at 1440px",
+      "status": "passed"
+    },
+    {
+      "title": "guides axe, keyboard, readable blocked tooltips and no overflow at 390px",
+      "status": "passed"
+    }
+  ]
+}

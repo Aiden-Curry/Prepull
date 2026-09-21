@@ -1,4 +1,6 @@
 import type { LogsView, LogsPerformance } from "../lib/warcraft-logs/model";
+import Link from "next/link";
+import { bossGuide, guideHref, raidGuide } from "../lib/guides/registry";
 import { progression } from "../lib/warcraft-logs/model";
 import { WCL_SITES, WCL_HOME, type WarcraftLogsSiteContext } from "../lib/warcraft-logs/context";
 import { logsReportUrl, isLogsCharacterUrl } from "../lib/warcraft-logs/identity";
@@ -36,10 +38,12 @@ export function CharacterLogs({ view, characterUrl, site }: { view: LogsView; ch
         return <details key={raid.zoneId} open={index === 0} className="rounded-2xl border border-[var(--border)] p-4">
           <summary className="focus-ring cursor-pointer rounded text-lg font-semibold"><span>{raid.name}</span><span className="mt-1 block text-sm font-normal">{raid.status === "temporary-error" ? "Raid data temporarily unavailable" : `${progress.killed} / ${progress.total} bosses killed${progress.cleared ? " · Cleared" : ""}`}</span></summary>
           {raid.status === "available" && <>
+            {site === "vanilla" && <LogsGuideLink zoneId={raid.zoneId} />}
             {raid.bosses.every(boss => boss.performances.length === 0) && <p className="mt-4 text-sm">No public ranking data for this raid.</p>}
             {raid.aggregates.length > 0 && <dl className="mt-5 grid gap-4 sm:grid-cols-2">{raid.aggregates.map((aggregate, i) => <div key={i}><dt className="text-sm">{aggregate.label} · {aggregate.spec} · {aggregate.role} · {aggregate.metric}</dt><dd className="mt-1 text-xl font-semibold">{percentile(aggregate.value)}</dd></div>)}</dl>}
             <ul className="mt-5 space-y-3">{raid.bosses.map(boss => <li key={boss.encounterId} className="min-w-0 rounded-xl bg-white/[.03] p-4"><h3 className="break-words font-semibold">{boss.name}{!boss.progression && <span className="ml-2 text-xs font-normal">Optional encounter</span>}</h3>
               <p className="mt-1 text-xs text-[var(--text-muted)]">{boss.performances.some(p => (p.kills ?? 0) >= 1) ? "Public kill recorded" : "No public kill recorded"}</p>
+              {site === "vanilla" && <LogsGuideLink zoneId={raid.zoneId} encounterId={boss.encounterId} />}
               {boss.performances.length ? boss.performances.map((performance, i) => <Performance key={i} performance={performance} />) : <p className="mt-2 text-sm text-[var(--text-muted)]">No public ranking data.</p>}
             </li>)}</ul>
           </>}
@@ -59,6 +63,10 @@ export function CharacterLogs({ view, characterUrl, site }: { view: LogsView; ch
       {safeCharacterUrl && !summary.fixture && <a className={external} href={safeCharacterUrl} target="_blank" rel="noopener noreferrer">View on Warcraft Logs<span className="sr-only"> (opens in a new tab)</span></a>}
     </footer>
   </section>;
+}
+function LogsGuideLink({ zoneId, encounterId }: { zoneId: number; encounterId?: number }) {
+  const guide = encounterId === undefined ? raidGuide("era", zoneId) : bossGuide("era", zoneId, encounterId);
+  return guide ? <Link className="focus-ring inline-flex min-h-11 items-center py-2 text-sm text-[var(--accent-hover)] underline underline-offset-4" href={guideHref(guide)}>{guide.title} guide</Link> : null;
 }
 function Performance({ performance: p }: { performance: LogsPerformance }) {
   return <div className="mt-3"><p className="break-words text-xs text-[var(--text-muted)]">{p.spec} · {p.role} · {p.metric}</p><dl className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm">

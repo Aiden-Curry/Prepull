@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SpecGuideLink } from "./guides/spec-guide-link";
 import type { ReactNode } from "react";
 import type { CharacterArmory, CharacterTalentState } from "../lib/armory/types";
 import { relevantStatistics } from "../lib/armory/normalize";
@@ -24,6 +25,7 @@ export function CharacterHeader({ armory, saved, headingLevel }: { armory: Chara
     <Heading className="display mt-3 break-words text-5xl sm:text-6xl">{character.name}</Heading><p className="mt-3 text-lg">Level {character.level} {character.race} {character.className}</p>
     <p className="mt-2 text-sm text-[var(--text-muted)]">{character.realm} · {character.region.toUpperCase()} · {character.realmType === "era" ? "Classic Era" : "Anniversary"} · {character.faction}</p>
     <p className="mt-4 font-semibold text-[var(--accent-hover)]">{character.specialization !== "Unavailable" ? character.specialization : "Specialization unavailable"}</p><CharacterFreshness armory={armory} saved={saved} />
+    <SpecGuideLink version={character.contentVersion} realmType={character.realmType} className={character.className} specialization={character.specialization} />
   </header>;
 }
 export function CharacterFreshness({ armory, saved }: { armory: CharacterArmory; saved: boolean }) {

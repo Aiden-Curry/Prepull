@@ -8,7 +8,7 @@ test("owner sees only accessible guild workspaces and persisted roster summary",
   await expect(page.getByText("E2E Guild B")).toHaveCount(0);
   await page.goto(`/era/guilds/${id("E2E_GUILD_A_ID")}`);
   await expect(page.getByText(/Guild roster/i)).toBeVisible();
-  await expect(page.getByText(/characters/i).first()).toBeVisible();
+  await expect(page.getByRole("main").getByText(/characters/i).first()).toBeVisible();
   await expectSafeError(page);
 });
 

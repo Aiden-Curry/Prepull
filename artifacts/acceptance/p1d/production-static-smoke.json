@@ -1,0 +1,173 @@
+{
+  "routes": [
+    {
+      "path": "/era/guides",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/classes",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/classes/warrior",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/tbc/guides",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/tbc/guides/classes",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/tbc/guides/raids",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/classes/warrior/fury",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/lucifron",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/magmadar",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/gehennas",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/garr",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/shazzrah",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/baron-geddon",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/sulfuron-harbinger",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/golemagg-the-incinerator",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/majordomo-executus",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/era/guides/raids/molten-core/ragnaros",
+      "status": 200,
+      "prerendered": true,
+      "canonical": true,
+      "indexable": true,
+      "privateStateAbsent": true
+    },
+    {
+      "path": "/tbc/guides/classes/warrior/fury",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/tbc/guides/raids/molten-core",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/era/guides/classes/mage/frost",
+      "status": 404,
+      "expected": 404
+    }
+  ],
+  "staticPublishedGuides": 12,
+  "outboundAttempts": 0
+}

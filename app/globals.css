@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.guide-section { scroll-margin-top: 6rem; }
+.guide-main { overflow-wrap: anywhere; }
+@media (min-width: 1024px) { .guide-toc { position: sticky; top: 6rem; max-height: calc(100vh - 7rem); overflow-y: auto; } }
+
 :root { --background: #110f0d; --surface: #1b1713; --surface-raised: #262019; --surface-muted: #17130f; --border: #4c3927; --border-strong: #705535; --text: #eee7dc; --text-muted: #a99d8e; --accent: #d6a84b; --accent-hover: #e1c47a; --accent-soft: rgba(214,168,75,.1); --accent-secondary: #a75032; --accent-special: #b08bd8; --glow: rgba(214,168,75,.14); --font-body: "Inter"; --font-display: "Georgia"; }
 [data-content-version="era"] { --background: #110f0d; --surface: #1b1713; --surface-raised: #262019; --surface-muted: #17130f; --border: #4c3927; --border-strong: #705535; --text: #eee7dc; --text-muted: #a99d8e; --accent: #d6a84b; --accent-hover: #e1c47a; --accent-soft: rgba(214,168,75,.1); --accent-secondary: #a75032; --accent-special: #b08bd8; --glow: rgba(214,168,75,.14); --hero-deep: #170b07; --hero-flare: rgba(174,69,34,.3); --hero-horizon: rgba(214,168,75,.16); }
 [data-content-version="tbc"] { --background: #07110f; --surface: #0d1b18; --surface-raised: #12251f; --surface-muted: #0a1714; --border: #245446; --border-strong: #327260; --text: #e1eee8; --text-muted: #8daaa0; --accent: #53e08b; --accent-hover: #79f0a4; --accent-soft: rgba(83,224,139,.09); --accent-secondary: #27b7a6; --accent-special: #9071d8; --glow: rgba(39,183,166,.14); --hero-deep: #080817; --hero-flare: rgba(104,63,172,.32); --hero-horizon: rgba(83,224,139,.15); }

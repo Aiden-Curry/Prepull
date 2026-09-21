@@ -76,5 +76,6 @@ test("observed Classic talent fixture renders active totals and spell links with
     await expect(talents).toContainText("32 points"); await expect(talents).toContainText("3 points");
     await expect(talents.getByRole("link", { name: "Anticipation" })).toHaveAttribute("href", "https://www.wowhead.com/classic/spell=12753");
     await expect(page.locator("body")).not.toContainText("must-not-be-public");
+    await expect(page.getByRole("link", { name: "View Fury Warrior guide" })).toHaveCount(0);
   } finally { await client.query("DELETE FROM public_character_lookup_cache WHERE cache_key=$1", [key]); await client.end(); }
 });
