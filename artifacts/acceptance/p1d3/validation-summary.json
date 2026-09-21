@@ -1,0 +1,21 @@
+{
+  "guides": {
+    "published": 14,
+    "errors": 0
+  },
+  "unitTests": 8,
+  "browserTests": 5,
+  "validators": [
+    "guides",
+    "gear",
+    "curated",
+    "spec -- all"
+  ],
+  "typecheck": true,
+  "lint": true,
+  "build": true,
+  "diffCheck": true,
+  "recommendationHashesUnchanged": 10,
+  "combatPrerendered": true,
+  "rogueIndexPrerendered": true
+}
