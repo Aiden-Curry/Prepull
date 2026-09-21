@@ -4,6 +4,22 @@ import { warriorTalents } from "../lib/talents/warrior.ts";
 import { furyGuideBuild } from "../lib/talents/builds.ts";
 import { talentAllocation, validateTalentBuild } from "../lib/talents/registry.ts";
 import { guideContent } from "../lib/guides/content.ts";
+import { mageTalents } from "../lib/talents/mage.ts";
+import { frostGuideBuilds } from "../lib/talents/mage-builds.ts";
+
+test("complete Classic Mage metadata and both legal sourced Frost builds", () => {
+  assert.equal(mageTalents.talents.length, 49);
+  assert.deepEqual(mageTalents.trees.map(t => t.name), ["Arcane", "Fire", "Frost"]);
+  for (const [index, build] of frostGuideBuilds.entries()) {
+    assert.deepEqual(validateTalentBuild(mageTalents, build), []);
+    assert.deepEqual(talentAllocation(mageTalents, build), index ? [16, 0, 35] : [31, 0, 20]);
+    assert.equal(Object.values(build.selectedRanks).reduce((a, b) => a + b, 0), 51);
+  }
+  assert.equal(frostGuideBuilds[0].selectedRanks.arcanePower, 1);
+  assert.equal(frostGuideBuilds[1].selectedRanks.wintersChill, 5);
+  assert.equal(mageTalents.talents.find(t => t.id === "iceBarrier")!.prerequisite, "iceBlock");
+  assert.ok(validateTalentBuild(mageTalents, { ...frostGuideBuilds[0], selectedRanks: { ...frostGuideBuilds[0].selectedRanks, arcaneInstability: 2 } }).some(e => e.includes("Unfilled prerequisite: arcanePower")));
+});
 
 test("verified Classic Warrior metadata and complete legal Fury allocation", () => {
   assert.equal(warriorTalents.talents.length, 52);
@@ -26,7 +42,7 @@ test("invalid ranks, tier gates, dependencies and totals are rejected", () => {
     [{ cruelty: 4 }, /Invalid level-60 allocation/],
   ] as const) assert.ok(validateTalentBuild(warriorTalents, { ...furyGuideBuild, selectedRanks: { ...furyGuideBuild.selectedRanks, ...changes } }).some(e => expected.test(e)));
 });
-test("only Fury guide uses visual talents; other guide prose remains independent", () => {
+test("only Fury and Frost guides use visual talents", () => {
   const owners = Object.entries(guideContent).filter(([, content]) => content.sections.some(s => s.blocks.some(b => b.kind === "talent-build"))).map(([id]) => id);
-  assert.deepEqual(owners, ["era-fury"]);
+  assert.deepEqual(owners, ["era-fury", "era-frost"]);
 });

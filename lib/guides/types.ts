@@ -9,7 +9,7 @@ export type GuideBlock =
   | { kind: "wowhead"; entries: { type: "item" | "spell"; id: number; name: string; note: string }[] }
   | { kind: "links"; guideIds: string[] }
   | { kind: "gear"; specKey: string; phases: number[] }
-  | { kind: "talent-build"; buildId: string }
+  | { kind: "talent-build"; buildId: string; alternativeBuildIds?: string[] }
   | { kind: "bosses"; raidId: number };
 export type GuideSection = { id: string; title: string; blocks: GuideBlock[] };
 export type GuideContent = { summary: string; sections: GuideSection[]; sources: GuideSource[]; tags?: string[]; quick?: { before: string; during: string; watch: string } };

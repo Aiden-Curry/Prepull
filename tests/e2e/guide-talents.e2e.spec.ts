@@ -33,5 +33,5 @@ test("390px tree navigation, tap details, blocked tooltips and accessibility", a
 });
 test("guide talents never replace public Armory talents or convert other guides", async ({page}) => {
   await page.goto('/era/characters/era/eu/firemaw/aidy'); await expect(page.locator('#character-talents')).toBeVisible(); await expect(page.locator('[data-guide-talent-build]')).toHaveCount(0);
-  for(const path of ['/era/guides/classes/mage/frost','/era/guides/classes/rogue/combat']) {await page.goto(path);await expect(page.locator('#talents')).toBeVisible();await expect(page.locator('[data-guide-talent-build]')).toHaveCount(0);}
+  for(const path of ['/era/guides/classes/rogue/combat']) {await page.goto(path);await expect(page.locator('#talents')).toBeVisible();await expect(page.locator('[data-guide-talent-build]')).toHaveCount(0);}
 });

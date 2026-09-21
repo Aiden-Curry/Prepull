@@ -39,9 +39,11 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
       if (!section.title.trim() || !section.blocks.length) fail("empty section");
       for (const block of section.blocks) {
         if (block.kind === "talent-build") {
-          const data = guideTalentBuild(block.buildId);
+          for (const id of [block.buildId, ...(block.alternativeBuildIds ?? [])]) {
+          const data = guideTalentBuild(id);
           if (!data || guide.type !== "spec" || data.metadata.className !== guide.className || guide.contentVersion !== data.metadata.contentVersion) fail("invalid guide talent build identity");
           else for (const error of validateTalentBuild(data.metadata, data.build)) fail(error);
+          }
         }
         if (block.kind === "links") for (const id of block.guideIds) if (!entries.some(target => target.id === id && target.status === "published" && target.contentVersion === guide.contentVersion)) fail(`broken internal guide link: ${id}`);
         if (block.kind === "wowhead") for (const entry of block.entries) if (!["item", "spell"].includes(entry.type) || !Number.isSafeInteger(entry.id) || entry.id <= 0 || !entry.name.trim()) fail("invalid Wowhead reference");
