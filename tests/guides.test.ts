@@ -11,7 +11,7 @@ import type { Guide, GuideContent } from "../lib/guides/types.ts";
 
 test("published guide manifest resolves routes and all ten accepted encounters in order", () => {
   assert.deepEqual(validateGuides(), []);
-  assert.equal(publishedGuides().length, 12);
+  assert.equal(publishedGuides().length, 13);
   for (const guide of publishedGuides()) assert.equal(resolveGuide(guide.contentVersion, guide.slug)?.id, guide.id);
   const bosses = publishedGuides("era").filter(guide => guide.type === "boss");
   assert.deepEqual(bosses.map(guide => guide.encounterId), moltenCoreEncounters.map(boss => boss.id));
@@ -79,4 +79,20 @@ test("canonical origin is explicit and does not infer a preview host", () => {
   assert.equal(siteOrigin({ PREPULL_SITE_URL: "https://public.example", NEXTAUTH_URL: "https://staging.example" }), "https://public.example");
   assert.equal(siteOrigin({ VERCEL_URL: "preview.example" }), "http://localhost:3000");
   assert.throws(() => siteOrigin({ PREPULL_SITE_URL: "https://user:password@example.com" }));
+});
+
+test("Frost uses accepted gear and exact specialization without TBC fallback", () => {
+  assert.equal(specGuide("era", "Mage", "Frost")?.id, "era-frost");
+  for (const spec of ["Fire", "Arcane", "Unavailable"]) assert.equal(specGuide("era", "Mage", spec), undefined);
+  assert.equal(specGuide("tbc", "Mage", "Frost"), undefined);
+  assert.equal(resolveGuide("tbc", "classes/mage/frost"), undefined);
+  const sets = resolveGuideGear("era-mage-frost", [0, 1]);
+  assert.deepEqual(sets.map(({ set }) => set.id), ["era-frost-mage-pre-raid", "era-frost-mage-phase-1"]);
+  for (const { set, slots } of sets) for (const { slot, items } of slots) {
+    assert.ok(items.length > 0);
+    for (const { item, reference } of items) assert.ok(set.slots[slot as keyof typeof set.slots]?.some(entry => entry.itemId === item.itemId && entry.itemId === reference.itemId));
+  }
+  const content = structuredClone(guideContent);
+  content["era-frost"].sections = content["era-frost"].sections.filter(section => section.id !== "gear");
+  assert.ok(validateGuides(guideRegistry, content).some(error => /Frost Mage must reference Pre-Raid and Phase 1 gear/.test(error)));
 });
