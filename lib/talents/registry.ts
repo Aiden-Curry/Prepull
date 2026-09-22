@@ -6,6 +6,8 @@ import { rogueTalents } from "./rogue.ts";
 import { combatGuideBuilds } from "./rogue-builds.ts";
 import { hunterTalents } from "./hunter.ts";
 import { marksmanshipGuideBuilds } from "./hunter-builds.ts";
+import { priestTalents } from "./priest.ts";
+import { holyGuideBuilds } from "./priest-builds.ts";
 import type { ClassicTalentClass, GuideTalentBuild } from "./types.ts";
 
 export function guideTalentBuild(id: string) {
@@ -15,7 +17,9 @@ export function guideTalentBuild(id: string) {
   const combat = combatGuideBuilds.find(build => build.id === id);
   if (combat) return { metadata: rogueTalents, build: combat };
   const hunter = marksmanshipGuideBuilds.find(build => build.id === id);
-  return hunter ? { metadata: hunterTalents, build: hunter } : undefined;
+  if (hunter) return { metadata: hunterTalents, build: hunter };
+  const priest = holyGuideBuilds.find(build => build.id === id);
+  return priest ? { metadata: priestTalents, build: priest } : undefined;
 }
 export function talentAllocation(metadata: ClassicTalentClass, build: GuideTalentBuild) {
   return metadata.trees.map(tree => metadata.talents.filter(t => t.tree === tree.id).reduce((sum, t) => sum + (build.selectedRanks[t.id] ?? 0), 0));
@@ -35,7 +39,12 @@ export function validateTalentBuild(metadata: ClassicTalentClass, build: GuideTa
     if (!Number.isInteger(t.maxRank) || t.maxRank < 1 || t.spellIds.length !== t.maxRank || t.spellIds.some(id => !Number.isSafeInteger(id) || id <= 0) || !/^[a-z0-9_]+$/.test(t.icon)) errors.push(`Invalid spell metadata: ${t.id}`);
     if (!Number.isInteger(rank) || rank < 0 || rank > t.maxRank) errors.push(`Invalid selected rank: ${t.id}`);
     const prerequisite = t.prerequisite ? byId.get(t.prerequisite) : undefined;
-    if (t.prerequisite && (!prerequisite || prerequisite.tree !== t.tree || prerequisite.row >= t.row)) errors.push(`Invalid prerequisite: ${t.id}`);
+    if (t.prerequisite && (!prerequisite || prerequisite.id === t.id || prerequisite.tree !== t.tree || prerequisite.row > t.row)) errors.push(`Invalid prerequisite: ${t.id}`);
+    const chain = new Set([t.id]);
+    for (let ancestor = prerequisite; ancestor; ancestor = ancestor.prerequisite ? byId.get(ancestor.prerequisite) : undefined) {
+      if (chain.has(ancestor.id)) { errors.push(`Cyclic prerequisite: ${t.id}`); break; }
+      chain.add(ancestor.id);
+    }
     if (rank > 0) {
       const earlier = metadata.talents.filter(other => other.tree === t.tree && other.row < t.row).reduce((sum, other) => sum + (build.selectedRanks[other.id] ?? 0), 0);
       if (earlier < (t.row - 1) * 5) errors.push(`Locked row: ${t.id}`);

@@ -57,7 +57,7 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
       }
     }
     if (guide.type === "boss" && (!content.quick || ["mechanics", "positioning", "tank", "healer", "dps", "preparation", "fury"].some(id => !anchors.has(id)))) fail("incomplete boss template");
-    const requiredGear = guide.id === "era-fury" ? "era-warrior-fury" : guide.id === "era-frost" ? "era-mage-frost" : guide.id === "era-combat" ? "era-rogue-combat" : guide.id === "era-marksmanship" ? "era-hunter-marksman" : undefined;
+    const requiredGear = guide.id === "era-fury" ? "era-warrior-fury" : guide.id === "era-frost" ? "era-mage-frost" : guide.id === "era-combat" ? "era-rogue-combat" : guide.id === "era-marksmanship" ? "era-hunter-marksman" : guide.id === "era-holy" ? "era-priest-holy" : undefined;
     if (requiredGear && !content.sections.some(section => section.blocks.some(block => block.kind === "gear" && block.specKey === requiredGear && [0, 1].every(phase => block.phases.includes(phase))))) fail(`${guide.title} must reference Pre-Raid and Phase 1 gear`);
   }
   for (const guide of publicEntries) if (guide.status !== "published" || !entries.some(entry => entry.id === guide.id && entry.status === "published")) errors.push(`${guide.id}: draft or unknown guide leaked into public manifest`);

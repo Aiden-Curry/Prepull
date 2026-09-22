@@ -10,6 +10,29 @@ import { rogueTalents } from "../lib/talents/rogue.ts";
 import { combatGuideBuilds } from "../lib/talents/rogue-builds.ts";
 import { hunterTalents } from "../lib/talents/hunter.ts";
 import { marksmanshipGuideBuilds } from "../lib/talents/hunter-builds.ts";
+import { priestTalents } from "../lib/talents/priest.ts";
+import { holyGuideBuilds } from "../lib/talents/priest-builds.ts";
+
+test("complete Classic Priest metadata and legal healing alternatives", () => {
+  assert.equal(priestTalents.talents.length, 47);
+  assert.deepEqual(priestTalents.trees.map(t => t.name), ["Discipline", "Holy", "Shadow"]);
+  assert.deepEqual(priestTalents.talents.find(t => t.id === "shadowFocus")!.spellIds, [15260, 15327, 15328, 15329, 15330]);
+  const improved = priestTalents.talents.find(t => t.id === "improvedVampiricEmbrace")!;
+  assert.equal(improved.prerequisite, "vampiricEmbrace");
+  assert.equal(improved.row, priestTalents.talents.find(t => t.id === improved.prerequisite)!.row);
+  const cyclic = { ...priestTalents, talents: priestTalents.talents.map(t => t.id === "vampiricEmbrace" ? { ...t, prerequisite: "improvedVampiricEmbrace" } : t) };
+  assert.ok(validateTalentBuild(cyclic, holyGuideBuilds[0]).some(e => e.includes("Cyclic prerequisite")));
+  for (const [index, build] of holyGuideBuilds.entries()) {
+    assert.deepEqual(validateTalentBuild(priestTalents, build), []);
+    assert.deepEqual(talentAllocation(priestTalents, build), index ? [32, 19, 0] : [21, 30, 0]);
+    assert.equal(Object.values(build.selectedRanks).reduce((a, b) => a + b, 0), 51);
+  }
+  assert.equal(holyGuideBuilds[0].selectedRanks.spiritualHealing, 5);
+  assert.equal(holyGuideBuilds[1].selectedRanks.powerInfusion, 1);
+  const build = holyGuideBuilds[1];
+  assert.ok(validateTalentBuild(priestTalents, { ...build, selectedRanks: { ...build.selectedRanks, mentalStrength: 0 } }).some(e => e.includes("Unfilled prerequisite")));
+  assert.ok(validateTalentBuild(priestTalents, { ...build, selectedRanks: { powerInfusion: 1 } }).some(e => e.includes("Locked row")));
+});
 
 test("complete Hunter metadata and two useful legal Marksmanship builds", () => {
   assert.equal(hunterTalents.talents.length, 46);
@@ -87,7 +110,7 @@ test("invalid ranks, tier gates, dependencies and totals are rejected", () => {
     [{ cruelty: 4 }, /Invalid level-60 allocation/],
   ] as const) assert.ok(validateTalentBuild(warriorTalents, { ...furyGuideBuild, selectedRanks: { ...furyGuideBuild.selectedRanks, ...changes } }).some(e => expected.test(e)));
 });
-test("only the four accepted spec guides use visual talents", () => {
+test("only the five accepted spec guides use visual talents", () => {
   const owners = Object.entries(guideContent).filter(([, content]) => content.sections.some(s => s.blocks.some(b => b.kind === "talent-build"))).map(([id]) => id);
-  assert.deepEqual(owners, ["era-fury", "era-frost", "era-combat", "era-marksmanship"]);
+  assert.deepEqual(owners, ["era-holy", "era-fury", "era-frost", "era-combat", "era-marksmanship"]);
 });

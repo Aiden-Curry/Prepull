@@ -9,6 +9,17 @@ import { wowheadLink } from "../lib/armory/wowhead.ts";
 import { siteOrigin } from "../lib/guides/metadata.ts";
 import type { Guide, GuideContent } from "../lib/guides/types.ts";
 
+test("Holy uses shared phases and excludes Discipline, Shadow and TBC", () => {
+  assert.equal(specGuide("era", "Priest", "Holy")?.id, "era-holy");
+  for (const spec of ["Discipline", "Shadow"]) assert.equal(specGuide("era", "Priest", spec), undefined);
+  assert.equal(specGuide("tbc", "Priest", "Holy"), undefined);
+  assert.deepEqual(resolveGuideGear("era-priest-holy", [0, 1]).map(({ set }) => set.phase), [0, 1]);
+  const contents = structuredClone(guideContent);
+  const gear = contents["era-holy"].sections.flatMap(s => s.blocks).find(b => b.kind === "gear")!;
+  if (gear.kind === "gear") gear.phases = [0];
+  assert.ok(validateGuides(guideRegistry, contents).some(e => e.includes("Holy Priest must reference")));
+});
+
 test("Hunter uses accepted gear and exact specialization without TBC fallback", () => {
   assert.equal(specGuide("era", "Hunter", "Marksmanship")?.id, "era-marksmanship");
   for (const spec of ["Beast Mastery", "Survival"]) assert.equal(specGuide("era", "Hunter", spec), undefined);
@@ -22,7 +33,7 @@ test("Hunter uses accepted gear and exact specialization without TBC fallback", 
 
 test("published guide manifest resolves routes and all ten accepted encounters in order", () => {
   assert.deepEqual(validateGuides(), []);
-  assert.equal(publishedGuides().length, 15);
+  assert.equal(publishedGuides().length, 16);
   for (const guide of publishedGuides()) assert.equal(resolveGuide(guide.contentVersion, guide.slug)?.id, guide.id);
   const bosses = publishedGuides("era").filter(guide => guide.type === "boss");
   assert.deepEqual(bosses.map(guide => guide.encounterId), moltenCoreEncounters.map(boss => boss.id));
