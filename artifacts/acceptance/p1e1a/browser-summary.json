@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "startTime": "2026-09-22T10:14:26.467Z",
+    "duration": 31484.219,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "scope": [
+    "BWL discovery/registry/no dead links",
+    "BWL SEO/TBC",
+    "1440px axe",
+    "390px overflow/axe",
+    "existing guide discovery",
+    "Molten Core ten boss routes"
+  ]
+}

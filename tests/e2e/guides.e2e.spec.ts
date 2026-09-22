@@ -16,7 +16,7 @@ test("published discovery, filtering, indices and direct unpublished routes", as
   await expect(page.getByRole("heading", { name: "Garr", exact: true })).toBeVisible();
   await expect(page.getByRole("status")).toHaveText("1 published guides");
   for (const path of ["/era/guides/classes", "/era/guides/classes/warrior", "/era/guides/raids"]) expect((await page.goto(path))?.status()).toBe(200);
-  for (const path of ["/era/guides/classes/mage/fire", "/era/guides/raids/blackwing-lair", "/tbc/guides/classes/warrior/fury", "/tbc/guides/raids/molten-core"]) expect((await page.goto(path))?.status()).toBe(404);
+  for (const path of ["/era/guides/classes/mage/fire", "/era/guides/raids/ahnqiraj", "/tbc/guides/classes/warrior/fury", "/tbc/guides/raids/molten-core"]) expect((await page.goto(path))?.status()).toBe(404);
 });
 test("Fury sections and central gear render with one reusable Wowhead script", async ({ page }) => {
   await page.route("https://wow.zamimg.com/js/tooltips.js", route => route.fulfill({ contentType: "application/javascript", body: "window.__guideTooltips=0;window.$WowheadPower={refreshLinks(){window.__guideTooltips++}};" }));

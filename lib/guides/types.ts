@@ -16,6 +16,6 @@ export type GuideContent = { summary: string; sections: GuideSection[]; sources:
 type GuideBase = { id: string; contentVersion: ContentVersion; slug: string; status: GuideStatus; title: string; updatedAt: string };
 export type Guide = GuideBase & (
   | { type: "spec"; className: string; specName: string }
-  | { type: "raid"; raidId: number }
+  | { type: "raid"; raidId: number; bossCoverage?: "complete" | "overview" }
   | { type: "boss"; raidId: number; encounterId: number }
 );

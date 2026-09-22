@@ -20,6 +20,7 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
     if (guide.type !== "spec") {
       const raid = guide.contentVersion === "era" ? ERA_RAIDS.find(raid => raid.id === guide.raidId) : undefined;
       if (!raid) fail("unknown raid for content version");
+      if (guide.id === "era-blackwing-lair" && (guide.type !== "raid" || guide.contentVersion !== "era" || guide.raidId !== 2002 || raid?.encounters.filter(boss => boss.progression).length !== 8 || raid?.encounters.some(boss => boss.id === 50631 && boss.progression))) fail("BWL must resolve to zone 2002 with eight progression encounters excluding the combined alternate");
       if (guide.type === "boss" && !raid?.encounters.some(boss => boss.id === guide.encounterId && boss.progression)) fail("unknown progression encounter or wrong raid");
     }
     if (guide.status !== "published") continue;
@@ -65,8 +66,11 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
     if (raid.type !== "raid") continue;
     const expected = raid.contentVersion === "era" ? ERA_RAIDS.find(entry => entry.id === raid.raidId)?.encounters.filter(boss => boss.progression) ?? [] : [];
     const bosses = entries.filter(entry => entry.type === "boss" && entry.status === "published" && entry.contentVersion === raid.contentVersion && entry.raidId === raid.raidId);
-    for (const encounter of expected) if (bosses.filter(boss => boss.type === "boss" && boss.encounterId === encounter.id).length !== 1) errors.push(`${raid.id}: missing or duplicate boss coverage for ${encounter.id}`);
-    if (bosses.length !== expected.length) errors.push(`${raid.id}: progression coverage count mismatch`);
+    for (const encounter of expected) {
+      const count = bosses.filter(boss => boss.type === "boss" && boss.encounterId === encounter.id).length;
+      if (count > 1 || (raid.bossCoverage !== "overview" && count !== 1)) errors.push(`${raid.id}: missing or duplicate boss coverage for ${encounter.id}`);
+    }
+    if (raid.bossCoverage !== "overview" && bosses.length !== expected.length) errors.push(`${raid.id}: progression coverage count mismatch`);
   }
   return errors;
 }
