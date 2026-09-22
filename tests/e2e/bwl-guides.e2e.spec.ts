@@ -19,13 +19,15 @@ test("BWL Logs links follow encounter IDs despite misleading display names", asy
     const projection = structuredClone(original);
     const raid = projection.raids[0]; raid.zoneId = 2002;
     const sample = raid.bosses[0];
-    raid.bosses = [50610, 50611, 50612, 50631].map(encounterId => ({ ...sample, encounterId, name: "Razorgore the Untamed" }));
+    raid.bosses = [50610, 50611, 50612, 50613, 50614, 50615, 50616, 50617, 50631].map(encounterId => ({ ...sample, encounterId, name: "Razorgore the Untamed" }));
     await client.query("UPDATE warcraft_logs_cache SET projection=$2 WHERE cache_key=$1", [key, JSON.stringify(projection)]);
     await page.reload();
     const logs = page.locator("#character-logs");
     await expect(logs.getByRole("link", { name: "Razorgore the Untamed guide", exact: true })).toHaveAttribute("href", `${path}/razorgore-the-untamed`);
     await expect(logs.getByRole("link", { name: "Vaelastrasz the Corrupt guide", exact: true })).toHaveAttribute("href", `${path}/vaelastrasz-the-corrupt`);
-    await expect(logs.locator(`a[href^="${path}/"]`)).toHaveCount(2);
+    await expect(logs.getByRole("link", { name: "Broodlord Lashlayer guide", exact: true })).toHaveAttribute("href", `${path}/broodlord-lashlayer`);
+    await expect(logs.getByRole("link", { name: "Firemaw guide", exact: true })).toHaveAttribute("href", `${path}/firemaw`);
+    await expect(logs.locator(`a[href^="${path}/"]`)).toHaveCount(4);
   } finally {
     if (original) await client.query("UPDATE warcraft_logs_cache SET projection=$2 WHERE cache_key=$1", [key, JSON.stringify(original)]);
     await client.end();
@@ -42,13 +44,13 @@ test("BWL discovery, eight registry cards and no unpublished boss links", async 
   const cards = page.getByTestId("boss-cards");
   await expect(cards.locator("li")).toHaveCount(8);
   expect(await cards.locator("li").evaluateAll(nodes => nodes.map(node => Number(node.getAttribute("data-progression-encounter-id"))))).toEqual(raidProgressionEncounters("era", 2002).map(boss => boss.id));
-  await expect(cards.getByRole("link")).toHaveCount(2);
-  expect(await cards.getByRole("link").evaluateAll(nodes => nodes.map(node => Number(node.getAttribute("data-encounter-id"))))).toEqual([50610, 50611]);
-  await expect(cards.getByText("Boss guide not yet published.", { exact: true })).toHaveCount(6);
+  await expect(cards.getByRole("link")).toHaveCount(4);
+  expect(await cards.getByRole("link").evaluateAll(nodes => nodes.map(node => Number(node.getAttribute("data-encounter-id"))))).toEqual([50610, 50611, 50612, 50613]);
+  await expect(cards.getByText("Boss guide not yet published.", { exact: true })).toHaveCount(4);
   await expect(cards).not.toContainText("Ebonroc / Flamegor");
   for (const boss of raidProgressionEncounters("era", 2002)) {
     const slug = boss.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-    expect((await request.get(`${path}/${slug}`)).status()).toBe([50610, 50611].includes(boss.id) ? 200 : 404);
+    expect((await request.get(`${path}/${slug}`)).status()).toBe([50610, 50611, 50612, 50613].includes(boss.id) ? 200 : 404);
   }
 });
 
@@ -63,7 +65,9 @@ test("BWL SEO, breadcrumbs, sections and TBC separation", async ({ page, request
   expect(xml).toContain(path);
   expect(xml).toContain(`${path}/razorgore-the-untamed`);
   expect(xml).toContain(`${path}/vaelastrasz-the-corrupt`);
-  expect(xml).not.toContain(`${path}/broodlord-lashlayer`);
+  expect(xml).toContain(`${path}/broodlord-lashlayer`);
+  expect(xml).toContain(`${path}/firemaw`);
+  expect(xml).not.toContain(`${path}/ebonroc`);
   expect((await page.goto("/tbc/guides/raids/blackwing-lair"))?.status()).toBe(404);
   await page.goto("/tbc/guides");
   await expect(page.getByRole("main")).toContainText("TBC guides are coming later");
@@ -82,6 +86,8 @@ for (const width of [1440, 390]) test(`BWL ${width}px layout and accessibility`,
 for (const [slug, title, sibling, direction] of [
   ["razorgore-the-untamed", "Razorgore the Untamed", "vaelastrasz-the-corrupt", "Next"],
   ["vaelastrasz-the-corrupt", "Vaelastrasz the Corrupt", "razorgore-the-untamed", "Previous"],
+  ["broodlord-lashlayer", "Broodlord Lashlayer", "firemaw", "Next"],
+  ["firemaw", "Firemaw", "broodlord-lashlayer", "Previous"],
 ]) test(`BWL boss ${slug}: route, navigation, SEO, mobile and axe`, async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 900 });
   expect((await page.goto(`${path}/${slug}`))?.status()).toBe(200);
@@ -94,7 +100,7 @@ for (const [slug, title, sibling, direction] of [
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations.filter(issue => ["serious", "critical"].includes(issue.impact ?? ""))).toEqual([]);
   const navigation = page.getByRole("navigation", { name: "Boss navigation" });
-  await expect(navigation.getByRole("link")).toHaveCount(1);
+  await expect(navigation.getByRole("link")).toHaveCount(["vaelastrasz-the-corrupt", "broodlord-lashlayer"].includes(slug) ? 2 : 1);
   await navigation.getByRole("link", { name: new RegExp(direction) }).click();
   await expect(page).toHaveURL(new RegExp(`/${sibling}$`));
   expect((await page.goto(`/tbc/guides/raids/blackwing-lair/${slug}`))?.status()).toBe(404);
