@@ -3,6 +3,48 @@ import { icy, p, section, source, wowhead } from "../helpers.ts";
 
 // Content is keyed by accepted encounter ID; names/order live in ERA_RAIDS.
 export const blackwingLairBossContent: Record<string, GuideContent> = {
+  "era-boss-50614": {
+    summary: "Swap promptly off Shadow of Ebonroc so his melee hits cannot undo raid damage through self-healing.",
+    tags: ["Tank swaps", "Threat", "Positioning"],
+    quick: { before: "Set a taunt order, backup calls and protected tank positions.", during: "An unaffected tank takes over when Shadow of Ebonroc lands.", watch: "Boss healing, resisted taunts and Wing Buffet threat loss." },
+    sources: [
+      wowhead("Ebonroc — Classic encounter strategy", "ebonroc-blackwing-lair-strategy"),
+      icy("Ebonroc — standard Classic tank rotation and positioning", "ebonroc-guide-strategy-abilities-loot"),
+    ].map(entry => ({ ...entry, accessedAt: "2026-09-22" })),
+    sections: [
+      section("mechanics", "Key mechanics", p("Shadow of Ebonroc lasts eight seconds on the current tank. Each landed melee hit against that afflicted target heals Ebonroc for 25,000 health. An unaffected tank must taunt promptly; extra raid damage is not a substitute for preventing those heals."), p("Wing Buffet knocks back targets in the frontal cone and reduces their threat. Shadow Flame is a separate frontal breath: tanks need an equipped Onyxia Scale Cloak to prevent its lingering damage, while still surviving the initial hit.")),
+      section("positioning", "Positioning", p("Pull into a cleared corner near the laboratory ramp. Space tank positions with backs against walls, keeping the raid behind the boss throughout handoffs. Do not rotate the frontal cone through melee or allow knockbacks into uncleared packs.")),
+      section("tank", "Tank", p("A three-tank rotation provides backup for debuff overlaps and resisted taunts. Call Shadow of Ebonroc immediately and have a tank without it take control. Do not taunt back while still afflicted. Coordinate the Wing Buffet receiver so its threat loss does not catch every tank; communicate a failed taunt before the next swing.")),
+      section("healer", "Healer", p("Follow the active tank as often as the tanks swap. Keep the outgoing tank safe and anticipate breath plus melee damage on the incoming one. Healing your tank does not trigger Ebonroc's heal: his melee hits on the debuffed tank do. Never withhold necessary healing to solve this mechanic.")),
+      section("dps", "DPS", p("Allow the tank team to establish control and reassess threat after Wing Buffet. Stay behind during swaps. If the boss repeatedly heals, call the missed handoff rather than trying to overcome it with uncontrolled burst.")),
+      section("dispels", "Debuff response", p("Use the assigned tank swap when Shadow of Ebonroc appears. The cloak handles Shadow Flame's lingering damage; it does not replace this swap.")),
+      section("preparation", "Preparation", p("Check every potential tank's cloak, taunt availability and healer coverage. Agree who responds if the next tank is already debuffed or a taunt fails.")),
+      section("mistakes", "Common mistakes", p("Taunting back too early, letting the boss hit an afflicted tank, or swinging his breath through the raid prolongs the fight and risks deaths.")),
+      section("fury", "Fury Warrior note", p("Control burst around tank changes. If assigned as a backup tank, prepare the cloak and tank position before pulling; do not improvise a taunt from inside the melee group.")),
+      section("related", "Related guides", { kind: "links", guideIds: ["era-blackwing-lair", "era-fury"] }),
+    ],
+  },
+  "era-boss-50615": {
+    summary: "Remove Frenzy with assigned Hunter shots while tanks maintain stable facing and threat through Wing Buffet.",
+    tags: ["Tranquilizing Shot", "Threat", "Positioning"],
+    quick: { before: "Assign Hunter rotation and miss backup; check tank cloaks.", during: "Tranquilize each Frenzy and coordinate Wing Buffet handoffs.", watch: "Repeated Fire Nova, missed shots and frontal Shadow Flame." },
+    sources: [
+      wowhead("Flamegor — Classic encounter strategy", "flamegor-blackwing-lair-strategy"),
+      icy("Flamegor — standard Classic strategy, excluding the combined seasonal encounter", "flamegor-guide-strategy-abilities-loot"),
+    ].map(entry => ({ ...entry, accessedAt: "2026-09-22" })),
+    sections: [
+      section("mechanics", "Key mechanics", p("Frenzy must be removed promptly with a Hunter's Tranquilizing Shot. While frenzied, Flamegor repeatedly uses Fire Nova, threatening the whole raid. This encounter has no Firemaw-style Flame Buffet stack-reset cycle."), p("Wing Buffet is a frontal knockback with threat reduction. Shadow Flame is a frontal breath; an equipped Onyxia Scale Cloak prevents the lingering damage but not the initial hit. Keep the frontal area restricted to the assigned tanks.")),
+      section("positioning", "Positioning", p("Use a cleared corner by the ramp, with tanks braced against the walls and spaced for controlled handoffs. Melee attack from behind; ranged and Hunters retain a clear view of the boss and healers remain in tank range. Keep the boss stationary where possible.")),
+      section("tank", "Tank", p("Use at least two prepared tanks with a planned Wing Buffet receiver and taunt handoff. Avoid having both tanks take its threat reduction. Announce resisted taunts and hold facing away from the raid. Terrain limits knockback travel but does not protect the threat lead.")),
+      section("healer", "Healer", p("Maintain coverage on the incoming tank through swaps and anticipate Shadow Flame followed by melee hits. If a Tranquilizing Shot misses, cover the resulting Fire Nova damage while Hunters remove Frenzy. Healing through repeated novas is not the planned solution.")),
+      section("dps", "DPS", p("Start with room for tank threat and check it again after Wing Buffet. Hunters prioritize Frenzy removal over damage; keep the shot available when your turn approaches. Other DPS hold their safe position rather than copying Firemaw's recurring line-of-sight resets.")),
+      section("dispels", "Tranquilizing Shot assignments", p("Arrange at least two Hunters who have learned Tranquilizing Shot, with an explicit rotation and miss backup. Call misses immediately and confirm Frenzy is removed. Use this ability rather than an ordinary magic dispel or a melee interrupt.")),
+      section("preparation", "Preparation", p("Check Hunter ammunition, range and shot readiness before pulling. Confirm cloak coverage for all tanks and name the backup for each tank and Hunter assignment.")),
+      section("mistakes", "Common mistakes", p("Unassigned shots can leave everyone on cooldown for the next Frenzy. Ignoring a miss, exposing melee to the breath or bursting through a threat drop creates avoidable failures.")),
+      section("fury", "Fury Warrior note", p("Pummel does not replace Tranquilizing Shot. Stay behind, monitor tank threat after Wing Buffet and preserve control during Execute rather than chasing a damage spike.")),
+      section("related", "Related guides", { kind: "links", guideIds: ["era-blackwing-lair", "era-fury"] }),
+    ],
+  },
   "era-boss-50612": {
     summary: "Finish the Suppression Room together, anchor the tanks and respect repeated threat loss and Mortal Strike.",
     tags: ["Threat", "Tank", "Positioning"],

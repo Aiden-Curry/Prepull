@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "startTime": "2026-09-22T17:23:15.007Z",
+    "duration": 23830.334,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "scope": [
+    "Logs IDs with misleading names; local projection restored",
+    "Overview exactly six of eight links; two unpublished 404s; alternate excluded/404",
+    "SEO/TBC",
+    "1440px and 390px overview axe",
+    "Six published boss routes/navigation/SEO/TBC/390px/axe"
+  ]
+}
