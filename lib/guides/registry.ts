@@ -19,6 +19,7 @@ export const guideRegistry: readonly Guide[] = [
   { id: "era-frost", type: "spec", contentVersion: "era", className: "Mage", specName: "Frost", slug: "classes/mage/frost", title: "Frost Mage", status: "published", updatedAt: reviewed },
   { id: "era-fury", type: "spec", contentVersion: "era", className: "Warrior", specName: "Fury", slug: "classes/warrior/fury", title: "Fury Warrior", status: "published", updatedAt: reviewed },
   { id: "era-molten-core", type: "raid", contentVersion: "era", raidId: moltenCore.id, slug: "raids/molten-core", title: moltenCore.name, status: "published", updatedAt: reviewed },
+  ...raidProgressionEncounters("era", blackwingLair.id).filter(boss => [50610, 50611].includes(boss.id)).map((boss): Guide => ({ id: `era-boss-${boss.id}`, type: "boss", contentVersion: "era", raidId: blackwingLair.id, encounterId: boss.id, slug: `raids/blackwing-lair/${slugify(boss.name)}`, title: boss.name, status: "published", updatedAt: "2026-09-22" })),
   ...moltenCoreEncounters.map((boss): Guide => ({ id: `era-boss-${boss.id}`, type: "boss", contentVersion: "era", raidId: moltenCore.id, encounterId: boss.id, slug: `raids/molten-core/${slugify(boss.name)}`, title: boss.name, status: "published", updatedAt: reviewed })),
 ];
 export function publishedGuides(version?: ContentVersion, entries = guideRegistry) { return entries.filter(guide => guide.status === "published" && (!version || guide.contentVersion === version)); }

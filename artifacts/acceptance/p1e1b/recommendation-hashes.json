@@ -1,0 +1,52 @@
+[
+  {
+    "file": "data/curated/published/era-combat-rogue-phase-1-v1.json",
+    "sha256": "1fed54b81f0fff557cc9cb3d5dfc7ff59ddb1dcc21aea9b9fcafcbdf8e7efd5f",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-combat-rogue-pre-raid-v1.json",
+    "sha256": "db86698b9b5c24873cbba6fe6ce98baa1a80b5d885d1419ba85f3a4ca4faf95d",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-frost-mage-phase-1-v1.json",
+    "sha256": "b5e8cf6dfc24fdf7e9818af2a9d119c1d165c731f225270d0560768a08d61eb1",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-frost-mage-pre-raid-v1.json",
+    "sha256": "0345530f92c430d0ef5242ff717a72480d249ea9775c70d5e69a27e90f1740af",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-fury-phase-1-v1.json",
+    "sha256": "9474c7c288f4910f5de5c9dae849b16800b20cfb3ed20c94cba4dd73239a9d16",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-fury-pre-raid-v1.json",
+    "sha256": "62d0f74e8f3af378049829b01130e91ab7ea920776bb9e9ff8499a3443a82f0f",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-holy-priest-phase-1-v1.json",
+    "sha256": "f334d284d25d92c4bf424a50e8a005f457665b2dc3c31fa78477464473796e7f",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-holy-priest-pre-raid-v1.json",
+    "sha256": "e76c2f1d45e6152fac6f16025f7e59a29cbd048c6cc10fc27d3b472644b9ec38",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-marksmanship-hunter-phase-1-v1.json",
+    "sha256": "99345600cadc27bbb93b1ab644f84dcd0cb721fd2b02c1917bfd93bb05b88f98",
+    "unchanged": true
+  },
+  {
+    "file": "data/curated/published/era-marksmanship-hunter-pre-raid-v1.json",
+    "sha256": "59d21bd0ae67c22be091e7c764c3cd07df5c2eac2db5ff6979030bb174b35ec1",
+    "unchanged": true
+  }
+]

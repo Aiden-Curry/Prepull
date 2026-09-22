@@ -39,7 +39,7 @@ test("Molten Core has ten ordered ID-mapped cards and every boss route is comple
   const links = page.getByTestId("boss-cards").getByRole("link");
   await expect(links).toHaveCount(10);
   expect(await links.evaluateAll(elements => elements.map(element => Number(element.getAttribute("data-encounter-id"))))).toEqual(moltenCoreEncounters.map(boss => boss.id));
-  for (const boss of publishedGuides("era").filter(guide => guide.type === "boss")) {
+  for (const boss of publishedGuides("era").filter(guide => guide.type === "boss" && guide.raidId === 2000)) {
     expect((await page.goto(guideHref(boss)))?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(boss.title);
     for (const title of ["Raid-night summary", "Key mechanics", "Positioning", "Tank", "Healer", "DPS", "Fury Warrior note", "Sources / reviewed against"]) await expect(page.getByRole("heading", { name: title, exact: true })).toBeVisible();

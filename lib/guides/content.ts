@@ -1,3 +1,4 @@
+import { blackwingLairBossContent } from "../../content/guides/era/blackwing-lair-bosses.ts";
 import { fury } from "../../content/guides/era/fury.ts";
 import { blackwingLairContent } from "../../content/guides/era/blackwing-lair.ts";
 import { frost } from "../../content/guides/era/frost.ts";
@@ -7,4 +8,4 @@ import { holy } from "../../content/guides/era/holy.ts";
 import { moltenCoreContent } from "../../content/guides/era/molten-core.ts";
 import { moltenCoreBossContent } from "../../content/guides/era/molten-core-bosses.ts";
 import type { GuideContent } from "./types.ts";
-export const guideContent: Readonly<Record<string, GuideContent>> = { "era-blackwing-lair": blackwingLairContent, "era-holy": holy, "era-fury": fury, "era-frost": frost, "era-combat": combat, "era-marksmanship": marksmanship, "era-molten-core": moltenCoreContent, ...moltenCoreBossContent };
+export const guideContent: Readonly<Record<string, GuideContent>> = { "era-blackwing-lair": blackwingLairContent, "era-holy": holy, "era-fury": fury, "era-frost": frost, "era-combat": combat, "era-marksmanship": marksmanship, "era-molten-core": moltenCoreContent, ...moltenCoreBossContent, ...blackwingLairBossContent };

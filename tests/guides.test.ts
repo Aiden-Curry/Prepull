@@ -33,9 +33,9 @@ test("Hunter uses accepted gear and exact specialization without TBC fallback", 
 
 test("published guide manifest resolves routes and all ten accepted encounters in order", () => {
   assert.deepEqual(validateGuides(), []);
-  assert.equal(publishedGuides().length, 17);
+  assert.equal(publishedGuides().length, 19);
   for (const guide of publishedGuides()) assert.equal(resolveGuide(guide.contentVersion, guide.slug)?.id, guide.id);
-  const bosses = publishedGuides("era").filter(guide => guide.type === "boss");
+  const bosses = publishedGuides("era").filter(guide => guide.type === "boss").filter(guide => guide.raidId === 2000);
   assert.deepEqual(bosses.map(guide => guide.encounterId), moltenCoreEncounters.map(boss => boss.id));
   assert.deepEqual(bosses.map(guide => guide.title), moltenCoreEncounters.map(boss => boss.name));
   assert.equal(bossGuide("era", 2000, 50672)?.title, "Ragnaros");
