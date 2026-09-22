@@ -68,9 +68,9 @@ export function validateGuides(entries: readonly Guide[] = guideRegistry, conten
     const bosses = entries.filter(entry => entry.type === "boss" && entry.status === "published" && entry.contentVersion === raid.contentVersion && entry.raidId === raid.raidId);
     for (const encounter of expected) {
       const count = bosses.filter(boss => boss.type === "boss" && boss.encounterId === encounter.id).length;
-      if (count > 1 || (raid.bossCoverage !== "overview" && count !== 1)) errors.push(`${raid.id}: missing or duplicate boss coverage for ${encounter.id}`);
+      if (count > 1 || ((raid.bossCoverage !== "overview" || (raid.contentVersion === "era" && raid.raidId === 2002)) && count !== 1)) errors.push(`${raid.id}: missing or duplicate boss coverage for ${encounter.id}`);
     }
-    if (raid.bossCoverage !== "overview" && bosses.length !== expected.length) errors.push(`${raid.id}: progression coverage count mismatch`);
+    if ((raid.bossCoverage !== "overview" || (raid.contentVersion === "era" && raid.raidId === 2002)) && bosses.length !== expected.length) errors.push(`${raid.id}: progression coverage count mismatch`);
   }
   return errors;
 }

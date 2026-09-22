@@ -1,8 +1,52 @@
 import type { GuideContent } from "../../../lib/guides/types.ts";
-import { icy, p, section, source, wowhead } from "../helpers.ts";
+import { icy, list, p, section, source, wowhead } from "../helpers.ts";
 
 // Content is keyed by accepted encounter ID; names/order live in ERA_RAIDS.
 export const blackwingLairBossContent: Record<string, GuideContent> = {
+  "era-boss-50616": {
+    summary: "Prepare for the week's breath pair, cleanse afflictions and keep Tranquilizing Shot coverage through the final burn.",
+    tags: ["Dispels", "Line of sight", "Tranquilizing Shot"],
+    quick: { before: "Assign cleanses, Hunter backups, sand and safe corners.", during: "Follow breath calls; Time Lapse needs a distinct plan.", watch: "Five afflictions, missed Frenzy removal and changing vulnerabilities." },
+    sources: [
+      wowhead("Chromaggus — Classic encounter strategy", "chromaggus-blackwing-lair-strategy"),
+      icy("Chromaggus — standard Classic breaths and preparation only", "chromaggus-guide-strategy-abilities-loot"),
+      source("Brood Affliction: Blue — Classic effects and dispel type", "ClassicDB", "https://classicdb.ch/?spell=23153"),
+    ].map(entry => ({ ...entry, accessedAt: "2026-09-22" })),
+    sections: [
+      section("mechanics", "Key mechanics", p("Two breaths are selected per raid lockout and alternate throughout it: Ignite Flesh (stacking fire damage), Incinerate (fire burst), Frost Burn (frost damage and slower attacks), Corrosive Acid (nature damage and armor loss), or Time Lapse (stun with temporary health/threat reduction). Identify the pair before repeating attempts."), p("Shimmer changes his vulnerable magic school during combat; casters adapt without neglecting cleanses. Hunters remove recurring Frenzy with Tranquilizing Shot. The separate enrage below 20% increases tank pressure while Frenzy continues.")),
+      section("positioning", "Positioning", p("Anchor him beside a tested corner where players can hide from breaths while retaining tank-healing access. Move before the breath lands. Line of sight does not prevent Brood Afflictions.")),
+      section("tank", "Tank", p("For ordinary breaths, keep the main tank exposed and the boss stable. With Time Lapse, a prepared off-tank and assigned healers hide; the main tank and DPS take the effect. The off-tank needs sufficient threat to hold him during the stun. Coordinate the return as the effect ends rather than assuming a permanent threat reset.")),
+      section("healer", "Healer", p("Maintain tank coverage during breath movement and prioritize endangered players' afflictions. Blue is a magic effect that drains mana and slows casting and movement; remove it promptly from healers and dispellers.")),
+      section("dps", "DPS", p("Hunters use a shot rotation with miss backup. Casters check each vulnerability change. Utility and breath positioning take priority over exploiting a damage window.")),
+      section("dispels", "Brood Afflictions and cleanses", list("Black: curse, increases fire damage taken. Assign Mages/Druids.", "Blue: magic. Assign Priests/Paladins.", "Green: poison, damage and reduced healing. Assign Druids/Paladins/Shamans.", "Red: disease, damage and boss healing on the victim's death. Assign Priests/Paladins/Shamans.", "Bronze: periodic stun; Hourglass Sand removes it. Distribute limited sand to tanks, healers and Tranquilizing Shot Hunters first.", "All five together cause hostile mutation. Keep cleansing while hidden; do not wait for five.")),
+      section("preparation", "Preparation", p("Distribute sand before using the lever. Bring recovery consumables; Restorative Potions and anti-venom supplement assigned cleanses. Match resistance/protection choices to the breath pair, without sacrificing essential tank durability or treating resistance as a substitute for hiding.")),
+      section("mistakes", "Common mistakes", p("Everyone hiding from Time Lapse, neglected afflictions, or a missed Frenzy during enrage can collapse tank coverage.")),
+      section("fury", "Fury Warrior note", p("Leave for ordinary breaths promptly, follow the Time Lapse assignment and keep Execute below the tank's threat. Damage does not excuse a missed movement call.")),
+      section("related", "Related guides", { kind: "links", guideIds: ["era-blackwing-lair", "era-fury"] }),
+    ],
+  },
+  "era-boss-50617": {
+    summary: "Control both add doors, survive the landing and class calls, then contain the skeletons before finishing Nefarian.",
+    tags: ["Adds", "Class calls", "Positioning"],
+    quick: { before: "Check every cloak and assign doors, calls and skeleton pickups.", during: "Keep boss facing stable; respond to calls immediately.", watch: "Landing Shadow Flame, fear and the 20% add transition." },
+    sources: [
+      wowhead("Nefarian — Classic phases and original class calls", "nefarian-blackwing-lair-strategy"),
+      icy("Nefarian — standard Classic strategy; empowered seasonal calls excluded", "nefarian-guide-strategy-abilities-loot-updated-for-the-season-of-mastery"),
+    ].map(entry => ({ ...entry, accessedAt: "2026-09-22" })),
+    sections: [
+      section("mechanics", "Key mechanics", p("Phase one sends Drakonids from two doors. Balance teams for the week's colors/resistances and tank Chromatic adds. After 42 kills, Nefarian lands; finish survivors while the boss tank establishes control. At 20%, fallen Drakonids rise as Bone Constructs. Class calls and boss abilities continue during this final add phase.")),
+      section("positioning", "Positioning", p("Equip Onyxia Scale Cloaks raid-wide for the landing Shadow Flame; they prevent its lingering effect, not the initial damage. Face the landed dragon away. Melee use flanks outside breath, Cleave and tail; ranged maintain tank range and a fear-safe position.")),
+      section("tank", "Tank", p("Plan Bellowing Roar protection with Berserker Rage, Fear Ward or Tremor Totem. Preserve facing and threat through class calls. Off-tanks save pickup tools for skeletons; coordinate the 20% push before they activate.")),
+      section("healer", "Healer", p("Cover door tanks, then the boss and skeleton tanks. Arrange replacements for Priest/Druid calls and extra support during Warrior calls. Keep healing range when avoiding fear.")),
+      section("dps", "DPS", p("Respect add resistances and tank pickups. Control skeletons before returning to the boss; do not tunnel Execute through their arrival.")),
+      section("class-calls", "Classic class calls", list("Warrior: forced Berserker Stance increases danger to tanks; watch threat and restore stance afterward.", "Druid: forced Cat Form; other healers/tanks cover duties.", "Priest: direct heals apply Corrupted Healing. Stop them; Renew and Power Word: Shield remain useful.", "Mage: involuntary Polymorphs; assigned friendly magic dispellers respond.", "Rogue: teleported and rooted near the boss; tank adjusts facing if they are exposed.", "Hunter: equipped ranged weapon breaks; unequip before call windows and carry a spare.", "Paladin: boss gains physical protection; manage damage while tank threat generation is impaired.", "Shaman: hostile totems; switch and destroy them.", "Warlock: hostile Infernals; control and kill them with non-fire damage.")),
+      section("dispels", "Dispels and cleanses", p("Mages/Druids remove Veil of Shadow promptly from endangered targets, especially tanks: it sharply reduces healing received. Priests/Paladins cover friendly Polymorph dispels during Mage calls.")),
+      section("preparation", "Preparation", p("Before starting dialogue, check cloaks, fear coverage, Hunter spares and class-call backups. Mark skeleton pickup areas and reserve AoE/control cooldowns.")),
+      section("mistakes", "Common mistakes", p("Missing cloaks, uncovered healer calls, unstable facing or pushing 20% before add tanks are ready turns transitions lethal.")),
+      section("fury", "Fury Warrior note", p("Warrior calls weaken tank threat and survival. Throttle accordingly; use assigned skeleton pickups rather than unplanned cleave.")),
+      section("related", "Related guides", { kind: "links", guideIds: ["era-blackwing-lair", "era-fury"] }),
+    ],
+  },
   "era-boss-50614": {
     summary: "Swap promptly off Shadow of Ebonroc so his melee hits cannot undo raid damage through self-healing.",
     tags: ["Tank swaps", "Threat", "Positioning"],

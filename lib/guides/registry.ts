@@ -12,14 +12,14 @@ const reviewed = "2026-09-21";
 const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 // Game names, order and membership come from the accepted identity registry.
 export const guideRegistry: readonly Guide[] = [
-  { id: "era-blackwing-lair", type: "raid", contentVersion: "era", raidId: blackwingLair.id, bossCoverage: "overview", slug: "raids/blackwing-lair", title: blackwingLair.name, status: "published", updatedAt: "2026-09-22" },
+  { id: "era-blackwing-lair", type: "raid", contentVersion: "era", raidId: blackwingLair.id, bossCoverage: "complete", slug: "raids/blackwing-lair", title: blackwingLair.name, status: "published", updatedAt: "2026-09-22" },
   { id: "era-holy", type: "spec", contentVersion: "era", className: "Priest", specName: "Holy", slug: "classes/priest/holy", title: "Holy Priest", status: "published", updatedAt: "2026-09-22" },
   { id: "era-marksmanship", type: "spec", contentVersion: "era", className: "Hunter", specName: "Marksmanship", slug: "classes/hunter/marksmanship", title: "Marksmanship Hunter", status: "published", updatedAt: reviewed },
   { id: "era-combat", type: "spec", contentVersion: "era", className: "Rogue", specName: "Combat", slug: "classes/rogue/combat", title: "Combat Rogue", status: "published", updatedAt: reviewed },
   { id: "era-frost", type: "spec", contentVersion: "era", className: "Mage", specName: "Frost", slug: "classes/mage/frost", title: "Frost Mage", status: "published", updatedAt: reviewed },
   { id: "era-fury", type: "spec", contentVersion: "era", className: "Warrior", specName: "Fury", slug: "classes/warrior/fury", title: "Fury Warrior", status: "published", updatedAt: reviewed },
   { id: "era-molten-core", type: "raid", contentVersion: "era", raidId: moltenCore.id, slug: "raids/molten-core", title: moltenCore.name, status: "published", updatedAt: reviewed },
-  ...raidProgressionEncounters("era", blackwingLair.id).filter(boss => [50610, 50611, 50612, 50613, 50614, 50615].includes(boss.id)).map((boss): Guide => ({ id: `era-boss-${boss.id}`, type: "boss", contentVersion: "era", raidId: blackwingLair.id, encounterId: boss.id, slug: `raids/blackwing-lair/${slugify(boss.name)}`, title: boss.name, status: "published", updatedAt: "2026-09-22" })),
+  ...raidProgressionEncounters("era", blackwingLair.id).map((boss): Guide => ({ id: `era-boss-${boss.id}`, type: "boss", contentVersion: "era", raidId: blackwingLair.id, encounterId: boss.id, slug: `raids/blackwing-lair/${slugify(boss.name)}`, title: boss.name, status: "published", updatedAt: "2026-09-22" })),
   ...moltenCoreEncounters.map((boss): Guide => ({ id: `era-boss-${boss.id}`, type: "boss", contentVersion: "era", raidId: moltenCore.id, encounterId: boss.id, slug: `raids/molten-core/${slugify(boss.name)}`, title: boss.name, status: "published", updatedAt: reviewed })),
 ];
 export function publishedGuides(version?: ContentVersion, entries = guideRegistry) { return entries.filter(guide => guide.status === "published" && (!version || guide.contentVersion === version)); }
